@@ -1,0 +1,7 @@
+﻿; ZohoProjects.def : Declares the module parameters.
+
+LIBRARY      "ZohoProjects.DLL"
+
+EXPORTS
+	DllCanUnloadNow            PRIVATE
+	DllGetClassObject          PRIVATE
