@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "OAuth2.h"
 
+#include "ZohoProjects.h"
+
 namespace oauth2
 {
 	codelistener::codelistener(web::uri listen_uri, web::http::oauth2::experimental::oauth2_config& config)
@@ -26,17 +28,18 @@ namespace oauth2
                     }
                 });
 
-				web::http::http_response response(web::http::status_codes::OK);
-				response.headers().set_content_type(U("text/html"));
-				response.set_body(U("<script type='text/javascript'>window.open('','_self').close();</script>"
-					"You may now close this window"));
+				web::http::http_response response(web::http::status_codes::TemporaryRedirect);
+				response.headers().add(U("Location"), utility::conversions::to_string_t(ZohoProjects::zohoUrl));
 				request.reply(response);
 
                 m_resplock.unlock();
             }
             else
             {
-                request.reply(web::http::status_codes::NotFound, U("Not found."));
+				web::http::http_response response(web::http::status_codes::NotFound);
+				response.headers().set_content_type(U("text/html"));
+				response.set_body(U("<script type='text/javascript'>window.open('','_self').close();</script>"));
+				request.reply(response);
             }
         });
 

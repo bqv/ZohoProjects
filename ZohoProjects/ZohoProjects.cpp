@@ -20,9 +20,9 @@ const std::string ZohoProjects::scopes[] = {
 	"ZohoProjects.events.ALL",
 	"ZohoProjects.forums.ALL",
 	"ZohoProjects.users.ALL",
-	"ZohoProjects.users.ALL",
 };
 const std::string ZohoProjects::redirectUrl = "http://localhost:8702";
+const std::string ZohoProjects::zohoUrl = "https://accounts.zoho.com";
 
 ZohoProjects::ZohoProjects()
 {

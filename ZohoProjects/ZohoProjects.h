@@ -14,5 +14,6 @@ public:
 	static const std::string clientId;
 	static const std::string clientSecret;
 	static const std::string redirectUrl;
+	static const std::string zohoUrl;
 };
 
