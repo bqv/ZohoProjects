@@ -12,7 +12,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZohoProjectsUI", "ZohoProje
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZohoProjectsVSIX", "ZohoProjects\ZohoProjectsVSIX\ZohoProjectsVSIX.csproj", "{4BFB285A-C50A-40AB-B3C1-6D3B3B6BAEDB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZohoProjectsTest", "ZohoProjectsTest\ZohoProjectsTest.vcxproj", "{843B6EE3-81BA-4072-AD42-3FD9A64CAAE2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZohoApi", "ZohoApi\ZohoApi.vcxproj", "{AEE1E511-BC91-4E23-A042-D02CA4F0AB76}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZohoApiTest", "ZohoApiTest\ZohoApiTest.vcxproj", "{D5E35259-5965-4C58-BD36-410DB0912020}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,16 +54,26 @@ Global
 		{4BFB285A-C50A-40AB-B3C1-6D3B3B6BAEDB}.Release|x64.Build.0 = Release|Any CPU
 		{4BFB285A-C50A-40AB-B3C1-6D3B3B6BAEDB}.Release|x86.ActiveCfg = Release|Any CPU
 		{4BFB285A-C50A-40AB-B3C1-6D3B3B6BAEDB}.Release|x86.Build.0 = Release|Any CPU
-		{843B6EE3-81BA-4072-AD42-3FD9A64CAAE2}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{843B6EE3-81BA-4072-AD42-3FD9A64CAAE2}.Debug|x64.ActiveCfg = Debug|x64
-		{843B6EE3-81BA-4072-AD42-3FD9A64CAAE2}.Debug|x64.Build.0 = Debug|x64
-		{843B6EE3-81BA-4072-AD42-3FD9A64CAAE2}.Debug|x86.ActiveCfg = Debug|Win32
-		{843B6EE3-81BA-4072-AD42-3FD9A64CAAE2}.Debug|x86.Build.0 = Debug|Win32
-		{843B6EE3-81BA-4072-AD42-3FD9A64CAAE2}.Release|Any CPU.ActiveCfg = Release|Win32
-		{843B6EE3-81BA-4072-AD42-3FD9A64CAAE2}.Release|x64.ActiveCfg = Release|x64
-		{843B6EE3-81BA-4072-AD42-3FD9A64CAAE2}.Release|x64.Build.0 = Release|x64
-		{843B6EE3-81BA-4072-AD42-3FD9A64CAAE2}.Release|x86.ActiveCfg = Release|Win32
-		{843B6EE3-81BA-4072-AD42-3FD9A64CAAE2}.Release|x86.Build.0 = Release|Win32
+		{AEE1E511-BC91-4E23-A042-D02CA4F0AB76}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{AEE1E511-BC91-4E23-A042-D02CA4F0AB76}.Debug|x64.ActiveCfg = Debug|x64
+		{AEE1E511-BC91-4E23-A042-D02CA4F0AB76}.Debug|x64.Build.0 = Debug|x64
+		{AEE1E511-BC91-4E23-A042-D02CA4F0AB76}.Debug|x86.ActiveCfg = Debug|Win32
+		{AEE1E511-BC91-4E23-A042-D02CA4F0AB76}.Debug|x86.Build.0 = Debug|Win32
+		{AEE1E511-BC91-4E23-A042-D02CA4F0AB76}.Release|Any CPU.ActiveCfg = Release|Win32
+		{AEE1E511-BC91-4E23-A042-D02CA4F0AB76}.Release|x64.ActiveCfg = Release|x64
+		{AEE1E511-BC91-4E23-A042-D02CA4F0AB76}.Release|x64.Build.0 = Release|x64
+		{AEE1E511-BC91-4E23-A042-D02CA4F0AB76}.Release|x86.ActiveCfg = Release|Win32
+		{AEE1E511-BC91-4E23-A042-D02CA4F0AB76}.Release|x86.Build.0 = Release|Win32
+		{D5E35259-5965-4C58-BD36-410DB0912020}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{D5E35259-5965-4C58-BD36-410DB0912020}.Debug|x64.ActiveCfg = Debug|x64
+		{D5E35259-5965-4C58-BD36-410DB0912020}.Debug|x64.Build.0 = Debug|x64
+		{D5E35259-5965-4C58-BD36-410DB0912020}.Debug|x86.ActiveCfg = Debug|Win32
+		{D5E35259-5965-4C58-BD36-410DB0912020}.Debug|x86.Build.0 = Debug|Win32
+		{D5E35259-5965-4C58-BD36-410DB0912020}.Release|Any CPU.ActiveCfg = Release|Win32
+		{D5E35259-5965-4C58-BD36-410DB0912020}.Release|x64.ActiveCfg = Release|x64
+		{D5E35259-5965-4C58-BD36-410DB0912020}.Release|x64.Build.0 = Release|x64
+		{D5E35259-5965-4C58-BD36-410DB0912020}.Release|x86.ActiveCfg = Release|Win32
+		{D5E35259-5965-4C58-BD36-410DB0912020}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

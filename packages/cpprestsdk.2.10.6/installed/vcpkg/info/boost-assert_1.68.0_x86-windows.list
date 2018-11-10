@@ -1,0 +1,8 @@
+x86-windows/
+x86-windows/include/
+x86-windows/include/boost/
+x86-windows/include/boost/assert.hpp
+x86-windows/include/boost/current_function.hpp
+x86-windows/share/
+x86-windows/share/boost-assert/
+x86-windows/share/boost-assert/copyright

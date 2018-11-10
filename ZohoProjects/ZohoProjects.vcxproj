@@ -18,7 +18,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
@@ -46,9 +46,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
@@ -84,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <EnablePREfast>true</EnablePREfast>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;UNICODE;_UNICODE;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -103,6 +108,9 @@
     <PostBuildEvent>
       <Command>lib /NOLOGO /OUT:"$(TargetPath).lib" "$(ProjectDir)\$(Configuration)*.obj"</Command>
     </PostBuildEvent>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
@@ -140,6 +148,7 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <SDLCheck>true</SDLCheck>
+      <EnablePREfast>true</EnablePREfast>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;UNICODE;_UNICODE;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -156,6 +165,9 @@
       <EntryPointSymbol>_DllMainCRTStartup@12</EntryPointSymbol>
       <ImportLibrary>$(OutDir)ZohoProjects.lib</ImportLibrary>
     </Link>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
     <Midl Include="ZohoProjects.idl" />
@@ -168,12 +180,10 @@
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Module.cpp" />
-    <ClCompile Include="OAuth2.cpp" />
     <ClCompile Include="StdAfx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Zoho.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -183,11 +193,9 @@
     <ClInclude Include="CommonIncludes.h" />
     <ClInclude Include="Guids.h" />
     <ClInclude Include="AuthorizationWindow.h" />
-    <ClInclude Include="OAuth2.h" />
     <ClInclude Include="Package.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="StdAfx.h" />
-    <ClInclude Include="Zoho.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ZohoProjects.rc" />
@@ -199,24 +207,10 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v15.0\VSSDK\Microsoft.VsSDK.Cpp.Overrides.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\packages\cpprestsdk.v120.winapp.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.winapp.msvcstl.dyn.rt-dyn.targets" Condition="Exists('..\packages\cpprestsdk.v120.winapp.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.winapp.msvcstl.dyn.rt-dyn.targets')" />
-    <Import Project="..\packages\cpprestsdk.v120.windesktop.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.windesktop.msvcstl.dyn.rt-dyn.targets" Condition="Exists('..\packages\cpprestsdk.v120.windesktop.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.windesktop.msvcstl.dyn.rt-dyn.targets')" />
-    <Import Project="..\packages\cpprestsdk.v120.winphone.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.winphone.msvcstl.dyn.rt-dyn.targets" Condition="Exists('..\packages\cpprestsdk.v120.winphone.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.winphone.msvcstl.dyn.rt-dyn.targets')" />
-    <Import Project="..\packages\cpprestsdk.v120.winphonesl.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.winphonesl.msvcstl.dyn.rt-dyn.targets" Condition="Exists('..\packages\cpprestsdk.v120.winphonesl.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.winphonesl.msvcstl.dyn.rt-dyn.targets')" />
-    <Import Project="..\packages\cpprestsdk.v120.winxp.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.winxp.msvcstl.dyn.rt-dyn.targets" Condition="Exists('..\packages\cpprestsdk.v120.winxp.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.winxp.msvcstl.dyn.rt-dyn.targets')" />
-    <Import Project="..\packages\cpprestsdk.v140.winapp.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v140.winapp.msvcstl.dyn.rt-dyn.targets" Condition="Exists('..\packages\cpprestsdk.v140.winapp.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v140.winapp.msvcstl.dyn.rt-dyn.targets')" />
-    <Import Project="..\packages\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.targets" Condition="Exists('..\packages\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\cpprestsdk.v120.winapp.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.winapp.msvcstl.dyn.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cpprestsdk.v120.winapp.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.winapp.msvcstl.dyn.rt-dyn.targets'))" />
-    <Error Condition="!Exists('..\packages\cpprestsdk.v120.windesktop.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.windesktop.msvcstl.dyn.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cpprestsdk.v120.windesktop.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.windesktop.msvcstl.dyn.rt-dyn.targets'))" />
-    <Error Condition="!Exists('..\packages\cpprestsdk.v120.winphone.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.winphone.msvcstl.dyn.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cpprestsdk.v120.winphone.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.winphone.msvcstl.dyn.rt-dyn.targets'))" />
-    <Error Condition="!Exists('..\packages\cpprestsdk.v120.winphonesl.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.winphonesl.msvcstl.dyn.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cpprestsdk.v120.winphonesl.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.winphonesl.msvcstl.dyn.rt-dyn.targets'))" />
-    <Error Condition="!Exists('..\packages\cpprestsdk.v120.winxp.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.winxp.msvcstl.dyn.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cpprestsdk.v120.winxp.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.winxp.msvcstl.dyn.rt-dyn.targets'))" />
-    <Error Condition="!Exists('..\packages\cpprestsdk.v140.winapp.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v140.winapp.msvcstl.dyn.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cpprestsdk.v140.winapp.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v140.winapp.msvcstl.dyn.rt-dyn.targets'))" />
-    <Error Condition="!Exists('..\packages\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.targets'))" />
   </Target>
 </Project>

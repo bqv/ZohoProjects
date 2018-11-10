@@ -60,7 +60,7 @@
     </ProjectReference>
     <ProjectReference Include="..\..\ZohoProjectsUi\ZohoProjectsUi.vcxproj">
       <Project>{5a482511-2013-4b11-a690-e60a106c6bca}</Project>
-      <Name>ZohoProjectsUi</Name>
+      <Name>ZohoProjectsUI</Name>
       <VSIXSubPath>1033</VSIXSubPath>
       <IncludeOutputGroupsInVSIX>
         BuiltProjectOutputGroup;
