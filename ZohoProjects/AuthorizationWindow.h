@@ -19,32 +19,32 @@ DEFINE_GUID(EnvironmentColorsCategory,
 #define VS_RGBA_TO_COLORREF(rgba) (rgba & 0x00FFFFFF)
 
 
-class ZohoProjectsWindowPane :
+class AuthorizationWindowPane :
 	public CComObjectRootEx<CComSingleThreadModel>,
-	public VsWindowPaneFromResource<ZohoProjectsWindowPane, IDD_ZohoProjects_DLG>,
-	public VsWindowFrameEventSink<ZohoProjectsWindowPane>,
+	public VsWindowPaneFromResource<AuthorizationWindowPane, IDD_ZohoProjects_DLG>,
+	public VsWindowFrameEventSink<AuthorizationWindowPane>,
 	public VSL::ISupportErrorInfoImpl<
 		InterfaceSupportsErrorInfoList<IVsWindowPane,
 		InterfaceSupportsErrorInfoList<IVsWindowFrameNotify,
 		InterfaceSupportsErrorInfoList<IVsWindowFrameNotify3> > > >,
 		public IVsBroadcastMessageEvents
 {
-	VSL_DECLARE_NOT_COPYABLE(ZohoProjectsWindowPane)
+	VSL_DECLARE_NOT_COPYABLE(AuthorizationWindowPane)
 
 protected:
 
 	// Protected constructor called by CComObject<ZohoProjectsWindowPane>::CreateInstance.
-	ZohoProjectsWindowPane() :
+	AuthorizationWindowPane() :
 		VsWindowPaneFromResource(),
 		m_hBackground(nullptr),
 		m_BroadcastCookie(VSCOOKIE_NIL)
 	{}
 
-	~ZohoProjectsWindowPane() {}
+	~AuthorizationWindowPane() {}
 	
 public:
 
-BEGIN_COM_MAP(ZohoProjectsWindowPane)
+BEGIN_COM_MAP(AuthorizationWindowPane)
 	COM_INTERFACE_ENTRY(IVsWindowPane)
 	COM_INTERFACE_ENTRY(IVsWindowFrameNotify)
 	COM_INTERFACE_ENTRY(IVsWindowFrameNotify3)
@@ -52,8 +52,7 @@ BEGIN_COM_MAP(ZohoProjectsWindowPane)
 	COM_INTERFACE_ENTRY(IVsBroadcastMessageEvents)
 END_COM_MAP()
 
-BEGIN_MSG_MAP(ZohoProjectsWindowPane)
-	COMMAND_HANDLER(IDC_CLICKME_BTN, BN_CLICKED, OnButtonClick)
+BEGIN_MSG_MAP(AuthorizationWindowPane)
 	MESSAGE_HANDLER(WM_CTLCOLORDLG, OnCtlColorDlg)
 END_MSG_MAP()
 
@@ -62,7 +61,7 @@ END_MSG_MAP()
 	// the event sink by siting it.
 	void PostSited(IVsPackageEnums::SetSiteResult /*result*/)
 	{
-		VsWindowFrameEventSink<ZohoProjectsWindowPane>::SetSite(GetVsSiteCache());
+		VsWindowFrameEventSink<AuthorizationWindowPane>::SetSite(GetVsSiteCache());
 		CComPtr<IVsShell> spShell = GetVsSiteCache().GetCachedService<IVsShell, SID_SVsShell>();
 		spShell->AdviseBroadcastMessages(this, &m_BroadcastCookie);
 		InitVSColors();
@@ -89,45 +88,9 @@ END_MSG_MAP()
 	// Callback function called by ToolWindowBase when the size of the window changes.
 	void OnFrameSize(int x, int y, int w, int h)
 	{
-		// Center button.
-		CWindow button(this->GetDlgItem(IDC_CLICKME_BTN));
-		RECT buttonRectangle;
-		button.GetWindowRect(&buttonRectangle);
-
-		OffsetRect(&buttonRectangle, -buttonRectangle.left, -buttonRectangle.top);
-
-		int iLeft = (w - buttonRectangle.right) / 2; 
-		if (iLeft <= 0)
-		{
-			iLeft = 5;
-		}
-
-		int iTop = (h - buttonRectangle.bottom) / 2; 
-		if (iTop <= 0)
-		{
-			iTop = 5;
-		}
-
-		button.SetWindowPos(NULL, iLeft, iTop, 0, 0, SWP_NOSIZE);
-	}
-
-	LRESULT OnButtonClick(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& bHandled)
-	{
-		// Load the message from the resources.
-		CComBSTR strMessage;
-		VSL_CHECKBOOL_GLE(strMessage.LoadStringW(_AtlBaseModule.GetResourceInstance(), IDS_BUTTONCLICK_MESSAGE));
-
-		// Get the title of the message box (it is the same as the tool window's title).
-		CComBSTR strTitle;
-		VSL_CHECKBOOL_GLE(strTitle.LoadStringW(_AtlBaseModule.GetResourceInstance(), IDS_WINDOW_TITLE));
-
-		// Get the UI Shell service.
-		CComPtr<IVsUIShell> spIVsUIShell = GetVsSiteCache().GetCachedService<IVsUIShell, SID_SVsUIShell>();
-		LONG lResult;
-		VSL_CHECKHRESULT(spIVsUIShell->ShowMessageBox(0, GUID_NULL, strTitle, strMessage, NULL, 0, OLEMSGBUTTON_OK, OLEMSGDEFBUTTON_FIRST, OLEMSGICON_INFO, FALSE, &lResult));
-
-		bHandled = TRUE;
-		return 0;
+		// Center browser.
+		CWindow browser(this->GetDlgItem(IDC_BROWSER));
+		browser.SetWindowPos(NULL, 0, 0, w, h, SWP_NOMOVE);
 	}
 
 	// Handled to set the color that should be used to draw the background of the Window Pane.
@@ -190,14 +153,14 @@ private:
 };
 
 
-class ZohoProjectsToolWindow :
-	public VSL::ToolWindowBase<ZohoProjectsToolWindow>
+class AuthorizationWindow :
+	public VSL::ToolWindowBase<AuthorizationWindow>
 {
 public:
 	// Constructor of the tool window object.
 	// The goal of this constructor is to initialize the base class with the site cache
 	// of the owner package.
-	ZohoProjectsToolWindow(const PackageVsSiteCache& rPackageVsSiteCache):
+	AuthorizationWindow(const PackageVsSiteCache& rPackageVsSiteCache):
 		ToolWindowBase(rPackageVsSiteCache)
 	{
 	}
@@ -233,8 +196,8 @@ public:
 		VSL_CHECKBOOLEAN_EX(m_spView == NULL, E_UNEXPECTED, IDS_E_GETVIEWOBJECT_CALLED_AGAIN);
 
 		// Create the object that implements the window pane for this tool window.
-		CComObject<ZohoProjectsWindowPane>* pViewObject;
-		VSL_CHECKHRESULT(CComObject<ZohoProjectsWindowPane>::CreateInstance(&pViewObject));
+		CComObject<AuthorizationWindowPane>* pViewObject;
+		VSL_CHECKHRESULT(CComObject<AuthorizationWindowPane>::CreateInstance(&pViewObject));
 
 		// Get the pointer to IUnknown for the window pane.
 		HRESULT hr = pViewObject->QueryInterface(IID_IUnknown, (void**)&m_spView);

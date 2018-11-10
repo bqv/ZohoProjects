@@ -22,6 +22,7 @@ const std::string ZohoProjects::scopes[] = {
 	"ZohoProjects.users.ALL",
 	"ZohoProjects.users.ALL",
 };
+const std::string ZohoProjects::redirectUrl = "http://localhost:8702";
 
 ZohoProjects::ZohoProjects()
 {
@@ -30,15 +31,19 @@ ZohoProjects::ZohoProjects()
 std::string ZohoProjects::authorizationUrl()
 {
 	std::ostringstream oss;
-	oss << "http://accounts.zoho.com/oauth/v2/auth";
-	oss << "?scope=" << std::accumulate(scopes, scopes + sizeof(scopes), std::string(),
+	oss << "https://accounts.zoho.com/oauth/v2/auth";
+	oss << "?scope=" << std::accumulate(std::begin(scopes), std::end(scopes), std::string(),
 		[](const std::string& a, const std::string& b) -> std::string {
 			return a + (a.length() > 0 ? "," : "") + b;
 		});
-	oss << "&client_id=" << clientId;
-	oss << "&response_type=" << "code";
 	oss << "&access_type=" << "offline";
-	oss << "&redirect_uri=" << "http://zoho.com";
 	oss << "&prompt=" << "consent";
+	return oss.str();
+}
+
+std::string ZohoProjects::tokenUrl()
+{
+	std::ostringstream oss;
+	oss << "https://accounts.zoho.com/oauth/v2/token";
 	return oss.str();
 }

@@ -27,6 +27,9 @@
     <ClCompile Include="ZohoProjects.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="OAuth2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommonIncludes.h">
@@ -44,10 +47,13 @@
     <ClInclude Include="StdAfx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ManagementWindow.h">
+    <ClInclude Include="ZohoProjects.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ZohoProjects.h">
+    <ClInclude Include="AuthorizationWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OAuth2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

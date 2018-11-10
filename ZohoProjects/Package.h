@@ -13,7 +13,7 @@
 #include "..\ZohoProjectsUI\CommandIds.h"
 
 
-#include "ManagementWindow.h"
+#include "AuthorizationWindow.h"
 #include <commctrl.h>
 
 
@@ -123,7 +123,7 @@ void OnMyCommand(CommandHandler* /*pSender*/, DWORD /*flags*/, VARIANT* /*pIn*/,
 
 
 private:
-    ZohoProjectsToolWindow m_MyToolWindow;
+    AuthorizationWindow m_MyToolWindow;
 
 
 };
