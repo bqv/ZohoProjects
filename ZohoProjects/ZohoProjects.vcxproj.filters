@@ -24,10 +24,10 @@
     <ClCompile Include="StdAfx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ZohoProjects.cpp">
+    <ClCompile Include="OAuth2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OAuth2.cpp">
+    <ClCompile Include="Zoho.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,13 +47,13 @@
     <ClInclude Include="StdAfx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ZohoProjects.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="AuthorizationWindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="OAuth2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Zoho.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

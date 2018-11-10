@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "OAuth2.h"
 
-#include "ZohoProjects.h"
+#include "Zoho.h"
 
 namespace oauth2
 {
@@ -29,7 +29,7 @@ namespace oauth2
                 });
 
 				web::http::http_response response(web::http::status_codes::TemporaryRedirect);
-				response.headers().add(U("Location"), utility::conversions::to_string_t(ZohoProjects::zohoUrl));
+				response.headers().add(U("Location"), utility::conversions::to_string_t(zoho::accounts_url));
 				request.reply(response);
 
                 m_resplock.unlock();

@@ -1,14 +1,14 @@
 #include "stdafx.h"
-#include "ZohoProjects.h"
+#include "Zoho.h"
 
 #include <vector>
 #include <sstream>
 #include <numeric>
 
-const std::string ZohoProjects::baseUrl = "https://projectsapi.zoho.com/restapi";
-const std::string ZohoProjects::clientId = "1000.0ESNDLDTNIT733894WBY544KIGZAEA";
-const std::string ZohoProjects::clientSecret = "15300e4a0f75ec7f400e7442c3bb5ccd250e1e2a8b";
-const std::string ZohoProjects::scopes[] = {
+const std::string zoho::base_url = "https://projectsapi.zoho.com/restapi";
+const std::string zoho::client_id = "1000.0ESNDLDTNIT733894WBY544KIGZAEA";
+const std::string zoho::client_secret = "15300e4a0f75ec7f400e7442c3bb5ccd250e1e2a8b";
+const std::string zoho::scopes[] = {
 	"ZohoProjects.portals.READ",
 	"ZohoProjects.projects.ALL",
 	"ZohoProjects.activities.READ",
@@ -21,14 +21,14 @@ const std::string ZohoProjects::scopes[] = {
 	"ZohoProjects.forums.ALL",
 	"ZohoProjects.users.ALL",
 };
-const std::string ZohoProjects::redirectUrl = "http://localhost:8702";
-const std::string ZohoProjects::zohoUrl = "https://accounts.zoho.com";
+const std::string zoho::redirect_url = "http://localhost:8702";
+const std::string zoho::accounts_url = "https://accounts.zoho.com";
 
-ZohoProjects::ZohoProjects()
+zoho::zoho()
 {
 }
 
-std::string ZohoProjects::authorizationUrl()
+std::string zoho::authorization_url()
 {
 	std::ostringstream oss;
 	oss << "https://accounts.zoho.com/oauth/v2/auth";
@@ -41,7 +41,7 @@ std::string ZohoProjects::authorizationUrl()
 	return oss.str();
 }
 
-std::string ZohoProjects::tokenUrl()
+std::string zoho::token_url()
 {
 	std::ostringstream oss;
 	oss << "https://accounts.zoho.com/oauth/v2/token";
