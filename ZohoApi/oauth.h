@@ -35,13 +35,16 @@ namespace oauth2
 		std::unique_ptr<codelistener> m_listener;
 		web::http::client::http_client_config m_http_config;
 		web::http::oauth2::experimental::oauth2_config m_oauth_config;
+		pplx::task_completion_event<bool> m_tce;
 
 		void open_browser_auth();
 		pplx::task<bool> authorization_code_flow();
+		pplx::task<bool> refresh_flow();
 
 	public:
 		session(utility::string_t, utility::string_t, utility::string_t, utility::string_t, utility::string_t);
 
-		web::http::client::http_client_config run();
+		web::http::client::http_client_config get();
+		void expire();
 	};
 }

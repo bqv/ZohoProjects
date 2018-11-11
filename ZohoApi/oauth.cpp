@@ -29,7 +29,7 @@ namespace oauth2
                 });
 
 				web::http::http_response response(web::http::status_codes::TemporaryRedirect);
-				response.headers().add(U("Location"), utility::conversions::to_string_t(zoho::accounts_url));
+				response.headers().add(U("Location"), utility::conversions::to_string_t(zoho::api::oauth::landing_url));
 				request.reply(response);
 
                 m_resplock.unlock();
@@ -69,11 +69,16 @@ namespace oauth2
 		m_oauth_config.set_http_basic_auth(false);
 	}
 
-	web::http::client::http_client_config session::run()
+	web::http::client::http_client_config session::get()
 	{
-		if (!m_oauth_config.token().is_valid_access_token())
+		if (!m_oauth_config.token().is_valid_access_token() || m_oauth_config.token().expires_in() <= 0)
 		{
-			if (authorization_code_flow().get())
+			if (!m_oauth_config.token().refresh_token().empty() && refresh_flow().get())
+			{
+				m_http_config.set_oauth2(m_oauth_config);
+				return m_http_config;
+			}
+			else if (authorization_code_flow().get())
 			{
 				m_http_config.set_oauth2(m_oauth_config);
 				return m_http_config;
@@ -110,5 +115,31 @@ namespace oauth2
 	{
 		open_browser_auth();
 		return m_listener->wait_code();
+	}
+
+	pplx::task<bool> session::refresh_flow()
+	{
+		m_oauth_config.token_from_refresh().then([this](pplx::task<void> token_task) -> void
+		{
+			try
+			{
+				token_task.wait();
+				m_tce.set(true);
+			}
+			catch (const web::http::oauth2::experimental::oauth2_exception& e)
+			{
+				ucout << "Error: " << e.what() << std::endl;
+				m_tce.set(false);
+			}
+		});
+        return pplx::create_task(m_tce);
+	}
+
+	void session::expire()
+	{
+		web::http::oauth2::experimental::oauth2_token token(m_oauth_config.token());
+		token.set_expires_in(0);
+		m_oauth_config.set_token(token);
+		m_http_config.set_oauth2(m_oauth_config);
 	}
 }
