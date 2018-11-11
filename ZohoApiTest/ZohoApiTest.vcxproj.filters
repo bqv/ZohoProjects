@@ -5,6 +5,9 @@
     <ClCompile Include="test_oauth.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
+    <ClCompile Include="test_zoho.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

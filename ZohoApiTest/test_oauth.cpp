@@ -25,5 +25,5 @@ TEST(OAuth, Code_Refresh) {
 	sess.get();
 	sess.expire();
 	web::http::client::http_client_config http_config = sess.get();
-	ASSERT_TRUE(http_config.oauth2()->is_enabled);
+	ASSERT_TRUE(http_config.oauth2()->is_enabled());
 }

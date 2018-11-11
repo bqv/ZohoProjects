@@ -1,13 +1,179 @@
 #pragma once
 
 #include <string>
-#include <optional>
+#include <vector>
+
+#include "oauth.h"
+
+#define JSON_GET_STRING(json, key, value) (json.has_field(U(key)) ? json.at(U(key)).as_string() : U(value))
+#define JSON_GET_BOOL(json, key, value) (json.has_field(U(key)) ? json.at(U(key)).as_bool() : value)
+#define JSON_GET_INTEGER(json, key, value) (json.has_field(U(key)) ? json.at(U(key)).as_integer() : value)
+#define JSON_GET_GET_STRING(json, key1, key2, value) (json.has_field(U(key1)) ? JSON_GET_STRING(json.at(U(key1)), key2, value) : U(value))
+#define JSON_GET_GET_INTEGER(json, key1, key2, value) (json.has_field(U(key1)) ? JSON_GET_INTEGER(json.at(U(key1)), key2, value) : value)
+#define JSON_GET_GET_GET_STRING(json, key1, key2, key3, value) (json.has_field(U(key1)) ? JSON_GET_GET_STRING(json.at(U(key1)), key2, key3, value) : U(value))
 
 namespace zoho
 {
+	class session : private oauth2::session
+	{
+	public:
+		session();
+
+		web::http::client::http_client client(std::string endpoint);
+	};
+
+	class codes
+	{
+	private:
+		codes() = delete;
+
+	public:
+		static bool is_success(web::http::status_code);
+	};
+
+	class entity
+	{
+	public:
+		const int id;
+
+		const std::string id_str()
+		{
+			return std::to_string(id);
+		}
+
+	protected:
+		entity(const int p_id);
+	};
+
+	class portal : public entity
+	{
+	public:
+		const utility::string_t name;
+		const bool is_default;
+		const utility::string_t gmt_time_zone;
+		const utility::string_t role;
+		struct
+		{
+			long templates;
+			long archived;
+			long active;
+		} const project_count;
+		struct
+		{
+			utility::string_t company_name;
+			utility::string_t website_url;
+			utility::string_t time_zone;
+			utility::string_t date_format;
+		} const settings;
+		struct
+		{
+			utility::string_t code;
+			utility::string_t language;
+			utility::string_t country;
+		} const locale;
+		struct
+		{
+			struct
+			{
+				utility::string_t url;
+			} project;
+		} const link;
+
+		portal(const web::json::value&);
+	};
+
+	struct project : public entity
+	{
+	public:
+		project() = delete;
+	};
+
+	struct milestone : public entity
+	{
+	public:
+		milestone() = delete;
+	};
+
+	struct tasklist : public entity
+	{
+	public:
+		tasklist() = delete;
+	};
+
+	struct task : public entity
+	{
+	public:
+		task() = delete;
+	};
+
+	template<class T, typename = std::enable_if<std::is_base_of<entity, T>::value>>
+	struct comment : public entity
+	{
+	public:
+		comment() = delete;
+	};
+
+	template<class T, typename = std::enable_if<std::is_base_of<entity, T>::value>>
+	struct attachment : public entity
+	{
+	public:
+		attachment() = delete;
+	};
+
+	template<class T, typename = std::enable_if<std::is_base_of<entity, T>::value>>
+	struct log : public entity
+	{
+	public:
+		log() = delete;
+	};
+
+	struct bug : public entity
+	{
+	public:
+		bug() = delete;
+	};
+
+	struct event : public entity
+	{
+	public:
+		event() = delete;
+	};
+
+	struct forum : public entity
+	{
+	public:
+		forum() = delete;
+	};
+
+	struct category : public entity
+	{
+	public:
+		category() = delete;
+	};
+
+	struct user : public entity
+	{
+	public:
+		user() = delete;
+	};
+
+	struct company : public entity
+	{
+	public:
+		company() = delete;
+	};
+
 	namespace api
 	{
-		const std::string base_url;
+		class exception : public std::exception
+		{
+		public:
+			const std::exception inner;
+			const std::string message;
+
+			exception(const std::exception&, const std::string&);
+			const char* what() const throw ();
+		};
 
 		class oauth
 		{
@@ -31,7 +197,9 @@ namespace zoho
 			portals() = delete;
 
 		public:
-			static std::string portals_endpoint();
+			inline static std::string portals_endpoint();
+
+			static std::vector<portal> all_portals(session&);
 		};
 
 		class projects
@@ -40,10 +208,10 @@ namespace zoho
 			projects() = delete;
 
 		public:
-			static std::string projects_endpoint(portal&);
-			static std::string project_endpoint(portal&, project&);
-			static std::string customfields_endpoint(portal&);
-			static std::string groups_endpoint(portal&);
+			inline static std::string projects_endpoint(portal&);
+			inline static std::string project_endpoint(portal&, project&);
+			inline static std::string customfields_endpoint(portal&);
+			inline static std::string groups_endpoint(portal&);
 		};
 
 		class dashboard
@@ -52,8 +220,8 @@ namespace zoho
 			dashboard() = delete;
 
 		public:
-			static std::string activities_endpoint(portal&, project&);
-			static std::string statuses_endpoint(portal&, project&);
+			inline static std::string activities_endpoint(portal&, project&);
+			inline static std::string statuses_endpoint(portal&, project&);
 		};
 
 		class milestones
@@ -62,9 +230,9 @@ namespace zoho
 			milestones() = delete;
 
 		public:
-			static std::string milestones_endpoint(portal&, project&);
-			static std::string milestone_endpoint(portal&, project&, milestone&);
-			static std::string status_endpoint(portal&, project&, milestone&);
+			inline static std::string milestones_endpoint(portal&, project&);
+			inline static std::string milestone_endpoint(portal&, project&, milestone&);
+			inline static std::string status_endpoint(portal&, project&, milestone&);
 		};
 
 		class tasklists
@@ -73,8 +241,8 @@ namespace zoho
 			tasklists() = delete;
 
 		public:
-			static std::string tasklists_endpoint(portal&, project&);
-			static std::string tasklist_endpoint(portal&, project&, tasklist&);
+			inline static std::string tasklists_endpoint(portal&, project&);
+			inline static std::string tasklist_endpoint(portal&, project&, tasklist&);
 		};
 
 		class tasks
@@ -83,18 +251,18 @@ namespace zoho
 			tasks() = delete;
 
 		public:
-			static std::string tasks_endpoint(portal&, project&);
-			static std::string tasklist_tasks_endpoint(portal&, project&, tasklist&);
-			static std::string task_endpoint(portal&, project&, task&);
-			static std::string reorder_endpoint(portal&, project&, task&);
-			static std::string subtasks_endpoint(portal&, project&, task&);
-			static std::string my_tasks_endpoint(portal&);
-			static std::string comments_endpoint(portal&, project&, task&);
-			static std::string comment_endpoint(portal&, project&, task&, comment<task>&);
-			static std::string attachments_endpoint(portal&, project&, task&);
-			static std::string attachment_endpoint(portal&, project&, task&, attachment<task>&);
-			static std::string layouts_endpoint(portal&);
-			static std::string layouts_endpoint(portal&, project&);
+			inline static std::string tasks_endpoint(portal&, project&);
+			inline static std::string tasklist_tasks_endpoint(portal&, project&, tasklist&);
+			inline static std::string task_endpoint(portal&, project&, task&);
+			inline static std::string reorder_endpoint(portal&, project&, task&);
+			inline static std::string subtasks_endpoint(portal&, project&, task&);
+			inline static std::string my_tasks_endpoint(portal&);
+			inline static std::string comments_endpoint(portal&, project&, task&);
+			inline static std::string comment_endpoint(portal&, project&, task&, comment<task>&);
+			inline static std::string attachments_endpoint(portal&, project&, task&);
+			inline static std::string attachment_endpoint(portal&, project&, task&, attachment<task>&);
+			inline static std::string layouts_endpoint(portal&);
+			inline static std::string layouts_endpoint(portal&, project&);
 		};
 
 		class timesheets
@@ -103,17 +271,17 @@ namespace zoho
 			timesheets() = delete;
 
 		public:
-			static std::string project_timelogs_endpoint(portal&, project&);
-			static std::string my_timelogs_endpoint(portal&);
-			static std::string task_timelogs_endpoint(portal&, project&, task&);
-			static std::string approve_task_timelogs_endpoint(portal&, project&, task&, log<task>&);
-			static std::string task_timelog_endpoint(portal&, project&, task&, log<task>&);
-			static std::string bug_timelogs_endpoint(portal&, project&, bug&);
-			static std::string approve_bug_timelogs_endpoint(portal&, project&, bug&, log<bug>&);
-			static std::string bug_timelog_endpoint(portal&, project&, bug&, log<bug>&);
-			static std::string general_timelogs_endpoint(portal&, project&);
-			static std::string approve_general_timelogs_endpoint(portal&, project&, log<project>&);
-			static std::string general_timelog_endpoint(portal&, project&, log<project>&);
+			inline static std::string project_timelogs_endpoint(portal&, project&);
+			inline static std::string my_timelogs_endpoint(portal&);
+			inline static std::string task_timelogs_endpoint(portal&, project&, task&);
+			inline static std::string approve_task_timelogs_endpoint(portal&, project&, task&, log<task>&);
+			inline static std::string task_timelog_endpoint(portal&, project&, task&, log<task>&);
+			inline static std::string bug_timelogs_endpoint(portal&, project&, bug&);
+			inline static std::string approve_bug_timelogs_endpoint(portal&, project&, bug&, log<bug>&);
+			inline static std::string bug_timelog_endpoint(portal&, project&, bug&, log<bug>&);
+			inline static std::string general_timelogs_endpoint(portal&, project&);
+			inline static std::string approve_general_timelogs_endpoint(portal&, project&, log<project>&);
+			inline static std::string general_timelog_endpoint(portal&, project&, log<project>&);
 		};
 
 		class bugs
@@ -122,21 +290,21 @@ namespace zoho
 			bugs() = delete;
 
 		public:
-			static std::string bugs_endpoint(portal&, project&);
-			static std::string bug_endpoint(portal&, project&, bug&);
-			static std::string comments_endpoint(portal&, project&);
-			static std::string comments_endpoint(portal&, project&, bug&);
-			static std::string comment_endpoint(portal&, project&, bug&, comment<bug>&);
-			static std::string timer_endpoint(portal&, project&, bug&);
-			static std::string customviews_endpoint(portal&, project&);
-			static std::string attachments_endpoint(portal&, project&, bug&);
-			static std::string resolution_endpoint(portal&, project&, bug&);
-			static std::string followers_endpoint(portal&, project&, bug&);
-			static std::string defaultfields_endpoint(portal&, project&);
-			static std::string customfields_endpoint(portal&, project&);
-			static std::string activities_endpoint(portal&, project&, bug&);
-			static std::string renamedfields_endpoint(portal&, project&);
-			static std::string my_bugs_endpoint(portal&);
+			inline static std::string bugs_endpoint(portal&, project&);
+			inline static std::string bug_endpoint(portal&, project&, bug&);
+			inline static std::string comments_endpoint(portal&, project&);
+			inline static std::string comments_endpoint(portal&, project&, bug&);
+			inline static std::string comment_endpoint(portal&, project&, bug&, comment<bug>&);
+			inline static std::string timer_endpoint(portal&, project&, bug&);
+			inline static std::string customviews_endpoint(portal&, project&);
+			inline static std::string attachments_endpoint(portal&, project&, bug&);
+			inline static std::string resolution_endpoint(portal&, project&, bug&);
+			inline static std::string followers_endpoint(portal&, project&, bug&);
+			inline static std::string defaultfields_endpoint(portal&, project&);
+			inline static std::string customfields_endpoint(portal&, project&);
+			inline static std::string activities_endpoint(portal&, project&, bug&);
+			inline static std::string renamedfields_endpoint(portal&, project&);
+			inline static std::string my_bugs_endpoint(portal&);
 		};
 
 		class events
@@ -145,8 +313,8 @@ namespace zoho
 			events() = delete;
 
 		public:
-			static std::string events_endpoint(portal&, project&);
-			static std::string event_endpoint(portal&, project&, event&);
+			inline static std::string events_endpoint(portal&, project&);
+			inline static std::string event_endpoint(portal&, project&, event&);
 		};
 
 		class forums
@@ -155,15 +323,15 @@ namespace zoho
 			forums() = delete;
 
 		public:
-			static std::string forums_endpoint(portal&, project&);
-			static std::string forum_endpoint(portal&, project&, forum&);
-			static std::string follow_endpoint(portal&, project&, forum&);
-			static std::string unfollow_endpoint(portal&, project&, forum&);
-			static std::string categories_endpoint(portal&, project&);
-			static std::string comments_endpoint(portal&, project&, forum&);
-			static std::string comment_endpoint(portal&, project&, forum&, comment<forum>&);
-			static std::string bestanswer_endpoint(portal&, project&, forum&, comment<forum>&);
-			static std::string category_endpoint(portal&, project&, category&);
+			inline static std::string forums_endpoint(portal&, project&);
+			inline static std::string forum_endpoint(portal&, project&, forum&);
+			inline static std::string follow_endpoint(portal&, project&, forum&);
+			inline static std::string unfollow_endpoint(portal&, project&, forum&);
+			inline static std::string categories_endpoint(portal&, project&);
+			inline static std::string comments_endpoint(portal&, project&, forum&);
+			inline static std::string comment_endpoint(portal&, project&, forum&, comment<forum>&);
+			inline static std::string bestanswer_endpoint(portal&, project&, forum&, comment<forum>&);
+			inline static std::string category_endpoint(portal&, project&, category&);
 		};
 
 		class users
@@ -172,108 +340,12 @@ namespace zoho
 			users() = delete;
 
 		public:
-			static std::string users_endpoint(portal&, project&);
-			static std::string user_endpoint(portal&, project&, user&);
-			static std::string avail_endpoint(portal&);
-			static std::string users_endpoint(portal&);
-			static std::string activation_endpoint(portal&);
-			static std::string company_endpoint(portal&, company&);
+			inline static std::string users_endpoint(portal&, project&);
+			inline static std::string user_endpoint(portal&, project&, user&);
+			inline static std::string avail_endpoint(portal&);
+			inline static std::string users_endpoint(portal&);
+			inline static std::string activation_endpoint(portal&);
+			inline static std::string company_endpoint(portal&, company&);
 		};
 	}
-
-	struct entity
-	{
-	public:
-		std::string id;
-		
-	protected:
-		entity() {};
-	};
-
-	struct portal : public entity
-	{
-	public:
-		portal() {};
-	};
-
-	struct project : public entity
-	{
-	public:
-		project() {};
-	};
-
-	struct milestone : public entity
-	{
-	public:
-		milestone() {};
-	};
-
-	struct tasklist : public entity
-	{
-	public:
-		tasklist() {};
-	};
-
-	struct task : public entity
-	{
-	public:
-		task() {};
-	};
-
-	template<class T, typename = std::enable_if<std::is_base_of<entity, T>::value>>
-	struct comment : public entity
-	{
-	public:
-		comment() {};
-	};
-
-	template<class T, typename = std::enable_if<std::is_base_of<entity, T>::value>>
-	struct attachment : public entity
-	{
-	public:
-		attachment() {};
-	};
-
-	template<class T, typename = std::enable_if<std::is_base_of<entity, T>::value>>
-	struct log : public entity
-	{
-	public:
-		log() {};
-	};
-
-	struct bug : public entity
-	{
-	public:
-		bug() {};
-	};
-
-	struct event : public entity
-	{
-	public:
-		event() {};
-	};
-
-	struct forum : public entity
-	{
-	public:
-		forum() {};
-	};
-
-	struct category : public entity
-	{
-	public:
-		category() {};
-	};
-
-	struct user : public entity
-	{
-	public:
-		user() {};
-	};
-
-	struct company : public entity
-	{
-	public:
-		company() {};
-	};
 }

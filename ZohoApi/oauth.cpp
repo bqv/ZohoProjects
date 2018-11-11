@@ -65,7 +65,7 @@ namespace oauth2
 	) : m_oauth_config(client_key, client_secret, auth_endpoint, token_endpoint, redirect_uri),
 		m_listener(new codelistener(redirect_uri, m_oauth_config))
 	{
-		m_oauth_config.set_bearer_auth(false);
+		m_oauth_config.set_bearer_auth(true);
 		m_oauth_config.set_http_basic_auth(false);
 	}
 
