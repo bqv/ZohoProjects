@@ -165,13 +165,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="api.h" />
+    <ClInclude Include="bug.h" />
+    <ClInclude Include="event.h" />
+    <ClInclude Include="forum.h" />
+    <ClInclude Include="milestone.h" />
     <ClInclude Include="oauth.h" />
+    <ClInclude Include="portal.h" />
+    <ClInclude Include="project.h" />
+    <ClInclude Include="task.h" />
+    <ClInclude Include="tasklist.h" />
+    <ClInclude Include="timesheet.h" />
+    <ClInclude Include="types.h" />
+    <ClInclude Include="user.h" />
+    <ClInclude Include="util.h" />
     <ClInclude Include="zoho.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="api.cpp" />
+    <ClCompile Include="bug.cpp" />
+    <ClCompile Include="forum.cpp" />
+    <ClCompile Include="milestone.cpp" />
     <ClCompile Include="oauth.cpp" />
+    <ClCompile Include="portal.cpp" />
+    <ClCompile Include="project.cpp" />
+    <ClCompile Include="event.cpp" />
+    <ClCompile Include="task.cpp" />
+    <ClCompile Include="tasklist.cpp" />
+    <ClCompile Include="timesheet.cpp" />
+    <ClCompile Include="types.cpp" />
+    <ClCompile Include="user.cpp" />
+    <ClCompile Include="util.cpp" />
     <ClCompile Include="zoho.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

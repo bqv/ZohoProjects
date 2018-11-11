@@ -2,6 +2,7 @@
 
 #include "../ZohoApi/oauth.h"
 #include "../ZohoApi/zoho.h"
+#include "../ZohoApi/api.h"
 #include "cpprest/http_client.h"
 
 TEST(OAuth, Code_Authentication) {
