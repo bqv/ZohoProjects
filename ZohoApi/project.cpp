@@ -38,6 +38,10 @@ namespace zoho
 		, name(JSON_GET_STRING(p_json, "name", ""))
 		, owner_id(JSON_GET_STRING(p_json, "owner_id", ""))
 		, role(JSON_GET_STRING(p_json, "role", ""))
+		, bug_count({
+			JSON_GET_GET_INTEGER(p_json, "bug_count", "open", 0),
+			JSON_GET_GET_INTEGER(p_json, "bug_count", "closed", 0),
+		  })
 	{
 		web::json::array array = JSON_GET_ARRAY(p_json, "custom_fields", web::json::value::array().as_array());
 		for (web::json::value item : array)
@@ -45,5 +49,23 @@ namespace zoho
 			web::json::object pair = item.as_object();
 			customfields.insert_or_assign(pair.begin()->first, pair.begin()->second.as_string());
 		}
+	}
+
+	customfield::customfield(const web::json::value& p_json)
+		: field_id(JSON_GET_STRING(p_json, "field_id", ""))
+		, is_visible(JSON_GET_BOOL(p_json, "is_visible", false))
+		, is_pii(JSON_GET_BOOL(p_json, "is_pii", false))
+		, is_encrypted(JSON_GET_BOOL(p_json, "is_encrypted", false))
+		, default_value(JSON_GET_STRING(p_json, "default_value", ""))
+		, id(JSON_GET_STRING(p_json, "id", ""))
+		, field_type(JSON_GET_STRING(p_json, "field_type", ""))
+		, field_name(JSON_GET_STRING(p_json, "field_name", ""))
+	{
+	}
+
+	group::group(const web::json::value& p_json)
+		: name(JSON_GET_STRING(p_json, "name", ""))
+		, id(JSON_GET_STRING(p_json, "id", ""))
+	{
 	}
 }

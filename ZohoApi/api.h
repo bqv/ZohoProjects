@@ -75,6 +75,28 @@ namespace zoho
 				const std::string& = "",
 				const std::string& = "",
 				const web::json::value& = web::json::value());
+			static project project_details(session&, portal&, project&);
+			static std::vector<customfield> get_customfields(session&, portal&);
+			static std::vector<group> get_groups(session&, portal&);
+			static project create_project(session&, portal&,
+				const std::string& name,
+				const id owner = 0,
+				const std::string& description = "",
+				const id template_id = 0,
+				const std::chrono::system_clock::time_point& start_date = std::chrono::system_clock::from_time_t(0),
+				const std::chrono::system_clock::time_point& end_date = std::chrono::system_clock::from_time_t(0),
+				const std::string strict_project = 0,
+				const std::map<std::string, std::string> custom_fields = {});
+			static project update_project(session&, portal&, project&,
+				const std::string& name,
+				const id owner = 0,
+				const std::string& description = "",
+				const id template_id = 0,
+				const std::chrono::system_clock::time_point& start_date = std::chrono::system_clock::from_time_t(0),
+				const std::chrono::system_clock::time_point& end_date = std::chrono::system_clock::from_time_t(0),
+				const std::string strict_project = 0,
+				const std::map<std::string, std::string> custom_fields = {});
+			static void delete_project(session&, portal&, project&);
 		};
 
 		class dashboard

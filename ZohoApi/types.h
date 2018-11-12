@@ -3,10 +3,12 @@
 #include <string>
 #include <vector>
 
-#include "cpprest/details/basic_types.h"
+#include "cpprest/json.h"
 
 namespace zoho
 {
+	typedef unsigned long long id;
+
 	class url
 	{
 	private:
@@ -18,19 +20,10 @@ namespace zoho
 		utility::string_t to_string();
 	};
 
-	class customfield
-	{
-	public:
-		customfield(const utility::string_t&, const utility::string_t&);
-
-		const utility::string_t key;
-		const utility::string_t value;
-	};
-
 	class entity
 	{
 	public:
-		const int id;
+		const id id;
 
 		const std::string id_str()
 		{

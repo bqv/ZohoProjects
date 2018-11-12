@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "types.h"
 
+#include "util.h"
+
 namespace zoho
 {
 	url::url(const utility::string_t& p_url)
@@ -12,12 +14,6 @@ namespace zoho
 	{
 		return m_url;
 	}
-
-	customfield::customfield(const utility::string_t& p_key, const utility::string_t& p_value)
-		: key(p_key), value(p_value)
-	{
-	}
-
 
 	entity::entity(const int p_id)
 		: id(p_id)

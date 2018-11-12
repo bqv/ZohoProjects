@@ -48,7 +48,36 @@ namespace zoho
 		utility::string_t name;
 		utility::string_t owner_id;
 		utility::string_t role;
+		struct
+		{
+			long open;
+			long closed;
+		} const bug_count;
 
 		project(const web::json::value&);
+	};
+
+	class customfield
+	{
+	public:
+		customfield(const web::json::value&);
+
+		const utility::string_t id;
+		const utility::string_t field_id;
+		const utility::string_t field_type;
+		const utility::string_t field_name;
+		const bool is_visible;
+		const bool is_pii;
+		const bool is_encrypted;
+		const utility::string_t default_value;
+	};
+
+	class group
+	{
+	public:
+		group(const web::json::value&);
+
+		const utility::string_t name;
+		const utility::string_t id;
 	};
 }
