@@ -4,7 +4,7 @@
 namespace zoho
 {
 	portal::portal(const web::json::value& p_json)
-		: entity::entity(JSON_GET_INTEGER(p_json, "id", -1))
+		: entity::entity(JSON_GET_LONG(p_json, "id", -1))
 		, name(JSON_GET_STRING(p_json, "name", ""))
 		, is_default(JSON_GET_BOOL(p_json, "default", false))
 		, gmt_time_zone(JSON_GET_STRING(p_json, "gmt_time_zone", ""))

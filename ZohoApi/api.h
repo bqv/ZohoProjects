@@ -7,6 +7,7 @@
 #include "zoho.h"
 #include "portal.h"
 #include "project.h"
+#include "dashboard.h"
 #include "milestone.h"
 #include "tasklist.h"
 #include "task.h"
@@ -79,23 +80,23 @@ namespace zoho
 			static std::vector<customfield> get_customfields(session&, portal&);
 			static std::vector<group> get_groups(session&, portal&);
 			static project create_project(session&, portal&,
-				const std::string& name,
-				const id owner = 0,
-				const std::string& description = "",
-				const id template_id = 0,
-				const std::chrono::system_clock::time_point& start_date = std::chrono::system_clock::from_time_t(0),
-				const std::chrono::system_clock::time_point& end_date = std::chrono::system_clock::from_time_t(0),
-				const std::string strict_project = 0,
-				const std::map<std::string, std::string> custom_fields = {});
+				const std::string&,
+				const id = 0,
+				const std::string& = "",
+				const id = 0,
+				const std::chrono::system_clock::time_point& = std::chrono::system_clock::from_time_t(0),
+				const std::chrono::system_clock::time_point& = std::chrono::system_clock::from_time_t(0),
+				const std::string& = "",
+				const std::map<std::string, std::string> = {});
 			static project update_project(session&, portal&, project&,
-				const std::string& name,
-				const id owner = 0,
-				const std::string& description = "",
-				const id template_id = 0,
-				const std::chrono::system_clock::time_point& start_date = std::chrono::system_clock::from_time_t(0),
-				const std::chrono::system_clock::time_point& end_date = std::chrono::system_clock::from_time_t(0),
-				const std::string strict_project = 0,
-				const std::map<std::string, std::string> custom_fields = {});
+				const std::string&,
+				const id = 0,
+				const std::string& = "",
+				const id = 0,
+				const std::chrono::system_clock::time_point& = std::chrono::system_clock::from_time_t(0),
+				const std::chrono::system_clock::time_point& = std::chrono::system_clock::from_time_t(0),
+				const std::string& = "",
+				const std::map<std::string, std::string> = {});
 			static void delete_project(session&, portal&, project&);
 		};
 
@@ -107,6 +108,15 @@ namespace zoho
 		public:
 			inline static std::string activities_endpoint(portal&, project&);
 			inline static std::string statuses_endpoint(portal&, project&);
+
+			static std::vector<activity> project_activities(session&, portal&, project&,
+				const int = 0,
+				const int = 0);
+			static std::vector<status> project_statuses(session&, portal&, project&,
+				const int = 0,
+				const int = 0);
+			static status add_status(session&, portal&, project&,
+				const std::string& = "");
 		};
 
 		class milestones

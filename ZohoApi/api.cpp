@@ -243,39 +243,39 @@ namespace zoho
 		}
 
 		project projects::create_project(session& p_sess, portal& p_portal,
-				const std::string& name,
-				const id owner,
-				const std::string& description,
-				const id template_id,
-				const std::chrono::system_clock::time_point& start_date,
-				const std::chrono::system_clock::time_point& end_date,
-				const std::string strict_project,
-				const std::map<std::string, std::string> custom_fields)
+				const std::string& p_name,
+				const id p_owner,
+				const std::string& p_description,
+				const id p_template_id,
+				const std::chrono::system_clock::time_point& p_start_date,
+				const std::chrono::system_clock::time_point& p_end_date,
+				const std::string& p_strict_project,
+				const std::map<std::string, std::string> p_custom_fields)
 		{
 			web::http::client::http_client client = p_sess.client(projects_endpoint(p_portal));
 			try
 			{
 				web::json::value params;
-				params[U("name")] = web::json::value::string(utility::conversions::to_string_t(name));
-				if (owner != 0) params[U("owner")] = web::json::value::number(owner);
-				if (!description.empty()) params[U("description")] = web::json::value::string(utility::conversions::to_string_t(description));
-				if (template_id != 0) params[U("template_id")] = web::json::value::number(template_id);
-				if (start_date.time_since_epoch != 0)
+				params[U("name")] = web::json::value::string(utility::conversions::to_string_t(p_name));
+				if (p_owner != 0) params[U("owner")] = web::json::value::number(p_owner);
+				if (!p_description.empty()) params[U("description")] = web::json::value::string(utility::conversions::to_string_t(p_description));
+				if (p_template_id != 0) params[U("template_id")] = web::json::value::number(p_template_id);
+				if (p_start_date.time_since_epoch != 0)
 				{
-					auto tt = std::chrono::system_clock::to_time_t(start_date);
+					auto tt = std::chrono::system_clock::to_time_t(p_start_date);
 					std::ostringstream oss;
 					oss << std::put_time(std::localtime(&tt), "%m-%d-%Y");
 					params[U("start_date")] = web::json::value::string(utility::conversions::to_string_t(oss.str()));
 				}
-				if (end_date.time_since_epoch != 0)
+				if (p_end_date.time_since_epoch != 0)
 				{
-					auto tt = std::chrono::system_clock::to_time_t(end_date);
+					auto tt = std::chrono::system_clock::to_time_t(p_end_date);
 					std::ostringstream oss;
 					oss << std::put_time(std::localtime(&tt), "%m-%d-%Y");
 					params[U("start_date")] = web::json::value::string(utility::conversions::to_string_t(oss.str()));
 				}
-				if (!strict_project.empty()) params[U("strict_project")] = web::json::value::string(utility::conversions::to_string_t(strict_project));
-				for (auto cf : custom_fields) params[utility::conversions::to_string_t(cf.first)] = web::json::value::string(utility::conversions::to_string_t(cf.second));
+				if (!p_strict_project.empty()) params[U("strict_project")] = web::json::value::string(utility::conversions::to_string_t(p_strict_project));
+				for (auto cf : p_custom_fields) params[utility::conversions::to_string_t(cf.first)] = web::json::value::string(utility::conversions::to_string_t(cf.second));
 				web::http::http_response response = client.request(web::http::methods::POST, U("/"), params).get();
 				web::json::value json = response.extract_json().get();
 				OutputDebugString(json.serialize().c_str());
@@ -296,39 +296,39 @@ namespace zoho
 		}
 
 		project projects::update_project(session& p_sess, portal& p_portal, project& p_project,
-				const std::string& name,
-				const id owner,
-				const std::string& description,
-				const id template_id,
-				const std::chrono::system_clock::time_point& start_date,
-				const std::chrono::system_clock::time_point& end_date,
-				const std::string strict_project,
-				const std::map<std::string, std::string> custom_fields)
+				const std::string& p_name,
+				const id p_owner,
+				const std::string& p_description,
+				const id p_template_id,
+				const std::chrono::system_clock::time_point& p_start_date,
+				const std::chrono::system_clock::time_point& p_end_date,
+				const std::string& p_strict_project,
+				const std::map<std::string, std::string> p_custom_fields)
 		{
-			web::http::client::http_client client = p_sess.client(project_endpoint(p_portal, p_project));
+			web::http::client::http_client client = p_sess.client(projects_endpoint(p_portal));
 			try
 			{
 				web::json::value params;
-				params[U("name")] = web::json::value::string(utility::conversions::to_string_t(name));
-				if (owner != 0) params[U("owner")] = web::json::value::number(owner);
-				if (!description.empty()) params[U("description")] = web::json::value::string(utility::conversions::to_string_t(description));
-				if (template_id != 0) params[U("template_id")] = web::json::value::number(template_id);
-				if (start_date.time_since_epoch != 0)
+				params[U("name")] = web::json::value::string(utility::conversions::to_string_t(p_name));
+				if (p_owner != 0) params[U("owner")] = web::json::value::number(p_owner);
+				if (!p_description.empty()) params[U("description")] = web::json::value::string(utility::conversions::to_string_t(p_description));
+				if (p_template_id != 0) params[U("template_id")] = web::json::value::number(p_template_id);
+				if (p_start_date.time_since_epoch != 0)
 				{
-					auto tt = std::chrono::system_clock::to_time_t(start_date);
+					auto tt = std::chrono::system_clock::to_time_t(p_start_date);
 					std::ostringstream oss;
 					oss << std::put_time(std::localtime(&tt), "%m-%d-%Y");
 					params[U("start_date")] = web::json::value::string(utility::conversions::to_string_t(oss.str()));
 				}
-				if (end_date.time_since_epoch != 0)
+				if (p_end_date.time_since_epoch != 0)
 				{
-					auto tt = std::chrono::system_clock::to_time_t(end_date);
+					auto tt = std::chrono::system_clock::to_time_t(p_end_date);
 					std::ostringstream oss;
 					oss << std::put_time(std::localtime(&tt), "%m-%d-%Y");
 					params[U("start_date")] = web::json::value::string(utility::conversions::to_string_t(oss.str()));
 				}
-				if (!strict_project.empty()) params[U("strict_project")] = web::json::value::string(utility::conversions::to_string_t(strict_project));
-				for (auto cf : custom_fields) params[utility::conversions::to_string_t(cf.first)] = web::json::value::string(utility::conversions::to_string_t(cf.second));
+				if (!p_strict_project.empty()) params[U("strict_project")] = web::json::value::string(utility::conversions::to_string_t(p_strict_project));
+				for (auto cf : p_custom_fields) params[utility::conversions::to_string_t(cf.first)] = web::json::value::string(utility::conversions::to_string_t(cf.second));
 				web::http::http_response response = client.request(web::http::methods::POST, U("/"), params).get();
 				web::json::value json = response.extract_json().get();
 				OutputDebugString(json.serialize().c_str());
@@ -353,7 +353,6 @@ namespace zoho
 			web::http::client::http_client client = p_sess.client(project_endpoint(p_portal, p_project));
 			try
 			{
-				web::json::value params;
 				web::http::http_response response = client.request(web::http::methods::DEL).get();
 				web::json::value json = response.extract_json().get();
 				OutputDebugString(json.serialize().c_str());
@@ -377,9 +376,104 @@ namespace zoho
 			return base_url + "/portal/" + p_portal.id_str() + "/projects/" + p_project.id_str() + "/activities/";
 		}
 
+		std::vector<activity> dashboard::project_activities(session& p_sess, portal& p_portal, project& p_project,
+			const int p_index,
+			const int p_range)
+		{
+			std::vector<activity> activities;
+			web::http::client::http_client client = p_sess.client(activities_endpoint(p_portal, p_project));
+			try
+			{
+				auto query = web::uri_builder();
+				if (p_index != 0) query.append_query(U("index"), utility::conversions::to_string_t(std::to_string(p_index)));
+				if (p_range != 0) query.append_query(U("range"), utility::conversions::to_string_t(std::to_string(p_range)));
+				web::http::http_response response = client.request(web::http::methods::GET).get();
+				web::json::value json = response.extract_json().get();
+				OutputDebugString(json.serialize().c_str());
+				if (codes::is_success(response.status_code()))
+				{
+					web::json::object object = json.as_object();
+					for (web::json::value item : json.as_object()[U("groups")].as_array())
+					{
+						activities.emplace_back(item);
+					}
+					return activities;
+				}
+				else
+				{
+					throw std::runtime_error(utility::conversions::to_utf8string(json.serialize()).c_str());
+				}
+			}
+			catch (const std::exception& e)
+			{
+				throw api::exception(e, e.what());
+			}
+		}
+
 		inline std::string dashboard::statuses_endpoint(portal& p_portal, project& p_project)
 		{
 			return base_url + "/portal/" + p_portal.id_str() + "/projects/" + p_project.id_str() + "/statuses/";
+		}
+
+		std::vector<status> dashboard::project_statuses(session& p_sess, portal& p_portal, project& p_project,
+			const int p_index,
+			const int p_range)
+		{
+			std::vector<status> statuses;
+			web::http::client::http_client client = p_sess.client(statuses_endpoint(p_portal, p_project));
+			try
+			{
+				auto query = web::uri_builder();
+				if (p_index != 0) query.append_query(U("index"), utility::conversions::to_string_t(std::to_string(p_index)));
+				if (p_range != 0) query.append_query(U("range"), utility::conversions::to_string_t(std::to_string(p_range)));
+				web::http::http_response response = client.request(web::http::methods::GET).get();
+				web::json::value json = response.extract_json().get();
+				OutputDebugString(json.serialize().c_str());
+				if (codes::is_success(response.status_code()))
+				{
+					web::json::object object = json.as_object();
+					for (web::json::value item : json.as_object()[U("groups")].as_array())
+					{
+						statuses.emplace_back(item);
+					}
+					return statuses;
+				}
+				else
+				{
+					throw std::runtime_error(utility::conversions::to_utf8string(json.serialize()).c_str());
+				}
+			}
+			catch (const std::exception& e)
+			{
+				throw api::exception(e, e.what());
+			}
+		}
+
+		status dashboard::add_status(session& p_sess, portal& p_portal, project& p_project,
+			const std::string& p_content)
+		{
+			web::http::client::http_client client = p_sess.client(statuses_endpoint(p_portal, p_project));
+			try
+			{
+				web::json::value params;
+				params[U("content")] = web::json::value::string(utility::conversions::to_string_t(p_content));
+				web::http::http_response response = client.request(web::http::methods::POST, U("/"), params).get();
+				web::json::value json = response.extract_json().get();
+				OutputDebugString(json.serialize().c_str());
+				if (codes::is_success(response.status_code()))
+				{
+					web::json::object object = json.as_object();
+					return json.as_object()[U("groups")].as_array()[0];
+				}
+				else
+				{
+					throw std::runtime_error(utility::conversions::to_utf8string(json.serialize()).c_str());
+				}
+			}
+			catch (const std::exception& e)
+			{
+				throw api::exception(e, e.what());
+			}
 		}
 
 		inline std::string milestones::milestones_endpoint(portal& p_portal, project& p_project)

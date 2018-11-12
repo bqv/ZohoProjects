@@ -4,7 +4,7 @@
 namespace zoho
 {
 	project::project(const web::json::value& p_json)
-		: entity::entity(JSON_GET_INTEGER(p_json, "id", -1))
+		: entity::entity(JSON_GET_LONG(p_json, "id", -1))
 		, created_date(std::chrono::duration(std::chrono::milliseconds(
 			JSON_GET_LONG(p_json, "created_date_long", -1))))
 		, is_bug_enabled(JSON_GET_BOOL(p_json, "IS_BUG_ENABLED", false))
