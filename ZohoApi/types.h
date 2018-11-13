@@ -31,7 +31,7 @@ namespace zoho
 		}
 
 	protected:
-		entity(const int p_id);
+		entity(const unsigned long long p_id);
 	};
 
 	template<class T, typename = std::enable_if<std::is_base_of<entity, T>::value>>

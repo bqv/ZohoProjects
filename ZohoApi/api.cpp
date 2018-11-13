@@ -5,6 +5,7 @@
 #include <sstream>
 #include <numeric>
 #include <iomanip>
+#include <ctime>
 
 #include "zoho.h"
 #include "types.h"
@@ -260,18 +261,22 @@ namespace zoho
 				if (p_owner != 0) params[U("owner")] = web::json::value::number(p_owner);
 				if (!p_description.empty()) params[U("description")] = web::json::value::string(utility::conversions::to_string_t(p_description));
 				if (p_template_id != 0) params[U("template_id")] = web::json::value::number(p_template_id);
-				if (p_start_date.time_since_epoch != 0)
+				if (p_start_date.time_since_epoch().count() != 0)
 				{
 					auto tt = std::chrono::system_clock::to_time_t(p_start_date);
+					struct tm time;
+					::localtime_s(&time, &tt);
 					std::ostringstream oss;
-					oss << std::put_time(std::localtime(&tt), "%m-%d-%Y");
+					oss << std::put_time(&time, "%m-%d-%Y");
 					params[U("start_date")] = web::json::value::string(utility::conversions::to_string_t(oss.str()));
 				}
-				if (p_end_date.time_since_epoch != 0)
+				if (p_end_date.time_since_epoch().count() != 0)
 				{
 					auto tt = std::chrono::system_clock::to_time_t(p_end_date);
+					struct tm time;
+					::localtime_s(&time, &tt);
 					std::ostringstream oss;
-					oss << std::put_time(std::localtime(&tt), "%m-%d-%Y");
+					oss << std::put_time(&time, "%m-%d-%Y");
 					params[U("start_date")] = web::json::value::string(utility::conversions::to_string_t(oss.str()));
 				}
 				if (!p_strict_project.empty()) params[U("strict_project")] = web::json::value::string(utility::conversions::to_string_t(p_strict_project));
@@ -313,18 +318,22 @@ namespace zoho
 				if (p_owner != 0) params[U("owner")] = web::json::value::number(p_owner);
 				if (!p_description.empty()) params[U("description")] = web::json::value::string(utility::conversions::to_string_t(p_description));
 				if (p_template_id != 0) params[U("template_id")] = web::json::value::number(p_template_id);
-				if (p_start_date.time_since_epoch != 0)
+				if (p_start_date.time_since_epoch().count() != 0)
 				{
 					auto tt = std::chrono::system_clock::to_time_t(p_start_date);
+					struct tm time;
+					::localtime_s(&time, &tt);
 					std::ostringstream oss;
-					oss << std::put_time(std::localtime(&tt), "%m-%d-%Y");
+					oss << std::put_time(&time, "%m-%d-%Y");
 					params[U("start_date")] = web::json::value::string(utility::conversions::to_string_t(oss.str()));
 				}
-				if (p_end_date.time_since_epoch != 0)
+				if (p_end_date.time_since_epoch().count() != 0)
 				{
 					auto tt = std::chrono::system_clock::to_time_t(p_end_date);
+					struct tm time;
+					::localtime_s(&time, &tt);
 					std::ostringstream oss;
-					oss << std::put_time(std::localtime(&tt), "%m-%d-%Y");
+					oss << std::put_time(&time, "%m-%d-%Y");
 					params[U("start_date")] = web::json::value::string(utility::conversions::to_string_t(oss.str()));
 				}
 				if (!p_strict_project.empty()) params[U("strict_project")] = web::json::value::string(utility::conversions::to_string_t(p_strict_project));

@@ -199,7 +199,7 @@
   <ItemGroup>
     <ClInclude Include="CommonIncludes.h" />
     <ClInclude Include="Guids.h" />
-    <ClInclude Include="AuthorizationWindow.h" />
+    <ClInclude Include="ProjectExplorer.h" />
     <ClInclude Include="Package.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="StdAfx.h" />

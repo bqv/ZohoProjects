@@ -12,16 +12,19 @@
 #define IDS_BUTTONCLICK_MESSAGE         123
 #define IDB_IMAGES                      300
 #define IDI_PACKAGE_ICON                400
+#define IDB_BITMAP1                     404
 #define IDD_ZohoProjects_DLG            800
+#define IDD_ZohoProjects_ProjectExplorer 800
 #define IDC_BROWSER                     1000
+#define IDC_ProjectTree                 1001
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        403
-#define _APS_NEXT_COMMAND_VALUE         40001
-#define _APS_NEXT_CONTROL_VALUE         1001
+#define _APS_NEXT_RESOURCE_VALUE        405
+#define _APS_NEXT_COMMAND_VALUE         40002
+#define _APS_NEXT_CONTROL_VALUE         1002
 #define _APS_NEXT_SYMED_VALUE           402
 #endif
 #endif

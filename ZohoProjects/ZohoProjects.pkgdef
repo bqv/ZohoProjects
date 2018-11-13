@@ -23,7 +23,7 @@
 
 [$RootKey$\ToolWindows\{78be790c-1903-490b-830b-a1880eda2fd2}]
 @="{aec201e1-fd9a-41df-bb44-937dd8c79a16}"
-"Name"="Management"
+"Name"="Project Explorer"
 "Float"="100,100,300,400"
 "Orientation"="Right"
 "Style"="Float"

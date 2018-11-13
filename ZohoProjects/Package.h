@@ -13,7 +13,7 @@
 #include "..\ZohoProjectsUI\CommandIds.h"
 
 
-#include "AuthorizationWindow.h"
+#include "ProjectExplorer.h"
 #include <commctrl.h>
 
 
@@ -51,7 +51,7 @@ VSL_DECLARE_NOT_COPYABLE(CZohoProjectsPackage)
 public:
 	CZohoProjectsPackage():
 		
-		m_MyToolWindow(GetVsSiteCache())
+		m_ProjectExplorer(GetVsSiteCache())
 	{
 	}
 	
@@ -79,22 +79,27 @@ public:
 // NOTE - the arguments passed to these macros can not have names longer then 30 characters
 // Definition of the commands handled by this package
 VSL_BEGIN_COMMAND_MAP()
-
     VSL_COMMAND_MAP_ENTRY(CLSID_ZohoProjectsCmdSet, zohoCreateTask, NULL, CommandHandler::ExecHandler(&OnMyCommand))
-    VSL_COMMAND_MAP_ENTRY(CLSID_ZohoProjectsCmdSet, zohoManagement, NULL, CommandHandler::ExecHandler(&OnMyTool))
+    VSL_COMMAND_MAP_ENTRY(CLSID_ZohoProjectsCmdSet, zohoProjectExplorer, NULL, CommandHandler::ExecHandler(&OnProjectExplorer))
+    VSL_COMMAND_MAP_ENTRY(CLSID_ZohoProjectExplorerCmdSet, zohoProjectExplorerToolbar, NULL, CommandHandler::ExecHandler(&OnProjectExplorerToolbar))
 VSL_END_VSCOMMAND_MAP()
 
 
 // The tool map implements IVsPackage::CreateTool that is called by VS to create a tool window 
 // when appropriate.
 VSL_BEGIN_TOOL_MAP()
-    VSL_TOOL_ENTRY(CLSID_guidPersistanceSlot, m_MyToolWindow.CreateAndShow())
+    VSL_TOOL_ENTRY(CLSID_guidPersistanceSlot, m_ProjectExplorer.CreateAndShow())
 VSL_END_TOOL_MAP()
 
 // Command handler called when the user selects the command to show the toolwindow.
-void OnMyTool(CommandHandler* /*pSender*/, DWORD /*flags*/, VARIANT* /*pIn*/, VARIANT* /*pOut*/)
+void OnProjectExplorer(CommandHandler* /*pSender*/, DWORD /*flags*/, VARIANT* /*pIn*/, VARIANT* /*pOut*/)
 {
-    m_MyToolWindow.CreateAndShow();
+    m_ProjectExplorer.CreateAndShow();
+}
+
+void OnProjectExplorerToolbar(CommandHandler* /*pSender*/, DWORD /*flags*/, VARIANT* /*pIn*/, VARIANT* /*pOut*/)
+{
+	OnMyCommand(NULL, NULL, NULL, NULL);
 }
 
 // Command handler called when the user selects the "My Command" command.
@@ -123,7 +128,7 @@ void OnMyCommand(CommandHandler* /*pSender*/, DWORD /*flags*/, VARIANT* /*pIn*/,
 
 
 private:
-    AuthorizationWindow m_MyToolWindow;
+    ProjectExplorer m_ProjectExplorer;
 
 
 };

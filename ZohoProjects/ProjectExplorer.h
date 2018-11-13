@@ -1,5 +1,5 @@
 ﻿//
-// MyToolWindow.h
+// ProjectExplorer.h
 //
 // This file contains the implementation of a tool window that hosts a .NET user control
 //
@@ -18,50 +18,61 @@ DEFINE_GUID(EnvironmentColorsCategory,
 
 #define VS_RGBA_TO_COLORREF(rgba) (rgba & 0x00FFFFFF)
 
-
-class AuthorizationWindowPane :
+class ProjectExplorerPane :
 	public CComObjectRootEx<CComSingleThreadModel>,
-	public VsWindowPaneFromResource<AuthorizationWindowPane, IDD_ZohoProjects_DLG>,
-	public VsWindowFrameEventSink<AuthorizationWindowPane>,
+	public VsWindowPaneFromResource<ProjectExplorerPane, IDD_ZohoProjects_ProjectExplorer>,
+	public VsWindowFrameEventSink<ProjectExplorerPane>,
 	public VSL::ISupportErrorInfoImpl<
 		InterfaceSupportsErrorInfoList<IVsWindowPane,
 		InterfaceSupportsErrorInfoList<IVsWindowFrameNotify,
 		InterfaceSupportsErrorInfoList<IVsWindowFrameNotify3> > > >,
-		public IVsBroadcastMessageEvents
+	public IVsBroadcastMessageEvents,
+	public IVsToolWindowToolbar
 {
-	VSL_DECLARE_NOT_COPYABLE(AuthorizationWindowPane)
+	VSL_DECLARE_NOT_COPYABLE(ProjectExplorerPane)
 
 protected:
 
-	// Protected constructor called by CComObject<ZohoProjectsWindowPane>::CreateInstance.
-	AuthorizationWindowPane() :
+	// Protected constructor called by CComObject<ProjectExplorerPane>::CreateInstance.
+	ProjectExplorerPane() :
 		VsWindowPaneFromResource(),
 		m_hBackground(nullptr),
 		m_BroadcastCookie(VSCOOKIE_NIL)
-	{}
+	{
+	}
 
-	~AuthorizationWindowPane() {}
+	~ProjectExplorerPane() {}
 	
 public:
 
-BEGIN_COM_MAP(AuthorizationWindowPane)
+BEGIN_COM_MAP(ProjectExplorerPane)
 	COM_INTERFACE_ENTRY(IVsWindowPane)
 	COM_INTERFACE_ENTRY(IVsWindowFrameNotify)
 	COM_INTERFACE_ENTRY(IVsWindowFrameNotify3)
 	COM_INTERFACE_ENTRY(ISupportErrorInfo)
 	COM_INTERFACE_ENTRY(IVsBroadcastMessageEvents)
+	COM_INTERFACE_ENTRY(IVsToolWindowToolbar)
 END_COM_MAP()
 
-BEGIN_MSG_MAP(AuthorizationWindowPane)
+BEGIN_MSG_MAP(ProjectExplorerPane)
 	MESSAGE_HANDLER(WM_CTLCOLORDLG, OnCtlColorDlg)
 END_MSG_MAP()
+
+	void InitToolbar()
+	{
+		CComPtr<IVsUIShell> spUIShell;
+		VSL_CHECKHRESULT(GetVsSiteCache().QueryService(SID_SVsUIShell, &spUIShell));
+		VSL_CHECKHRESULT(spUIShell->SetupToolbar(GetHWND(), (IVsToolWindowToolbar*)this, &m_ToolbarHost));
+		VSL_CHECKBOOLEAN(m_ToolbarHost != nullptr, E_UNEXPECTED);
+		VSL_CHECKHRESULT(m_ToolbarHost->AddToolbar(VSTWT_TOP, &CLSID_ZohoProjectExplorerCmdSet, zohoProjectExplorerToolbar));
+	}
 
 	// Function called by VsWindowPaneFromResource at the end of SetSite; at this point the
 	// window pane is constructed and sited and can be used, so this is where we can initialize
 	// the event sink by siting it.
 	void PostSited(IVsPackageEnums::SetSiteResult /*result*/)
 	{
-		VsWindowFrameEventSink<AuthorizationWindowPane>::SetSite(GetVsSiteCache());
+		VsWindowFrameEventSink<ProjectExplorerPane>::SetSite(GetVsSiteCache());
 		CComPtr<IVsShell> spShell = GetVsSiteCache().GetCachedService<IVsShell, SID_SVsShell>();
 		spShell->AdviseBroadcastMessages(this, &m_BroadcastCookie);
 		InitVSColors();
@@ -88,9 +99,6 @@ END_MSG_MAP()
 	// Callback function called by ToolWindowBase when the size of the window changes.
 	void OnFrameSize(int x, int y, int w, int h)
 	{
-		// Center browser.
-		CWindow browser(this->GetDlgItem(IDC_BROWSER));
-		browser.SetWindowPos(NULL, 0, 0, w, h, SWP_NOMOVE);
 	}
 
 	// Handled to set the color that should be used to draw the background of the Window Pane.
@@ -106,6 +114,18 @@ END_MSG_MAP()
 		}
 
 		return (LRESULT)m_hBackground;
+	}
+
+	// Inherited via IVsToolWindowToolbar
+	STDMETHOD(GetBorder)(RECT *prc) override
+	{
+		GetClientRect(prc);
+		return S_OK;
+	}
+
+	STDMETHOD(SetBorderSpace)(LPCBORDERWIDTHS pbw) override
+	{
+		return S_OK;
 	}
 
 	STDMETHOD(OnBroadcastMessage)(UINT uMsg, WPARAM /*wParam*/, LPARAM /*lParam*/)
@@ -150,17 +170,18 @@ private:
 
 	HBRUSH m_hBackground;
 	VSCOOKIE m_BroadcastCookie;
+	CComPtr<IVsToolWindowToolbarHost> m_ToolbarHost;
 };
 
 
-class AuthorizationWindow :
-	public VSL::ToolWindowBase<AuthorizationWindow>
+class ProjectExplorer :
+	public VSL::ToolWindowBase<ProjectExplorer>
 {
 public:
 	// Constructor of the tool window object.
 	// The goal of this constructor is to initialize the base class with the site cache
 	// of the owner package.
-	AuthorizationWindow(const PackageVsSiteCache& rPackageVsSiteCache):
+	ProjectExplorer(const PackageVsSiteCache& rPackageVsSiteCache):
 		ToolWindowBase(rPackageVsSiteCache)
 	{
 	}
@@ -181,7 +202,7 @@ public:
 	// Creation flags for this tool window.
 	VSCREATETOOLWIN GetCreationFlags() const
 	{
-		return CTW_fInitNew|CTW_fForceCreate;
+		return CTW_fInitNew|CTW_fForceCreate|CTW_fToolbarHost;
 	}
 
 	// Return the GUID of the persistence slot for this tool window.
@@ -196,8 +217,8 @@ public:
 		VSL_CHECKBOOLEAN_EX(m_spView == NULL, E_UNEXPECTED, IDS_E_GETVIEWOBJECT_CALLED_AGAIN);
 
 		// Create the object that implements the window pane for this tool window.
-		CComObject<AuthorizationWindowPane>* pViewObject;
-		VSL_CHECKHRESULT(CComObject<AuthorizationWindowPane>::CreateInstance(&pViewObject));
+		CComObject<ProjectExplorerPane>* pViewObject;
+		VSL_CHECKHRESULT(CComObject<ProjectExplorerPane>::CreateInstance(&pViewObject));
 
 		// Get the pointer to IUnknown for the window pane.
 		HRESULT hr = pViewObject->QueryInterface(IID_IUnknown, (void**)&m_spView);
@@ -226,6 +247,11 @@ public:
 			srpvt.intVal = 1;
 			GetIVsWindowFrame()->SetProperty(VSFPROPID_BitmapIndex, srpvt);
 		}
+
+		static_cast<ProjectExplorerPane*>(
+			static_cast<IVsWindowPane*>(
+				static_cast<IUnknown*>(
+					m_spView)))->InitToolbar();
 	}
 
 private:

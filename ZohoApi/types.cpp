@@ -15,7 +15,7 @@ namespace zoho
 		return m_url;
 	}
 
-	entity::entity(const int p_id)
+	entity::entity(const unsigned long long p_id)
 		: id(p_id)
 	{
 	}

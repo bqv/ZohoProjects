@@ -44,19 +44,27 @@
     group; your package should define its own command set in order to avoid collisions  
     with command ids defined by other packages. -->
 
+    <Menus>
+      <Menu guid="guidZohoProjectExplorerCmdSet" id="zohoProjectExplorerToolbar" type="ToolWindowToolbar">
+        <CommandFlag>DefaultDocked</CommandFlag>
+        <Strings>
+          <ButtonText>Test Toolbar</ButtonText>
+          <CommandName>Test Toolbar</CommandName>
+        </Strings>
+      </Menu>
+    </Menus>
     
     <!-- In this section you can define new menu groups. A menu group is a container for 
          other menus or buttons (commands); from a visual point of view you can see the 
          group as the part of a menu contained between two lines. The parent of a group 
          must be a menu. -->
     <Groups>
-
-      <Group guid="guidZohoProjectsCmdSet" id="MyMenuGroup" priority="0x0600">
+      <Group guid="guidZohoProjectsCmdSet" id="zohoMenuGroup" priority="0x0600">
         <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
       </Group>
-      
-
-
+      <Group guid="guidZohoProjectExplorerCmdSet" id="zohoProjectExplorerToolbarGroup" priority="0x0000">
+        <Parent guid="guidZohoProjectExplorerCmdSet" id="zohoProjectExplorerToolbar"/>
+      </Group>
     </Groups>
     
     <!--Buttons section. -->
@@ -72,22 +80,28 @@
           If you do not want an image next to your command, remove the Icon node /> -->
 
       <Button guid="guidZohoProjectsCmdSet" id="zohoCreateTask" priority="0x0100" type="Button">
-        <Parent guid="guidZohoProjectsCmdSet" id="MyMenuGroup" />
+        <Parent guid="guidZohoProjectsCmdSet" id="zohoMenuGroup" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
           <ButtonText>Create Task</ButtonText>
         </Strings>
       </Button>
 
-
-      <Button guid="guidZohoProjectsCmdSet" id="zohoManagement" priority="0x0100" type="Button">
+      <Button guid="guidZohoProjectsCmdSet" id="zohoProjectExplorer" priority="0x0100" type="Button">
         <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1"/>
         <Icon guid="guidImages" id="bmpPic2" />
         <Strings>
-          <ButtonText>Management</ButtonText>
+          <ButtonText>Project Explorer</ButtonText>
         </Strings>
       </Button>
 
+      <Button guid="guidZohoProjectExplorerCmdSet" id="zohoProjectExplorerCommand" priority="0x0100" type="Button">
+        <Parent guid="guidZohoProjectExplorerCmdSet" id="zohoProjectExplorerToolbarGroup"/>
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Invoke Test Command</ButtonText>
+        </Strings>
+      </Button>
 
     </Buttons>
    
@@ -103,8 +117,5 @@
     </Bitmaps>
  
   </Commands>
-
-
-
 
 </CommandTable>
