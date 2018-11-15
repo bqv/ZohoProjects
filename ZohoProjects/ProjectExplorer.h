@@ -27,7 +27,8 @@ class ProjectExplorerPane :
 		InterfaceSupportsErrorInfoList<IVsWindowFrameNotify,
 		InterfaceSupportsErrorInfoList<IVsWindowFrameNotify3> > > >,
 	public IVsBroadcastMessageEvents,
-	public IVsToolWindowToolbar
+	public IVsToolWindowToolbar,
+	public IVsWindowSearch
 {
 	VSL_DECLARE_NOT_COPYABLE(ProjectExplorerPane)
 
@@ -52,20 +53,12 @@ BEGIN_COM_MAP(ProjectExplorerPane)
 	COM_INTERFACE_ENTRY(ISupportErrorInfo)
 	COM_INTERFACE_ENTRY(IVsBroadcastMessageEvents)
 	COM_INTERFACE_ENTRY(IVsToolWindowToolbar)
+	COM_INTERFACE_ENTRY(IVsWindowSearch)
 END_COM_MAP()
 
 BEGIN_MSG_MAP(ProjectExplorerPane)
 	MESSAGE_HANDLER(WM_CTLCOLORDLG, OnCtlColorDlg)
 END_MSG_MAP()
-
-	void InitToolbar()
-	{
-		CComPtr<IVsUIShell> spUIShell;
-		VSL_CHECKHRESULT(GetVsSiteCache().QueryService(SID_SVsUIShell, &spUIShell));
-		VSL_CHECKHRESULT(spUIShell->SetupToolbar(GetHWND(), (IVsToolWindowToolbar*)this, &m_ToolbarHost));
-		VSL_CHECKBOOLEAN(m_ToolbarHost != nullptr, E_UNEXPECTED);
-		VSL_CHECKHRESULT(m_ToolbarHost->AddToolbar(VSTWT_TOP, &CLSID_ZohoProjectExplorerCmdSet, zohoProjectExplorerToolbar));
-	}
 
 	// Function called by VsWindowPaneFromResource at the end of SetSite; at this point the
 	// window pane is constructed and sited and can be used, so this is where we can initialize
@@ -128,6 +121,49 @@ END_MSG_MAP()
 		return S_OK;
 	}
 
+	// Inherited via IVsWindowSearch
+	STDMETHOD(get_SearchEnabled)(VARIANT_BOOL *pfEnabled) override
+	{
+		*pfEnabled = TRUE;
+		return S_OK;
+	}
+
+	STDMETHOD(get_Category)(GUID *pguidCategoryId) override
+	{
+		return S_OK;
+	}
+
+	STDMETHOD(CreateSearch)(VSCOOKIE dwCookie, IVsSearchQuery *pSearchQuery, IVsSearchCallback *pSearchCallback, IVsSearchTask **ppSearchTask) override
+	{
+		return S_OK;
+	}
+
+	STDMETHOD(ClearSearch)(void) override
+	{
+		return S_OK;
+	}
+
+	STDMETHOD(ProvideSearchSettings)(IVsUIDataSource *pSearchSettings) override
+	{
+		return S_OK;
+	}
+
+	STDMETHOD(get_SearchFiltersEnum)(IVsEnumWindowSearchFilters **ppEnum) override
+	{
+		return S_OK;
+	}
+
+	STDMETHOD(get_SearchOptionsEnum)(IVsEnumWindowSearchOptions **ppEnum) override
+	{
+		return S_OK;
+	}
+
+	STDMETHOD(OnNavigationKeyDown)(VSSEARCHNAVIGATIONKEY dwNavigationKey, VSUIACCELMODIFIERS dwModifiers, VARIANT_BOOL *pfHandled) override
+	{
+		return S_OK;
+	}
+
+	// Inherited via IVsWindowPane
 	STDMETHOD(OnBroadcastMessage)(UINT uMsg, WPARAM /*wParam*/, LPARAM /*lParam*/)
 	{
 		switch (uMsg)
@@ -170,9 +206,7 @@ private:
 
 	HBRUSH m_hBackground;
 	VSCOOKIE m_BroadcastCookie;
-	CComPtr<IVsToolWindowToolbarHost> m_ToolbarHost;
 };
-
 
 class ProjectExplorer :
 	public VSL::ToolWindowBase<ProjectExplorer>
@@ -194,7 +228,7 @@ public:
 		if (0 == strCaption.GetLength())
 		{
 			VSL_CHECKBOOL_GLE(
-				strCaption.LoadStringW(_AtlBaseModule.GetResourceInstance(), IDS_WINDOW_TITLE));
+				strCaption.LoadStringW(_AtlBaseModule.GetResourceInstance(), IDS_ProjectExplorer_Title));
 		}
 		return strCaption;
 	}
@@ -248,12 +282,32 @@ public:
 			GetIVsWindowFrame()->SetProperty(VSFPROPID_BitmapIndex, srpvt);
 		}
 
-		static_cast<ProjectExplorerPane*>(
-			static_cast<IVsWindowPane*>(
-				static_cast<IUnknown*>(
-					m_spView)))->InitToolbar();
+		/*VARIANT variant;
+		VSL_CHECKHRESULT(GetIVsWindowFrame()->GetProperty(VSFPROPID_DocView, &variant));
+		CComPtr<IUnknown> docview = variant.punkVal;
+		auto hw = static_cast<IVsUIHierarchyWindow*>(
+					static_cast<IUnknown*>(
+						docview));
+		CComPtr<IUnknown> page;
+		VSL_CHECKHRESULT(hw->Init((IVsUIHierarchy*)&hierarchy,
+			UIHWF_SupportToolWindowToolbars,
+			&page));
+		VSL_CHECKHRESULT(hw->AddUIHierarchy(&hierarchy, 0));
+
+		auto pane = static_cast<ProjectExplorerPane*>(
+						static_cast<IVsWindowPane*>(
+							static_cast<IUnknown*>(
+								page)));
+
+		CComPtr<IVsUIShell> spUIShell;
+		VSL_CHECKHRESULT(GetVsSiteCache().QueryService(SID_SVsUIShell, &spUIShell));
+		VSL_CHECKHRESULT(spUIShell->SetupToolbar(pane->GetHWND(), (IVsToolWindowToolbar*)pane, &m_ToolbarHost));
+		VSL_CHECKBOOLEAN(m_ToolbarHost != nullptr, E_UNEXPECTED);
+		VSL_CHECKHRESULT(m_ToolbarHost->AddToolbar(VSTWT_TOP, &CLSID_ZohoProjectExplorerCmdSet, zohoProjectExplorerToolbar));*/
 	}
 
 private:
 	CComPtr<IUnknown> m_spView;
+	CComPtr<IVsToolWindowToolbarHost> m_ToolbarHost;
+	//ProjectExplorerHierarchy hierarchy;
 };
