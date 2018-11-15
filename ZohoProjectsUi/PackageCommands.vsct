@@ -91,7 +91,7 @@
         <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1"/>
         <Icon guid="guidImages" id="bmpPic2" />
         <Strings>
-          <ButtonText>Project Explorer</ButtonText>
+          <ButtonText>Zoho Project Explorer</ButtonText>
         </Strings>
       </Button>
 

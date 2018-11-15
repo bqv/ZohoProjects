@@ -193,7 +193,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="..\ZohoApi\packages.config" />
     <None Include="ZohoProjects.def" />
   </ItemGroup>
   <ItemGroup>
@@ -213,16 +213,20 @@
   <ItemGroup>
     <ProjectReference Include="..\ZohoApi\ZohoApi.vcxproj">
       <Project>{aee1e511-bc91-4e23-a042-d02ca4f0ab76}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v15.0\VSSDK\Microsoft.VsSDK.Cpp.targets" />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v15.0\VSSDK\Microsoft.VsSDK.Cpp.Overrides.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\cpprestsdk.2.10.6\build\native\cpprestsdk.targets" Condition="Exists('..\packages\cpprestsdk.2.10.6\build\native\cpprestsdk.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
+    <Error Condition="!Exists('..\packages\cpprestsdk.2.10.6\build\native\cpprestsdk.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cpprestsdk.2.10.6\build\native\cpprestsdk.targets'))" />
   </Target>
 </Project>
