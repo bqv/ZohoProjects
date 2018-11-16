@@ -1,6 +1,8 @@
 #pragma once
 
 #include <mutex>
+
+#include "lib.h"
 #include "cpprest/http_client.h"
 
 #if defined(_WIN32) && !defined(__cplusplus_winrt)
@@ -14,7 +16,7 @@
 
 namespace oauth2
 {
-	class codelistener
+	class DLLEXPORT codelistener
 	{
 	private:
 		std::unique_ptr<web::http::experimental::listener::http_listener> m_listener;
@@ -29,7 +31,7 @@ namespace oauth2
 		pplx::task<bool> wait_code();
 	};
 
-	class session
+	class DLLEXPORT session
 	{
 	private:
 		std::unique_ptr<codelistener> m_listener;

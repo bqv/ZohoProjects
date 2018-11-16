@@ -3,13 +3,14 @@
 #include <string>
 #include <vector>
 
+#include "lib.h"
 #include "cpprest/json.h"
 
 namespace zoho
 {
 	typedef unsigned long long id;
 
-	class url
+	class DLLEXPORT url
 	{
 	private:
 		const utility::string_t m_url;
@@ -20,7 +21,7 @@ namespace zoho
 		utility::string_t to_string();
 	};
 
-	class entity
+	class DLLEXPORT entity
 	{
 	public:
 		const id id;
@@ -35,14 +36,14 @@ namespace zoho
 	};
 
 	template<class T, typename = std::enable_if<std::is_base_of<entity, T>::value>>
-	struct comment : public entity
+	struct DLLEXPORT comment : public entity
 	{
 	public:
 		comment() = delete;
 	};
 
 	template<class T, typename = std::enable_if<std::is_base_of<entity, T>::value>>
-	struct attachment : public entity
+	struct DLLEXPORT attachment : public entity
 	{
 	public:
 		attachment() = delete;

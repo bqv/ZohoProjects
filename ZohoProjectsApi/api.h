@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 
+#include "lib.h"
 #include "oauth.h"
 #include "zoho.h"
 #include "portal.h"
@@ -21,7 +22,7 @@ namespace zoho
 {
 	namespace api
 	{
-		class exception : public std::exception
+		class DLLEXPORT exception : public std::exception
 		{
 		public:
 			const std::exception inner;
@@ -31,7 +32,7 @@ namespace zoho
 			const char* what() const throw ();
 		};
 
-		class oauth
+		class DLLEXPORT oauth
 		{
 		private:
 			static const std::string scopes[];
@@ -47,7 +48,7 @@ namespace zoho
 			static const std::string landing_url;
 		};
 
-		class portals
+		class DLLEXPORT portals
 		{
 		private:
 			portals() = delete;
@@ -58,7 +59,7 @@ namespace zoho
 			static std::vector<portal> all_portals(session&);
 		};
 
-		class projects
+		class DLLEXPORT projects
 		{
 		private:
 			projects() = delete;
@@ -100,7 +101,7 @@ namespace zoho
 			static void delete_project(session&, portal&, project&);
 		};
 
-		class dashboard
+		class DLLEXPORT dashboard
 		{
 		private:
 			dashboard() = delete;
@@ -119,7 +120,7 @@ namespace zoho
 				const std::string& = "");
 		};
 
-		class milestones
+		class DLLEXPORT milestones
 		{
 		private:
 			milestones() = delete;
@@ -130,7 +131,7 @@ namespace zoho
 			inline static std::string status_endpoint(portal&, project&, milestone&);
 		};
 
-		class tasklists
+		class DLLEXPORT tasklists
 		{
 		private:
 			tasklists() = delete;
@@ -140,7 +141,7 @@ namespace zoho
 			inline static std::string tasklist_endpoint(portal&, project&, tasklist&);
 		};
 
-		class tasks
+		class DLLEXPORT tasks
 		{
 		private:
 			tasks() = delete;
@@ -160,7 +161,7 @@ namespace zoho
 			inline static std::string layouts_endpoint(portal&, project&);
 		};
 
-		class timesheets
+		class DLLEXPORT timesheets
 		{
 		private:
 			timesheets() = delete;
@@ -179,7 +180,7 @@ namespace zoho
 			inline static std::string general_timelog_endpoint(portal&, project&, log<project>&);
 		};
 
-		class bugs
+		class DLLEXPORT bugs
 		{
 		private:
 			bugs() = delete;
@@ -202,7 +203,7 @@ namespace zoho
 			inline static std::string my_bugs_endpoint(portal&);
 		};
 
-		class events
+		class DLLEXPORT events
 		{
 		private:
 			events() = delete;
@@ -212,7 +213,7 @@ namespace zoho
 			inline static std::string event_endpoint(portal&, project&, event&);
 		};
 
-		class forums
+		class DLLEXPORT forums
 		{
 		private:
 			forums() = delete;
@@ -229,7 +230,7 @@ namespace zoho
 			inline static std::string category_endpoint(portal&, project&, category&);
 		};
 
-		class users
+		class DLLEXPORT users
 		{
 		private:
 			users() = delete;

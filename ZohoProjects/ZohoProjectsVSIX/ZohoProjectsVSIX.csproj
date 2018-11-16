@@ -49,6 +49,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\ZohoProjectsApi\ZohoProjectsApi.vcxproj">
+      <Project>{aee1e511-bc91-4e23-a042-d02ca4f0ab76}</Project>
+      <Name>ZohoProjectsApi</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ZohoProjects.vcxproj">
       <Project>{f9d2dbfd-71ed-4559-9ea8-4547b8a17eed}</Project>
       <Name>ZohoProjects</Name>
@@ -72,81 +76,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\packages\cpprestsdk.2.10.6\installed\x64-windows\bin\boost_atomic-vc141-mt-x64-1_68.dll">
-      <Link>Libraries\boost_atomic-vc141-mt-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\cpprestsdk.2.10.6\installed\x64-windows\bin\boost_chrono-vc141-mt-x64-1_68.dll">
-      <Link>Libraries\boost_chrono-vc141-mt-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\cpprestsdk.2.10.6\installed\x64-windows\bin\boost_container-vc141-mt-x64-1_68.dll">
-      <Link>Libraries\boost_container-vc141-mt-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\cpprestsdk.2.10.6\installed\x64-windows\bin\boost_context-vc141-mt-x64-1_68.dll">
-      <Link>Libraries\boost_context-vc141-mt-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\cpprestsdk.2.10.6\installed\x64-windows\bin\boost_coroutine-vc141-mt-x64-1_68.dll">
-      <Link>Libraries\boost_coroutine-vc141-mt-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\cpprestsdk.2.10.6\installed\x64-windows\bin\boost_date_time-vc141-mt-x64-1_68.dll">
-      <Link>Libraries\boost_date_time-vc141-mt-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\cpprestsdk.2.10.6\installed\x64-windows\bin\boost_math_c99-vc141-mt-x64-1_68.dll">
-      <Link>Libraries\boost_math_c99-vc141-mt-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\cpprestsdk.2.10.6\installed\x64-windows\bin\boost_math_c99f-vc141-mt-x64-1_68.dll">
-      <Link>Libraries\boost_math_c99f-vc141-mt-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\cpprestsdk.2.10.6\installed\x64-windows\bin\boost_math_c99l-vc141-mt-x64-1_68.dll">
-      <Link>Libraries\boost_math_c99l-vc141-mt-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\cpprestsdk.2.10.6\installed\x64-windows\bin\boost_math_tr1-vc141-mt-x64-1_68.dll">
-      <Link>Libraries\boost_math_tr1-vc141-mt-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\cpprestsdk.2.10.6\installed\x64-windows\bin\boost_math_tr1f-vc141-mt-x64-1_68.dll">
-      <Link>Libraries\boost_math_tr1f-vc141-mt-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\cpprestsdk.2.10.6\installed\x64-windows\bin\boost_math_tr1l-vc141-mt-x64-1_68.dll">
-      <Link>Libraries\boost_math_tr1l-vc141-mt-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\cpprestsdk.2.10.6\installed\x64-windows\bin\boost_regex-vc141-mt-x64-1_68.dll">
-      <Link>Libraries\boost_regex-vc141-mt-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\cpprestsdk.2.10.6\installed\x64-windows\bin\boost_system-vc141-mt-x64-1_68.dll">
-      <Link>Libraries\boost_system-vc141-mt-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\cpprestsdk.2.10.6\installed\x64-windows\bin\boost_thread-vc141-mt-x64-1_68.dll">
-      <Link>Libraries\boost_thread-vc141-mt-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
     <Content Include="..\..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\boost_atomic-vc141-mt-x32-1_68.dll">
       <Link>Libraries\boost_atomic-vc141-mt-x32-1_68.dll</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -253,7 +182,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="cpprestsdk">
-      <Version>2.9.1.1</Version>
+      <Version>2.10.6</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -264,7 +264,7 @@ namespace zoho
 				if (p_start_date.time_since_epoch().count() != 0)
 				{
 					auto tt = std::chrono::system_clock::to_time_t(p_start_date);
-					struct tm time;
+					struct DLLEXPORT tm time;
 					::localtime_s(&time, &tt);
 					std::ostringstream oss;
 					oss << std::put_time(&time, "%m-%d-%Y");
@@ -273,7 +273,7 @@ namespace zoho
 				if (p_end_date.time_since_epoch().count() != 0)
 				{
 					auto tt = std::chrono::system_clock::to_time_t(p_end_date);
-					struct tm time;
+					struct DLLEXPORT tm time;
 					::localtime_s(&time, &tt);
 					std::ostringstream oss;
 					oss << std::put_time(&time, "%m-%d-%Y");
@@ -321,7 +321,7 @@ namespace zoho
 				if (p_start_date.time_since_epoch().count() != 0)
 				{
 					auto tt = std::chrono::system_clock::to_time_t(p_start_date);
-					struct tm time;
+					struct DLLEXPORT tm time;
 					::localtime_s(&time, &tt);
 					std::ostringstream oss;
 					oss << std::put_time(&time, "%m-%d-%Y");
@@ -330,7 +330,7 @@ namespace zoho
 				if (p_end_date.time_since_epoch().count() != 0)
 				{
 					auto tt = std::chrono::system_clock::to_time_t(p_end_date);
-					struct tm time;
+					struct DLLEXPORT tm time;
 					::localtime_s(&time, &tt);
 					std::ostringstream oss;
 					oss << std::put_time(&time, "%m-%d-%Y");

@@ -59,6 +59,7 @@
     <None Include="ZohoProjects.def">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <PkgdefFile Include="ZohoProjects.pkgdef">

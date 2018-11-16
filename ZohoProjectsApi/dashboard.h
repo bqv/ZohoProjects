@@ -2,13 +2,14 @@
 
 #include <chrono>
 
+#include "lib.h"
 #include "types.h"
 #include "util.h"
 #include "cpprest/json.h"
 
 namespace zoho
 {
-	class activity : entity
+	class DLLEXPORT activity : entity
 	{
 	public:
 		activity(const web::json::value&);
@@ -20,7 +21,7 @@ namespace zoho
 		const std::chrono::system_clock::time_point time;
 	};
 
-	class status : entity
+	class DLLEXPORT status : entity
 	{
 	public:
 		status(const web::json::value&);

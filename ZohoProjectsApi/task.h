@@ -1,10 +1,11 @@
 #pragma once
 
+#include "lib.h"
 #include "types.h"
 
 namespace zoho
 {
-	class task : public entity
+	class DLLEXPORT task : public entity
 	{
 	public:
 		task() = delete;

@@ -10,11 +10,11 @@
 #include <AtlWin.h>
 #include <VSLWindows.h>
 
-//#include "..\ZohoApi\project.h"
+#include "..\ZohoProjectsApi\project.h"
 
 #include "..\ZohoProjectsUI\Resource.h"
 
-/*class ProjectExplorerHierarchy :
+class ProjectExplorerHierarchy :
 	public IVsUIHierarchy
 {
 public:
@@ -228,7 +228,7 @@ public:
 
 private:
 	ULONG m_cRef;
-};*/
+};
 
 // {624ed9c3-bdfd-41fa-96c3-7c824ea32e3d}
 DEFINE_GUID(EnvironmentColorsCategory, 
@@ -505,7 +505,7 @@ public:
 			GetIVsWindowFrame()->SetProperty(VSFPROPID_BitmapIndex, srpvt);
 		}
 
-		/*VARIANT variant;
+		VARIANT variant;
 		VSL_CHECKHRESULT(GetIVsWindowFrame()->GetProperty(VSFPROPID_DocView, &variant));
 		CComPtr<IUnknown> docview = variant.punkVal;
 		auto hw = static_cast<IVsUIHierarchyWindow*>(
@@ -526,11 +526,11 @@ public:
 		VSL_CHECKHRESULT(GetVsSiteCache().QueryService(SID_SVsUIShell, &spUIShell));
 		VSL_CHECKHRESULT(spUIShell->SetupToolbar(pane->GetHWND(), (IVsToolWindowToolbar*)pane, &m_ToolbarHost));
 		VSL_CHECKBOOLEAN(m_ToolbarHost != nullptr, E_UNEXPECTED);
-		VSL_CHECKHRESULT(m_ToolbarHost->AddToolbar(VSTWT_TOP, &CLSID_ZohoProjectExplorerCmdSet, zohoProjectExplorerToolbar));*/
+		VSL_CHECKHRESULT(m_ToolbarHost->AddToolbar(VSTWT_TOP, &CLSID_ZohoProjectExplorerCmdSet, zohoProjectExplorerToolbar));
 	}
 
 private:
 	CComPtr<IUnknown> m_spView;
 	CComPtr<IVsToolWindowToolbarHost> m_ToolbarHost;
-	//ProjectExplorerHierarchy hierarchy;
+	ProjectExplorerHierarchy hierarchy;
 };

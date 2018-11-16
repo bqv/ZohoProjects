@@ -3,26 +3,27 @@
 #include <map>
 #include <chrono>
 
+#include "lib.h"
 #include "types.h"
 #include "util.h"
 #include "cpprest/json.h"
 
 namespace zoho
 {
-	class project : public entity
+	class DLLEXPORT project : public entity
 	{
 	public:
 		std::map<utility::string_t, utility::string_t> customfields;
 		std::chrono::system_clock::time_point created_date;
 		bool is_bug_enabled;
 		utility::string_t owner_name;
-		struct
+		struct DLLEXPORT
 		{
 			long open;
 			long closed;
 		} const task_count;
 		utility::string_t status;
-		struct
+		struct DLLEXPORT
 		{
 			url folder;
 			url milestone;
@@ -39,7 +40,7 @@ namespace zoho
 			url activity;
 		} const link;
 		utility::string_t workspace_id;
-		struct
+		struct DLLEXPORT
 		{
 			long open;
 			long closed;
@@ -48,7 +49,7 @@ namespace zoho
 		utility::string_t name;
 		utility::string_t owner_id;
 		utility::string_t role;
-		struct
+		struct DLLEXPORT
 		{
 			long open;
 			long closed;
@@ -57,7 +58,7 @@ namespace zoho
 		project(const web::json::value&);
 	};
 
-	class customfield
+	class DLLEXPORT customfield
 	{
 	public:
 		customfield(const web::json::value&);
@@ -72,7 +73,7 @@ namespace zoho
 		const utility::string_t default_value;
 	};
 
-	class group
+	class DLLEXPORT group
 	{
 	public:
 		group(const web::json::value&);

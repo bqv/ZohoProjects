@@ -1,16 +1,17 @@
 #pragma once
 
+#include "lib.h"
 #include "types.h"
 
 namespace zoho
 {
-	class user : public entity
+	class DLLEXPORT user : public entity
 	{
 	public:
 		user() = delete;
 	};
 
-	struct company : public entity
+	struct DLLEXPORT company : public entity
 	{
 	public:
 		company() = delete;

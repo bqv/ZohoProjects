@@ -4,12 +4,13 @@
 #include <vector>
 #include <ctime>
 
+#include "lib.h"
 #include "oauth.h"
 #include "types.h"
 
 namespace zoho
 {
-	class session : private oauth2::session
+	class DLLEXPORT session : private oauth2::session
 	{
 	public:
 		session();
@@ -17,7 +18,7 @@ namespace zoho
 		web::http::client::http_client client(std::string endpoint);
 	};
 
-	class codes
+	class DLLEXPORT codes
 	{
 	private:
 		codes() = delete;
