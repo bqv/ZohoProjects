@@ -120,7 +120,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_ProjectExplorer_Title        "Zoho Project Explorer"
+    IDS_ProjectExplorer_Title "Zoho Project Explorer"
     IDS_E_CANTCREATETOOL    "Unable to create the tool"
     IDS_E_GETVIEWOBJECT_CALLED_AGAIN 
                             "GetViewObject was unexpectedly called more then once."

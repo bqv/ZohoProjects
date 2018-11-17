@@ -6,7 +6,7 @@
 #define IDS_PRODUCTDETAILS              102
 #define IDS_COMPANYNAME                 103
 #define IDS_VERSION                     104
-#define IDS_ProjectExplorer_Title                120
+#define IDS_ProjectExplorer_Title       120
 #define IDS_E_CANTCREATETOOL            121
 #define IDS_E_GETVIEWOBJECT_CALLED_AGAIN 122
 #define IDS_BUTTONCLICK_MESSAGE         123
@@ -21,7 +21,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        405
 #define _APS_NEXT_COMMAND_VALUE         40002
-#define _APS_NEXT_CONTROL_VALUE         1000
+#define _APS_NEXT_CONTROL_VALUE         1001
 #define _APS_NEXT_SYMED_VALUE           402
 #endif
 #endif

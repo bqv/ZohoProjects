@@ -9,6 +9,9 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="Libraries">
+      <UniqueIdentifier>{cfabd47a-fb14-466f-8ec5-a56bb3f0a03c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -31,5 +34,62 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\boost_atomic-vc141-mt-x32-1_68.dll">
+      <Filter>Libraries</Filter>
+    </None>
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\boost_chrono-vc141-mt-x32-1_68.dll">
+      <Filter>Libraries</Filter>
+    </None>
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\boost_container-vc141-mt-x32-1_68.dll">
+      <Filter>Libraries</Filter>
+    </None>
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\boost_context-vc141-mt-x32-1_68.dll">
+      <Filter>Libraries</Filter>
+    </None>
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\boost_coroutine-vc141-mt-x32-1_68.dll">
+      <Filter>Libraries</Filter>
+    </None>
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\boost_date_time-vc141-mt-x32-1_68.dll">
+      <Filter>Libraries</Filter>
+    </None>
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\boost_math_c99-vc141-mt-x32-1_68.dll">
+      <Filter>Libraries</Filter>
+    </None>
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\boost_math_c99f-vc141-mt-x32-1_68.dll">
+      <Filter>Libraries</Filter>
+    </None>
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\boost_math_c99l-vc141-mt-x32-1_68.dll">
+      <Filter>Libraries</Filter>
+    </None>
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\boost_math_tr1-vc141-mt-x32-1_68.dll">
+      <Filter>Libraries</Filter>
+    </None>
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\boost_math_tr1f-vc141-mt-x32-1_68.dll">
+      <Filter>Libraries</Filter>
+    </None>
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\boost_math_tr1l-vc141-mt-x32-1_68.dll">
+      <Filter>Libraries</Filter>
+    </None>
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\boost_regex-vc141-mt-x32-1_68.dll">
+      <Filter>Libraries</Filter>
+    </None>
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\boost_system-vc141-mt-x32-1_68.dll">
+      <Filter>Libraries</Filter>
+    </None>
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\boost_thread-vc141-mt-x32-1_68.dll">
+      <Filter>Libraries</Filter>
+    </None>
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\cpprest_2_10.dll">
+      <Filter>Libraries</Filter>
+    </None>
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\libeay32.dll">
+      <Filter>Libraries</Filter>
+    </None>
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\ssleay32.dll">
+      <Filter>Libraries</Filter>
+    </None>
+    <None Include="..\packages\cpprestsdk.2.10.6\installed\x86-windows\bin\zlib1.dll">
+      <Filter>Libraries</Filter>
+    </None>
   </ItemGroup>
 </Project>

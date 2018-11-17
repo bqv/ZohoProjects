@@ -9,6 +9,7 @@
 #include <initguid.h>
 #include <AtlWin.h>
 #include <VSLWindows.h>
+#include <CommCtrl.h>
 
 #include "..\ZohoProjectsApi\project.h"
 
@@ -241,9 +242,9 @@ class ProjectExplorerPane :
 	public VsWindowPaneFromResource<ProjectExplorerPane, IDD_ZohoProjects_ProjectExplorer>,
 	public VsWindowFrameEventSink<ProjectExplorerPane>,
 	public VSL::ISupportErrorInfoImpl<
-		InterfaceSupportsErrorInfoList<IVsWindowPane,
-		InterfaceSupportsErrorInfoList<IVsWindowFrameNotify,
-		InterfaceSupportsErrorInfoList<IVsWindowFrameNotify3> > > >,
+	InterfaceSupportsErrorInfoList<IVsWindowPane,
+	InterfaceSupportsErrorInfoList<IVsWindowFrameNotify,
+	InterfaceSupportsErrorInfoList<IVsWindowFrameNotify3> > > >,
 	public IVsBroadcastMessageEvents,
 	public IVsToolWindowToolbar,
 	public IVsWindowSearch
@@ -251,10 +252,17 @@ class ProjectExplorerPane :
 	VSL_DECLARE_NOT_COPYABLE(ProjectExplorerPane)
 
 protected:
+	enum map
+	{
+		TreeView = 1,
+		Button = 2,
+	};
 
 	// Protected constructor called by CComObject<ProjectExplorerPane>::CreateInstance.
 	ProjectExplorerPane() :
 		VsWindowPaneFromResource(),
+		m_TreeView(WC_TREEVIEW, this, map::TreeView),
+		m_Button(WC_BUTTON, this, map::Button),
 		m_hBackground(nullptr),
 		m_BroadcastCookie(VSCOOKIE_NIL)
 	{
@@ -275,7 +283,10 @@ BEGIN_COM_MAP(ProjectExplorerPane)
 END_COM_MAP()
 
 BEGIN_MSG_MAP(ProjectExplorerPane)
+	MESSAGE_HANDLER(WM_INITDIALOG, OnInitDialog)
 	MESSAGE_HANDLER(WM_CTLCOLORDLG, OnCtlColorDlg)
+ALT_MSG_MAP(map::TreeView)
+ALT_MSG_MAP(map::Button)
 END_MSG_MAP()
 
 	// Function called by VsWindowPaneFromResource at the end of SetSite; at this point the
@@ -327,6 +338,26 @@ END_MSG_MAP()
 		return (LRESULT)m_hBackground;
 	}
 
+	LRESULT OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& bHandled)
+	{
+		RECT rc;
+		GetClientRect(&rc);
+		rc.right -= rc.left;
+		rc.bottom -= rc.top;
+		rc.top = rc.left = 0;
+
+		m_TreeView.Create(GetHWND(), rc, U("Tree View"),
+			TVS_HASBUTTONS | TVS_DISABLEDRAGDROP);
+		VSL_CHECKBOOLEAN(m_TreeView.m_hWnd != NULL, E_UNEXPECTED);
+
+		m_Button.Create(GetHWND(), RECT({20,20,50,50}), U("Button"),
+			0);
+		VSL_CHECKBOOLEAN(m_Button.m_hWnd != NULL, E_UNEXPECTED);
+
+		return FALSE;
+	}
+
+#pragma region
 	// Inherited via IVsToolWindowToolbar
 	STDMETHOD(GetBorder)(RECT *prc) override
 	{
@@ -338,7 +369,9 @@ END_MSG_MAP()
 	{
 		return S_OK;
 	}
+#pragma endregion IVsToolwindowToolbar
 
+#pragma region
 	// Inherited via IVsWindowSearch
 	STDMETHOD(get_SearchEnabled)(VARIANT_BOOL *pfEnabled) override
 	{
@@ -377,10 +410,13 @@ END_MSG_MAP()
 	}
 
 	STDMETHOD(OnNavigationKeyDown)(VSSEARCHNAVIGATIONKEY dwNavigationKey, VSUIACCELMODIFIERS dwModifiers, VARIANT_BOOL *pfHandled) override
+	// Inherited via IVsWindowSearch
 	{
 		return S_OK;
 	}
+#pragma endregion IVsWindowSearch
 
+#pragma region
 	// Inherited via IVsWindowPane
 	STDMETHOD(OnBroadcastMessage)(UINT uMsg, WPARAM /*wParam*/, LPARAM /*lParam*/)
 	{
@@ -395,6 +431,7 @@ END_MSG_MAP()
 
 		return S_OK;
 	}
+#pragma endregion IVsWindowPane
 
 private:
 	// Initialize colors that are used to render the Window Pane.
@@ -424,6 +461,8 @@ private:
 
 	HBRUSH m_hBackground;
 	VSCOOKIE m_BroadcastCookie;
+	CContainedWindow m_TreeView;
+	CContainedWindow m_Button;
 };
 
 class ProjectExplorer :
@@ -437,11 +476,6 @@ public:
 		ToolWindowBase(rPackageVsSiteCache)
 	{
 	}
-
-	/*const GUID GetLocalRegistryCLSIDViewObject() const
-	{
-		return CLSID_VSUIHIERARCHYWINDOW;
-	}*/
 
 	// Caption of the tool window.
 	const wchar_t* const GetCaption() const
@@ -508,19 +542,10 @@ public:
 		VARIANT variant;
 		VSL_CHECKHRESULT(GetIVsWindowFrame()->GetProperty(VSFPROPID_DocView, &variant));
 		CComPtr<IUnknown> docview = variant.punkVal;
-		auto hw = static_cast<IVsUIHierarchyWindow*>(
-					static_cast<IUnknown*>(
-						docview));
-		CComPtr<IUnknown> page;
-		VSL_CHECKHRESULT(hw->Init((IVsUIHierarchy*)&hierarchy,
-			UIHWF_SupportToolWindowToolbars,
-			&page));
-		VSL_CHECKHRESULT(hw->AddUIHierarchy(&hierarchy, 0));
-
 		auto pane = static_cast<ProjectExplorerPane*>(
 						static_cast<IVsWindowPane*>(
 							static_cast<IUnknown*>(
-								page)));
+								docview)));
 
 		CComPtr<IVsUIShell> spUIShell;
 		VSL_CHECKHRESULT(GetVsSiteCache().QueryService(SID_SVsUIShell, &spUIShell));
