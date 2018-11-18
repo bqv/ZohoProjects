@@ -77,11 +77,13 @@ namespace oauth2
 			if (!m_oauth_config.token().refresh_token().empty() && refresh_flow().get())
 			{
 				m_http_config.set_oauth2(m_oauth_config);
+				callback(m_oauth_config.token());
 				return m_http_config;
 			}
 			else if (authorization_code_flow().get())
 			{
 				m_http_config.set_oauth2(m_oauth_config);
+				callback(m_oauth_config.token());
 				return m_http_config;
 			}
 			else
@@ -134,6 +136,10 @@ namespace oauth2
 			}
 		});
         return pplx::create_task(m_tce);
+	}
+
+	void session::callback(const web::http::oauth2::experimental::oauth2_token& token)
+	{
 	}
 
 	void session::expire()

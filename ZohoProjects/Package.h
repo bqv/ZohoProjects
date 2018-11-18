@@ -1,24 +1,20 @@
 ﻿// Package.h
-
 #pragma once
 
 #include <atlstr.h>
 #include <VSLCommandTarget.h>
 
-
-#include "resource.h"       // main symbols
+#include "Resource.h"       // main symbols
 #include "Guids.h"
-#include "..\ZohoProjectsUI\Resource.h"
 
+#include "..\ZohoProjectsUI\Resource.h"
 #include "..\ZohoProjectsUI\CommandIds.h"
 
-
+#include "Client.h"
 #include "ProjectExplorer.h"
 #include <commctrl.h>
 
-
 using namespace VSL;
-
 
 class ATL_NO_VTABLE CZohoProjectsPackage : 
 	// CComObjectRootEx and CComCoClass are used to implement a non-thread safe COM object, and 
@@ -30,7 +26,8 @@ class ATL_NO_VTABLE CZohoProjectsPackage :
 	public IOleCommandTargetImpl<CZohoProjectsPackage>,
 	// Provides consumers of this object with the ability to determine which interfaces support
 	// extended error information.
-	public ATL::ISupportErrorInfoImpl<&__uuidof(IVsPackage)>
+	public ATL::ISupportErrorInfoImpl<&__uuidof(IVsPackage)>,
+	public IZohoClientImpl
 {
 public:
 
@@ -40,6 +37,7 @@ BEGIN_COM_MAP(CZohoProjectsPackage)
 	COM_INTERFACE_ENTRY(IVsPackage)
 	COM_INTERFACE_ENTRY(IOleCommandTarget)
 	COM_INTERFACE_ENTRY(ISupportErrorInfo)
+	COM_INTERFACE_ENTRY(IZohoClient)
 END_COM_MAP()
 
 // COM objects typically should not be cloned, and this prevents cloning by declaring the 
@@ -49,16 +47,14 @@ END_COM_MAP()
 VSL_DECLARE_NOT_COPYABLE(CZohoProjectsPackage)
 
 public:
-	CZohoProjectsPackage():
-		
-		m_ProjectExplorer(GetVsSiteCache())
+	CZohoProjectsPackage()
+		: m_ProjectExplorer(GetVsSiteCache())
 	{
 	}
 	
 	~CZohoProjectsPackage()
 	{
 	}
-
 
 	// This function provides the error information if it is not possible to load
 	// the UI dll. It is for this reason that the resource IDS_E_BADINSTALL must
@@ -126,11 +122,8 @@ void OnMyCommand(CommandHandler* /*pSender*/, DWORD /*flags*/, VARIANT* /*pIn*/,
 	VSL_CHECKHRESULT(hr);
 }
 
-
 private:
     ProjectExplorer m_ProjectExplorer;
-
-
 };
 
 // This exposes CZohoProjectsPackage for instantiation via DllGetClassObject; however, an instance

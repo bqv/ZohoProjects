@@ -30,4 +30,3 @@ PackageModule _AtlModule;
 
 // Must come after declaration of _AtlModule and DEFAULT_REGISTRY_ROOT
 #include <VSLPackageDllEntryPoints.cpp>
-

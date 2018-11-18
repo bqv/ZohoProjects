@@ -11,7 +11,15 @@
 #include <VSLWindows.h>
 #include <CommCtrl.h>
 
-#include "..\ZohoProjectsApi\project.h"
+#include <shellAPI.h>
+#include <atlapp.h>
+#include <atlwin.h>
+#include <atlframe.h>
+#include <atlctrls.h>
+#include <atlctrlw.h>
+#include <atlctrlx.h>
+
+#include <Client.h>
 
 #include "..\ZohoProjectsUI\Resource.h"
 
@@ -30,205 +38,6 @@ public:
 		, childItem2(web::json::value::object())
 	{
 	}
-
-	zoho::project * GetItem(int itemid)
-	{
-		switch (itemid)
-		{
-			case VSITEMID_ROOT:
-				return &rootItem;
-			case 1:
-				return &childItem1;
-			case 2:
-				return &childItem2;
-		}
-		return NULL;
-	}
-
-	// Inherited via IVsUIHierarchy
-	STDMETHOD(QueryInterface)(REFIID riid, void ** ppvObject) override
-	{
-		// Always set out parameter to NULL, validating it first.
-		if (!ppvObject)
-			return E_INVALIDARG;
-		*ppvObject = NULL;
-		if (riid == IID_IUnknown || riid == IID_UIHierarchy)
-		{
-			// Increment the reference count and return the pointer.
-			*ppvObject = (LPVOID)this;
-			AddRef();
-			return NOERROR;
-		}
-		return E_NOINTERFACE;
-	}
-	STDMETHOD_(ULONG,AddRef)(void) override
-	{
-		InterlockedIncrement(&m_cRef);
-		return m_cRef;
-	}
-	STDMETHOD_(ULONG,Release)(void) override
-	{
-		ULONG ulRefCount = InterlockedDecrement(&m_cRef);
-		if (0 == m_cRef)
-		{
-			delete this;
-		}
-		return ulRefCount;
-	}
-	STDMETHOD(SetSite)(IServiceProvider * pSP) override 
-	{
-		m_serviceProvider = pSP;
-		return S_OK;
-	}
-	STDMETHOD(GetSite)(IServiceProvider ** ppSP) override 
-	{
-		m_serviceProvider->QueryService(IID_IOleManager, ppSP);
-		return S_OK;
-	}
-	STDMETHOD(QueryClose)(BOOL * pfCanClose) override 
-	{
-		*pfCanClose = TRUE;
-		return S_OK;
-	}
-	STDMETHOD(Close)(void) override 
-	{
-		return S_OK;
-	}
-	STDMETHOD(GetGuidProperty)(VSITEMID itemid, VSHPROPID propid, GUID * pguid) override 
-	{
-		memset(pguid, 0, sizeof(GUID));
-		return DISP_E_MEMBERNOTFOUND;
-	}
-	STDMETHOD(SetGuidProperty)(VSITEMID itemid, VSHPROPID propid, REFGUID rguid) override 
-	{
-		return E_NOTIMPL;
-	}
-	STDMETHOD(GetProperty)(VSITEMID itemid, VSHPROPID propid, VARIANT * pvar) override 
-	{
-		VariantClear(pvar);
-		switch (propid)
-		{
-			case VSHPROPID_CmdUIGuid:
-				*pvar = CComVariant(&CLSID_ZohoProjectsCmdSet);
-				break;
-
-			case (int)VSHPROPID_Parent:
-				if (itemid == VSITEMID_ROOT)
-					*pvar = CComVariant(VSITEMID_NIL);
-				else
-					*pvar = CComVariant(VSITEMID_ROOT);
-				break;
-
-			case (int)VSHPROPID_FirstChild:
-				if (itemid == VSITEMID_ROOT)
-					*pvar = CComVariant(childItem1.id);
-				else
-					*pvar = CComVariant(VSITEMID_NIL);
-				break;
-
-			case (int)VSHPROPID_NextSibling:
-				if (itemid == childItem1.id)
-					*pvar = CComVariant(childItem2.id);
-				else
-					*pvar = CComVariant(VSITEMID_NIL);
-				break;
-
-			case (int)VSHPROPID_Expandable:
-				if (itemid == VSITEMID_ROOT)
-					*pvar = CComVariant(true);
-				else
-					*pvar = CComVariant(false);
-				break;
-
-			case (int)VSHPROPID_IconImgList:
-			case (int)VSHPROPID_OpenFolderIconHandle:
-				*pvar = CComVariant((int)0);
-				break;
-
-			case (int)VSHPROPID_IconIndex:
-			case (int)VSHPROPID_OpenFolderIconIndex:
-				*pvar = CComVariant(0);
-				break;
-
-			case (int)VSHPROPID_Caption:
-			case (int)VSHPROPID_SaveName:
-				*pvar = CComVariant(0);
-				break;
-
-			case (int)VSHPROPID_ShowOnlyItemCaption:
-				*pvar = CComVariant(true);
-				break;
-
-			case (int)VSHPROPID_ParentHierarchy:
-				if (itemid == childItem1.id || itemid == childItem2.id)
-					*pvar = CComVariant(this);
-				break;
-		}
-
-		if (CComVariant() != *pvar)
-			return S_OK;
-
-		return DISP_E_MEMBERNOTFOUND;
-	}
-	STDMETHOD(SetProperty)(VSITEMID itemid, VSHPROPID propid, VARIANT var) override 
-	{
-		return E_NOTIMPL;
-	}
-	STDMETHOD(GetNestedHierarchy)(VSITEMID itemid, REFIID iidHierarchyNested, void ** ppHierarchyNested, VSITEMID * pitemidNested) override 
-	{
-		*ppHierarchyNested = NULL;
-		*pitemidNested = 0;
-		return E_NOTIMPL;
-	}
-	STDMETHOD(GetCanonicalName)(VSITEMID itemid, BSTR * pbstrName) override 
-	{
-		return E_INVALIDARG;
-	}
-	STDMETHOD(ParseCanonicalName)(LPCOLESTR pszName, VSITEMID * pitemid) override 
-	{
-		*pitemid = 0;
-		return E_NOTIMPL;
-	}
-	STDMETHOD(Unused0)(void) override 
-	{
-		return E_NOTIMPL;
-	}
-	STDMETHOD(AdviseHierarchyEvents)(IVsHierarchyEvents * pEventSink, VSCOOKIE * pdwCookie) override
-	{
-		*pdwCookie = 0;
-		return S_OK;
-	}
-	STDMETHOD(UnadviseHierarchyEvents)(VSCOOKIE dwCookie) override 
-	{
-		return S_OK;
-	}
-	STDMETHOD(Unused1)(void) override 
-	{
-		return E_NOTIMPL;
-	}
-	STDMETHOD(Unused2)(void) override 
-	{
-		return E_NOTIMPL;
-	}
-	STDMETHOD(Unused3)(void) override 
-	{
-		return E_NOTIMPL;
-	}
-	STDMETHOD(Unused4)(void) override 
-	{
-		return E_NOTIMPL;
-	}
-	STDMETHOD(QueryStatusCommand)(VSITEMID itemid, const GUID * pguidCmdGroup, ULONG cCmds, OLECMD prgCmds[], OLECMDTEXT * pCmdText) override 
-	{
-		return OLECMDERR_E_UNKNOWNGROUP;
-	}
-	STDMETHOD(ExecCommand)(VSITEMID itemid, const GUID * pguidCmdGroup, DWORD nCmdID, DWORD nCmdexecopt, VARIANT * pvaIn, VARIANT * pvaOut) override 
-	{
-		return OLECMDERR_E_NOTSUPPORTED;
-	}
-
-private:
-	ULONG m_cRef;
 };
 
 // {624ed9c3-bdfd-41fa-96c3-7c824ea32e3d}
@@ -254,8 +63,9 @@ class ProjectExplorerPane :
 protected:
 	enum map
 	{
-		TreeView = 1,
-		Button = 2,
+		Nil,
+		TreeView,
+		Button,
 	};
 
 	// Protected constructor called by CComObject<ProjectExplorerPane>::CreateInstance.
@@ -346,13 +156,17 @@ END_MSG_MAP()
 		rc.bottom -= rc.top;
 		rc.top = rc.left = 0;
 
-		m_TreeView.Create(GetHWND(), rc, U("Tree View"),
-			TVS_HASBUTTONS | TVS_DISABLEDRAGDROP);
-		VSL_CHECKBOOLEAN(m_TreeView.m_hWnd != NULL, E_UNEXPECTED);
+		CComQIPtr<IZohoClient> zoho = GetZohoClient();
+		if (SUCCEEDED(zoho->IsConnected()))
+		{
+			m_TreeView.Create(GetHWND(), rc, U("Tree View"),
+				WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | TVS_HASLINES | TVS_LINESATROOT | TVS_HASBUTTONS | TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS);
+			VSL_CHECKBOOLEAN(m_TreeView.m_hWnd != NULL, E_UNEXPECTED);
 
-		m_Button.Create(GetHWND(), RECT({20,20,50,50}), U("Button"),
-			0);
-		VSL_CHECKBOOLEAN(m_Button.m_hWnd != NULL, E_UNEXPECTED);
+			m_Button.Create(GetHWND(), RECT({ 20,20,50,50 }), U("Button"),
+				0);
+			VSL_CHECKBOOLEAN(m_Button.m_hWnd != NULL, E_UNEXPECTED);
+		}
 
 		return FALSE;
 	}
@@ -433,6 +247,17 @@ END_MSG_MAP()
 	}
 #pragma endregion IVsWindowPane
 
+protected:
+	CComQIPtr<IZohoClient> GetZohoClient()
+	{
+		IVsPackage *pPackage;
+		CComPtr<IVsShell> spShell = GetVsSiteCache().GetCachedService<IVsShell, SID_SVsShell>();
+		spShell->IsPackageLoaded(guidZohoProjectsPkg, &pPackage);
+		CComQIPtr<IZohoClient> pZohoClient(pPackage);
+		VSL_CHECKPOINTER(&pZohoClient, E_UNEXPECTED);
+		return pZohoClient;
+	}
+
 private:
 	// Initialize colors that are used to render the Window Pane.
 	void InitVSColors()
@@ -461,8 +286,8 @@ private:
 
 	HBRUSH m_hBackground;
 	VSCOOKIE m_BroadcastCookie;
-	CContainedWindow m_TreeView;
-	CContainedWindow m_Button;
+	CContainedWindowT<CTreeViewCtrl> m_TreeView;
+	CContainedWindowT<CButton> m_Button;
 };
 
 class ProjectExplorer :
@@ -557,5 +382,4 @@ public:
 private:
 	CComPtr<IUnknown> m_spView;
 	CComPtr<IVsToolWindowToolbarHost> m_ToolbarHost;
-	ProjectExplorerHierarchy hierarchy;
 };

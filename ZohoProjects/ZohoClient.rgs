@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {896cb552-5514-49c9-bdfc-e87b4a536bf3} = s 'ZohoClient class'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{a2d24c53-43b7-43d6-9005-79e623146c8f}'
+			Version = s '1.0'
+		}
+	}
+}
