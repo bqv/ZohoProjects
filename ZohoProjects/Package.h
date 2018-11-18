@@ -6,6 +6,7 @@
 
 #include "Resource.h"       // main symbols
 #include "Guids.h"
+#include "ZohoProjects.h"
 
 #include "..\ZohoProjectsUI\Resource.h"
 #include "..\ZohoProjectsUI\CommandIds.h"
@@ -27,7 +28,8 @@ class ATL_NO_VTABLE CZohoProjectsPackage :
 	// Provides consumers of this object with the ability to determine which interfaces support
 	// extended error information.
 	public ATL::ISupportErrorInfoImpl<&__uuidof(IVsPackage)>,
-	public IZohoClientImpl
+	// Provides the IZohoProjectsPackage implementation
+	public IZohoProjectsPackage
 {
 public:
 
@@ -37,7 +39,7 @@ BEGIN_COM_MAP(CZohoProjectsPackage)
 	COM_INTERFACE_ENTRY(IVsPackage)
 	COM_INTERFACE_ENTRY(IOleCommandTarget)
 	COM_INTERFACE_ENTRY(ISupportErrorInfo)
-	COM_INTERFACE_ENTRY(IZohoClient)
+	COM_INTERFACE_ENTRY(IZohoProjectsPackage)
 END_COM_MAP()
 
 // COM objects typically should not be cloned, and this prevents cloning by declaring the 
@@ -87,43 +89,52 @@ VSL_BEGIN_TOOL_MAP()
     VSL_TOOL_ENTRY(CLSID_guidPersistanceSlot, m_ProjectExplorer.CreateAndShow())
 VSL_END_TOOL_MAP()
 
-// Command handler called when the user selects the command to show the toolwindow.
-void OnProjectExplorer(CommandHandler* /*pSender*/, DWORD /*flags*/, VARIANT* /*pIn*/, VARIANT* /*pOut*/)
-{
-    m_ProjectExplorer.CreateAndShow();
-}
+	// Command handler called when the user selects the command to show the toolwindow.
+	void OnProjectExplorer(CommandHandler* /*pSender*/, DWORD /*flags*/, VARIANT* /*pIn*/, VARIANT* /*pOut*/)
+	{
+		m_ProjectExplorer.CreateAndShow();
+	}
 
-void OnProjectExplorerToolbar(CommandHandler* /*pSender*/, DWORD /*flags*/, VARIANT* /*pIn*/, VARIANT* /*pOut*/)
-{
-	OnMyCommand(NULL, NULL, NULL, NULL);
-}
+	void OnProjectExplorerToolbar(CommandHandler* /*pSender*/, DWORD /*flags*/, VARIANT* /*pIn*/, VARIANT* /*pOut*/)
+	{
+		OnMyCommand(NULL, NULL, NULL, NULL);
+	}
 
-// Command handler called when the user selects the "My Command" command.
-void OnMyCommand(CommandHandler* /*pSender*/, DWORD /*flags*/, VARIANT* /*pIn*/, VARIANT* /*pOut*/)
-{
-	// Get the string for the title of the message box from the resource dll.
-	CComBSTR bstrTitle;
-	VSL_CHECKBOOL_GLE(bstrTitle.LoadStringW(_AtlBaseModule.GetResourceInstance(), IDS_PROJNAME));
-	// Get a pointer to the UI Shell service to show the message box.
-	CComPtr<IVsUIShell> spUiShell = this->GetVsSiteCache().GetCachedService<IVsUIShell, SID_SVsUIShell>();
-	LONG lResult;
-	HRESULT hr = spUiShell->ShowMessageBox(
-	                             0,
-	                             CLSID_NULL,
-	                             bstrTitle,
-	                             W2OLE(L"Inside CZohoProjectsPackage::Exec"),
-	                             NULL,
-	                             0,
-	                             OLEMSGBUTTON_OK,
-	                             OLEMSGDEFBUTTON_FIRST,
-	                             OLEMSGICON_INFO,
-	                             0,
-	                             &lResult);
-	VSL_CHECKHRESULT(hr);
-}
+	// Command handler called when the user selects the "My Command" command.
+	void OnMyCommand(CommandHandler* /*pSender*/, DWORD /*flags*/, VARIANT* /*pIn*/, VARIANT* /*pOut*/)
+	{
+		// Get the string for the title of the message box from the resource dll.
+		CComBSTR bstrTitle;
+		VSL_CHECKBOOL_GLE(bstrTitle.LoadStringW(_AtlBaseModule.GetResourceInstance(), IDS_PROJNAME));
+		// Get a pointer to the UI Shell service to show the message box.
+		CComPtr<IVsUIShell> spUiShell = this->GetVsSiteCache().GetCachedService<IVsUIShell, SID_SVsUIShell>();
+		LONG lResult;
+		HRESULT hr = spUiShell->ShowMessageBox(
+									 0,
+									 CLSID_NULL,
+									 bstrTitle,
+									 W2OLE(L"Inside CZohoProjectsPackage::Exec"),
+									 NULL,
+									 0,
+									 OLEMSGBUTTON_OK,
+									 OLEMSGDEFBUTTON_FIRST,
+									 OLEMSGICON_INFO,
+									 0,
+									 &lResult);
+		VSL_CHECKHRESULT(hr);
+	}
+
+	STDMETHOD(GetClient)(LPVARIANT pvResult)
+	{
+		VariantClear(pvResult);
+		pvResult->vt = VT_RECORD;
+		pvResult->pvRecord = &m_client;
+		return S_OK;
+	}
 
 private:
     ProjectExplorer m_ProjectExplorer;
+	ZohoClient m_client;
 };
 
 // This exposes CZohoProjectsPackage for instantiation via DllGetClassObject; however, an instance

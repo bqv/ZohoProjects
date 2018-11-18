@@ -142,6 +142,7 @@
     <ClCompile Include="bug.cpp" />
     <ClCompile Include="dashboard.cpp" />
     <ClCompile Include="forum.cpp" />
+    <ClCompile Include="lib.cpp" />
     <ClCompile Include="milestone.cpp" />
     <ClCompile Include="oauth.cpp" />
     <ClCompile Include="portal.cpp" />
@@ -160,16 +161,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\CppRestSdk\CppRestSdk.vcxproj">
+      <Project>{2142fb7c-58b0-4043-a12c-87bc73575b01}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\packages\cpprestsdk.2.10.6\build\native\cpprestsdk.targets" Condition="Exists('..\packages\cpprestsdk.2.10.6\build\native\cpprestsdk.targets')" />
-  </ImportGroup>
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\cpprestsdk.2.10.6\build\native\cpprestsdk.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cpprestsdk.2.10.6\build\native\cpprestsdk.targets'))" />
-  </Target>
+  <ImportGroup Label="ExtensionTargets" />
 </Project>

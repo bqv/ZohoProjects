@@ -27,26 +27,25 @@ namespace zoho
 		}
 
 		const std::string base_url = "https://projectsapi.zoho.com/restapi";
-		const std::string oauth::client_id = "1000.0ESNDLDTNIT733894WBY544KIGZAEA";
-		const std::string oauth::client_secret = "15300e4a0f75ec7f400e7442c3bb5ccd250e1e2a8b";
-		const std::string oauth::scopes[] = {
-			"ZohoProjects.portals.READ",
-			"ZohoProjects.projects.ALL",
-			"ZohoProjects.activities.READ",
-			"ZohoProjects.milestones.ALL",
-			"ZohoProjects.tasklists.ALL",
-			"ZohoProjects.tasks.ALL",
-			"ZohoProjects.timesheets.ALL",
-			"ZohoProjects.bugs.ALL",
-			"ZohoProjects.events.ALL",
-			"ZohoProjects.forums.ALL",
-			"ZohoProjects.users.ALL",
-		};
-		const std::string oauth::redirect_url = "http://localhost:8702";
-		const std::string oauth::landing_url = "https://accounts.zoho.com";
 
-		std::string oauth::authorization_url()
+		const char* oauth::authorization_url()
 		{
+			static std::string s_authorization_url;
+
+			const std::string scopes[] = {
+				"ZohoProjects.portals.READ",
+				"ZohoProjects.projects.ALL",
+				"ZohoProjects.activities.READ",
+				"ZohoProjects.milestones.ALL",
+				"ZohoProjects.tasklists.ALL",
+				"ZohoProjects.tasks.ALL",
+				"ZohoProjects.timesheets.ALL",
+				"ZohoProjects.bugs.ALL",
+				"ZohoProjects.events.ALL",
+				"ZohoProjects.forums.ALL",
+				"ZohoProjects.users.ALL",
+			};
+
 			std::ostringstream oss;
 			oss << "https://accounts.zoho.com/oauth/v2/auth";
 			oss << "?scope=" << std::accumulate(std::begin(scopes), std::end(scopes), std::string(),
@@ -55,14 +54,46 @@ namespace zoho
 			});
 			oss << "&access_type=" << "offline";
 			oss << "&prompt=" << "consent";
-			return oss.str();
+			s_authorization_url = oss.str();
+			return s_authorization_url.c_str();
 		}
 
-		std::string oauth::token_url()
+		const char* oauth::token_url()
 		{
+			static std::string s_token_url;
+
 			std::ostringstream oss;
 			oss << "https://accounts.zoho.com/oauth/v2/token";
-			return oss.str();
+			s_token_url = oss.str();
+			return s_token_url.c_str();
+		}
+
+		const char* oauth::client_id()
+		{
+			static std::string s_client_id;
+			s_client_id = "1000.0ESNDLDTNIT733894WBY544KIGZAEA";
+			return s_client_id.c_str();
+		}
+
+		const char* oauth::client_secret()
+		{
+			static std::string s_client_secret;
+			s_client_secret = "15300e4a0f75ec7f400e7442c3bb5ccd250e1e2a8b";
+			return s_client_secret.c_str();
+		}
+
+		const char* oauth::redirect_url()
+		{
+			static std::string s_redirect_url;
+			s_redirect_url = "http://localhost:8702";
+			return s_redirect_url.c_str();
+		}
+
+		const char* oauth::landing_url()
+		{
+			static std::string s_landing_url;
+			s_landing_url = "https://accounts.zoho.com";
+			return s_landing_url.c_str();
 		}
 
 		inline std::string portals::portals_endpoint()
@@ -117,11 +148,11 @@ namespace zoho
 			try
 			{
 				auto query = web::uri_builder();
-				if (p_index != 0) query.append_query(U("index"), utility::conversions::to_string_t(std::to_string(p_index)));
-				if (p_range != 0) query.append_query(U("range"), utility::conversions::to_string_t(std::to_string(p_range)));
-				if (!p_status.empty()) query.append_query(U("status"), utility::conversions::to_string_t(p_status));
-				if (!p_sort_column.empty()) query.append_query(U("sort_column"), utility::conversions::to_string_t(p_sort_column));
-				if (!p_sort_order.empty()) query.append_query(U("sort_order"), utility::conversions::to_string_t(p_sort_order));
+				if (p_index != 0) query.append_query(U("index"), util::string(std::to_string(p_index)));
+				if (p_range != 0) query.append_query(U("range"), util::string(std::to_string(p_range)));
+				if (!p_status.empty()) query.append_query(U("status"), util::string(p_status));
+				if (!p_sort_column.empty()) query.append_query(U("sort_column"), util::string(p_sort_column));
+				if (!p_sort_order.empty()) query.append_query(U("sort_order"), util::string(p_sort_order));
 				if (!p_json_string.is_null()) query.append_query(U("json_string"), p_json_string.serialize());
 				web::http::http_response response = client.request(web::http::methods::GET, query.to_string()).get();
 				web::json::value json = response.extract_json().get();
@@ -257,9 +288,9 @@ namespace zoho
 			try
 			{
 				web::json::value params;
-				params[U("name")] = web::json::value::string(utility::conversions::to_string_t(p_name));
+				params[U("name")] = web::json::value::string(util::string(p_name));
 				if (p_owner != 0) params[U("owner")] = web::json::value::number(p_owner);
-				if (!p_description.empty()) params[U("description")] = web::json::value::string(utility::conversions::to_string_t(p_description));
+				if (!p_description.empty()) params[U("description")] = web::json::value::string(util::string(p_description));
 				if (p_template_id != 0) params[U("template_id")] = web::json::value::number(p_template_id);
 				if (p_start_date.time_since_epoch().count() != 0)
 				{
@@ -268,7 +299,7 @@ namespace zoho
 					::localtime_s(&time, &tt);
 					std::ostringstream oss;
 					oss << std::put_time(&time, "%m-%d-%Y");
-					params[U("start_date")] = web::json::value::string(utility::conversions::to_string_t(oss.str()));
+					params[U("start_date")] = web::json::value::string(util::string(oss.str()));
 				}
 				if (p_end_date.time_since_epoch().count() != 0)
 				{
@@ -277,10 +308,10 @@ namespace zoho
 					::localtime_s(&time, &tt);
 					std::ostringstream oss;
 					oss << std::put_time(&time, "%m-%d-%Y");
-					params[U("start_date")] = web::json::value::string(utility::conversions::to_string_t(oss.str()));
+					params[U("start_date")] = web::json::value::string(util::string(oss.str()));
 				}
-				if (!p_strict_project.empty()) params[U("strict_project")] = web::json::value::string(utility::conversions::to_string_t(p_strict_project));
-				for (auto cf : p_custom_fields) params[utility::conversions::to_string_t(cf.first)] = web::json::value::string(utility::conversions::to_string_t(cf.second));
+				if (!p_strict_project.empty()) params[U("strict_project")] = web::json::value::string(util::string(p_strict_project));
+				for (auto cf : p_custom_fields) params[util::string(cf.first)] = web::json::value::string(util::string(cf.second));
 				web::http::http_response response = client.request(web::http::methods::POST, U("/"), params).get();
 				web::json::value json = response.extract_json().get();
 				OutputDebugString(json.serialize().c_str());
@@ -314,9 +345,9 @@ namespace zoho
 			try
 			{
 				web::json::value params;
-				params[U("name")] = web::json::value::string(utility::conversions::to_string_t(p_name));
+				params[U("name")] = web::json::value::string(util::string(p_name));
 				if (p_owner != 0) params[U("owner")] = web::json::value::number(p_owner);
-				if (!p_description.empty()) params[U("description")] = web::json::value::string(utility::conversions::to_string_t(p_description));
+				if (!p_description.empty()) params[U("description")] = web::json::value::string(util::string(p_description));
 				if (p_template_id != 0) params[U("template_id")] = web::json::value::number(p_template_id);
 				if (p_start_date.time_since_epoch().count() != 0)
 				{
@@ -325,7 +356,7 @@ namespace zoho
 					::localtime_s(&time, &tt);
 					std::ostringstream oss;
 					oss << std::put_time(&time, "%m-%d-%Y");
-					params[U("start_date")] = web::json::value::string(utility::conversions::to_string_t(oss.str()));
+					params[U("start_date")] = web::json::value::string(util::string(oss.str()));
 				}
 				if (p_end_date.time_since_epoch().count() != 0)
 				{
@@ -334,10 +365,10 @@ namespace zoho
 					::localtime_s(&time, &tt);
 					std::ostringstream oss;
 					oss << std::put_time(&time, "%m-%d-%Y");
-					params[U("start_date")] = web::json::value::string(utility::conversions::to_string_t(oss.str()));
+					params[U("start_date")] = web::json::value::string(util::string(oss.str()));
 				}
-				if (!p_strict_project.empty()) params[U("strict_project")] = web::json::value::string(utility::conversions::to_string_t(p_strict_project));
-				for (auto cf : p_custom_fields) params[utility::conversions::to_string_t(cf.first)] = web::json::value::string(utility::conversions::to_string_t(cf.second));
+				if (!p_strict_project.empty()) params[U("strict_project")] = web::json::value::string(util::string(p_strict_project));
+				for (auto cf : p_custom_fields) params[util::string(cf.first)] = web::json::value::string(util::string(cf.second));
 				web::http::http_response response = client.request(web::http::methods::POST, U("/"), params).get();
 				web::json::value json = response.extract_json().get();
 				OutputDebugString(json.serialize().c_str());
@@ -394,8 +425,8 @@ namespace zoho
 			try
 			{
 				auto query = web::uri_builder();
-				if (p_index != 0) query.append_query(U("index"), utility::conversions::to_string_t(std::to_string(p_index)));
-				if (p_range != 0) query.append_query(U("range"), utility::conversions::to_string_t(std::to_string(p_range)));
+				if (p_index != 0) query.append_query(U("index"), util::string(std::to_string(p_index)));
+				if (p_range != 0) query.append_query(U("range"), util::string(std::to_string(p_range)));
 				web::http::http_response response = client.request(web::http::methods::GET).get();
 				web::json::value json = response.extract_json().get();
 				OutputDebugString(json.serialize().c_str());
@@ -433,8 +464,8 @@ namespace zoho
 			try
 			{
 				auto query = web::uri_builder();
-				if (p_index != 0) query.append_query(U("index"), utility::conversions::to_string_t(std::to_string(p_index)));
-				if (p_range != 0) query.append_query(U("range"), utility::conversions::to_string_t(std::to_string(p_range)));
+				if (p_index != 0) query.append_query(U("index"), util::string(std::to_string(p_index)));
+				if (p_range != 0) query.append_query(U("range"), util::string(std::to_string(p_range)));
 				web::http::http_response response = client.request(web::http::methods::GET).get();
 				web::json::value json = response.extract_json().get();
 				OutputDebugString(json.serialize().c_str());
@@ -465,7 +496,7 @@ namespace zoho
 			try
 			{
 				web::json::value params;
-				params[U("content")] = web::json::value::string(utility::conversions::to_string_t(p_content));
+				params[U("content")] = web::json::value::string(util::string(p_content));
 				web::http::http_response response = client.request(web::http::methods::POST, U("/"), params).get();
 				web::json::value json = response.extract_json().get();
 				OutputDebugString(json.serialize().c_str());

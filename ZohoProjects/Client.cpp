@@ -1,10 +1,5 @@
 #include "stdafx.h"
 
-#include "Resource.h"
-#include "..\ZohoProjectsUI\Resource.h"
-#include "Guids.h"
-#include "..\ZohoProjectsUI\CommandIds.h"
-
 #include "ZohoProjects.h"
 #include "Client.h"
 
@@ -13,12 +8,7 @@
 static LPCTSTR CREDENTIAL_TARGET = U("Zohorojects/tokens");
 static UINT8 CREDENTIAL_VERSION = 1;
 
-CZohoClient::CZohoClient()
-	: IZohoClientImpl()
-{
-}
-
-IZohoClientImpl::IZohoClientImpl()
+ZohoClient::ZohoClient()
 	: zoho::session()
 	, m_credential(CREDENTIAL_TARGET)
 {
@@ -47,7 +37,7 @@ IZohoClientImpl::IZohoClientImpl()
 	zoho::session::set(zoho::credential(accesstoken, refreshtoken, tokentype, scope, expiresin));
 }
 
-void IZohoClientImpl::callback(const zoho::credential p_cred)
+void ZohoClient::callback(const zoho::credential p_cred)
 {
 	Serializer sr;
 
@@ -64,12 +54,12 @@ void IZohoClientImpl::callback(const zoho::credential p_cred)
 	if (FAILED(hr)) return;
 }
 
-STDMETHODIMP IZohoClientImpl::IsConnected()
+BOOL ZohoClient::IsConnected() const
 {
-	return *this ? S_OK : E_NOT_SET;
+	return static_cast<bool>(*this);
 }
 
-STDMETHODIMP IZohoClientImpl::Disconnect()
+HRESULT ZohoClient::Disconnect()
 {
 	zoho::session::expire();
 

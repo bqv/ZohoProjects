@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="websockets">
+      <UniqueIdentifier>{9d6f213c-267f-490b-8ee6-05cf27a206d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="websockets\client">
+      <UniqueIdentifier>{6c48927c-b87b-4806-978d-8d845c3e22d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utilities">
+      <UniqueIdentifier>{2a9d46cb-c5c7-4649-b7dc-8a54094e06ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="uri">
+      <UniqueIdentifier>{2249209e-a9d8-4fe1-8886-d6ed38405d76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="streams">
+      <UniqueIdentifier>{ee107810-c7f5-438d-a4fd-7b8c01f28613}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pplx">
+      <UniqueIdentifier>{f08c8b97-aaa0-456a-8282-77f2886470c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pch">
+      <UniqueIdentifier>{95e46155-4375-41ad-b098-bce9dac3ff44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="json">
+      <UniqueIdentifier>{7bae2cd2-4bc9-4dd2-b6a3-7ba27db2596d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http">
+      <UniqueIdentifier>{1bcbac97-fc4e-4641-8832-85dae6b57462}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http\oauth">
+      <UniqueIdentifier>{66f4729c-5ae9-4cee-9610-0d7dddd09476}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http\listener">
+      <UniqueIdentifier>{91f19445-f352-4f45-8250-61d9851d737f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http\common">
+      <UniqueIdentifier>{af2e3301-910e-446c-86e3-b5bb9a213664}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http\client">
+      <UniqueIdentifier>{0a388be9-b4e9-4660-aabf-e2755a36afeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpprest">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="cpprest\details">
+      <UniqueIdentifier>{5109bee4-64a5-48aa-a62e-49befb41b727}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="http\client\http_client_impl.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="pplx\pplx.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="pplx\pplxcancellation_token.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="pplx\pplxconv.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="pplx\pplxinterface.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="pplx\pplxlinux.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="pplx\pplxtasks.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="pplx\pplxwin.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="pplx\threadpool.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\astreambuf.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\asyncrt_utils.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\base_uri.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\containerstream.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\filestream.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\http_client.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\http_compression.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\http_headers.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\http_listener.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\http_msg.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\interopstream.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\json.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\oauth1.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\oauth2.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\producerconsumerstream.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\rawptrstream.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\streams.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\uri.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\uri_builder.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\version.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\ws_msg.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\ws_client.h">
+      <Filter>cpprest</Filter>
+    </ClInclude>
+    <ClInclude Include="websockets\client\ws_client_impl.h">
+      <Filter>websockets\client</Filter>
+    </ClInclude>
+    <ClInclude Include="pch\stdafx.h">
+      <Filter>pch</Filter>
+    </ClInclude>
+    <ClInclude Include="http\listener\http_server_httpsys.h">
+      <Filter>http\listener</Filter>
+    </ClInclude>
+    <ClInclude Include="http\listener\http_server_impl.h">
+      <Filter>http\listener</Filter>
+    </ClInclude>
+    <ClInclude Include="http\common\x509_cert_utilities.h">
+      <Filter>http\common</Filter>
+    </ClInclude>
+    <ClInclude Include="http\common\internal_http_helpers.h">
+      <Filter>http\common</Filter>
+    </ClInclude>
+    <ClInclude Include="http\common\connection_pool_helpers.h">
+      <Filter>http\common</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\basic_types.h">
+      <Filter>cpprest\details</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\cpprest_compat.h">
+      <Filter>cpprest\details</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\fileio.h">
+      <Filter>cpprest\details</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\http_helpers.h">
+      <Filter>cpprest\details</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\http_server.h">
+      <Filter>cpprest\details</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\http_server_api.h">
+      <Filter>cpprest\details</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\nosal.h">
+      <Filter>cpprest\details</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\resource.h">
+      <Filter>cpprest\details</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\SafeInt3.hpp">
+      <Filter>cpprest\details</Filter>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\web_utilities.h">
+      <Filter>cpprest\details</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="websockets\client\ws_client.cpp">
+      <Filter>websockets\client</Filter>
+    </ClCompile>
+    <ClCompile Include="websockets\client\ws_client_winrt.cpp">
+      <Filter>websockets\client</Filter>
+    </ClCompile>
+    <ClCompile Include="websockets\client\ws_client_wspp.cpp">
+      <Filter>websockets\client</Filter>
+    </ClCompile>
+    <ClCompile Include="websockets\client\ws_msg.cpp">
+      <Filter>websockets\client</Filter>
+    </ClCompile>
+    <ClCompile Include="utilities\web_utilities.cpp">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="utilities\base64.cpp">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="utilities\asyncrt_utils.cpp">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="uri\uri_builder.cpp">
+      <Filter>uri</Filter>
+    </ClCompile>
+    <ClCompile Include="uri\uri.cpp">
+      <Filter>uri</Filter>
+    </ClCompile>
+    <ClCompile Include="streams\fileio_winrt.cpp">
+      <Filter>streams</Filter>
+    </ClCompile>
+    <ClCompile Include="streams\fileio_win32.cpp">
+      <Filter>streams</Filter>
+    </ClCompile>
+    <ClCompile Include="streams\fileio_posix.cpp">
+      <Filter>streams</Filter>
+    </ClCompile>
+    <ClCompile Include="pplx\pplx.cpp">
+      <Filter>pplx</Filter>
+    </ClCompile>
+    <ClCompile Include="pplx\pplxapple.cpp">
+      <Filter>pplx</Filter>
+    </ClCompile>
+    <ClCompile Include="pplx\pplxlinux.cpp">
+      <Filter>pplx</Filter>
+    </ClCompile>
+    <ClCompile Include="pplx\pplxwin.cpp">
+      <Filter>pplx</Filter>
+    </ClCompile>
+    <ClCompile Include="pplx\threadpool.cpp">
+      <Filter>pplx</Filter>
+    </ClCompile>
+    <ClCompile Include="pch\stdafx.cpp">
+      <Filter>pch</Filter>
+    </ClCompile>
+    <ClCompile Include="json\json.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\json_parsing.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\json_serialization.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="http\oauth\oauth1.cpp">
+      <Filter>http\oauth</Filter>
+    </ClCompile>
+    <ClCompile Include="http\oauth\oauth2.cpp">
+      <Filter>http\oauth</Filter>
+    </ClCompile>
+    <ClCompile Include="http\listener\http_listener.cpp">
+      <Filter>http\listener</Filter>
+    </ClCompile>
+    <ClCompile Include="http\listener\http_listener_msg.cpp">
+      <Filter>http\listener</Filter>
+    </ClCompile>
+    <ClCompile Include="http\listener\http_server_api.cpp">
+      <Filter>http\listener</Filter>
+    </ClCompile>
+    <ClCompile Include="http\listener\http_server_asio.cpp">
+      <Filter>http\listener</Filter>
+    </ClCompile>
+    <ClCompile Include="http\listener\http_server_httpsys.cpp">
+      <Filter>http\listener</Filter>
+    </ClCompile>
+    <ClCompile Include="http\common\http_compression.cpp">
+      <Filter>http\common</Filter>
+    </ClCompile>
+    <ClCompile Include="http\common\http_helpers.cpp">
+      <Filter>http\common</Filter>
+    </ClCompile>
+    <ClCompile Include="http\common\http_msg.cpp">
+      <Filter>http\common</Filter>
+    </ClCompile>
+    <ClCompile Include="http\client\http_client.cpp">
+      <Filter>http\client</Filter>
+    </ClCompile>
+    <ClCompile Include="http\client\http_client_msg.cpp">
+      <Filter>http\client</Filter>
+    </ClCompile>
+    <ClCompile Include="http\client\http_client_winhttp.cpp">
+      <Filter>http\client</Filter>
+    </ClCompile>
+    <ClCompile Include="http\client\http_client_winrt.cpp">
+      <Filter>http\client</Filter>
+    </ClCompile>
+    <ClCompile Include="http\client\x509_cert_utilities.cpp">
+      <Filter>http\client</Filter>
+    </ClCompile>
+    <ClCompile Include="http\client\http_client_asio.cpp">
+      <Filter>http\client</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="utilities\Resource.rc">
+      <Filter>utilities</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpprest\details\http_constants.dat">
+      <Filter>cpprest\details</Filter>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

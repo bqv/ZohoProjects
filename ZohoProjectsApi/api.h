@@ -35,17 +35,15 @@ namespace zoho
 		class DLLEXPORT oauth
 		{
 		private:
-			static const std::string scopes[];
-
 			oauth() = delete;
-		public:
-			static std::string authorization_url();
-			static std::string token_url();
 
-			static const std::string client_id;
-			static const std::string client_secret;
-			static const std::string redirect_url;
-			static const std::string landing_url;
+		public:
+			static const char* authorization_url();
+			static const char* token_url();
+			static const char* client_id();
+			static const char* client_secret();
+			static const char* redirect_url();
+			static const char* landing_url();
 		};
 
 		class DLLEXPORT portals

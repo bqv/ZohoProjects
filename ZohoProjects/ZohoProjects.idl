@@ -8,7 +8,7 @@ import "oaidl.idl";
 import "ocidl.idl";
 midl_pragma warning (disable : 2015)
 import "vsshell.idl";
-midl_pragma warning (default : 2015)
+midl_pragma warning(default : 2015)
 
 //standard dispids
 #define DISPID_Name                     (-800)
@@ -26,11 +26,11 @@ midl_pragma warning (default : 2015)
 	pointer_default(unique),
 	version(1.0)
 ]
-interface IZohoClient : IUnknown
+interface IZohoProjectsPackage : IUnknown
 {
-	HRESULT IsConnected();
-	HRESULT Disconnect();
+	[id(1)] HRESULT GetClient([out, retval] LPVARIANT pResult);
 };
+
 [
 	uuid(a2d24c53-43b7-43d6-9005-79e623146c8f),
 	version(1.0),
@@ -41,7 +41,6 @@ library ZohoProjectsLib
 	importlib("stdole32.tlb");
 	importlib("stdole2.tlb");
 
-
 	[
 		uuid(aec201e1-fd9a-41df-bb44-937dd8c79a16),
 		helpstring("ZohoProjects Package")
@@ -49,14 +48,6 @@ library ZohoProjectsLib
 	coclass ZohoProjectsPackage
 	{
 		[default] interface IVsPackage;
-	};
-	[
-		uuid(896cb552-5514-49c9-bdfc-e87b4a536bf3),
-		helpstring("ZohoProjects Client")
-	]
-	coclass ZohoClient
-	{
-		[default] interface IZohoClient;
 	};
 };
 import "shobjidl.idl";

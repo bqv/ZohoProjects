@@ -30,7 +30,7 @@ namespace oauth2
                 });
 
 				web::http::http_response response(web::http::status_codes::TemporaryRedirect);
-				response.headers().add(U("Location"), utility::conversions::to_string_t(zoho::api::oauth::landing_url));
+				response.headers().add(U("Location"), util::string(zoho::api::oauth::landing_url()));
 				request.reply(response);
 
                 m_resplock.unlock();
@@ -64,7 +64,7 @@ namespace oauth2
 		utility::string_t token_endpoint,
 		utility::string_t redirect_uri
 	) : m_oauth_config(client_key, client_secret, auth_endpoint, token_endpoint, redirect_uri),
-		m_listener(new codelistener(redirect_uri, m_oauth_config))
+		m_listener(new codelistener(redirect_uri.c_str(), m_oauth_config))
 	{
 		m_oauth_config.set_bearer_auth(true);
 		m_oauth_config.set_http_basic_auth(false);

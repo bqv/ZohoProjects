@@ -23,6 +23,8 @@
 
 #include "..\ZohoProjectsUI\Resource.h"
 
+#include "Package.h"
+
 class ProjectExplorerHierarchy :
 	public IVsUIHierarchy
 {
@@ -156,8 +158,8 @@ END_MSG_MAP()
 		rc.bottom -= rc.top;
 		rc.top = rc.left = 0;
 
-		CComQIPtr<IZohoClient> zoho = GetZohoClient();
-		if (SUCCEEDED(zoho->IsConnected()))
+		ZohoClient* zoho = GetZohoClient();
+		if (zoho->IsConnected())
 		{
 			m_TreeView.Create(GetHWND(), rc, U("Tree View"),
 				WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | TVS_HASLINES | TVS_LINESATROOT | TVS_HASBUTTONS | TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS);
@@ -248,14 +250,17 @@ END_MSG_MAP()
 #pragma endregion IVsWindowPane
 
 protected:
-	CComQIPtr<IZohoClient> GetZohoClient()
+	ZohoClient* GetZohoClient()
 	{
 		IVsPackage *pPackage;
 		CComPtr<IVsShell> spShell = GetVsSiteCache().GetCachedService<IVsShell, SID_SVsShell>();
-		spShell->IsPackageLoaded(guidZohoProjectsPkg, &pPackage);
-		CComQIPtr<IZohoClient> pZohoClient(pPackage);
-		VSL_CHECKPOINTER(&pZohoClient, E_UNEXPECTED);
-		return pZohoClient;
+		VSL_CHECKHRESULT(spShell->IsPackageLoaded(guidZohoProjectsPkg, &pPackage));
+		CComQIPtr<IZohoProjectsPackage> pZohoPackage(pPackage);
+		VSL_CHECKBOOL(!!pZohoPackage, E_UNEXPECTED);
+
+		VARIANT vZohoClient;
+		VSL_CHECKHRESULT(pZohoPackage.p->GetClient(&vZohoClient));
+		return (ZohoClient*)vZohoClient.pvRecord;
 	}
 
 private:

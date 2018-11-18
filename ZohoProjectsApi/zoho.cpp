@@ -11,17 +11,17 @@
 namespace zoho
 {
 	session::session() : oauth2::session(
-		utility::conversions::to_string_t(api::oauth::client_id),
-		utility::conversions::to_string_t(api::oauth::client_secret),
-		utility::conversions::to_string_t(api::oauth::authorization_url()),
-		utility::conversions::to_string_t(api::oauth::token_url()),
-		utility::conversions::to_string_t(api::oauth::redirect_url))
+		util::string(api::oauth::client_id()),
+		util::string(api::oauth::client_secret()),
+		util::string(api::oauth::authorization_url()),
+		util::string(api::oauth::token_url()),
+		util::string(api::oauth::redirect_url()))
 	{
 	}
 
 	web::http::client::http_client session::client(std::string p_endpoint)
 	{
-		web::uri uri(utility::conversions::to_string_t(p_endpoint));
+		web::uri uri(util::string(p_endpoint));
 		web::http::client::http_client client(uri, get());
 		return client;
 	}
