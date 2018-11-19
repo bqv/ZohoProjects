@@ -18,22 +18,22 @@ namespace util
 	}
 
 #ifdef UNICODE
-	std::wstring string(const std::string& s)
+	std::wstring DLLEXPORT string(const std::string& s)
 	{
 		return string_convert(s);
 	}
 
-	std::wstring string(const std::wstring& s)
+	std::wstring DLLEXPORT string(const std::wstring& s)
 	{
 		return s.substr();
 	}
 #else
-	std::string string(const std::string& s)
+	std::string DLLEXPORT string(const std::string& s)
 	{
 		return s.substr();
 	}
 
-	std::string string(const std::wstring& s)
+	std::string DLLEXPORT string(const std::wstring& s)
 	{
 		return string_convert(s);
 	}

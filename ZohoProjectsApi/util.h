@@ -2,6 +2,8 @@
 
 #include <string>
 
+#include "lib.h"
+
 #define JSON_GET_STRING(json, key, value) (json.has_field(U(key)) ? json.at(U(key)).as_string() : U(value))
 #define JSON_GET_BOOL(json, key, value) (json.has_field(U(key)) ? json.at(U(key)).as_bool() : value)
 #define JSON_GET_INTEGER(json, key, value) (json.has_field(U(key)) ? json.at(U(key)).as_integer() : value)
@@ -19,10 +21,10 @@ namespace util
 	std::string string_convert(const std::wstring&);
 
 #ifdef UNICODE
-	std::wstring string(const std::string&);
-	std::wstring string(const std::wstring&);
+	std::wstring DLLEXPORT string(const std::string&);
+	std::wstring DLLEXPORT string(const std::wstring&);
 #else
-	std::string string(const std::string&);
-	std::string string(const std::wstring&);
+	std::string DLLEXPORT string(const std::string&);
+	std::string DLLEXPORT string(const std::wstring&);
 #endif
 }

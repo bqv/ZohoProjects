@@ -286,7 +286,6 @@
   <ImportGroup Label="ExtensionTargets">
     <Import Project="..\packages\boost.1.68.0.0\build\boost.targets" Condition="Exists('..\packages\boost.1.68.0.0\build\boost.targets')" />
     <Import Project="..\packages\zlib-msvc-x86.1.2.11.8900\build\native\zlib-msvc-x86.targets" Condition="Exists('..\packages\zlib-msvc-x86.1.2.11.8900\build\native\zlib-msvc-x86.targets')" />
-    <Import Project="..\packages\openssl-vc141.1.1.0\build\native\openssl-vc141.targets" Condition="Exists('..\packages\openssl-vc141.1.1.0\build\native\openssl-vc141.targets')" />
     <Import Project="..\packages\boost_atomic-vc141.1.68.0.0\build\boost_atomic-vc141.targets" Condition="Exists('..\packages\boost_atomic-vc141.1.68.0.0\build\boost_atomic-vc141.targets')" />
     <Import Project="..\packages\boost_bzip2-vc141.1.68.0.0\build\boost_bzip2-vc141.targets" Condition="Exists('..\packages\boost_bzip2-vc141.1.68.0.0\build\boost_bzip2-vc141.targets')" />
     <Import Project="..\packages\boost_chrono-vc141.1.68.0.0\build\boost_chrono-vc141.targets" Condition="Exists('..\packages\boost_chrono-vc141.1.68.0.0\build\boost_chrono-vc141.targets')" />
@@ -336,7 +335,6 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\boost.1.68.0.0\build\boost.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost.1.68.0.0\build\boost.targets'))" />
     <Error Condition="!Exists('..\packages\zlib-msvc-x86.1.2.11.8900\build\native\zlib-msvc-x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\zlib-msvc-x86.1.2.11.8900\build\native\zlib-msvc-x86.targets'))" />
-    <Error Condition="!Exists('..\packages\openssl-vc141.1.1.0\build\native\openssl-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\openssl-vc141.1.1.0\build\native\openssl-vc141.targets'))" />
     <Error Condition="!Exists('..\packages\boost_atomic-vc141.1.68.0.0\build\boost_atomic-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_atomic-vc141.1.68.0.0\build\boost_atomic-vc141.targets'))" />
     <Error Condition="!Exists('..\packages\boost_bzip2-vc141.1.68.0.0\build\boost_bzip2-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_bzip2-vc141.1.68.0.0\build\boost_bzip2-vc141.targets'))" />
     <Error Condition="!Exists('..\packages\boost_chrono-vc141.1.68.0.0\build\boost_chrono-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_chrono-vc141.1.68.0.0\build\boost_chrono-vc141.targets'))" />
