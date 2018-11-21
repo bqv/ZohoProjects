@@ -316,6 +316,5 @@
     <None Include="cpprest\details\http_constants.dat">
       <Filter>cpprest\details</Filter>
     </None>
-    <None Include="packages.config" />
   </ItemGroup>
 </Project>

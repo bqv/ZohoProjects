@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{a9569e3f-4841-433b-9309-e97f3721cde2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\concept">
+      <UniqueIdentifier>{6dee0d99-5eae-43c7-abd1-86bd097f8305}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\concept\detail">
+      <UniqueIdentifier>{390a9d36-46a7-4e9b-ac5c-821ad960ce99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\concept_check">
+      <UniqueIdentifier>{4275b04e-f890-404d-88e6-85b917030e9a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\concept_archetype.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\concept_check.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\concept\assert.hpp">
+      <Filter>boost\concept</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\concept\requires.hpp">
+      <Filter>boost\concept</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\concept\usage.hpp">
+      <Filter>boost\concept</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\concept\detail\backward_compatibility.hpp">
+      <Filter>boost\concept\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\concept\detail\borland.hpp">
+      <Filter>boost\concept\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\concept\detail\concept_def.hpp">
+      <Filter>boost\concept\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\concept\detail\concept_undef.hpp">
+      <Filter>boost\concept\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\concept\detail\general.hpp">
+      <Filter>boost\concept\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\concept\detail\has_constraints.hpp">
+      <Filter>boost\concept\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\concept\detail\msvc.hpp">
+      <Filter>boost\concept\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\concept_check\borland.hpp">
+      <Filter>boost\concept_check</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\concept_check\general.hpp">
+      <Filter>boost\concept_check</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\concept_check\has_constraints.hpp">
+      <Filter>boost\concept_check</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\concept_check\msvc.hpp">
+      <Filter>boost\concept_check</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

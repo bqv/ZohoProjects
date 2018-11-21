@@ -105,6 +105,9 @@
     <ClCompile Include="test_zoho.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CppRestSdk\CppRestSdk.vcxproj">
+      <Project>{2142fb7c-58b0-4043-a12c-87bc73575b01}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\ZohoProjectsApi\ZohoProjectsApi.vcxproj">
       <Project>{aee1e511-bc91-4e23-a042-d02ca4f0ab76}</Project>
     </ProjectReference>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{23afe1f1-0d6d-4f79-926b-b16301cbf66b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\integer">
+      <UniqueIdentifier>{fc799dfe-c68d-4d25-9dba-06e555f1e43a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\pending">
+      <UniqueIdentifier>{ac3f4394-33fe-4c49-a186-b00c8786ce5b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\integer.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\integer_fwd.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\integer_traits.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\integer\common_factor.hpp">
+      <Filter>boost\integer</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\integer\common_factor_ct.hpp">
+      <Filter>boost\integer</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\integer\common_factor_rt.hpp">
+      <Filter>boost\integer</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\integer\extended_euclidean.hpp">
+      <Filter>boost\integer</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\integer\integer_log2.hpp">
+      <Filter>boost\integer</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\integer\integer_mask.hpp">
+      <Filter>boost\integer</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\integer\mod_inverse.hpp">
+      <Filter>boost\integer</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\integer\static_log2.hpp">
+      <Filter>boost\integer</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\integer\static_min_max.hpp">
+      <Filter>boost\integer</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\integer_log2.hpp">
+      <Filter>boost\pending</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

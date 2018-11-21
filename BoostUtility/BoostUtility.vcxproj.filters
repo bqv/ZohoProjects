@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{8da52233-d920-42bc-8404-893d9c4b4d1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\detail">
+      <UniqueIdentifier>{13429553-5b94-47a2-89d0-2a34ba3dfc2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\utility">
+      <UniqueIdentifier>{41a6cfdd-133f-4964-82a6-4119d78d6730}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\utility\detail">
+      <UniqueIdentifier>{436f9b2a-0eff-46b2-b242-c4d7aaa63b50}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\call_traits.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\compressed_pair.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\operators.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\operators_v1.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\call_traits.hpp">
+      <Filter>boost\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\compressed_pair.hpp">
+      <Filter>boost\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\ob_compressed_pair.hpp">
+      <Filter>boost\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\base_from_member.hpp">
+      <Filter>boost\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\binary.hpp">
+      <Filter>boost\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\compare_pointees.hpp">
+      <Filter>boost\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\identity_type.hpp">
+      <Filter>boost\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\in_place_factory.hpp">
+      <Filter>boost\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\result_of.hpp">
+      <Filter>boost\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\string_ref.hpp">
+      <Filter>boost\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\string_ref_fwd.hpp">
+      <Filter>boost\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\string_view.hpp">
+      <Filter>boost\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\string_view_fwd.hpp">
+      <Filter>boost\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\typed_in_place_factory.hpp">
+      <Filter>boost\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\value_init.hpp">
+      <Filter>boost\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\detail\in_place_factory_prefix.hpp">
+      <Filter>boost\utility\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\detail\in_place_factory_suffix.hpp">
+      <Filter>boost\utility\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\detail\minstd_rand.hpp">
+      <Filter>boost\utility\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\detail\result_of_iterate.hpp">
+      <Filter>boost\utility\detail</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

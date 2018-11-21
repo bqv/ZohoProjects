@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{1fde60b7-1f49-4ab6-92be-0a94f9c0c828}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\detail">
+      <UniqueIdentifier>{68a06d1e-fad8-4f14-b767-caa32ceffc85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\smart_ptr">
+      <UniqueIdentifier>{e2bae191-7a3d-44a2-9136-9b5b8c7d20d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\smart_ptr\detail">
+      <UniqueIdentifier>{9c116d5f-a720-4311-85bd-0bf197e45f80}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\enable_shared_from_this.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive_ptr.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\make_shared.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\make_unique.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pointer_cast.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pointer_to_other.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\scoped_array.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\scoped_ptr.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\shared_array.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\shared_ptr.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\weak_ptr.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\atomic_count.hpp">
+      <Filter>boost\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\lightweight_mutex.hpp">
+      <Filter>boost\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\lightweight_thread.hpp">
+      <Filter>boost\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\quick_allocator.hpp">
+      <Filter>boost\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\allocate_local_shared_array.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\allocate_shared_array.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\atomic_shared_ptr.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\bad_weak_ptr.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\enable_shared_from_raw.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\enable_shared_from_this.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\intrusive_ptr.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\intrusive_ref_counter.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\local_shared_ptr.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\make_local_shared.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\make_local_shared_array.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\make_local_shared_object.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\make_shared.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\make_shared_array.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\make_shared_object.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\make_unique.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\owner_less.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\scoped_array.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\scoped_ptr.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\shared_array.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\shared_ptr.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\weak_ptr.hpp">
+      <Filter>boost\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count_gcc.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count_gcc_x86.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count_nt.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count_pt.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count_solaris.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count_spin.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count_std_atomic.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count_sync.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count_win32.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\lightweight_mutex.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\local_counted_base.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\local_sp_deleter.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\lwm_nop.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\lwm_pthreads.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\lwm_win32_cs.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\operator_bool.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\quick_allocator.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\shared_count.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_convertible.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_acc_ia64.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_aix.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_clang.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_cw_ppc.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_cw_x86.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_gcc_ia64.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_gcc_mips.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_gcc_ppc.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_gcc_sparc.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_gcc_x86.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_nt.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_pt.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_snc_ps3.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_solaris.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_spin.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_std_atomic.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_sync.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_vacpp_ppc.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_w32.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_impl.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_disable_deprecated.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_forward.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_has_sync.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_interlocked.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_noexcept.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\sp_nullptr_t.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\spinlock.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\spinlock_gcc_arm.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\spinlock_nt.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\spinlock_pool.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\spinlock_pt.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\spinlock_std_atomic.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\spinlock_sync.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\spinlock_w32.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr\detail\yield_k.hpp">
+      <Filter>boost\smart_ptr\detail</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

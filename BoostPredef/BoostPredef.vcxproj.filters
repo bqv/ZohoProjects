@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{767a66a7-2c1e-421a-a901-3766bdbab005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\detail">
+      <UniqueIdentifier>{9d5a89e3-ea22-47bf-b89f-0c16e306f262}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef">
+      <UniqueIdentifier>{1d9ec9d8-c1f9-4e08-be8b-37cb4e76b98f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef\platform">
+      <UniqueIdentifier>{236914fd-860f-4554-9062-4f606db17d1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef\other">
+      <UniqueIdentifier>{94a46414-5168-43d0-ba80-4a3c1a491ba6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef\os">
+      <UniqueIdentifier>{97aa78bb-c641-4676-a7c7-0752c43e94e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef\architecture">
+      <UniqueIdentifier>{e1003ae6-877e-463c-b58e-029d37212e16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef\compiler">
+      <UniqueIdentifier>{1c5a5844-cc55-4646-b40a-84651fff9cb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef\detail">
+      <UniqueIdentifier>{03f4258a-9266-44e1-8732-eedfd4fbb3f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef\hardware">
+      <UniqueIdentifier>{0d03eb95-a8b8-4c3f-8354-fedbe153bc53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef\language">
+      <UniqueIdentifier>{3d0d9e0f-349c-4c55-915d-0ce802163ee6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef\library">
+      <UniqueIdentifier>{9541b497-3f17-4789-8573-c69b371a3be0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef\architecture\x86">
+      <UniqueIdentifier>{3111fdeb-f2ff-4702-ab93-98698d5b3c11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef\hardware\simd">
+      <UniqueIdentifier>{25c4d20c-973f-47e5-8669-7871b0df4022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef\hardware\simd\arm">
+      <UniqueIdentifier>{5fe6a746-3619-400e-aef5-4b28acf31b3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef\hardware\simd\x86_amd">
+      <UniqueIdentifier>{30c3af24-26f5-4696-9cb6-a443bba5bd4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef\hardware\simd\x86">
+      <UniqueIdentifier>{a773fb16-317c-4139-b170-8c1dfdec3283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef\hardware\simd\ppc">
+      <UniqueIdentifier>{285cebf9-340f-4f6c-b191-466ab4aa6de8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef\library\c">
+      <UniqueIdentifier>{d3f127c2-edfa-4c1b-bb15-adcd2f7e822a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef\library\std">
+      <UniqueIdentifier>{29683576-8a0f-4204-8b40-7608d239f1ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\predef\os\bsd">
+      <UniqueIdentifier>{6e9edb16-4b21-4197-b657-898e8d2c29df}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\predef.h">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\endian.hpp">
+      <Filter>boost\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture.h">
+      <Filter>boost\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler.h">
+      <Filter>boost\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\hardware.h">
+      <Filter>boost\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\language.h">
+      <Filter>boost\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library.h">
+      <Filter>boost\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\make.h">
+      <Filter>boost\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os.h">
+      <Filter>boost\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\other.h">
+      <Filter>boost\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\platform.h">
+      <Filter>boost\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\version.h">
+      <Filter>boost\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\version_number.h">
+      <Filter>boost\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\alpha.h">
+      <Filter>boost\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\arm.h">
+      <Filter>boost\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\blackfin.h">
+      <Filter>boost\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\convex.h">
+      <Filter>boost\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\ia64.h">
+      <Filter>boost\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\m68k.h">
+      <Filter>boost\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\mips.h">
+      <Filter>boost\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\parisc.h">
+      <Filter>boost\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\ppc.h">
+      <Filter>boost\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\ptx.h">
+      <Filter>boost\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\pyramid.h">
+      <Filter>boost\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\rs6k.h">
+      <Filter>boost\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\sparc.h">
+      <Filter>boost\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\superh.h">
+      <Filter>boost\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\sys370.h">
+      <Filter>boost\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\sys390.h">
+      <Filter>boost\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\x86.h">
+      <Filter>boost\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\z.h">
+      <Filter>boost\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\x86\32.h">
+      <Filter>boost\predef\architecture\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\architecture\x86\64.h">
+      <Filter>boost\predef\architecture\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\digitalmars.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\dignus.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\edg.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\ekopath.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\gcc.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\gcc_xml.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\greenhills.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\hp_acc.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\iar.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\ibm.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\intel.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\kai.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\llvm.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\metaware.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\metrowerks.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\microtec.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\mpw.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\nvcc.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\palm.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\pgi.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\sgi_mipspro.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\sunpro.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\tendra.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\visualc.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\watcom.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\borland.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\clang.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\comeau.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\compaq.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\compiler\diab.h">
+      <Filter>boost\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\detail\_exception.h">
+      <Filter>boost\predef\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\detail\comp_detected.h">
+      <Filter>boost\predef\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\detail\endian_compat.h">
+      <Filter>boost\predef\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\detail\os_detected.h">
+      <Filter>boost\predef\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\detail\platform_detected.h">
+      <Filter>boost\predef\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\detail\test.h">
+      <Filter>boost\predef\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\detail\test_def.h">
+      <Filter>boost\predef\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\detail\_cassert.h">
+      <Filter>boost\predef\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\hardware\simd.h">
+      <Filter>boost\predef\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\hardware\simd\arm.h">
+      <Filter>boost\predef\hardware\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\hardware\simd\ppc.h">
+      <Filter>boost\predef\hardware\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\hardware\simd\x86.h">
+      <Filter>boost\predef\hardware\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\hardware\simd\x86_amd.h">
+      <Filter>boost\predef\hardware\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\hardware\simd\arm\versions.h">
+      <Filter>boost\predef\hardware\simd\arm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\hardware\simd\ppc\versions.h">
+      <Filter>boost\predef\hardware\simd\ppc</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\hardware\simd\x86\versions.h">
+      <Filter>boost\predef\hardware\simd\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\hardware\simd\x86_amd\versions.h">
+      <Filter>boost\predef\hardware\simd\x86_amd</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\language\cuda.h">
+      <Filter>boost\predef\language</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\language\objc.h">
+      <Filter>boost\predef\language</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\language\stdc.h">
+      <Filter>boost\predef\language</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\language\stdcpp.h">
+      <Filter>boost\predef\language</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\c.h">
+      <Filter>boost\predef\library</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\std.h">
+      <Filter>boost\predef\library</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\c\_prefix.h">
+      <Filter>boost\predef\library\c</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\c\cloudabi.h">
+      <Filter>boost\predef\library\c</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\c\gnu.h">
+      <Filter>boost\predef\library\c</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\c\uc.h">
+      <Filter>boost\predef\library\c</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\c\vms.h">
+      <Filter>boost\predef\library\c</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\c\zos.h">
+      <Filter>boost\predef\library\c</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\std\_prefix.h">
+      <Filter>boost\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\std\cxx.h">
+      <Filter>boost\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\std\dinkumware.h">
+      <Filter>boost\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\std\libcomo.h">
+      <Filter>boost\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\std\modena.h">
+      <Filter>boost\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\std\msl.h">
+      <Filter>boost\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\std\roguewave.h">
+      <Filter>boost\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\std\sgi.h">
+      <Filter>boost\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\std\stdcpp3.h">
+      <Filter>boost\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\std\stlport.h">
+      <Filter>boost\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\library\std\vacpp.h">
+      <Filter>boost\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\aix.h">
+      <Filter>boost\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\amigaos.h">
+      <Filter>boost\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\android.h">
+      <Filter>boost\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\beos.h">
+      <Filter>boost\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\bsd.h">
+      <Filter>boost\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\cygwin.h">
+      <Filter>boost\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\haiku.h">
+      <Filter>boost\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\hpux.h">
+      <Filter>boost\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\ios.h">
+      <Filter>boost\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\irix.h">
+      <Filter>boost\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\linux.h">
+      <Filter>boost\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\macos.h">
+      <Filter>boost\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\os400.h">
+      <Filter>boost\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\qnxnto.h">
+      <Filter>boost\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\solaris.h">
+      <Filter>boost\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\unix.h">
+      <Filter>boost\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\vms.h">
+      <Filter>boost\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\windows.h">
+      <Filter>boost\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\bsd\bsdi.h">
+      <Filter>boost\predef\os\bsd</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\bsd\dragonfly.h">
+      <Filter>boost\predef\os\bsd</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\bsd\free.h">
+      <Filter>boost\predef\os\bsd</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\bsd\net.h">
+      <Filter>boost\predef\os\bsd</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\os\bsd\open.h">
+      <Filter>boost\predef\os\bsd</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\other\endian.h">
+      <Filter>boost\predef\other</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\other\workaround.h">
+      <Filter>boost\predef\other</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\platform\cloudabi.h">
+      <Filter>boost\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\platform\ios.h">
+      <Filter>boost\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\platform\mingw.h">
+      <Filter>boost\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\platform\mingw32.h">
+      <Filter>boost\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\platform\mingw64.h">
+      <Filter>boost\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\platform\windows_desktop.h">
+      <Filter>boost\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\platform\windows_phone.h">
+      <Filter>boost\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\platform\windows_runtime.h">
+      <Filter>boost\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\platform\windows_server.h">
+      <Filter>boost\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\platform\windows_store.h">
+      <Filter>boost\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\platform\windows_system.h">
+      <Filter>boost\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\predef\platform\windows_uwp.h">
+      <Filter>boost\predef\platform</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

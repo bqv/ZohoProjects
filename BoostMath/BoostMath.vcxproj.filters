@@ -1,0 +1,1482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{b32e1ae7-354a-4b29-8f1e-33a8f3f633f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tr1">
+      <UniqueIdentifier>{c913d270-7af9-4a9e-bfea-4bebca789041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\math">
+      <UniqueIdentifier>{7392d4b7-c4f1-4c77-8693-4092af71cb31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\math\bindings">
+      <UniqueIdentifier>{552536c7-e30a-4e43-8fec-f12b6065d86c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\math\bindings\detail">
+      <UniqueIdentifier>{0971f336-02dd-497d-a6e4-aaf20f059f0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\math\complex">
+      <UniqueIdentifier>{d1f21924-95e2-451d-a56e-2580b80c035c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\math\concepts">
+      <UniqueIdentifier>{42194858-28cd-49b8-8a44-0413b4b37b39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\math\constants">
+      <UniqueIdentifier>{b84c7c46-4abe-4c19-bd4c-0049a7b0d6ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\math\cstdfloat">
+      <UniqueIdentifier>{4bda8a34-d8fe-43b9-b1fd-53dcce5df528}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\math\distributions">
+      <UniqueIdentifier>{0d6ff0ca-1f9b-4318-8f25-85e95c4523d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\math\distributions\detail">
+      <UniqueIdentifier>{fc4bf477-df9b-4d9c-b78e-e141b0beda88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\math\tools">
+      <UniqueIdentifier>{14e169cb-a518-4277-aa18-564bd041c000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\math\tools\detail">
+      <UniqueIdentifier>{52e3e6a5-d5cf-4c3b-afc9-bf83ae971d06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\math\interpolators">
+      <UniqueIdentifier>{e5ceaa17-4ee8-4f82-bd88-747126655b59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\math\interpolators\detail">
+      <UniqueIdentifier>{14a2977b-6a56-488d-b737-f68a31492253}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\math\special_functions">
+      <UniqueIdentifier>{7850bc35-03c1-481d-aa3d-f3ca3e5d0515}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\math\special_functions\detail">
+      <UniqueIdentifier>{d7deb7a2-c686-4046-be9d-4843f5ee1e03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\math\quadrature">
+      <UniqueIdentifier>{bfc8808a-37fe-4348-98c1-c4b3ab21cdd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\math\quadrature\detail">
+      <UniqueIdentifier>{cc1f0a7d-00b9-41e2-b79a-0a26a32bde95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\math\policies">
+      <UniqueIdentifier>{9d89100a-7d40-4020-956d-959a7cd3b7b9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="tr1\acoshf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\acoshl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\asinh.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\asinhf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\asinhl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\assoc_laguerre.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\assoc_laguerref.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\assoc_laguerrel.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\assoc_legendre.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\assoc_legendref.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\assoc_legendrel.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\atanh.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\atanhf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\atanhl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\beta.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\betaf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\betal.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\cbrt.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\cbrtf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\cbrtl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\comp_ellint_1.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\comp_ellint_1f.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\comp_ellint_1l.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\comp_ellint_2.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\comp_ellint_2f.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\comp_ellint_2l.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\comp_ellint_3.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\comp_ellint_3f.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\comp_ellint_3l.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\copysign.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\copysignf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\copysignl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\cyl_bessel_i.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\cyl_bessel_if.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\cyl_bessel_il.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\cyl_bessel_j.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\cyl_bessel_jf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\cyl_bessel_jl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\cyl_bessel_k.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\cyl_bessel_kf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\cyl_bessel_kl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\cyl_neumann.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\cyl_neumannf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\cyl_neumannl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\ellint_1.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\ellint_1f.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\ellint_1l.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\ellint_2.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\ellint_2f.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\ellint_2l.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\ellint_3.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\ellint_3f.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\ellint_3l.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\erf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\erfc.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\erfcf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\erfcl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\erff.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\erfl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\expint.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\expintf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\expintl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\expm1.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\expm1f.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\expm1l.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\fmax.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\fmaxf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\fmaxl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\fmin.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\fminf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\fminl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\fpclassify.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\fpclassifyf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\fpclassifyl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\hermite.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\hermitef.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\hermitel.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\hypot.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\hypotf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\hypotl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\laguerre.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\laguerref.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\laguerrel.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\legendre.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\legendref.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\legendrel.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\lgamma.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\lgammaf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\lgammal.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\llround.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\llroundf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\llroundl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\log1p.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\log1pf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\log1pl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\lround.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\lroundf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\lroundl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\nextafter.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\nextafterf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\nextafterl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\nexttoward.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\nexttowardf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\nexttowardl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\riemann_zeta.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\riemann_zetaf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\riemann_zetal.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\round.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\roundf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\roundl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\sph_bessel.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\sph_besself.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\sph_bessell.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\sph_legendre.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\sph_legendref.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\sph_legendrel.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\sph_neumann.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\sph_neumannf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\sph_neumannl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\tgamma.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\tgammaf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\tgammal.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\trunc.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\truncf.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\truncl.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+    <ClCompile Include="tr1\acosh.cpp">
+      <Filter>tr1</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="tr1\c_policy.hpp">
+      <Filter>tr1</Filter>
+    </ClInclude>
+    <ClInclude Include="tr1\pch.hpp">
+      <Filter>tr1</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\cstdfloat.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math_fwd.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\common_factor.hpp">
+      <Filter>boost\math</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\common_factor_ct.hpp">
+      <Filter>boost\math</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\common_factor_rt.hpp">
+      <Filter>boost\math</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\complex.hpp">
+      <Filter>boost\math</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions.hpp">
+      <Filter>boost\math</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\octonion.hpp">
+      <Filter>boost\math</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\quaternion.hpp">
+      <Filter>boost\math</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions.hpp">
+      <Filter>boost\math</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tr1.hpp">
+      <Filter>boost\math</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tr1_c_macros.ipp">
+      <Filter>boost\math</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\bindings\e_float.hpp">
+      <Filter>boost\math\bindings</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\bindings\mpfr.hpp">
+      <Filter>boost\math\bindings</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\bindings\mpreal.hpp">
+      <Filter>boost\math\bindings</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\bindings\rr.hpp">
+      <Filter>boost\math\bindings</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\bindings\detail\big_digamma.hpp">
+      <Filter>boost\math\bindings\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\bindings\detail\big_lanczos.hpp">
+      <Filter>boost\math\bindings\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\complex\acos.hpp">
+      <Filter>boost\math\complex</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\complex\acosh.hpp">
+      <Filter>boost\math\complex</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\complex\asin.hpp">
+      <Filter>boost\math\complex</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\complex\asinh.hpp">
+      <Filter>boost\math\complex</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\complex\atan.hpp">
+      <Filter>boost\math\complex</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\complex\atanh.hpp">
+      <Filter>boost\math\complex</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\complex\details.hpp">
+      <Filter>boost\math\complex</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\complex\fabs.hpp">
+      <Filter>boost\math\complex</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\concepts\distributions.hpp">
+      <Filter>boost\math\concepts</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\concepts\real_concept.hpp">
+      <Filter>boost\math\concepts</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\concepts\real_type_concept.hpp">
+      <Filter>boost\math\concepts</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\concepts\std_real_concept.hpp">
+      <Filter>boost\math\concepts</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\constants\calculate_constants.hpp">
+      <Filter>boost\math\constants</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\constants\constants.hpp">
+      <Filter>boost\math\constants</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\constants\generate.hpp">
+      <Filter>boost\math\constants</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\constants\info.hpp">
+      <Filter>boost\math\constants</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\cstdfloat\cstdfloat_cmath.hpp">
+      <Filter>boost\math\cstdfloat</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\cstdfloat\cstdfloat_complex.hpp">
+      <Filter>boost\math\cstdfloat</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\cstdfloat\cstdfloat_complex_std.hpp">
+      <Filter>boost\math\cstdfloat</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\cstdfloat\cstdfloat_iostream.hpp">
+      <Filter>boost\math\cstdfloat</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\cstdfloat\cstdfloat_limits.hpp">
+      <Filter>boost\math\cstdfloat</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\cstdfloat\cstdfloat_types.hpp">
+      <Filter>boost\math\cstdfloat</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\arcsine.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\bernoulli.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\beta.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\binomial.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\cauchy.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\chi_squared.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\complement.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\exponential.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\extreme_value.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\find_location.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\find_scale.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\fisher_f.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\fwd.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\gamma.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\geometric.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\hyperexponential.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\hypergeometric.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\inverse_chi_squared.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\inverse_gamma.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\inverse_gaussian.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\laplace.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\logistic.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\lognormal.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\negative_binomial.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\non_central_beta.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\non_central_chi_squared.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\non_central_f.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\non_central_t.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\normal.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\pareto.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\poisson.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\rayleigh.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\skew_normal.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\students_t.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\triangular.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\uniform.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\weibull.hpp">
+      <Filter>boost\math\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\detail\common_error_handling.hpp">
+      <Filter>boost\math\distributions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\detail\derived_accessors.hpp">
+      <Filter>boost\math\distributions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\detail\generic_mode.hpp">
+      <Filter>boost\math\distributions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\detail\generic_quantile.hpp">
+      <Filter>boost\math\distributions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\detail\hypergeometric_cdf.hpp">
+      <Filter>boost\math\distributions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\detail\hypergeometric_pdf.hpp">
+      <Filter>boost\math\distributions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\detail\hypergeometric_quantile.hpp">
+      <Filter>boost\math\distributions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\distributions\detail\inv_discrete_quantile.hpp">
+      <Filter>boost\math\distributions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\atomic.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\big_constant.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\complex.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\config.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\convert_from_string.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\fraction.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\iteration_logger.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\minima.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\numerical_differentiation.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\polynomial.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\polynomial_gcd.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\precision.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\promotion.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\rational.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\real_cast.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\remez.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\roots.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\series.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\solve.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\stats.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\test.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\test_data.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\test_value.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\toms748_solve.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\traits.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\tuple.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\user.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\workaround.hpp">
+      <Filter>boost\math\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_2.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_3.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_4.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_5.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_6.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_7.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_8.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_9.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_10.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_11.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_12.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_13.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_14.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_15.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_16.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_17.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_18.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_19.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_20.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_2.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_3.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_4.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_5.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_6.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_7.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_8.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_9.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_10.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_11.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_12.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_13.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_14.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_15.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_16.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_17.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_18.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_19.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_20.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_2.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_3.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_4.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_5.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_6.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_7.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_8.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_9.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_10.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_11.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_12.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_13.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_14.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_15.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_16.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_17.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_18.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_19.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_20.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_2.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_3.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_4.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_5.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_6.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_7.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_8.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_9.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_10.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_11.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_12.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_13.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_14.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_15.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_16.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_17.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_18.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_19.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_20.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_2.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_3.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_4.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_5.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_6.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_7.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_8.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_9.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_10.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_11.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_12.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_13.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_14.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_15.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_16.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_17.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_18.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_19.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_20.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_2.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_3.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_4.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_5.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_6.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_7.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_8.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_9.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_10.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_11.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_12.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_13.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_14.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_15.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_16.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_17.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_18.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_19.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_20.hpp">
+      <Filter>boost\math\tools\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\interpolators\barycentric_rational.hpp">
+      <Filter>boost\math\interpolators</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\interpolators\cubic_b_spline.hpp">
+      <Filter>boost\math\interpolators</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\interpolators\detail\barycentric_rational_detail.hpp">
+      <Filter>boost\math\interpolators\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\interpolators\detail\cubic_b_spline_detail.hpp">
+      <Filter>boost\math\interpolators\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\acosh.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\airy.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\asinh.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\atanh.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\bernoulli.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\bessel.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\bessel_prime.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\beta.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\binomial.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\cbrt.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\chebyshev.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\chebyshev_transform.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\cos_pi.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\digamma.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\ellint_1.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\ellint_2.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\ellint_3.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\ellint_d.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\ellint_rc.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\ellint_rd.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\ellint_rf.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\ellint_rg.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\ellint_rj.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\erf.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\expint.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\expm1.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\factorials.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\fpclassify.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\gamma.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\hankel.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\hermite.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\heuman_lambda.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\hypot.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\jacobi_elliptic.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\jacobi_zeta.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\laguerre.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\lambert_w.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\lanczos.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\legendre.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\legendre_stieltjes.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\log1p.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\math_fwd.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\modf.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\next.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\nonfinite_num_facets.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\owens_t.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\polygamma.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\pow.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\powm1.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\prime.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\relative_difference.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\round.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\sign.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\sin_pi.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\sinc.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\sinhc.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\spherical_harmonic.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\sqrt1pm1.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\trigamma.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\trunc.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\ulp.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\zeta.hpp">
+      <Filter>boost\math\special_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bernoulli_details.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_derivatives_linear.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_i0.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_i1.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_ik.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_j0.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_j1.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_jn.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_jy.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_jy_asym.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_jy_derivatives_asym.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_jy_derivatives_series.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_jy_series.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_jy_zero.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_k0.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_k1.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_kn.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_y0.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_y1.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\bessel_yn.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\erf_inv.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\fp_traits.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\gamma_inva.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\ibeta_inv_ab.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\ibeta_inverse.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\iconv.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\igamma_inverse.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\igamma_large.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\lambert_w_lookup_table.ipp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\lanczos_sse2.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\lgamma_small.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\polygamma.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\round_fwd.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\t_distribution_inv.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\unchecked_bernoulli.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\unchecked_factorial.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\special_functions\detail\airy_ai_bi_zero.hpp">
+      <Filter>boost\math\special_functions\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\quadrature\exp_sinh.hpp">
+      <Filter>boost\math\quadrature</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\quadrature\gauss.hpp">
+      <Filter>boost\math\quadrature</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\quadrature\gauss_kronrod.hpp">
+      <Filter>boost\math\quadrature</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\quadrature\naive_monte_carlo.hpp">
+      <Filter>boost\math\quadrature</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\quadrature\sinh_sinh.hpp">
+      <Filter>boost\math\quadrature</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\quadrature\tanh_sinh.hpp">
+      <Filter>boost\math\quadrature</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\quadrature\trapezoidal.hpp">
+      <Filter>boost\math\quadrature</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\quadrature\detail\exp_sinh_detail.hpp">
+      <Filter>boost\math\quadrature\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\quadrature\detail\sinh_sinh_detail.hpp">
+      <Filter>boost\math\quadrature\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\quadrature\detail\tanh_sinh_constants.hpp">
+      <Filter>boost\math\quadrature\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\quadrature\detail\tanh_sinh_detail.hpp">
+      <Filter>boost\math\quadrature\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\policies\error_handling.hpp">
+      <Filter>boost\math\policies</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math\policies\policy.hpp">
+      <Filter>boost\math\policies</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

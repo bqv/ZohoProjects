@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\intrusive\any_hook.hpp" />
+    <ClInclude Include="boost\intrusive\avltree.hpp" />
+    <ClInclude Include="boost\intrusive\avltree_algorithms.hpp" />
+    <ClInclude Include="boost\intrusive\avl_set.hpp" />
+    <ClInclude Include="boost\intrusive\avl_set_hook.hpp" />
+    <ClInclude Include="boost\intrusive\bstree.hpp" />
+    <ClInclude Include="boost\intrusive\bstree_algorithms.hpp" />
+    <ClInclude Include="boost\intrusive\bs_set.hpp" />
+    <ClInclude Include="boost\intrusive\bs_set_hook.hpp" />
+    <ClInclude Include="boost\intrusive\circular_list_algorithms.hpp" />
+    <ClInclude Include="boost\intrusive\circular_slist_algorithms.hpp" />
+    <ClInclude Include="boost\intrusive\derivation_value_traits.hpp" />
+    <ClInclude Include="boost\intrusive\detail\algorithm.hpp" />
+    <ClInclude Include="boost\intrusive\detail\algo_type.hpp" />
+    <ClInclude Include="boost\intrusive\detail\any_node_and_algorithms.hpp" />
+    <ClInclude Include="boost\intrusive\detail\array_initializer.hpp" />
+    <ClInclude Include="boost\intrusive\detail\assert.hpp" />
+    <ClInclude Include="boost\intrusive\detail\avltree_node.hpp" />
+    <ClInclude Include="boost\intrusive\detail\bstree_algorithms_base.hpp" />
+    <ClInclude Include="boost\intrusive\detail\common_slist_algorithms.hpp" />
+    <ClInclude Include="boost\intrusive\detail\config_begin.hpp" />
+    <ClInclude Include="boost\intrusive\detail\config_end.hpp" />
+    <ClInclude Include="boost\intrusive\detail\default_header_holder.hpp" />
+    <ClInclude Include="boost\intrusive\detail\ebo_functor_holder.hpp" />
+    <ClInclude Include="boost\intrusive\detail\empty_node_checker.hpp" />
+    <ClInclude Include="boost\intrusive\detail\equal_to_value.hpp" />
+    <ClInclude Include="boost\intrusive\detail\exception_disposer.hpp" />
+    <ClInclude Include="boost\intrusive\detail\function_detector.hpp" />
+    <ClInclude Include="boost\intrusive\detail\generic_hook.hpp" />
+    <ClInclude Include="boost\intrusive\detail\get_value_traits.hpp" />
+    <ClInclude Include="boost\intrusive\detail\hashtable_node.hpp" />
+    <ClInclude Include="boost\intrusive\detail\has_member_function_callable_with.hpp" />
+    <ClInclude Include="boost\intrusive\detail\hook_traits.hpp" />
+    <ClInclude Include="boost\intrusive\detail\iiterator.hpp" />
+    <ClInclude Include="boost\intrusive\detail\is_stateful_value_traits.hpp" />
+    <ClInclude Include="boost\intrusive\detail\iterator.hpp" />
+    <ClInclude Include="boost\intrusive\detail\key_nodeptr_comp.hpp" />
+    <ClInclude Include="boost\intrusive\detail\list_iterator.hpp" />
+    <ClInclude Include="boost\intrusive\detail\list_node.hpp" />
+    <ClInclude Include="boost\intrusive\detail\math.hpp" />
+    <ClInclude Include="boost\intrusive\detail\minimal_less_equal_header.hpp" />
+    <ClInclude Include="boost\intrusive\detail\minimal_pair_header.hpp" />
+    <ClInclude Include="boost\intrusive\detail\mpl.hpp" />
+    <ClInclude Include="boost\intrusive\detail\node_cloner_disposer.hpp" />
+    <ClInclude Include="boost\intrusive\detail\node_holder.hpp" />
+    <ClInclude Include="boost\intrusive\detail\node_to_value.hpp" />
+    <ClInclude Include="boost\intrusive\detail\parent_from_member.hpp" />
+    <ClInclude Include="boost\intrusive\detail\rbtree_node.hpp" />
+    <ClInclude Include="boost\intrusive\detail\reverse_iterator.hpp" />
+    <ClInclude Include="boost\intrusive\detail\simple_disposers.hpp" />
+    <ClInclude Include="boost\intrusive\detail\size_holder.hpp" />
+    <ClInclude Include="boost\intrusive\detail\slist_iterator.hpp" />
+    <ClInclude Include="boost\intrusive\detail\slist_node.hpp" />
+    <ClInclude Include="boost\intrusive\detail\std_fwd.hpp" />
+    <ClInclude Include="boost\intrusive\detail\transform_iterator.hpp" />
+    <ClInclude Include="boost\intrusive\detail\tree_iterator.hpp" />
+    <ClInclude Include="boost\intrusive\detail\tree_node.hpp" />
+    <ClInclude Include="boost\intrusive\detail\tree_value_compare.hpp" />
+    <ClInclude Include="boost\intrusive\detail\uncast.hpp" />
+    <ClInclude Include="boost\intrusive\detail\workaround.hpp" />
+    <ClInclude Include="boost\intrusive\hashtable.hpp" />
+    <ClInclude Include="boost\intrusive\intrusive_fwd.hpp" />
+    <ClInclude Include="boost\intrusive\linear_slist_algorithms.hpp" />
+    <ClInclude Include="boost\intrusive\link_mode.hpp" />
+    <ClInclude Include="boost\intrusive\list.hpp" />
+    <ClInclude Include="boost\intrusive\list_hook.hpp" />
+    <ClInclude Include="boost\intrusive\member_value_traits.hpp" />
+    <ClInclude Include="boost\intrusive\options.hpp" />
+    <ClInclude Include="boost\intrusive\pack_options.hpp" />
+    <ClInclude Include="boost\intrusive\parent_from_member.hpp" />
+    <ClInclude Include="boost\intrusive\pointer_plus_bits.hpp" />
+    <ClInclude Include="boost\intrusive\pointer_rebind.hpp" />
+    <ClInclude Include="boost\intrusive\pointer_traits.hpp" />
+    <ClInclude Include="boost\intrusive\priority_compare.hpp" />
+    <ClInclude Include="boost\intrusive\rbtree.hpp" />
+    <ClInclude Include="boost\intrusive\rbtree_algorithms.hpp" />
+    <ClInclude Include="boost\intrusive\set.hpp" />
+    <ClInclude Include="boost\intrusive\set_hook.hpp" />
+    <ClInclude Include="boost\intrusive\sgtree.hpp" />
+    <ClInclude Include="boost\intrusive\sgtree_algorithms.hpp" />
+    <ClInclude Include="boost\intrusive\sg_set.hpp" />
+    <ClInclude Include="boost\intrusive\slist.hpp" />
+    <ClInclude Include="boost\intrusive\slist_hook.hpp" />
+    <ClInclude Include="boost\intrusive\splaytree.hpp" />
+    <ClInclude Include="boost\intrusive\splaytree_algorithms.hpp" />
+    <ClInclude Include="boost\intrusive\splay_set.hpp" />
+    <ClInclude Include="boost\intrusive\treap.hpp" />
+    <ClInclude Include="boost\intrusive\treap_algorithms.hpp" />
+    <ClInclude Include="boost\intrusive\treap_set.hpp" />
+    <ClInclude Include="boost\intrusive\trivial_value_traits.hpp" />
+    <ClInclude Include="boost\intrusive\unordered_set.hpp" />
+    <ClInclude Include="boost\intrusive\unordered_set_hook.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{80960BA3-59BD-411C-A75C-F8D290F06426}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BoostIntrusive</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;BOOSTINTRUSIVE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;BOOSTINTRUSIVE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;BOOSTINTRUSIVE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;BOOSTINTRUSIVE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

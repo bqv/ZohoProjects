@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\algorithm\algorithm.hpp" />
+    <ClInclude Include="boost\algorithm\apply_permutation.hpp" />
+    <ClInclude Include="boost\algorithm\clamp.hpp" />
+    <ClInclude Include="boost\algorithm\cxx11\all_of.hpp" />
+    <ClInclude Include="boost\algorithm\cxx11\any_of.hpp" />
+    <ClInclude Include="boost\algorithm\cxx11\copy_if.hpp" />
+    <ClInclude Include="boost\algorithm\cxx11\copy_n.hpp" />
+    <ClInclude Include="boost\algorithm\cxx11\find_if_not.hpp" />
+    <ClInclude Include="boost\algorithm\cxx11\iota.hpp" />
+    <ClInclude Include="boost\algorithm\cxx11\is_partitioned.hpp" />
+    <ClInclude Include="boost\algorithm\cxx11\is_permutation.hpp" />
+    <ClInclude Include="boost\algorithm\cxx11\is_sorted.hpp" />
+    <ClInclude Include="boost\algorithm\cxx11\none_of.hpp" />
+    <ClInclude Include="boost\algorithm\cxx11\one_of.hpp" />
+    <ClInclude Include="boost\algorithm\cxx11\partition_copy.hpp" />
+    <ClInclude Include="boost\algorithm\cxx11\partition_point.hpp" />
+    <ClInclude Include="boost\algorithm\cxx14\equal.hpp" />
+    <ClInclude Include="boost\algorithm\cxx14\is_permutation.hpp" />
+    <ClInclude Include="boost\algorithm\cxx14\mismatch.hpp" />
+    <ClInclude Include="boost\algorithm\cxx17\exclusive_scan.hpp" />
+    <ClInclude Include="boost\algorithm\cxx17\for_each_n.hpp" />
+    <ClInclude Include="boost\algorithm\cxx17\inclusive_scan.hpp" />
+    <ClInclude Include="boost\algorithm\cxx17\reduce.hpp" />
+    <ClInclude Include="boost\algorithm\cxx17\transform_exclusive_scan.hpp" />
+    <ClInclude Include="boost\algorithm\cxx17\transform_inclusive_scan.hpp" />
+    <ClInclude Include="boost\algorithm\cxx17\transform_reduce.hpp" />
+    <ClInclude Include="boost\algorithm\find_backward.hpp" />
+    <ClInclude Include="boost\algorithm\find_not.hpp" />
+    <ClInclude Include="boost\algorithm\gather.hpp" />
+    <ClInclude Include="boost\algorithm\hex.hpp" />
+    <ClInclude Include="boost\algorithm\is_palindrome.hpp" />
+    <ClInclude Include="boost\algorithm\is_partitioned_until.hpp" />
+    <ClInclude Include="boost\algorithm\minmax.hpp" />
+    <ClInclude Include="boost\algorithm\minmax_element.hpp" />
+    <ClInclude Include="boost\algorithm\searching\boyer_moore.hpp" />
+    <ClInclude Include="boost\algorithm\searching\boyer_moore_horspool.hpp" />
+    <ClInclude Include="boost\algorithm\searching\detail\bm_traits.hpp" />
+    <ClInclude Include="boost\algorithm\searching\detail\debugging.hpp" />
+    <ClInclude Include="boost\algorithm\searching\knuth_morris_pratt.hpp" />
+    <ClInclude Include="boost\algorithm\sort_subrange.hpp" />
+    <ClInclude Include="boost\algorithm\string.hpp" />
+    <ClInclude Include="boost\algorithm\string\case_conv.hpp" />
+    <ClInclude Include="boost\algorithm\string\classification.hpp" />
+    <ClInclude Include="boost\algorithm\string\compare.hpp" />
+    <ClInclude Include="boost\algorithm\string\concept.hpp" />
+    <ClInclude Include="boost\algorithm\string\config.hpp" />
+    <ClInclude Include="boost\algorithm\string\constants.hpp" />
+    <ClInclude Include="boost\algorithm\string\detail\case_conv.hpp" />
+    <ClInclude Include="boost\algorithm\string\detail\classification.hpp" />
+    <ClInclude Include="boost\algorithm\string\detail\finder.hpp" />
+    <ClInclude Include="boost\algorithm\string\detail\finder_regex.hpp" />
+    <ClInclude Include="boost\algorithm\string\detail\find_format.hpp" />
+    <ClInclude Include="boost\algorithm\string\detail\find_format_all.hpp" />
+    <ClInclude Include="boost\algorithm\string\detail\find_format_store.hpp" />
+    <ClInclude Include="boost\algorithm\string\detail\find_iterator.hpp" />
+    <ClInclude Include="boost\algorithm\string\detail\formatter.hpp" />
+    <ClInclude Include="boost\algorithm\string\detail\formatter_regex.hpp" />
+    <ClInclude Include="boost\algorithm\string\detail\predicate.hpp" />
+    <ClInclude Include="boost\algorithm\string\detail\replace_storage.hpp" />
+    <ClInclude Include="boost\algorithm\string\detail\sequence.hpp" />
+    <ClInclude Include="boost\algorithm\string\detail\trim.hpp" />
+    <ClInclude Include="boost\algorithm\string\detail\util.hpp" />
+    <ClInclude Include="boost\algorithm\string\erase.hpp" />
+    <ClInclude Include="boost\algorithm\string\find.hpp" />
+    <ClInclude Include="boost\algorithm\string\finder.hpp" />
+    <ClInclude Include="boost\algorithm\string\find_format.hpp" />
+    <ClInclude Include="boost\algorithm\string\find_iterator.hpp" />
+    <ClInclude Include="boost\algorithm\string\formatter.hpp" />
+    <ClInclude Include="boost\algorithm\string\iter_find.hpp" />
+    <ClInclude Include="boost\algorithm\string\join.hpp" />
+    <ClInclude Include="boost\algorithm\string\predicate.hpp" />
+    <ClInclude Include="boost\algorithm\string\predicate_facade.hpp" />
+    <ClInclude Include="boost\algorithm\string\regex.hpp" />
+    <ClInclude Include="boost\algorithm\string\regex_find_format.hpp" />
+    <ClInclude Include="boost\algorithm\string\replace.hpp" />
+    <ClInclude Include="boost\algorithm\string\sequence_traits.hpp" />
+    <ClInclude Include="boost\algorithm\string\split.hpp" />
+    <ClInclude Include="boost\algorithm\string\std\list_traits.hpp" />
+    <ClInclude Include="boost\algorithm\string\std\rope_traits.hpp" />
+    <ClInclude Include="boost\algorithm\string\std\slist_traits.hpp" />
+    <ClInclude Include="boost\algorithm\string\std\string_traits.hpp" />
+    <ClInclude Include="boost\algorithm\string\std_containers_traits.hpp" />
+    <ClInclude Include="boost\algorithm\string\trim.hpp" />
+    <ClInclude Include="boost\algorithm\string\trim_all.hpp" />
+    <ClInclude Include="boost\algorithm\string\yes_no_type.hpp" />
+    <ClInclude Include="boost\algorithm\string_regex.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{F8B8B6B0-E7F7-4026-9FB0-A550CCE4F697}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BoostAlgorithm</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;BOOSTALGORITHM_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;BOOSTALGORITHM_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;BOOSTALGORITHM_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;BOOSTALGORITHM_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="atlres.h" />
+    <ClInclude Include="atlresce.h" />
+    <ClInclude Include="atlribbon.h" />
+    <ClInclude Include="atlscrl.h" />
+    <ClInclude Include="atlsplit.h" />
+    <ClInclude Include="atltheme.h" />
+    <ClInclude Include="atluser.h" />
+    <ClInclude Include="atlwince.h" />
+    <ClInclude Include="atlwinx.h" />
+    <ClInclude Include="atlapp.h" />
+    <ClInclude Include="atlcrack.h" />
+    <ClInclude Include="atlctrls.h" />
+    <ClInclude Include="atlctrlw.h" />
+    <ClInclude Include="atlctrlx.h" />
+    <ClInclude Include="atlddx.h" />
+    <ClInclude Include="atldlgs.h" />
+    <ClInclude Include="atldwm.h" />
+    <ClInclude Include="atlfind.h" />
+    <ClInclude Include="atlframe.h" />
+    <ClInclude Include="atlgdi.h" />
+    <ClInclude Include="atlmisc.h" />
+    <ClInclude Include="atlprint.h" />
+  </ItemGroup>
+</Project>

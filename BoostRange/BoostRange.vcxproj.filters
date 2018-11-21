@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{615369b5-fc3c-401c-a4f6-41b8a6f4b486}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\range">
+      <UniqueIdentifier>{36e8a4e3-339d-48e7-ad02-faf4c960a8da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\range\adaptor">
+      <UniqueIdentifier>{6779cba9-650f-42a1-a73c-f53ec7c2b76d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\range\algorithm">
+      <UniqueIdentifier>{7233a250-a549-4f96-ba51-ecfc313716fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\range\algorithm_ext">
+      <UniqueIdentifier>{8839634e-79ec-4a89-930f-dabd22544da8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\range\detail">
+      <UniqueIdentifier>{d474f635-4d16-4092-831a-1a725900b826}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\range.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptors.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm_ext.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\any_range.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\as_array.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\as_literal.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\atl.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\begin.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\category.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\combine.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\concepts.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\config.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\const_iterator.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\const_reverse_iterator.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\counting_range.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\difference_type.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\distance.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\empty.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\end.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\functions.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\has_range_iterator.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\irange.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\istream_range.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\iterator.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\iterator_range.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\iterator_range_core.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\iterator_range_hash.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\iterator_range_io.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\join.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\metafunctions.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\mfc.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\mfc_map.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\mutable_iterator.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\numeric.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\pointer.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\range_fwd.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\rbegin.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\reference.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\rend.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\result_iterator.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\reverse_iterator.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\reverse_result_iterator.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\size.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\size_type.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\sub_range.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\traversal.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\value_type.hpp">
+      <Filter>boost\range</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\adjacent_filtered.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\argument_fwd.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\copied.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\define_adaptor.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\filtered.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\formatted.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\indexed.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\indirected.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\map.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\ref_unwrapped.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\replaced.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\replaced_if.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\reversed.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\sliced.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\strided.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\tokenized.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\transformed.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\type_erased.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\adaptor\uniqued.hpp">
+      <Filter>boost\range\adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\adjacent_find.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\binary_search.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\copy.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\copy_backward.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\count.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\count_if.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\equal.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\equal_range.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\fill.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\fill_n.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\find.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\find_end.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\find_first_of.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\find_if.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\for_each.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\generate.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\heap_algorithm.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\inplace_merge.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\lexicographical_compare.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\lower_bound.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\max_element.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\merge.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\min_element.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\mismatch.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\nth_element.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\partial_sort.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\partial_sort_copy.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\partition.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\permutation.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\random_shuffle.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\remove.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\remove_copy.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\remove_copy_if.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\remove_if.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\replace.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\replace_copy.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\replace_copy_if.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\replace_if.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\reverse.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\reverse_copy.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\rotate.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\rotate_copy.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\search.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\search_n.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\set_algorithm.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\sort.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\stable_partition.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\stable_sort.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\swap_ranges.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\transform.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\unique.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\unique_copy.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm\upper_bound.hpp">
+      <Filter>boost\range\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm_ext\copy_n.hpp">
+      <Filter>boost\range\algorithm_ext</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm_ext\erase.hpp">
+      <Filter>boost\range\algorithm_ext</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm_ext\for_each.hpp">
+      <Filter>boost\range\algorithm_ext</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm_ext\insert.hpp">
+      <Filter>boost\range\algorithm_ext</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm_ext\iota.hpp">
+      <Filter>boost\range\algorithm_ext</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm_ext\is_sorted.hpp">
+      <Filter>boost\range\algorithm_ext</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm_ext\overwrite.hpp">
+      <Filter>boost\range\algorithm_ext</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm_ext\push_back.hpp">
+      <Filter>boost\range\algorithm_ext</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\algorithm_ext\push_front.hpp">
+      <Filter>boost\range\algorithm_ext</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\any_iterator.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\any_iterator_buffer.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\any_iterator_interface.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\any_iterator_wrapper.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\as_literal.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\begin.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\collection_traits.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\collection_traits_detail.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\combine_cxx03.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\combine_cxx11.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\combine_no_rvalue.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\combine_rvalue.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\common.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\default_constructible_unary_fn.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\demote_iterator_traversal_tag.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\detail_str.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\difference_type.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\empty.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\end.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\extract_optional_type.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\has_member_size.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\implementation_help.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\join_iterator.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\microsoft.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\misc_concept.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\msvc_has_iterator_workaround.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\range_return.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\remove_extent.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\safe_bool.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\sfinae.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\size_type.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\sizer.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\str_types.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range\detail\value_type.hpp">
+      <Filter>boost\range\detail</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

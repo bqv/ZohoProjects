@@ -1,4 +1,5 @@
 #pragma once
+#include "stdafx.h"
 
 #ifdef ZOHOPROJECTS
 #pragma warning(disable:4374)

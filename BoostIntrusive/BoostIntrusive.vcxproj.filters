@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{af420014-7495-4121-9f1d-a1f5a880c6c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\intrusive">
+      <UniqueIdentifier>{0834b4fb-06c3-47de-895d-4c4b529cc44c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\intrusive\detail">
+      <UniqueIdentifier>{78f858e5-b99e-4fc0-abe2-444d9d0a133a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\intrusive\any_hook.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\avl_set.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\avl_set_hook.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\avltree.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\avltree_algorithms.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\bs_set.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\bs_set_hook.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\bstree.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\bstree_algorithms.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\circular_list_algorithms.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\circular_slist_algorithms.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\derivation_value_traits.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\hashtable.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\intrusive_fwd.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\linear_slist_algorithms.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\link_mode.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\list.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\list_hook.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\member_value_traits.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\options.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\pack_options.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\parent_from_member.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\pointer_plus_bits.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\pointer_rebind.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\pointer_traits.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\priority_compare.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\rbtree.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\rbtree_algorithms.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\set.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\set_hook.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\sg_set.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\sgtree.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\sgtree_algorithms.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\slist.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\slist_hook.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\splay_set.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\splaytree.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\splaytree_algorithms.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\treap.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\treap_algorithms.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\treap_set.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\trivial_value_traits.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\unordered_set.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\unordered_set_hook.hpp">
+      <Filter>boost\intrusive</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\algo_type.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\algorithm.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\any_node_and_algorithms.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\array_initializer.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\assert.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\avltree_node.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\bstree_algorithms_base.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\common_slist_algorithms.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\config_begin.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\config_end.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\default_header_holder.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\ebo_functor_holder.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\empty_node_checker.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\equal_to_value.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\exception_disposer.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\function_detector.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\generic_hook.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\get_value_traits.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\has_member_function_callable_with.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\hashtable_node.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\hook_traits.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\iiterator.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\is_stateful_value_traits.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\iterator.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\key_nodeptr_comp.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\list_iterator.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\list_node.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\math.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\minimal_less_equal_header.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\minimal_pair_header.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\mpl.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\node_cloner_disposer.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\node_holder.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\node_to_value.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\parent_from_member.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\rbtree_node.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\reverse_iterator.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\simple_disposers.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\size_holder.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\slist_iterator.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\slist_node.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\std_fwd.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\transform_iterator.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\tree_iterator.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\tree_node.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\tree_value_compare.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\uncast.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive\detail\workaround.hpp">
+      <Filter>boost\intrusive\detail</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

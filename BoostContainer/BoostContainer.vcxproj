@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="alloc_lib.c" />
+    <ClCompile Include="dlmalloc.cpp" />
+    <ClCompile Include="dlmalloc_2_8_6.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="dlmalloc_ext_2_8_6.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="global_resource.cpp" />
+    <ClCompile Include="monotonic_buffer_resource.cpp" />
+    <ClCompile Include="pool_resource.cpp" />
+    <ClCompile Include="synchronized_pool_resource.cpp" />
+    <ClCompile Include="unsynchronized_pool_resource.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\container\adaptive_pool.hpp" />
+    <ClInclude Include="boost\container\allocator.hpp" />
+    <ClInclude Include="boost\container\allocator_traits.hpp" />
+    <ClInclude Include="boost\container\container_fwd.hpp" />
+    <ClInclude Include="boost\container\deque.hpp" />
+    <ClInclude Include="boost\container\detail\adaptive_node_pool.hpp" />
+    <ClInclude Include="boost\container\detail\adaptive_node_pool_impl.hpp" />
+    <ClInclude Include="boost\container\detail\addressof.hpp" />
+    <ClInclude Include="boost\container\detail\advanced_insert_int.hpp" />
+    <ClInclude Include="boost\container\detail\algorithm.hpp" />
+    <ClInclude Include="boost\container\detail\allocation_type.hpp" />
+    <ClInclude Include="boost\container\detail\allocator_version_traits.hpp" />
+    <ClInclude Include="boost\container\detail\alloc_helpers.hpp" />
+    <ClInclude Include="boost\container\detail\alloc_lib.h" />
+    <ClInclude Include="boost\container\detail\auto_link.hpp" />
+    <ClInclude Include="boost\container\detail\block_list.hpp" />
+    <ClInclude Include="boost\container\detail\block_slist.hpp" />
+    <ClInclude Include="boost\container\detail\compare_functors.hpp" />
+    <ClInclude Include="boost\container\detail\config_begin.hpp" />
+    <ClInclude Include="boost\container\detail\config_end.hpp" />
+    <ClInclude Include="boost\container\detail\construct_in_place.hpp" />
+    <ClInclude Include="boost\container\detail\container_or_allocator_rebind.hpp" />
+    <ClInclude Include="boost\container\detail\container_rebind.hpp" />
+    <ClInclude Include="boost\container\detail\copy_move_algo.hpp" />
+    <ClInclude Include="boost\container\detail\destroyers.hpp" />
+    <ClInclude Include="boost\container\detail\dispatch_uses_allocator.hpp" />
+    <ClInclude Include="boost\container\detail\dlmalloc.hpp" />
+    <ClInclude Include="boost\container\detail\flat_tree.hpp" />
+    <ClInclude Include="boost\container\detail\function_detector.hpp" />
+    <ClInclude Include="boost\container\detail\is_container.hpp" />
+    <ClInclude Include="boost\container\detail\is_contiguous_container.hpp" />
+    <ClInclude Include="boost\container\detail\is_sorted.hpp" />
+    <ClInclude Include="boost\container\detail\iterator.hpp" />
+    <ClInclude Include="boost\container\detail\iterators.hpp" />
+    <ClInclude Include="boost\container\detail\iterator_to_raw_pointer.hpp" />
+    <ClInclude Include="boost\container\detail\math_functions.hpp" />
+    <ClInclude Include="boost\container\detail\minimal_char_traits_header.hpp" />
+    <ClInclude Include="boost\container\detail\min_max.hpp" />
+    <ClInclude Include="boost\container\detail\mpl.hpp" />
+    <ClInclude Include="boost\container\detail\multiallocation_chain.hpp" />
+    <ClInclude Include="boost\container\detail\mutex.hpp" />
+    <ClInclude Include="boost\container\detail\next_capacity.hpp" />
+    <ClInclude Include="boost\container\detail\node_alloc_holder.hpp" />
+    <ClInclude Include="boost\container\detail\node_pool.hpp" />
+    <ClInclude Include="boost\container\detail\node_pool_impl.hpp" />
+    <ClInclude Include="boost\container\detail\pair.hpp" />
+    <ClInclude Include="boost\container\detail\pair_key_mapped_of_value.hpp" />
+    <ClInclude Include="boost\container\detail\placement_new.hpp" />
+    <ClInclude Include="boost\container\detail\pool_common.hpp" />
+    <ClInclude Include="boost\container\detail\pool_common_alloc.hpp" />
+    <ClInclude Include="boost\container\detail\pool_resource.hpp" />
+    <ClInclude Include="boost\container\detail\singleton.hpp" />
+    <ClInclude Include="boost\container\detail\std_fwd.hpp" />
+    <ClInclude Include="boost\container\detail\thread_mutex.hpp" />
+    <ClInclude Include="boost\container\detail\transform_iterator.hpp" />
+    <ClInclude Include="boost\container\detail\tree.hpp" />
+    <ClInclude Include="boost\container\detail\type_traits.hpp" />
+    <ClInclude Include="boost\container\detail\value_functors.hpp" />
+    <ClInclude Include="boost\container\detail\value_init.hpp" />
+    <ClInclude Include="boost\container\detail\variadic_templates_tools.hpp" />
+    <ClInclude Include="boost\container\detail\version_type.hpp" />
+    <ClInclude Include="boost\container\detail\workaround.hpp" />
+    <ClInclude Include="boost\container\flat_map.hpp" />
+    <ClInclude Include="boost\container\flat_set.hpp" />
+    <ClInclude Include="boost\container\list.hpp" />
+    <ClInclude Include="boost\container\map.hpp" />
+    <ClInclude Include="boost\container\new_allocator.hpp" />
+    <ClInclude Include="boost\container\node_allocator.hpp" />
+    <ClInclude Include="boost\container\node_handle.hpp" />
+    <ClInclude Include="boost\container\options.hpp" />
+    <ClInclude Include="boost\container\pmr\deque.hpp" />
+    <ClInclude Include="boost\container\pmr\flat_map.hpp" />
+    <ClInclude Include="boost\container\pmr\flat_set.hpp" />
+    <ClInclude Include="boost\container\pmr\global_resource.hpp" />
+    <ClInclude Include="boost\container\pmr\list.hpp" />
+    <ClInclude Include="boost\container\pmr\map.hpp" />
+    <ClInclude Include="boost\container\pmr\memory_resource.hpp" />
+    <ClInclude Include="boost\container\pmr\monotonic_buffer_resource.hpp" />
+    <ClInclude Include="boost\container\pmr\polymorphic_allocator.hpp" />
+    <ClInclude Include="boost\container\pmr\pool_options.hpp" />
+    <ClInclude Include="boost\container\pmr\resource_adaptor.hpp" />
+    <ClInclude Include="boost\container\pmr\set.hpp" />
+    <ClInclude Include="boost\container\pmr\slist.hpp" />
+    <ClInclude Include="boost\container\pmr\small_vector.hpp" />
+    <ClInclude Include="boost\container\pmr\stable_vector.hpp" />
+    <ClInclude Include="boost\container\pmr\string.hpp" />
+    <ClInclude Include="boost\container\pmr\synchronized_pool_resource.hpp" />
+    <ClInclude Include="boost\container\pmr\unsynchronized_pool_resource.hpp" />
+    <ClInclude Include="boost\container\pmr\vector.hpp" />
+    <ClInclude Include="boost\container\scoped_allocator.hpp" />
+    <ClInclude Include="boost\container\scoped_allocator_fwd.hpp" />
+    <ClInclude Include="boost\container\set.hpp" />
+    <ClInclude Include="boost\container\slist.hpp" />
+    <ClInclude Include="boost\container\small_vector.hpp" />
+    <ClInclude Include="boost\container\stable_vector.hpp" />
+    <ClInclude Include="boost\container\static_vector.hpp" />
+    <ClInclude Include="boost\container\string.hpp" />
+    <ClInclude Include="boost\container\throw_exception.hpp" />
+    <ClInclude Include="boost\container\uses_allocator.hpp" />
+    <ClInclude Include="boost\container\uses_allocator_fwd.hpp" />
+    <ClInclude Include="boost\container\vector.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{3296F729-6DA6-4D9F-B770-5A78E56F4DCF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BoostContainer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>USE_DL_PREFIX;WIN32;_DEBUG;BOOSTCONTAINER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\BoostCore\;$(ProjectDir)..\BoostIntrusive\;$(ProjectDir)..\BoostStaticAssert\;$(ProjectDir)..\BoostAssert\;$(ProjectDir)..\BoostMove\;$(ProjectDir)..\BoostConfig\;$(ProjectDir)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <NoEntryPoint>true</NoEntryPoint>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;BOOSTCONTAINER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>USE_DL_PREFIX;WIN32;NDEBUG;BOOSTCONTAINER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\BoostCore\;$(ProjectDir)..\BoostIntrusive\;$(ProjectDir)..\BoostStaticAssert\;$(ProjectDir)..\BoostAssert\;$(ProjectDir)..\BoostMove\;$(ProjectDir)..\BoostConfig\;$(ProjectDir)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <NoEntryPoint>true</NoEntryPoint>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;BOOSTCONTAINER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

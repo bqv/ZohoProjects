@@ -9,14 +9,6 @@
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|x64">
-      <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x64">
-      <Configuration>Release</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -39,19 +31,6 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -63,23 +42,12 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -88,33 +56,20 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_ASYNCRT_EXPORT;CPPREST_EXCLUDE_BROTLI;__STDC_WANT_LIB_EXT1__=1;WIN32;_DEBUG;CPPRESTSDK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0600;BOOST_ASIO_HEADER_ONLY;BOOST_ALL_NO_LIB;_CRT_SECURE_NO_WARNINGS;BOOST_SYSTEM_DYN_LINK;BOOST_ASIO_MSVC;BOOST_ASIO_DYN_LINK;_ASYNCRT_EXPORT;CPPREST_EXCLUDE_BROTLI;__STDC_WANT_LIB_EXT1__=1;WIN32;_DEBUG;CPPRESTSDK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)websockets\client;$(ProjectDir)utilities;$(ProjectDir)uri;$(ProjectDir)streams;$(ProjectDir)pplx;$(ProjectDir)pch;$(ProjectDir)json;$(ProjectDir)http\client;$(ProjectDir)http\common;$(ProjectDir)http\listener;$(ProjectDir)http\oauth;$(ProjectDir)cpprest;$(ProjectDir)cpprest\details;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\BoostConceptCheck\;$(ProjectDir)..\BoostDetail\;$(ProjectDir)..\BoostIterator\;$(ProjectDir)..\BoostRange\;$(ProjectDir)..\BoostAlgorithm\;$(ProjectDir)..\Zlib\;$(ProjectDir)..\WebSocketPP\;$(ProjectDir)..\OpenSsl\;$(ProjectDir)..\BoostRegex\;$(ProjectDir)..\BoostBind\;$(ProjectDir)..\BoostNumericConversion\;$(ProjectDir)..\BoostPreprocessor\;$(ProjectDir)..\BoostMpl\;$(ProjectDir)..\BoostTypeTraits\;$(ProjectDir)..\BoostStaticAssert\;$(ProjectDir)..\BoostUtility\;$(ProjectDir)..\BoostCore\;$(ProjectDir)..\BoostSmartPtr\;$(ProjectDir)..\BoostDateTime\;$(ProjectDir)..\BoostAssert\;$(ProjectDir)..\BoostThrowException\;$(ProjectDir)..\BoostPredef\;$(ProjectDir)..\BoostWinapi\;$(ProjectDir)..\BoostConfig\;$(ProjectDir)..\BoostSystem\;$(ProjectDir)..\BoostAsio;$(ProjectDir);$(ProjectDir)websockets\client;$(ProjectDir)utilities;$(ProjectDir)uri;$(ProjectDir)streams;$(ProjectDir)pplx;$(ProjectDir)pch;$(ProjectDir)json;$(ProjectDir)http\client;$(ProjectDir)http\common;$(ProjectDir)http\listener;$(ProjectDir)http\oauth;$(ProjectDir)cpprest;$(ProjectDir)cpprest\details;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>bcrypt.lib;httpapi.lib;winhttp.lib;crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>httpapi.lib;bcrypt.lib;crypt32.lib;winhttp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>NotSet</ShowProgress>
     </Link>
     <ResourceCompile>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)websockets\client;$(ProjectDir)utilities;$(ProjectDir)uri;$(ProjectDir)streams;$(ProjectDir)pplx;$(ProjectDir)pch;$(ProjectDir)json;$(ProjectDir)http\client;$(ProjectDir)http\common;$(ProjectDir)http\listener;$(ProjectDir)http\oauth;$(ProjectDir)cpprest;$(ProjectDir)cpprest\details;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;CPPRESTSDK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -124,87 +79,152 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_ASYNCRT_EXPORT;CPPREST_EXCLUDE_BROTLI;__STDC_WANT_LIB_EXT1__=1;WIN32;NDEBUG;CPPRESTSDK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0600;BOOST_ASIO_HEADER_ONLY;BOOST_ALL_NO_LIB;_CRT_SECURE_NO_WARNINGS;BOOST_SYSTEM_DYN_LINK;BOOST_ASIO_MSVC;BOOST_ASIO_DYN_LINK;_ASYNCRT_EXPORT;CPPREST_EXCLUDE_BROTLI;__STDC_WANT_LIB_EXT1__=1;WIN32;_DEBUG;CPPRESTSDK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)websockets\client;$(ProjectDir)utilities;$(ProjectDir)uri;$(ProjectDir)streams;$(ProjectDir)pplx;$(ProjectDir)pch;$(ProjectDir)json;$(ProjectDir)http\client;$(ProjectDir)http\common;$(ProjectDir)http\listener;$(ProjectDir)http\oauth;$(ProjectDir)cpprest;$(ProjectDir)cpprest\details;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\BoostConceptCheck\;$(ProjectDir)..\BoostDetail\;$(ProjectDir)..\BoostIterator\;$(ProjectDir)..\BoostRange\;$(ProjectDir)..\BoostAlgorithm\;$(ProjectDir)..\Zlib\;$(ProjectDir)..\WebSocketPP\;$(ProjectDir)..\OpenSsl\;$(ProjectDir)..\BoostRegex\;$(ProjectDir)..\BoostBind\;$(ProjectDir)..\BoostNumericConversion\;$(ProjectDir)..\BoostPreprocessor\;$(ProjectDir)..\BoostMpl\;$(ProjectDir)..\BoostTypeTraits\;$(ProjectDir)..\BoostStaticAssert\;$(ProjectDir)..\BoostUtility\;$(ProjectDir)..\BoostCore\;$(ProjectDir)..\BoostSmartPtr\;$(ProjectDir)..\BoostDateTime\;$(ProjectDir)..\BoostAssert\;$(ProjectDir)..\BoostThrowException\;$(ProjectDir)..\BoostPredef\;$(ProjectDir)..\BoostWinapi\;$(ProjectDir)..\BoostConfig\;$(ProjectDir)..\BoostSystem\;$(ProjectDir)..\BoostAsio;$(ProjectDir);$(ProjectDir)websockets\client;$(ProjectDir)utilities;$(ProjectDir)uri;$(ProjectDir)streams;$(ProjectDir)pplx;$(ProjectDir)pch;$(ProjectDir)json;$(ProjectDir)http\client;$(ProjectDir)http\common;$(ProjectDir)http\listener;$(ProjectDir)http\oauth;$(ProjectDir)cpprest;$(ProjectDir)cpprest\details;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>bcrypt.lib;httpapi.lib;winhttp.lib;crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>httpapi.lib;bcrypt.lib;crypt32.lib;winhttp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>NotSet</ShowProgress>
     </Link>
     <ResourceCompile>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)websockets\client;$(ProjectDir)utilities;$(ProjectDir)uri;$(ProjectDir)streams;$(ProjectDir)pplx;$(ProjectDir)pch;$(ProjectDir)json;$(ProjectDir)http\client;$(ProjectDir)http\common;$(ProjectDir)http\listener;$(ProjectDir)http\oauth;$(ProjectDir)cpprest;$(ProjectDir)cpprest\details;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;CPPRESTSDK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Windows</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="cpprest\astreambuf.h" />
-    <ClInclude Include="cpprest\asyncrt_utils.h" />
-    <ClInclude Include="cpprest\base_uri.h" />
-    <ClInclude Include="cpprest\containerstream.h" />
-    <ClInclude Include="cpprest\details\basic_types.h" />
-    <ClInclude Include="cpprest\details\cpprest_compat.h" />
-    <ClInclude Include="cpprest\details\fileio.h" />
-    <ClInclude Include="cpprest\details\http_helpers.h" />
-    <ClInclude Include="cpprest\details\http_server.h" />
-    <ClInclude Include="cpprest\details\http_server_api.h" />
-    <ClInclude Include="cpprest\details\nosal.h" />
-    <ClInclude Include="cpprest\details\resource.h" />
-    <ClInclude Include="cpprest\details\SafeInt3.hpp" />
-    <ClInclude Include="cpprest\details\web_utilities.h" />
-    <ClInclude Include="cpprest\filestream.h" />
-    <ClInclude Include="cpprest\http_client.h" />
-    <ClInclude Include="cpprest\http_compression.h" />
-    <ClInclude Include="cpprest\http_headers.h" />
-    <ClInclude Include="cpprest\http_listener.h" />
-    <ClInclude Include="cpprest\http_msg.h" />
-    <ClInclude Include="cpprest\interopstream.h" />
-    <ClInclude Include="cpprest\json.h" />
-    <ClInclude Include="cpprest\oauth1.h" />
-    <ClInclude Include="cpprest\oauth2.h" />
-    <ClInclude Include="cpprest\producerconsumerstream.h" />
-    <ClInclude Include="cpprest\rawptrstream.h" />
-    <ClInclude Include="cpprest\streams.h" />
-    <ClInclude Include="cpprest\uri.h" />
-    <ClInclude Include="cpprest\uri_builder.h" />
-    <ClInclude Include="cpprest\version.h" />
-    <ClInclude Include="cpprest\ws_client.h" />
-    <ClInclude Include="cpprest\ws_msg.h" />
-    <ClInclude Include="http\client\http_client_impl.h" />
+    <ClInclude Include="cpprest\astreambuf.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\asyncrt_utils.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\base_uri.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\containerstream.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\basic_types.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\cpprest_compat.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\fileio.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\http_helpers.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\http_server.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\http_server_api.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\nosal.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\resource.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\SafeInt3.hpp">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\details\web_utilities.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\filestream.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\http_client.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\http_compression.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\http_headers.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\http_listener.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\http_msg.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\interopstream.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\json.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\oauth1.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\oauth2.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\producerconsumerstream.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\rawptrstream.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\streams.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\uri.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\uri_builder.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\version.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\ws_client.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="cpprest\ws_msg.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="http\client\http_client_impl.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
     <ClInclude Include="http\common\connection_pool_helpers.h" />
     <ClInclude Include="http\common\internal_http_helpers.h" />
     <ClInclude Include="http\common\x509_cert_utilities.h" />
     <ClInclude Include="http\listener\http_server_httpsys.h" />
     <ClInclude Include="http\listener\http_server_impl.h" />
     <ClInclude Include="pch\stdafx.h" />
-    <ClInclude Include="pplx\pplx.h" />
-    <ClInclude Include="pplx\pplxcancellation_token.h" />
-    <ClInclude Include="pplx\pplxconv.h" />
-    <ClInclude Include="pplx\pplxinterface.h" />
-    <ClInclude Include="pplx\pplxlinux.h" />
-    <ClInclude Include="pplx\pplxtasks.h" />
-    <ClInclude Include="pplx\pplxwin.h" />
-    <ClInclude Include="pplx\threadpool.h" />
+    <ClInclude Include="pplx\pplx.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="pplx\pplxcancellation_token.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="pplx\pplxconv.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="pplx\pplxinterface.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="pplx\pplxlinux.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="pplx\pplxtasks.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="pplx\pplxwin.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="pplx\threadpool.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
     <ClInclude Include="websockets\client\ws_client_impl.h" />
   </ItemGroup>
   <ItemGroup>
@@ -223,7 +243,10 @@
     <ClCompile Include="http\common\http_compression.cpp" />
     <ClCompile Include="http\common\http_helpers.cpp" />
     <ClCompile Include="http\common\http_msg.cpp" />
-    <ClCompile Include="http\listener\http_listener.cpp" />
+    <ClCompile Include="http\listener\http_listener.cpp">
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PreprocessToFile>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PreprocessToFile>
+    </ClCompile>
     <ClCompile Include="http\listener\http_listener_msg.cpp" />
     <ClCompile Include="http\listener\http_server_api.cpp" />
     <ClCompile Include="http\listener\http_server_asio.cpp">
@@ -278,104 +301,26 @@
   <ItemGroup>
     <None Include="cpprest\details\http_constants.dat">
       <FileType>CppHeader</FileType>
-      <DeploymentContent>false</DeploymentContent>
+      <DeploymentContent>true</DeploymentContent>
     </None>
-    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BoostDateTime\BoostDateTime.vcxproj">
+      <Project>{4bfc73df-893f-4898-a802-b4b91b63dc37}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\BoostSystem\BoostSystem.vcxproj">
+      <Project>{06931848-99e8-4da1-9eb0-b7e3d596e77f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LibEay32\LibEay32.vcxproj">
+      <Project>{35744bf8-a83c-4e98-9bd2-781d2ad05978}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SslEay32\SslEay32.vcxproj">
+      <Project>{2dabb579-6729-4b15-a446-9f78a03e08ba}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Zlib\Zlib.vcxproj">
+      <Project>{7f23459f-c2c8-49b4-b949-aa380c25c887}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\packages\boost.1.68.0.0\build\boost.targets" Condition="Exists('..\packages\boost.1.68.0.0\build\boost.targets')" />
-    <Import Project="..\packages\zlib-msvc-x86.1.2.11.8900\build\native\zlib-msvc-x86.targets" Condition="Exists('..\packages\zlib-msvc-x86.1.2.11.8900\build\native\zlib-msvc-x86.targets')" />
-    <Import Project="..\packages\boost_atomic-vc141.1.68.0.0\build\boost_atomic-vc141.targets" Condition="Exists('..\packages\boost_atomic-vc141.1.68.0.0\build\boost_atomic-vc141.targets')" />
-    <Import Project="..\packages\boost_bzip2-vc141.1.68.0.0\build\boost_bzip2-vc141.targets" Condition="Exists('..\packages\boost_bzip2-vc141.1.68.0.0\build\boost_bzip2-vc141.targets')" />
-    <Import Project="..\packages\boost_chrono-vc141.1.68.0.0\build\boost_chrono-vc141.targets" Condition="Exists('..\packages\boost_chrono-vc141.1.68.0.0\build\boost_chrono-vc141.targets')" />
-    <Import Project="..\packages\boost_container-vc141.1.68.0.0\build\boost_container-vc141.targets" Condition="Exists('..\packages\boost_container-vc141.1.68.0.0\build\boost_container-vc141.targets')" />
-    <Import Project="..\packages\boost_context-vc141.1.68.0.0\build\boost_context-vc141.targets" Condition="Exists('..\packages\boost_context-vc141.1.68.0.0\build\boost_context-vc141.targets')" />
-    <Import Project="..\packages\boost_contract-vc141.1.68.0.0\build\boost_contract-vc141.targets" Condition="Exists('..\packages\boost_contract-vc141.1.68.0.0\build\boost_contract-vc141.targets')" />
-    <Import Project="..\packages\boost_coroutine-vc141.1.68.0.0\build\boost_coroutine-vc141.targets" Condition="Exists('..\packages\boost_coroutine-vc141.1.68.0.0\build\boost_coroutine-vc141.targets')" />
-    <Import Project="..\packages\boost_date_time-vc141.1.68.0.0\build\boost_date_time-vc141.targets" Condition="Exists('..\packages\boost_date_time-vc141.1.68.0.0\build\boost_date_time-vc141.targets')" />
-    <Import Project="..\packages\boost_exception-vc141.1.68.0.0\build\boost_exception-vc141.targets" Condition="Exists('..\packages\boost_exception-vc141.1.68.0.0\build\boost_exception-vc141.targets')" />
-    <Import Project="..\packages\boost_fiber-vc141.1.68.0.0\build\boost_fiber-vc141.targets" Condition="Exists('..\packages\boost_fiber-vc141.1.68.0.0\build\boost_fiber-vc141.targets')" />
-    <Import Project="..\packages\boost_filesystem-vc141.1.68.0.0\build\boost_filesystem-vc141.targets" Condition="Exists('..\packages\boost_filesystem-vc141.1.68.0.0\build\boost_filesystem-vc141.targets')" />
-    <Import Project="..\packages\boost_graph-vc141.1.68.0.0\build\boost_graph-vc141.targets" Condition="Exists('..\packages\boost_graph-vc141.1.68.0.0\build\boost_graph-vc141.targets')" />
-    <Import Project="..\packages\boost_iostreams-vc141.1.68.0.0\build\boost_iostreams-vc141.targets" Condition="Exists('..\packages\boost_iostreams-vc141.1.68.0.0\build\boost_iostreams-vc141.targets')" />
-    <Import Project="..\packages\boost_locale-vc141.1.68.0.0\build\boost_locale-vc141.targets" Condition="Exists('..\packages\boost_locale-vc141.1.68.0.0\build\boost_locale-vc141.targets')" />
-    <Import Project="..\packages\boost_log-vc141.1.68.0.0\build\boost_log-vc141.targets" Condition="Exists('..\packages\boost_log-vc141.1.68.0.0\build\boost_log-vc141.targets')" />
-    <Import Project="..\packages\boost_log_setup-vc141.1.68.0.0\build\boost_log_setup-vc141.targets" Condition="Exists('..\packages\boost_log_setup-vc141.1.68.0.0\build\boost_log_setup-vc141.targets')" />
-    <Import Project="..\packages\boost_math_c99-vc141.1.68.0.0\build\boost_math_c99-vc141.targets" Condition="Exists('..\packages\boost_math_c99-vc141.1.68.0.0\build\boost_math_c99-vc141.targets')" />
-    <Import Project="..\packages\boost_math_c99f-vc141.1.68.0.0\build\boost_math_c99f-vc141.targets" Condition="Exists('..\packages\boost_math_c99f-vc141.1.68.0.0\build\boost_math_c99f-vc141.targets')" />
-    <Import Project="..\packages\boost_math_c99l-vc141.1.68.0.0\build\boost_math_c99l-vc141.targets" Condition="Exists('..\packages\boost_math_c99l-vc141.1.68.0.0\build\boost_math_c99l-vc141.targets')" />
-    <Import Project="..\packages\boost_math_tr1-vc141.1.68.0.0\build\boost_math_tr1-vc141.targets" Condition="Exists('..\packages\boost_math_tr1-vc141.1.68.0.0\build\boost_math_tr1-vc141.targets')" />
-    <Import Project="..\packages\boost_math_tr1f-vc141.1.68.0.0\build\boost_math_tr1f-vc141.targets" Condition="Exists('..\packages\boost_math_tr1f-vc141.1.68.0.0\build\boost_math_tr1f-vc141.targets')" />
-    <Import Project="..\packages\boost_math_tr1l-vc141.1.68.0.0\build\boost_math_tr1l-vc141.targets" Condition="Exists('..\packages\boost_math_tr1l-vc141.1.68.0.0\build\boost_math_tr1l-vc141.targets')" />
-    <Import Project="..\packages\boost_prg_exec_monitor-vc141.1.68.0.0\build\boost_prg_exec_monitor-vc141.targets" Condition="Exists('..\packages\boost_prg_exec_monitor-vc141.1.68.0.0\build\boost_prg_exec_monitor-vc141.targets')" />
-    <Import Project="..\packages\boost_program_options-vc141.1.68.0.0\build\boost_program_options-vc141.targets" Condition="Exists('..\packages\boost_program_options-vc141.1.68.0.0\build\boost_program_options-vc141.targets')" />
-    <Import Project="..\packages\boost_python37-vc141.1.68.0.0\build\boost_python37-vc141.targets" Condition="Exists('..\packages\boost_python37-vc141.1.68.0.0\build\boost_python37-vc141.targets')" />
-    <Import Project="..\packages\boost_random-vc141.1.68.0.0\build\boost_random-vc141.targets" Condition="Exists('..\packages\boost_random-vc141.1.68.0.0\build\boost_random-vc141.targets')" />
-    <Import Project="..\packages\boost_regex-vc141.1.68.0.0\build\boost_regex-vc141.targets" Condition="Exists('..\packages\boost_regex-vc141.1.68.0.0\build\boost_regex-vc141.targets')" />
-    <Import Project="..\packages\boost_serialization-vc141.1.68.0.0\build\boost_serialization-vc141.targets" Condition="Exists('..\packages\boost_serialization-vc141.1.68.0.0\build\boost_serialization-vc141.targets')" />
-    <Import Project="..\packages\boost_signals-vc141.1.68.0.0\build\boost_signals-vc141.targets" Condition="Exists('..\packages\boost_signals-vc141.1.68.0.0\build\boost_signals-vc141.targets')" />
-    <Import Project="..\packages\boost_stacktrace_noop-vc141.1.68.0.0\build\boost_stacktrace_noop-vc141.targets" Condition="Exists('..\packages\boost_stacktrace_noop-vc141.1.68.0.0\build\boost_stacktrace_noop-vc141.targets')" />
-    <Import Project="..\packages\boost_stacktrace_windbg-vc141.1.68.0.0\build\boost_stacktrace_windbg-vc141.targets" Condition="Exists('..\packages\boost_stacktrace_windbg-vc141.1.68.0.0\build\boost_stacktrace_windbg-vc141.targets')" />
-    <Import Project="..\packages\boost_stacktrace_windbg_cached-vc141.1.68.0.0\build\boost_stacktrace_windbg_cached-vc141.targets" Condition="Exists('..\packages\boost_stacktrace_windbg_cached-vc141.1.68.0.0\build\boost_stacktrace_windbg_cached-vc141.targets')" />
-    <Import Project="..\packages\boost_system-vc141.1.68.0.0\build\boost_system-vc141.targets" Condition="Exists('..\packages\boost_system-vc141.1.68.0.0\build\boost_system-vc141.targets')" />
-    <Import Project="..\packages\boost_test_exec_monitor-vc141.1.68.0.0\build\boost_test_exec_monitor-vc141.targets" Condition="Exists('..\packages\boost_test_exec_monitor-vc141.1.68.0.0\build\boost_test_exec_monitor-vc141.targets')" />
-    <Import Project="..\packages\boost_thread-vc141.1.68.0.0\build\boost_thread-vc141.targets" Condition="Exists('..\packages\boost_thread-vc141.1.68.0.0\build\boost_thread-vc141.targets')" />
-    <Import Project="..\packages\boost_timer-vc141.1.68.0.0\build\boost_timer-vc141.targets" Condition="Exists('..\packages\boost_timer-vc141.1.68.0.0\build\boost_timer-vc141.targets')" />
-    <Import Project="..\packages\boost_type_erasure-vc141.1.68.0.0\build\boost_type_erasure-vc141.targets" Condition="Exists('..\packages\boost_type_erasure-vc141.1.68.0.0\build\boost_type_erasure-vc141.targets')" />
-    <Import Project="..\packages\boost_unit_test_framework-vc141.1.68.0.0\build\boost_unit_test_framework-vc141.targets" Condition="Exists('..\packages\boost_unit_test_framework-vc141.1.68.0.0\build\boost_unit_test_framework-vc141.targets')" />
-    <Import Project="..\packages\boost_wave-vc141.1.68.0.0\build\boost_wave-vc141.targets" Condition="Exists('..\packages\boost_wave-vc141.1.68.0.0\build\boost_wave-vc141.targets')" />
-    <Import Project="..\packages\boost_wserialization-vc141.1.68.0.0\build\boost_wserialization-vc141.targets" Condition="Exists('..\packages\boost_wserialization-vc141.1.68.0.0\build\boost_wserialization-vc141.targets')" />
-    <Import Project="..\packages\boost_zlib-vc141.1.68.0.0\build\boost_zlib-vc141.targets" Condition="Exists('..\packages\boost_zlib-vc141.1.68.0.0\build\boost_zlib-vc141.targets')" />
-    <Import Project="..\packages\boost-vc141.1.68.0.0\build\boost-vc141.targets" Condition="Exists('..\packages\boost-vc141.1.68.0.0\build\boost-vc141.targets')" />
-  </ImportGroup>
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\boost.1.68.0.0\build\boost.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost.1.68.0.0\build\boost.targets'))" />
-    <Error Condition="!Exists('..\packages\zlib-msvc-x86.1.2.11.8900\build\native\zlib-msvc-x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\zlib-msvc-x86.1.2.11.8900\build\native\zlib-msvc-x86.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_atomic-vc141.1.68.0.0\build\boost_atomic-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_atomic-vc141.1.68.0.0\build\boost_atomic-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_bzip2-vc141.1.68.0.0\build\boost_bzip2-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_bzip2-vc141.1.68.0.0\build\boost_bzip2-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_chrono-vc141.1.68.0.0\build\boost_chrono-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_chrono-vc141.1.68.0.0\build\boost_chrono-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_container-vc141.1.68.0.0\build\boost_container-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_container-vc141.1.68.0.0\build\boost_container-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_context-vc141.1.68.0.0\build\boost_context-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_context-vc141.1.68.0.0\build\boost_context-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_contract-vc141.1.68.0.0\build\boost_contract-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_contract-vc141.1.68.0.0\build\boost_contract-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_coroutine-vc141.1.68.0.0\build\boost_coroutine-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_coroutine-vc141.1.68.0.0\build\boost_coroutine-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_date_time-vc141.1.68.0.0\build\boost_date_time-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_date_time-vc141.1.68.0.0\build\boost_date_time-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_exception-vc141.1.68.0.0\build\boost_exception-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_exception-vc141.1.68.0.0\build\boost_exception-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_fiber-vc141.1.68.0.0\build\boost_fiber-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_fiber-vc141.1.68.0.0\build\boost_fiber-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_filesystem-vc141.1.68.0.0\build\boost_filesystem-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_filesystem-vc141.1.68.0.0\build\boost_filesystem-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_graph-vc141.1.68.0.0\build\boost_graph-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_graph-vc141.1.68.0.0\build\boost_graph-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_iostreams-vc141.1.68.0.0\build\boost_iostreams-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_iostreams-vc141.1.68.0.0\build\boost_iostreams-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_locale-vc141.1.68.0.0\build\boost_locale-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_locale-vc141.1.68.0.0\build\boost_locale-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_log-vc141.1.68.0.0\build\boost_log-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_log-vc141.1.68.0.0\build\boost_log-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_log_setup-vc141.1.68.0.0\build\boost_log_setup-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_log_setup-vc141.1.68.0.0\build\boost_log_setup-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_math_c99-vc141.1.68.0.0\build\boost_math_c99-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_math_c99-vc141.1.68.0.0\build\boost_math_c99-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_math_c99f-vc141.1.68.0.0\build\boost_math_c99f-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_math_c99f-vc141.1.68.0.0\build\boost_math_c99f-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_math_c99l-vc141.1.68.0.0\build\boost_math_c99l-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_math_c99l-vc141.1.68.0.0\build\boost_math_c99l-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_math_tr1-vc141.1.68.0.0\build\boost_math_tr1-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_math_tr1-vc141.1.68.0.0\build\boost_math_tr1-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_math_tr1f-vc141.1.68.0.0\build\boost_math_tr1f-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_math_tr1f-vc141.1.68.0.0\build\boost_math_tr1f-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_math_tr1l-vc141.1.68.0.0\build\boost_math_tr1l-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_math_tr1l-vc141.1.68.0.0\build\boost_math_tr1l-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_prg_exec_monitor-vc141.1.68.0.0\build\boost_prg_exec_monitor-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_prg_exec_monitor-vc141.1.68.0.0\build\boost_prg_exec_monitor-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_program_options-vc141.1.68.0.0\build\boost_program_options-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_program_options-vc141.1.68.0.0\build\boost_program_options-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_python37-vc141.1.68.0.0\build\boost_python37-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_python37-vc141.1.68.0.0\build\boost_python37-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_random-vc141.1.68.0.0\build\boost_random-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_random-vc141.1.68.0.0\build\boost_random-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_regex-vc141.1.68.0.0\build\boost_regex-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_regex-vc141.1.68.0.0\build\boost_regex-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_serialization-vc141.1.68.0.0\build\boost_serialization-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_serialization-vc141.1.68.0.0\build\boost_serialization-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_signals-vc141.1.68.0.0\build\boost_signals-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_signals-vc141.1.68.0.0\build\boost_signals-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_stacktrace_noop-vc141.1.68.0.0\build\boost_stacktrace_noop-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_stacktrace_noop-vc141.1.68.0.0\build\boost_stacktrace_noop-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_stacktrace_windbg-vc141.1.68.0.0\build\boost_stacktrace_windbg-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_stacktrace_windbg-vc141.1.68.0.0\build\boost_stacktrace_windbg-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_stacktrace_windbg_cached-vc141.1.68.0.0\build\boost_stacktrace_windbg_cached-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_stacktrace_windbg_cached-vc141.1.68.0.0\build\boost_stacktrace_windbg_cached-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_system-vc141.1.68.0.0\build\boost_system-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_system-vc141.1.68.0.0\build\boost_system-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_test_exec_monitor-vc141.1.68.0.0\build\boost_test_exec_monitor-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_test_exec_monitor-vc141.1.68.0.0\build\boost_test_exec_monitor-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_thread-vc141.1.68.0.0\build\boost_thread-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_thread-vc141.1.68.0.0\build\boost_thread-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_timer-vc141.1.68.0.0\build\boost_timer-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_timer-vc141.1.68.0.0\build\boost_timer-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_type_erasure-vc141.1.68.0.0\build\boost_type_erasure-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_type_erasure-vc141.1.68.0.0\build\boost_type_erasure-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_unit_test_framework-vc141.1.68.0.0\build\boost_unit_test_framework-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_unit_test_framework-vc141.1.68.0.0\build\boost_unit_test_framework-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_wave-vc141.1.68.0.0\build\boost_wave-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_wave-vc141.1.68.0.0\build\boost_wave-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_wserialization-vc141.1.68.0.0\build\boost_wserialization-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_wserialization-vc141.1.68.0.0\build\boost_wserialization-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_zlib-vc141.1.68.0.0\build\boost_zlib-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_zlib-vc141.1.68.0.0\build\boost_zlib-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost-vc141.1.68.0.0\build\boost-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost-vc141.1.68.0.0\build\boost-vc141.targets'))" />
-  </Target>
+  <ImportGroup Label="ExtensionTargets" />
 </Project>

@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="tr1\acosh.cpp" />
+    <ClCompile Include="tr1\acoshf.cpp" />
+    <ClCompile Include="tr1\acoshl.cpp" />
+    <ClCompile Include="tr1\asinh.cpp" />
+    <ClCompile Include="tr1\asinhf.cpp" />
+    <ClCompile Include="tr1\asinhl.cpp" />
+    <ClCompile Include="tr1\assoc_laguerre.cpp" />
+    <ClCompile Include="tr1\assoc_laguerref.cpp" />
+    <ClCompile Include="tr1\assoc_laguerrel.cpp" />
+    <ClCompile Include="tr1\assoc_legendre.cpp" />
+    <ClCompile Include="tr1\assoc_legendref.cpp" />
+    <ClCompile Include="tr1\assoc_legendrel.cpp" />
+    <ClCompile Include="tr1\atanh.cpp" />
+    <ClCompile Include="tr1\atanhf.cpp" />
+    <ClCompile Include="tr1\atanhl.cpp" />
+    <ClCompile Include="tr1\beta.cpp" />
+    <ClCompile Include="tr1\betaf.cpp" />
+    <ClCompile Include="tr1\betal.cpp" />
+    <ClCompile Include="tr1\cbrt.cpp" />
+    <ClCompile Include="tr1\cbrtf.cpp" />
+    <ClCompile Include="tr1\cbrtl.cpp" />
+    <ClCompile Include="tr1\comp_ellint_1.cpp" />
+    <ClCompile Include="tr1\comp_ellint_1f.cpp" />
+    <ClCompile Include="tr1\comp_ellint_1l.cpp" />
+    <ClCompile Include="tr1\comp_ellint_2.cpp" />
+    <ClCompile Include="tr1\comp_ellint_2f.cpp" />
+    <ClCompile Include="tr1\comp_ellint_2l.cpp" />
+    <ClCompile Include="tr1\comp_ellint_3.cpp" />
+    <ClCompile Include="tr1\comp_ellint_3f.cpp" />
+    <ClCompile Include="tr1\comp_ellint_3l.cpp" />
+    <ClCompile Include="tr1\copysign.cpp" />
+    <ClCompile Include="tr1\copysignf.cpp" />
+    <ClCompile Include="tr1\copysignl.cpp" />
+    <ClCompile Include="tr1\cyl_bessel_i.cpp" />
+    <ClCompile Include="tr1\cyl_bessel_if.cpp" />
+    <ClCompile Include="tr1\cyl_bessel_il.cpp" />
+    <ClCompile Include="tr1\cyl_bessel_j.cpp" />
+    <ClCompile Include="tr1\cyl_bessel_jf.cpp" />
+    <ClCompile Include="tr1\cyl_bessel_jl.cpp" />
+    <ClCompile Include="tr1\cyl_bessel_k.cpp" />
+    <ClCompile Include="tr1\cyl_bessel_kf.cpp" />
+    <ClCompile Include="tr1\cyl_bessel_kl.cpp" />
+    <ClCompile Include="tr1\cyl_neumann.cpp" />
+    <ClCompile Include="tr1\cyl_neumannf.cpp" />
+    <ClCompile Include="tr1\cyl_neumannl.cpp" />
+    <ClCompile Include="tr1\ellint_1.cpp" />
+    <ClCompile Include="tr1\ellint_1f.cpp" />
+    <ClCompile Include="tr1\ellint_1l.cpp" />
+    <ClCompile Include="tr1\ellint_2.cpp" />
+    <ClCompile Include="tr1\ellint_2f.cpp" />
+    <ClCompile Include="tr1\ellint_2l.cpp" />
+    <ClCompile Include="tr1\ellint_3.cpp" />
+    <ClCompile Include="tr1\ellint_3f.cpp" />
+    <ClCompile Include="tr1\ellint_3l.cpp" />
+    <ClCompile Include="tr1\erf.cpp" />
+    <ClCompile Include="tr1\erfc.cpp" />
+    <ClCompile Include="tr1\erfcf.cpp" />
+    <ClCompile Include="tr1\erfcl.cpp" />
+    <ClCompile Include="tr1\erff.cpp" />
+    <ClCompile Include="tr1\erfl.cpp" />
+    <ClCompile Include="tr1\expint.cpp" />
+    <ClCompile Include="tr1\expintf.cpp" />
+    <ClCompile Include="tr1\expintl.cpp" />
+    <ClCompile Include="tr1\expm1.cpp" />
+    <ClCompile Include="tr1\expm1f.cpp" />
+    <ClCompile Include="tr1\expm1l.cpp" />
+    <ClCompile Include="tr1\fmax.cpp" />
+    <ClCompile Include="tr1\fmaxf.cpp" />
+    <ClCompile Include="tr1\fmaxl.cpp" />
+    <ClCompile Include="tr1\fmin.cpp" />
+    <ClCompile Include="tr1\fminf.cpp" />
+    <ClCompile Include="tr1\fminl.cpp" />
+    <ClCompile Include="tr1\fpclassify.cpp" />
+    <ClCompile Include="tr1\fpclassifyf.cpp" />
+    <ClCompile Include="tr1\fpclassifyl.cpp" />
+    <ClCompile Include="tr1\hermite.cpp" />
+    <ClCompile Include="tr1\hermitef.cpp" />
+    <ClCompile Include="tr1\hermitel.cpp" />
+    <ClCompile Include="tr1\hypot.cpp" />
+    <ClCompile Include="tr1\hypotf.cpp" />
+    <ClCompile Include="tr1\hypotl.cpp" />
+    <ClCompile Include="tr1\laguerre.cpp" />
+    <ClCompile Include="tr1\laguerref.cpp" />
+    <ClCompile Include="tr1\laguerrel.cpp" />
+    <ClCompile Include="tr1\legendre.cpp" />
+    <ClCompile Include="tr1\legendref.cpp" />
+    <ClCompile Include="tr1\legendrel.cpp" />
+    <ClCompile Include="tr1\lgamma.cpp" />
+    <ClCompile Include="tr1\lgammaf.cpp" />
+    <ClCompile Include="tr1\lgammal.cpp" />
+    <ClCompile Include="tr1\llround.cpp" />
+    <ClCompile Include="tr1\llroundf.cpp" />
+    <ClCompile Include="tr1\llroundl.cpp" />
+    <ClCompile Include="tr1\log1p.cpp" />
+    <ClCompile Include="tr1\log1pf.cpp" />
+    <ClCompile Include="tr1\log1pl.cpp" />
+    <ClCompile Include="tr1\lround.cpp" />
+    <ClCompile Include="tr1\lroundf.cpp" />
+    <ClCompile Include="tr1\lroundl.cpp" />
+    <ClCompile Include="tr1\nextafter.cpp" />
+    <ClCompile Include="tr1\nextafterf.cpp" />
+    <ClCompile Include="tr1\nextafterl.cpp" />
+    <ClCompile Include="tr1\nexttoward.cpp" />
+    <ClCompile Include="tr1\nexttowardf.cpp" />
+    <ClCompile Include="tr1\nexttowardl.cpp" />
+    <ClCompile Include="tr1\riemann_zeta.cpp" />
+    <ClCompile Include="tr1\riemann_zetaf.cpp" />
+    <ClCompile Include="tr1\riemann_zetal.cpp" />
+    <ClCompile Include="tr1\round.cpp" />
+    <ClCompile Include="tr1\roundf.cpp" />
+    <ClCompile Include="tr1\roundl.cpp" />
+    <ClCompile Include="tr1\sph_bessel.cpp" />
+    <ClCompile Include="tr1\sph_besself.cpp" />
+    <ClCompile Include="tr1\sph_bessell.cpp" />
+    <ClCompile Include="tr1\sph_legendre.cpp" />
+    <ClCompile Include="tr1\sph_legendref.cpp" />
+    <ClCompile Include="tr1\sph_legendrel.cpp" />
+    <ClCompile Include="tr1\sph_neumann.cpp" />
+    <ClCompile Include="tr1\sph_neumannf.cpp" />
+    <ClCompile Include="tr1\sph_neumannl.cpp" />
+    <ClCompile Include="tr1\tgamma.cpp" />
+    <ClCompile Include="tr1\tgammaf.cpp" />
+    <ClCompile Include="tr1\tgammal.cpp" />
+    <ClCompile Include="tr1\trunc.cpp" />
+    <ClCompile Include="tr1\truncf.cpp" />
+    <ClCompile Include="tr1\truncl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\cstdfloat.hpp" />
+    <ClInclude Include="boost\math\bindings\detail\big_digamma.hpp" />
+    <ClInclude Include="boost\math\bindings\detail\big_lanczos.hpp" />
+    <ClInclude Include="boost\math\bindings\e_float.hpp" />
+    <ClInclude Include="boost\math\bindings\mpfr.hpp" />
+    <ClInclude Include="boost\math\bindings\mpreal.hpp" />
+    <ClInclude Include="boost\math\bindings\rr.hpp" />
+    <ClInclude Include="boost\math\common_factor.hpp" />
+    <ClInclude Include="boost\math\common_factor_ct.hpp" />
+    <ClInclude Include="boost\math\common_factor_rt.hpp" />
+    <ClInclude Include="boost\math\complex.hpp" />
+    <ClInclude Include="boost\math\complex\acos.hpp" />
+    <ClInclude Include="boost\math\complex\acosh.hpp" />
+    <ClInclude Include="boost\math\complex\asin.hpp" />
+    <ClInclude Include="boost\math\complex\asinh.hpp" />
+    <ClInclude Include="boost\math\complex\atan.hpp" />
+    <ClInclude Include="boost\math\complex\atanh.hpp" />
+    <ClInclude Include="boost\math\complex\details.hpp" />
+    <ClInclude Include="boost\math\complex\fabs.hpp" />
+    <ClInclude Include="boost\math\concepts\distributions.hpp" />
+    <ClInclude Include="boost\math\concepts\real_concept.hpp" />
+    <ClInclude Include="boost\math\concepts\real_type_concept.hpp" />
+    <ClInclude Include="boost\math\concepts\std_real_concept.hpp" />
+    <ClInclude Include="boost\math\constants\calculate_constants.hpp" />
+    <ClInclude Include="boost\math\constants\constants.hpp" />
+    <ClInclude Include="boost\math\constants\generate.hpp" />
+    <ClInclude Include="boost\math\constants\info.hpp" />
+    <ClInclude Include="boost\math\cstdfloat\cstdfloat_cmath.hpp" />
+    <ClInclude Include="boost\math\cstdfloat\cstdfloat_complex.hpp" />
+    <ClInclude Include="boost\math\cstdfloat\cstdfloat_complex_std.hpp" />
+    <ClInclude Include="boost\math\cstdfloat\cstdfloat_iostream.hpp" />
+    <ClInclude Include="boost\math\cstdfloat\cstdfloat_limits.hpp" />
+    <ClInclude Include="boost\math\cstdfloat\cstdfloat_types.hpp" />
+    <ClInclude Include="boost\math\distributions.hpp" />
+    <ClInclude Include="boost\math\distributions\arcsine.hpp" />
+    <ClInclude Include="boost\math\distributions\bernoulli.hpp" />
+    <ClInclude Include="boost\math\distributions\beta.hpp" />
+    <ClInclude Include="boost\math\distributions\binomial.hpp" />
+    <ClInclude Include="boost\math\distributions\cauchy.hpp" />
+    <ClInclude Include="boost\math\distributions\chi_squared.hpp" />
+    <ClInclude Include="boost\math\distributions\complement.hpp" />
+    <ClInclude Include="boost\math\distributions\detail\common_error_handling.hpp" />
+    <ClInclude Include="boost\math\distributions\detail\derived_accessors.hpp" />
+    <ClInclude Include="boost\math\distributions\detail\generic_mode.hpp" />
+    <ClInclude Include="boost\math\distributions\detail\generic_quantile.hpp" />
+    <ClInclude Include="boost\math\distributions\detail\hypergeometric_cdf.hpp" />
+    <ClInclude Include="boost\math\distributions\detail\hypergeometric_pdf.hpp" />
+    <ClInclude Include="boost\math\distributions\detail\hypergeometric_quantile.hpp" />
+    <ClInclude Include="boost\math\distributions\detail\inv_discrete_quantile.hpp" />
+    <ClInclude Include="boost\math\distributions\exponential.hpp" />
+    <ClInclude Include="boost\math\distributions\extreme_value.hpp" />
+    <ClInclude Include="boost\math\distributions\find_location.hpp" />
+    <ClInclude Include="boost\math\distributions\find_scale.hpp" />
+    <ClInclude Include="boost\math\distributions\fisher_f.hpp" />
+    <ClInclude Include="boost\math\distributions\fwd.hpp" />
+    <ClInclude Include="boost\math\distributions\gamma.hpp" />
+    <ClInclude Include="boost\math\distributions\geometric.hpp" />
+    <ClInclude Include="boost\math\distributions\hyperexponential.hpp" />
+    <ClInclude Include="boost\math\distributions\hypergeometric.hpp" />
+    <ClInclude Include="boost\math\distributions\inverse_chi_squared.hpp" />
+    <ClInclude Include="boost\math\distributions\inverse_gamma.hpp" />
+    <ClInclude Include="boost\math\distributions\inverse_gaussian.hpp" />
+    <ClInclude Include="boost\math\distributions\laplace.hpp" />
+    <ClInclude Include="boost\math\distributions\logistic.hpp" />
+    <ClInclude Include="boost\math\distributions\lognormal.hpp" />
+    <ClInclude Include="boost\math\distributions\negative_binomial.hpp" />
+    <ClInclude Include="boost\math\distributions\non_central_beta.hpp" />
+    <ClInclude Include="boost\math\distributions\non_central_chi_squared.hpp" />
+    <ClInclude Include="boost\math\distributions\non_central_f.hpp" />
+    <ClInclude Include="boost\math\distributions\non_central_t.hpp" />
+    <ClInclude Include="boost\math\distributions\normal.hpp" />
+    <ClInclude Include="boost\math\distributions\pareto.hpp" />
+    <ClInclude Include="boost\math\distributions\poisson.hpp" />
+    <ClInclude Include="boost\math\distributions\rayleigh.hpp" />
+    <ClInclude Include="boost\math\distributions\skew_normal.hpp" />
+    <ClInclude Include="boost\math\distributions\students_t.hpp" />
+    <ClInclude Include="boost\math\distributions\triangular.hpp" />
+    <ClInclude Include="boost\math\distributions\uniform.hpp" />
+    <ClInclude Include="boost\math\distributions\weibull.hpp" />
+    <ClInclude Include="boost\math\interpolators\barycentric_rational.hpp" />
+    <ClInclude Include="boost\math\interpolators\cubic_b_spline.hpp" />
+    <ClInclude Include="boost\math\interpolators\detail\barycentric_rational_detail.hpp" />
+    <ClInclude Include="boost\math\interpolators\detail\cubic_b_spline_detail.hpp" />
+    <ClInclude Include="boost\math\octonion.hpp" />
+    <ClInclude Include="boost\math\policies\error_handling.hpp" />
+    <ClInclude Include="boost\math\policies\policy.hpp" />
+    <ClInclude Include="boost\math\quadrature\detail\exp_sinh_detail.hpp" />
+    <ClInclude Include="boost\math\quadrature\detail\sinh_sinh_detail.hpp" />
+    <ClInclude Include="boost\math\quadrature\detail\tanh_sinh_constants.hpp" />
+    <ClInclude Include="boost\math\quadrature\detail\tanh_sinh_detail.hpp" />
+    <ClInclude Include="boost\math\quadrature\exp_sinh.hpp" />
+    <ClInclude Include="boost\math\quadrature\gauss.hpp" />
+    <ClInclude Include="boost\math\quadrature\gauss_kronrod.hpp" />
+    <ClInclude Include="boost\math\quadrature\naive_monte_carlo.hpp" />
+    <ClInclude Include="boost\math\quadrature\sinh_sinh.hpp" />
+    <ClInclude Include="boost\math\quadrature\tanh_sinh.hpp" />
+    <ClInclude Include="boost\math\quadrature\trapezoidal.hpp" />
+    <ClInclude Include="boost\math\quaternion.hpp" />
+    <ClInclude Include="boost\math\special_functions.hpp" />
+    <ClInclude Include="boost\math\special_functions\acosh.hpp" />
+    <ClInclude Include="boost\math\special_functions\airy.hpp" />
+    <ClInclude Include="boost\math\special_functions\asinh.hpp" />
+    <ClInclude Include="boost\math\special_functions\atanh.hpp" />
+    <ClInclude Include="boost\math\special_functions\bernoulli.hpp" />
+    <ClInclude Include="boost\math\special_functions\bessel.hpp" />
+    <ClInclude Include="boost\math\special_functions\bessel_prime.hpp" />
+    <ClInclude Include="boost\math\special_functions\beta.hpp" />
+    <ClInclude Include="boost\math\special_functions\binomial.hpp" />
+    <ClInclude Include="boost\math\special_functions\cbrt.hpp" />
+    <ClInclude Include="boost\math\special_functions\chebyshev.hpp" />
+    <ClInclude Include="boost\math\special_functions\chebyshev_transform.hpp" />
+    <ClInclude Include="boost\math\special_functions\cos_pi.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\airy_ai_bi_zero.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bernoulli_details.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_derivatives_linear.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_i0.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_i1.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_ik.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_j0.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_j1.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_jn.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_jy.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_jy_asym.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_jy_derivatives_asym.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_jy_derivatives_series.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_jy_series.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_jy_zero.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_k0.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_k1.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_kn.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_y0.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_y1.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\bessel_yn.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\erf_inv.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\fp_traits.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\gamma_inva.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\ibeta_inverse.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\ibeta_inv_ab.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\iconv.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\igamma_inverse.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\igamma_large.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\lambert_w_lookup_table.ipp" />
+    <ClInclude Include="boost\math\special_functions\detail\lanczos_sse2.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\lgamma_small.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\polygamma.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\round_fwd.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\t_distribution_inv.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\unchecked_bernoulli.hpp" />
+    <ClInclude Include="boost\math\special_functions\detail\unchecked_factorial.hpp" />
+    <ClInclude Include="boost\math\special_functions\digamma.hpp" />
+    <ClInclude Include="boost\math\special_functions\ellint_1.hpp" />
+    <ClInclude Include="boost\math\special_functions\ellint_2.hpp" />
+    <ClInclude Include="boost\math\special_functions\ellint_3.hpp" />
+    <ClInclude Include="boost\math\special_functions\ellint_d.hpp" />
+    <ClInclude Include="boost\math\special_functions\ellint_rc.hpp" />
+    <ClInclude Include="boost\math\special_functions\ellint_rd.hpp" />
+    <ClInclude Include="boost\math\special_functions\ellint_rf.hpp" />
+    <ClInclude Include="boost\math\special_functions\ellint_rg.hpp" />
+    <ClInclude Include="boost\math\special_functions\ellint_rj.hpp" />
+    <ClInclude Include="boost\math\special_functions\erf.hpp" />
+    <ClInclude Include="boost\math\special_functions\expint.hpp" />
+    <ClInclude Include="boost\math\special_functions\expm1.hpp" />
+    <ClInclude Include="boost\math\special_functions\factorials.hpp" />
+    <ClInclude Include="boost\math\special_functions\fpclassify.hpp" />
+    <ClInclude Include="boost\math\special_functions\gamma.hpp" />
+    <ClInclude Include="boost\math\special_functions\hankel.hpp" />
+    <ClInclude Include="boost\math\special_functions\hermite.hpp" />
+    <ClInclude Include="boost\math\special_functions\heuman_lambda.hpp" />
+    <ClInclude Include="boost\math\special_functions\hypot.hpp" />
+    <ClInclude Include="boost\math\special_functions\jacobi_elliptic.hpp" />
+    <ClInclude Include="boost\math\special_functions\jacobi_zeta.hpp" />
+    <ClInclude Include="boost\math\special_functions\laguerre.hpp" />
+    <ClInclude Include="boost\math\special_functions\lambert_w.hpp" />
+    <ClInclude Include="boost\math\special_functions\lanczos.hpp" />
+    <ClInclude Include="boost\math\special_functions\legendre.hpp" />
+    <ClInclude Include="boost\math\special_functions\legendre_stieltjes.hpp" />
+    <ClInclude Include="boost\math\special_functions\log1p.hpp" />
+    <ClInclude Include="boost\math\special_functions\math_fwd.hpp" />
+    <ClInclude Include="boost\math\special_functions\modf.hpp" />
+    <ClInclude Include="boost\math\special_functions\next.hpp" />
+    <ClInclude Include="boost\math\special_functions\nonfinite_num_facets.hpp" />
+    <ClInclude Include="boost\math\special_functions\owens_t.hpp" />
+    <ClInclude Include="boost\math\special_functions\polygamma.hpp" />
+    <ClInclude Include="boost\math\special_functions\pow.hpp" />
+    <ClInclude Include="boost\math\special_functions\powm1.hpp" />
+    <ClInclude Include="boost\math\special_functions\prime.hpp" />
+    <ClInclude Include="boost\math\special_functions\relative_difference.hpp" />
+    <ClInclude Include="boost\math\special_functions\round.hpp" />
+    <ClInclude Include="boost\math\special_functions\sign.hpp" />
+    <ClInclude Include="boost\math\special_functions\sinc.hpp" />
+    <ClInclude Include="boost\math\special_functions\sinhc.hpp" />
+    <ClInclude Include="boost\math\special_functions\sin_pi.hpp" />
+    <ClInclude Include="boost\math\special_functions\spherical_harmonic.hpp" />
+    <ClInclude Include="boost\math\special_functions\sqrt1pm1.hpp" />
+    <ClInclude Include="boost\math\special_functions\trigamma.hpp" />
+    <ClInclude Include="boost\math\special_functions\trunc.hpp" />
+    <ClInclude Include="boost\math\special_functions\ulp.hpp" />
+    <ClInclude Include="boost\math\special_functions\zeta.hpp" />
+    <ClInclude Include="boost\math\tools\atomic.hpp" />
+    <ClInclude Include="boost\math\tools\big_constant.hpp" />
+    <ClInclude Include="boost\math\tools\complex.hpp" />
+    <ClInclude Include="boost\math\tools\config.hpp" />
+    <ClInclude Include="boost\math\tools\convert_from_string.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_10.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_11.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_12.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_13.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_14.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_15.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_16.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_17.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_18.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_19.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_2.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_20.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_3.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_4.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_5.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_6.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_7.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_8.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner1_9.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_10.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_11.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_12.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_13.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_14.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_15.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_16.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_17.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_18.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_19.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_2.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_20.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_3.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_4.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_5.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_6.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_7.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_8.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner2_9.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_10.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_11.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_12.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_13.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_14.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_15.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_16.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_17.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_18.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_19.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_2.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_20.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_3.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_4.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_5.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_6.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_7.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_8.hpp" />
+    <ClInclude Include="boost\math\tools\detail\polynomial_horner3_9.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_10.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_11.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_12.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_13.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_14.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_15.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_16.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_17.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_18.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_19.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_2.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_20.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_3.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_4.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_5.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_6.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_7.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_8.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner1_9.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_10.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_11.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_12.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_13.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_14.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_15.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_16.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_17.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_18.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_19.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_2.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_20.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_3.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_4.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_5.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_6.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_7.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_8.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner2_9.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_10.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_11.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_12.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_13.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_14.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_15.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_16.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_17.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_18.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_19.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_2.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_20.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_3.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_4.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_5.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_6.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_7.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_8.hpp" />
+    <ClInclude Include="boost\math\tools\detail\rational_horner3_9.hpp" />
+    <ClInclude Include="boost\math\tools\fraction.hpp" />
+    <ClInclude Include="boost\math\tools\iteration_logger.hpp" />
+    <ClInclude Include="boost\math\tools\minima.hpp" />
+    <ClInclude Include="boost\math\tools\numerical_differentiation.hpp" />
+    <ClInclude Include="boost\math\tools\polynomial.hpp" />
+    <ClInclude Include="boost\math\tools\polynomial_gcd.hpp" />
+    <ClInclude Include="boost\math\tools\precision.hpp" />
+    <ClInclude Include="boost\math\tools\promotion.hpp" />
+    <ClInclude Include="boost\math\tools\rational.hpp" />
+    <ClInclude Include="boost\math\tools\real_cast.hpp" />
+    <ClInclude Include="boost\math\tools\remez.hpp" />
+    <ClInclude Include="boost\math\tools\roots.hpp" />
+    <ClInclude Include="boost\math\tools\series.hpp" />
+    <ClInclude Include="boost\math\tools\solve.hpp" />
+    <ClInclude Include="boost\math\tools\stats.hpp" />
+    <ClInclude Include="boost\math\tools\test.hpp" />
+    <ClInclude Include="boost\math\tools\test_data.hpp" />
+    <ClInclude Include="boost\math\tools\test_value.hpp" />
+    <ClInclude Include="boost\math\tools\toms748_solve.hpp" />
+    <ClInclude Include="boost\math\tools\traits.hpp" />
+    <ClInclude Include="boost\math\tools\tuple.hpp" />
+    <ClInclude Include="boost\math\tools\user.hpp" />
+    <ClInclude Include="boost\math\tools\workaround.hpp" />
+    <ClInclude Include="boost\math\tr1.hpp" />
+    <ClInclude Include="boost\math\tr1_c_macros.ipp" />
+    <ClInclude Include="boost\math_fwd.hpp" />
+    <ClInclude Include="tr1\c_policy.hpp" />
+    <ClInclude Include="tr1\pch.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{8685D911-DD09-462E-AB1A-2CB3FEFC1384}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BoostMath</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;BOOSTMATH_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;BOOSTMATH_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;BOOSTMATH_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;BOOSTMATH_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{34c3c3a1-d5d3-445c-bc88-a9980baa315a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\bind">
+      <UniqueIdentifier>{ed6e81ed-0f57-4c60-b5a2-bf0bc6ac2a1e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\bind.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\is_placeholder.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mem_fn.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\apply.hpp">
+      <Filter>boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\arg.hpp">
+      <Filter>boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\bind.hpp">
+      <Filter>boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\bind_cc.hpp">
+      <Filter>boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\bind_mf_cc.hpp">
+      <Filter>boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\bind_mf2_cc.hpp">
+      <Filter>boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\bind_template.hpp">
+      <Filter>boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\make_adaptable.hpp">
+      <Filter>boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\mem_fn.hpp">
+      <Filter>boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\mem_fn_cc.hpp">
+      <Filter>boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\mem_fn_template.hpp">
+      <Filter>boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\mem_fn_vw.hpp">
+      <Filter>boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\placeholders.hpp">
+      <Filter>boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\protect.hpp">
+      <Filter>boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\storage.hpp">
+      <Filter>boost\bind</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

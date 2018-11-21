@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{58ecc44f-6f99-44d2-babf-8907494ab8ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\system">
+      <UniqueIdentifier>{263debe1-0c75-4a0d-8a5c-2261e5e9928d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\system\detail">
+      <UniqueIdentifier>{024c5b25-6bd8-4f9e-b045-521486fd6154}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\cerrno.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\system\api_config.hpp">
+      <Filter>boost\system</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\system\config.hpp">
+      <Filter>boost\system</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\system\cygwin_error.hpp">
+      <Filter>boost\system</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\system\error_code.hpp">
+      <Filter>boost\system</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\system\linux_error.hpp">
+      <Filter>boost\system</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\system\system_error.hpp">
+      <Filter>boost\system</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\system\windows_error.hpp">
+      <Filter>boost\system</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\system\detail\config.hpp">
+      <Filter>boost\system\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\system\detail\generic_category.hpp">
+      <Filter>boost\system\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\system\detail\std_interoperability.hpp">
+      <Filter>boost\system\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\system\detail\system_category_posix.hpp">
+      <Filter>boost\system\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\system\detail\system_category_win32.hpp">
+      <Filter>boost\system\detail</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="error_code.cpp" />
+  </ItemGroup>
+</Project>

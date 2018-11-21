@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{ea0dc5aa-448b-4b53-991b-937281e249fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\numeric">
+      <UniqueIdentifier>{c1c8a160-2ed1-4989-bbeb-fe27deade844}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\numeric\conversion">
+      <UniqueIdentifier>{f16b97b9-6ec4-45ac-8cee-914090140931}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\numeric\conversion\detail">
+      <UniqueIdentifier>{fa04ac58-f7cf-429f-9171-691b42289fcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\numeric\conversion\detail\preprocessed">
+      <UniqueIdentifier>{3ad4083a-47a7-457d-a0de-e686e92220e8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\cast.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\bounds.hpp">
+      <Filter>boost\numeric\conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\cast.hpp">
+      <Filter>boost\numeric\conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\conversion_traits.hpp">
+      <Filter>boost\numeric\conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\converter.hpp">
+      <Filter>boost\numeric\conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\converter_policies.hpp">
+      <Filter>boost\numeric\conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\int_float_mixture.hpp">
+      <Filter>boost\numeric\conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\int_float_mixture_enum.hpp">
+      <Filter>boost\numeric\conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\is_subranged.hpp">
+      <Filter>boost\numeric\conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\numeric_cast_traits.hpp">
+      <Filter>boost\numeric\conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\sign_mixture.hpp">
+      <Filter>boost\numeric\conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\sign_mixture_enum.hpp">
+      <Filter>boost\numeric\conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\udt_builtin_mixture.hpp">
+      <Filter>boost\numeric\conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\udt_builtin_mixture_enum.hpp">
+      <Filter>boost\numeric\conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\detail\bounds.hpp">
+      <Filter>boost\numeric\conversion\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\detail\conversion_traits.hpp">
+      <Filter>boost\numeric\conversion\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\detail\converter.hpp">
+      <Filter>boost\numeric\conversion\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\detail\int_float_mixture.hpp">
+      <Filter>boost\numeric\conversion\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\detail\is_subranged.hpp">
+      <Filter>boost\numeric\conversion\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\detail\meta.hpp">
+      <Filter>boost\numeric\conversion\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\detail\numeric_cast_traits.hpp">
+      <Filter>boost\numeric\conversion\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\detail\old_numeric_cast.hpp">
+      <Filter>boost\numeric\conversion\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\detail\sign_mixture.hpp">
+      <Filter>boost\numeric\conversion\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\detail\udt_builtin_mixture.hpp">
+      <Filter>boost\numeric\conversion\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\detail\preprocessed\numeric_cast_traits_common.hpp">
+      <Filter>boost\numeric\conversion\detail\preprocessed</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\numeric\conversion\detail\preprocessed\numeric_cast_traits_long_long.hpp">
+      <Filter>boost\numeric\conversion\detail\preprocessed</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

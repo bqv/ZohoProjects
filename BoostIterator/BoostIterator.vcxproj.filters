@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{9720ad73-83ed-4869-8a48-a3fab6f43133}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\iterator">
+      <UniqueIdentifier>{ae638721-ec3e-4336-9d0c-49bf648945f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\iterator\detail">
+      <UniqueIdentifier>{fb129a64-630b-4982-9ce1-893d746994aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\pending">
+      <UniqueIdentifier>{727e2d22-8dc6-44f1-8afb-2a880ec0ea69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\pending\detail">
+      <UniqueIdentifier>{a775f6a7-d46c-49ce-b1e6-1823860cba04}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\function_output_iterator.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\generator_iterator.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\indirect_reference.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator_adaptors.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\next_prior.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pointee.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\shared_container_iterator.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\advance.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\counting_iterator.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\distance.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\filter_iterator.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\function_input_iterator.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\function_output_iterator.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\indirect_iterator.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\interoperable.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\is_lvalue_iterator.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\is_readable_iterator.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\iterator_adaptor.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\iterator_archetypes.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\iterator_categories.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\iterator_concepts.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\iterator_facade.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\iterator_traits.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\minimum_category.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\new_iterator_tests.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\permutation_iterator.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\reverse_iterator.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\transform_iterator.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\zip_iterator.hpp">
+      <Filter>boost\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\detail\any_conversion_eater.hpp">
+      <Filter>boost\iterator\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\detail\config_def.hpp">
+      <Filter>boost\iterator\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\detail\config_undef.hpp">
+      <Filter>boost\iterator\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\detail\enable_if.hpp">
+      <Filter>boost\iterator\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\detail\facade_iterator_category.hpp">
+      <Filter>boost\iterator\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\detail\minimum_category.hpp">
+      <Filter>boost\iterator\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\iterator_adaptors.hpp">
+      <Filter>boost\pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\iterator_tests.hpp">
+      <Filter>boost\pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\detail\int_iterator.hpp">
+      <Filter>boost\pending\detail</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

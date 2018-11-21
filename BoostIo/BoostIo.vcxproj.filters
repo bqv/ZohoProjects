@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{099cc204-2905-429b-934d-c973070696f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\io">
+      <UniqueIdentifier>{81134810-f5a8-4ba3-beb0-e48438eba141}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\io\detail">
+      <UniqueIdentifier>{d884ce47-b526-4d7c-8682-c53f3efc6ba5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\io_fwd.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\io\ios_state.hpp">
+      <Filter>boost\io</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\io\detail\quoted_manip.hpp">
+      <Filter>boost\io\detail</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

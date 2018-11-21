@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{8d60461b-6863-448b-be6c-b2a9b940db12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\detail">
+      <UniqueIdentifier>{f9e4b7ac-f3d1-43bd-adde-40654fe2c846}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\lexical_cast">
+      <UniqueIdentifier>{b30460d9-e07e-45de-93c8-e8d70deca65d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\lexical_cast\detail">
+      <UniqueIdentifier>{30c3e4f5-3569-4551-bca4-75e847c56f78}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\lexical_cast.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\basic_pointerbuf.hpp">
+      <Filter>boost\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\lcast_precision.hpp">
+      <Filter>boost\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\lexical_cast\bad_lexical_cast.hpp">
+      <Filter>boost\lexical_cast</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\lexical_cast\lexical_cast_old.hpp">
+      <Filter>boost\lexical_cast</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\lexical_cast\try_lexical_convert.hpp">
+      <Filter>boost\lexical_cast</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\lexical_cast\detail\converter_lexical.hpp">
+      <Filter>boost\lexical_cast\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\lexical_cast\detail\converter_lexical_streams.hpp">
+      <Filter>boost\lexical_cast\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\lexical_cast\detail\converter_numeric.hpp">
+      <Filter>boost\lexical_cast\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\lexical_cast\detail\inf_nan.hpp">
+      <Filter>boost\lexical_cast\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\lexical_cast\detail\is_character.hpp">
+      <Filter>boost\lexical_cast\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\lexical_cast\detail\lcast_char_constants.hpp">
+      <Filter>boost\lexical_cast\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\lexical_cast\detail\lcast_unsigned_converters.hpp">
+      <Filter>boost\lexical_cast\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\lexical_cast\detail\widest_char.hpp">
+      <Filter>boost\lexical_cast\detail</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

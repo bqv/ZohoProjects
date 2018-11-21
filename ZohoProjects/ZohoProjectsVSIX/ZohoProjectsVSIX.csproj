@@ -49,9 +49,29 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\BoostDateTime\BoostDateTime.vcxproj">
+      <Project>{4bfc73df-893f-4898-a802-b4b91b63dc37}</Project>
+      <Name>BoostDateTime</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BoostSystem\BoostSystem.vcxproj">
+      <Project>{06931848-99e8-4da1-9eb0-b7e3d596e77f}</Project>
+      <Name>BoostSystem</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\CppRestSdk\CppRestSdk.vcxproj">
       <Project>{2142fb7c-58b0-4043-a12c-87bc73575b01}</Project>
       <Name>CppRestSdk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LibEay32\LibEay32.vcxproj">
+      <Project>{35744bf8-a83c-4e98-9bd2-781d2ad05978}</Project>
+      <Name>LibEay32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SslEay32\SslEay32.vcxproj">
+      <Project>{2dabb579-6729-4b15-a446-9f78a03e08ba}</Project>
+      <Name>SslEay32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Zlib\Zlib.vcxproj">
+      <Project>{7f23459f-c2c8-49b4-b949-aa380c25c887}</Project>
+      <Name>Zlib</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\ZohoProjectsApi\ZohoProjectsApi.vcxproj">
       <Project>{aee1e511-bc91-4e23-a042-d02ca4f0ab76}</Project>
@@ -80,57 +100,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\packages\boost_date_time-vc141.1.68.0.0\lib\native\boost_date_time-vc141-mt-gd-x32-1_68.dll">
-      <Link>Libraries\boost_date_time-vc141-mt-gd-x32-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\boost_date_time-vc141.1.68.0.0\lib\native\boost_date_time-vc141-mt-gd-x64-1_68.dll">
-      <Link>Libraries\boost_date_time-vc141-mt-gd-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\boost_date_time-vc141.1.68.0.0\lib\native\boost_date_time-vc141-mt-x32-1_68.dll">
-      <Link>Libraries\boost_date_time-vc141-mt-x32-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\boost_date_time-vc141.1.68.0.0\lib\native\boost_date_time-vc141-mt-x64-1_68.dll">
-      <Link>Libraries\boost_date_time-vc141-mt-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\boost_system-vc141.1.68.0.0\lib\native\boost_system-vc141-mt-gd-x32-1_68.dll">
-      <Link>Libraries\boost_system-vc141-mt-gd-x32-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\boost_system-vc141.1.68.0.0\lib\native\boost_system-vc141-mt-gd-x64-1_68.dll">
-      <Link>Libraries\boost_system-vc141-mt-gd-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\boost_system-vc141.1.68.0.0\lib\native\boost_system-vc141-mt-x32-1_68.dll">
-      <Link>Libraries\boost_system-vc141-mt-x32-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\boost_system-vc141.1.68.0.0\lib\native\boost_system-vc141-mt-x64-1_68.dll">
-      <Link>Libraries\boost_system-vc141-mt-x64-1_68.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
-    <Content Include="..\..\packages\openssl.redist.1.0.1.25\build\native\bin\v120\Win32\Release\dynamic\libeay32.dll">
-      <Link>Libraries\libeay32.dll</Link>
-    </Content>
-    <Content Include="..\..\packages\openssl.redist.1.0.1.25\build\native\bin\v120\Win32\Release\dynamic\ssleay32.dll">
-      <Link>Libraries\ssleay32.dll</Link>
-    </Content>
-    <Content Include="..\..\packages\zlib-msvc-x86.1.2.11.8900\build\native\bin_release\zlib.dll">
-      <Link>Libraries\zlib.dll</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <VSIXSubPath>/</VSIXSubPath>
-    </Content>
     <Content Include="License.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -139,140 +108,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="boost">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_atomic-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_bzip2-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_chrono-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_container-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_context-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_contract-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_coroutine-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_date_time-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_exception-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_fiber-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_filesystem-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_graph-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_iostreams-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_locale-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_log-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_log_setup-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_math_c99-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_math_c99f-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_math_c99l-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_math_tr1-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_math_tr1f-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_math_tr1l-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_prg_exec_monitor-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_program_options-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_python37-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_random-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_regex-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_serialization-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_signals-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_stacktrace_noop-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_stacktrace_windbg-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_stacktrace_windbg_cached-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_system-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_test_exec_monitor-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_thread-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_timer-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_type_erasure-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_unit_test_framework-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_wave-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_wserialization-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="boost_zlib-vc141">
-      <Version>1.68.0</Version>
-    </PackageReference>
-    <PackageReference Include="zlib-msvc-x86">
-      <Version>1.2.11.8900</Version>
-    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />

@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{0395e2fb-3dca-4c0a-9ac4-1bd2174ea711}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\algorithm">
+      <UniqueIdentifier>{60c4f9d2-c649-4a35-988a-77ecc8274f57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\algorithm\cxx11">
+      <UniqueIdentifier>{d2d27f9f-7f24-4f74-b523-035dd2ffce1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\algorithm\cxx14">
+      <UniqueIdentifier>{eacee572-c579-484a-821c-fb78744ef9a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\algorithm\cxx17">
+      <UniqueIdentifier>{e42c880f-e39b-47d4-865f-ae2e939a154a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\algorithm\string">
+      <UniqueIdentifier>{db50ef77-b6b1-40f3-bec7-a140b4c61b41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\algorithm\searching">
+      <UniqueIdentifier>{7bfb576a-007e-4e0c-9666-c8b4d256c487}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\algorithm\searching\detail">
+      <UniqueIdentifier>{c1ee8a74-9179-4a22-b784-ed752156fb8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\algorithm\string\std">
+      <UniqueIdentifier>{48aef95e-28c1-4c99-8e97-5baf3bc16c84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\algorithm\string\detail">
+      <UniqueIdentifier>{834a2628-32f8-4f2f-8951-5227c17b6b9b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\algorithm\algorithm.hpp">
+      <Filter>boost\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\apply_permutation.hpp">
+      <Filter>boost\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\clamp.hpp">
+      <Filter>boost\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\find_backward.hpp">
+      <Filter>boost\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\find_not.hpp">
+      <Filter>boost\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\gather.hpp">
+      <Filter>boost\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\hex.hpp">
+      <Filter>boost\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\is_palindrome.hpp">
+      <Filter>boost\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\is_partitioned_until.hpp">
+      <Filter>boost\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\minmax.hpp">
+      <Filter>boost\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\minmax_element.hpp">
+      <Filter>boost\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\sort_subrange.hpp">
+      <Filter>boost\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string.hpp">
+      <Filter>boost\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string_regex.hpp">
+      <Filter>boost\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx11\all_of.hpp">
+      <Filter>boost\algorithm\cxx11</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx11\any_of.hpp">
+      <Filter>boost\algorithm\cxx11</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx11\copy_if.hpp">
+      <Filter>boost\algorithm\cxx11</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx11\copy_n.hpp">
+      <Filter>boost\algorithm\cxx11</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx11\find_if_not.hpp">
+      <Filter>boost\algorithm\cxx11</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx11\iota.hpp">
+      <Filter>boost\algorithm\cxx11</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx11\is_partitioned.hpp">
+      <Filter>boost\algorithm\cxx11</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx11\is_permutation.hpp">
+      <Filter>boost\algorithm\cxx11</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx11\is_sorted.hpp">
+      <Filter>boost\algorithm\cxx11</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx11\none_of.hpp">
+      <Filter>boost\algorithm\cxx11</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx11\one_of.hpp">
+      <Filter>boost\algorithm\cxx11</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx11\partition_copy.hpp">
+      <Filter>boost\algorithm\cxx11</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx11\partition_point.hpp">
+      <Filter>boost\algorithm\cxx11</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx14\equal.hpp">
+      <Filter>boost\algorithm\cxx14</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx14\is_permutation.hpp">
+      <Filter>boost\algorithm\cxx14</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx14\mismatch.hpp">
+      <Filter>boost\algorithm\cxx14</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx17\exclusive_scan.hpp">
+      <Filter>boost\algorithm\cxx17</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx17\for_each_n.hpp">
+      <Filter>boost\algorithm\cxx17</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx17\inclusive_scan.hpp">
+      <Filter>boost\algorithm\cxx17</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx17\reduce.hpp">
+      <Filter>boost\algorithm\cxx17</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx17\transform_exclusive_scan.hpp">
+      <Filter>boost\algorithm\cxx17</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx17\transform_inclusive_scan.hpp">
+      <Filter>boost\algorithm\cxx17</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\cxx17\transform_reduce.hpp">
+      <Filter>boost\algorithm\cxx17</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\searching\boyer_moore.hpp">
+      <Filter>boost\algorithm\searching</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\searching\boyer_moore_horspool.hpp">
+      <Filter>boost\algorithm\searching</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\searching\knuth_morris_pratt.hpp">
+      <Filter>boost\algorithm\searching</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\searching\detail\bm_traits.hpp">
+      <Filter>boost\algorithm\searching\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\searching\detail\debugging.hpp">
+      <Filter>boost\algorithm\searching\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\constants.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\erase.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\find.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\find_format.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\find_iterator.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\finder.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\formatter.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\iter_find.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\join.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\predicate.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\predicate_facade.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\regex.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\regex_find_format.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\replace.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\sequence_traits.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\split.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\std_containers_traits.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\trim.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\trim_all.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\yes_no_type.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\case_conv.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\classification.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\compare.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\concept.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\config.hpp">
+      <Filter>boost\algorithm\string</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\std\list_traits.hpp">
+      <Filter>boost\algorithm\string\std</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\std\rope_traits.hpp">
+      <Filter>boost\algorithm\string\std</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\std\slist_traits.hpp">
+      <Filter>boost\algorithm\string\std</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\std\string_traits.hpp">
+      <Filter>boost\algorithm\string\std</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\detail\case_conv.hpp">
+      <Filter>boost\algorithm\string\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\detail\classification.hpp">
+      <Filter>boost\algorithm\string\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\detail\find_format.hpp">
+      <Filter>boost\algorithm\string\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\detail\find_format_all.hpp">
+      <Filter>boost\algorithm\string\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\detail\find_format_store.hpp">
+      <Filter>boost\algorithm\string\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\detail\find_iterator.hpp">
+      <Filter>boost\algorithm\string\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\detail\finder.hpp">
+      <Filter>boost\algorithm\string\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\detail\finder_regex.hpp">
+      <Filter>boost\algorithm\string\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\detail\formatter.hpp">
+      <Filter>boost\algorithm\string\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\detail\formatter_regex.hpp">
+      <Filter>boost\algorithm\string\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\detail\predicate.hpp">
+      <Filter>boost\algorithm\string\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\detail\replace_storage.hpp">
+      <Filter>boost\algorithm\string\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\detail\sequence.hpp">
+      <Filter>boost\algorithm\string\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\detail\trim.hpp">
+      <Filter>boost\algorithm\string\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\algorithm\string\detail\util.hpp">
+      <Filter>boost\algorithm\string\detail</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

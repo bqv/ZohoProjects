@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cpp_regex_traits.cpp" />
+    <ClCompile Include="cregex.cpp" />
+    <ClCompile Include="c_regex_traits.cpp" />
+    <ClCompile Include="fileiter.cpp" />
+    <ClCompile Include="icu.cpp" />
+    <ClCompile Include="instances.cpp" />
+    <ClCompile Include="posix_api.cpp" />
+    <ClCompile Include="regex.cpp" />
+    <ClCompile Include="regex_debug.cpp" />
+    <ClCompile Include="regex_raw_buffer.cpp" />
+    <ClCompile Include="regex_traits_defaults.cpp" />
+    <ClCompile Include="static_mutex.cpp" />
+    <ClCompile Include="usinstances.cpp" />
+    <ClCompile Include="w32_regex_traits.cpp" />
+    <ClCompile Include="wc_regex_traits.cpp" />
+    <ClCompile Include="wide_posix_api.cpp" />
+    <ClCompile Include="winstances.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\cregex.hpp" />
+    <ClInclude Include="boost\regex.h" />
+    <ClInclude Include="boost\regex.hpp" />
+    <ClInclude Include="boost\regex\concepts.hpp" />
+    <ClInclude Include="boost\regex\config.hpp" />
+    <ClInclude Include="boost\regex\config\borland.hpp" />
+    <ClInclude Include="boost\regex\config\cwchar.hpp" />
+    <ClInclude Include="boost\regex\icu.hpp" />
+    <ClInclude Include="boost\regex\mfc.hpp" />
+    <ClInclude Include="boost\regex\pattern_except.hpp" />
+    <ClInclude Include="boost\regex\pending\object_cache.hpp" />
+    <ClInclude Include="boost\regex\pending\static_mutex.hpp" />
+    <ClInclude Include="boost\regex\pending\unicode_iterator.hpp" />
+    <ClInclude Include="boost\regex\regex_traits.hpp" />
+    <ClInclude Include="boost\regex\user.hpp" />
+    <ClInclude Include="boost\regex\v4\basic_regex.hpp" />
+    <ClInclude Include="boost\regex\v4\basic_regex_creator.hpp" />
+    <ClInclude Include="boost\regex\v4\basic_regex_parser.hpp" />
+    <ClInclude Include="boost\regex\v4\char_regex_traits.hpp" />
+    <ClInclude Include="boost\regex\v4\cpp_regex_traits.hpp" />
+    <ClInclude Include="boost\regex\v4\cregex.hpp" />
+    <ClInclude Include="boost\regex\v4\c_regex_traits.hpp" />
+    <ClInclude Include="boost\regex\v4\error_type.hpp" />
+    <ClInclude Include="boost\regex\v4\fileiter.hpp" />
+    <ClInclude Include="boost\regex\v4\instances.hpp" />
+    <ClInclude Include="boost\regex\v4\iterator_category.hpp" />
+    <ClInclude Include="boost\regex\v4\iterator_traits.hpp" />
+    <ClInclude Include="boost\regex\v4\match_flags.hpp" />
+    <ClInclude Include="boost\regex\v4\match_results.hpp" />
+    <ClInclude Include="boost\regex\v4\mem_block_cache.hpp" />
+    <ClInclude Include="boost\regex\v4\perl_matcher.hpp" />
+    <ClInclude Include="boost\regex\v4\perl_matcher_common.hpp" />
+    <ClInclude Include="boost\regex\v4\perl_matcher_non_recursive.hpp" />
+    <ClInclude Include="boost\regex\v4\perl_matcher_recursive.hpp" />
+    <ClInclude Include="boost\regex\v4\primary_transform.hpp" />
+    <ClInclude Include="boost\regex\v4\protected_call.hpp" />
+    <ClInclude Include="boost\regex\v4\regbase.hpp" />
+    <ClInclude Include="boost\regex\v4\regex.hpp" />
+    <ClInclude Include="boost\regex\v4\regex_format.hpp" />
+    <ClInclude Include="boost\regex\v4\regex_fwd.hpp" />
+    <ClInclude Include="boost\regex\v4\regex_grep.hpp" />
+    <ClInclude Include="boost\regex\v4\regex_iterator.hpp" />
+    <ClInclude Include="boost\regex\v4\regex_match.hpp" />
+    <ClInclude Include="boost\regex\v4\regex_merge.hpp" />
+    <ClInclude Include="boost\regex\v4\regex_raw_buffer.hpp" />
+    <ClInclude Include="boost\regex\v4\regex_replace.hpp" />
+    <ClInclude Include="boost\regex\v4\regex_search.hpp" />
+    <ClInclude Include="boost\regex\v4\regex_split.hpp" />
+    <ClInclude Include="boost\regex\v4\regex_token_iterator.hpp" />
+    <ClInclude Include="boost\regex\v4\regex_traits.hpp" />
+    <ClInclude Include="boost\regex\v4\regex_traits_defaults.hpp" />
+    <ClInclude Include="boost\regex\v4\regex_workaround.hpp" />
+    <ClInclude Include="boost\regex\v4\states.hpp" />
+    <ClInclude Include="boost\regex\v4\sub_match.hpp" />
+    <ClInclude Include="boost\regex\v4\syntax_type.hpp" />
+    <ClInclude Include="boost\regex\v4\u32regex_iterator.hpp" />
+    <ClInclude Include="boost\regex\v4\u32regex_token_iterator.hpp" />
+    <ClInclude Include="boost\regex\v4\w32_regex_traits.hpp" />
+    <ClInclude Include="boost\regex_fwd.hpp" />
+    <ClInclude Include="internals.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{EE9AEA61-1B88-4D18-A428-5AA4D227B76F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BoostRegex</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;BOOSTREGEX_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;BOOSTREGEX_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;BOOSTREGEX_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;BOOSTREGEX_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -75,7 +75,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>.\;..;$(Office10Include);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Wtl\;$(ProjectDir)..\CppRestSdk\;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>ZOHOPROJECTS;WIN32;_WINDOWS;_MBCS;_USRDLL;UNICODE;TLC=2;TLD=2;TLM=2;TLF=3;TLI=4;_X86_=1;i386=1;_NEW_SDK=1;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <BufferSecurityCheck>true</BufferSecurityCheck>
@@ -102,7 +102,7 @@
     <Link>
       <RegisterOutput>false</RegisterOutput>
       <AdditionalOptions>/MACHINE:I386</AdditionalOptions>
-      <AdditionalDependencies>$(SolutionDir)packages\cpprestsdk.2.10.6\installed\x86-windows\lib\*.lib;vsguids.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>vsguids.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <ModuleDefinitionFile>.\ZohoProjects.def</ModuleDefinitionFile>
       <SubSystem>Windows</SubSystem>
@@ -138,7 +138,7 @@
       <AdditionalOptions>/Oxs</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;$(Office10Include);..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Wtl\;$(ProjectDir)..\CppRestSdk\;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>ZOHOPROJECTS;WIN32;_WINDOWS;_MBCS;_USRDLL;UNICODE;NDEBUG;TLC=2;TLD=2;TLM=2;TLF=3;TLI=4;_X86_=1;i386=1;_NEW_SDK=1;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -166,7 +166,7 @@
     <Link>
       <RegisterOutput>false</RegisterOutput>
       <AdditionalOptions>/MACHINE:I386</AdditionalOptions>
-      <AdditionalDependencies>$(SolutionDir)packages\cpprestsdk.2.10.6\installed\x86-windows\lib\*.lib;vsguids.lib;msvcrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>vsguids.lib;msvcrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <ModuleDefinitionFile>.\ZohoProjects.def</ModuleDefinitionFile>
       <SubSystem>Windows</SubSystem>
@@ -197,7 +197,6 @@
     <ClCompile Include="Client.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="ZohoProjects.def" />
   </ItemGroup>
   <ItemGroup>
@@ -218,6 +217,9 @@
     <PkgdefFile Include="ZohoProjects.pkgdef" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CppRestSdk\CppRestSdk.vcxproj">
+      <Project>{2142fb7c-58b0-4043-a12c-87bc73575b01}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\ZohoProjectsApi\ZohoProjectsApi.vcxproj">
       <Project>{aee1e511-bc91-4e23-a042-d02ca4f0ab76}</Project>
     </ProjectReference>
@@ -225,13 +227,5 @@
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v15.0\VSSDK\Microsoft.VsSDK.Cpp.targets" />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v15.0\VSSDK\Microsoft.VsSDK.Cpp.Overrides.targets" />
-  <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\packages\wtl.10.0.8280\build\native\wtl.targets" Condition="Exists('..\packages\wtl.10.0.8280\build\native\wtl.targets')" />
-  </ImportGroup>
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\wtl.10.0.8280\build\native\wtl.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\wtl.10.0.8280\build\native\wtl.targets'))" />
-  </Target>
+  <ImportGroup Label="ExtensionTargets" />
 </Project>

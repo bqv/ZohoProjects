@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\range.hpp" />
+    <ClInclude Include="boost\range\adaptors.hpp" />
+    <ClInclude Include="boost\range\adaptor\adjacent_filtered.hpp" />
+    <ClInclude Include="boost\range\adaptor\argument_fwd.hpp" />
+    <ClInclude Include="boost\range\adaptor\copied.hpp" />
+    <ClInclude Include="boost\range\adaptor\define_adaptor.hpp" />
+    <ClInclude Include="boost\range\adaptor\filtered.hpp" />
+    <ClInclude Include="boost\range\adaptor\formatted.hpp" />
+    <ClInclude Include="boost\range\adaptor\indexed.hpp" />
+    <ClInclude Include="boost\range\adaptor\indirected.hpp" />
+    <ClInclude Include="boost\range\adaptor\map.hpp" />
+    <ClInclude Include="boost\range\adaptor\ref_unwrapped.hpp" />
+    <ClInclude Include="boost\range\adaptor\replaced.hpp" />
+    <ClInclude Include="boost\range\adaptor\replaced_if.hpp" />
+    <ClInclude Include="boost\range\adaptor\reversed.hpp" />
+    <ClInclude Include="boost\range\adaptor\sliced.hpp" />
+    <ClInclude Include="boost\range\adaptor\strided.hpp" />
+    <ClInclude Include="boost\range\adaptor\tokenized.hpp" />
+    <ClInclude Include="boost\range\adaptor\transformed.hpp" />
+    <ClInclude Include="boost\range\adaptor\type_erased.hpp" />
+    <ClInclude Include="boost\range\adaptor\uniqued.hpp" />
+    <ClInclude Include="boost\range\algorithm.hpp" />
+    <ClInclude Include="boost\range\algorithm\adjacent_find.hpp" />
+    <ClInclude Include="boost\range\algorithm\binary_search.hpp" />
+    <ClInclude Include="boost\range\algorithm\copy.hpp" />
+    <ClInclude Include="boost\range\algorithm\copy_backward.hpp" />
+    <ClInclude Include="boost\range\algorithm\count.hpp" />
+    <ClInclude Include="boost\range\algorithm\count_if.hpp" />
+    <ClInclude Include="boost\range\algorithm\equal.hpp" />
+    <ClInclude Include="boost\range\algorithm\equal_range.hpp" />
+    <ClInclude Include="boost\range\algorithm\fill.hpp" />
+    <ClInclude Include="boost\range\algorithm\fill_n.hpp" />
+    <ClInclude Include="boost\range\algorithm\find.hpp" />
+    <ClInclude Include="boost\range\algorithm\find_end.hpp" />
+    <ClInclude Include="boost\range\algorithm\find_first_of.hpp" />
+    <ClInclude Include="boost\range\algorithm\find_if.hpp" />
+    <ClInclude Include="boost\range\algorithm\for_each.hpp" />
+    <ClInclude Include="boost\range\algorithm\generate.hpp" />
+    <ClInclude Include="boost\range\algorithm\heap_algorithm.hpp" />
+    <ClInclude Include="boost\range\algorithm\inplace_merge.hpp" />
+    <ClInclude Include="boost\range\algorithm\lexicographical_compare.hpp" />
+    <ClInclude Include="boost\range\algorithm\lower_bound.hpp" />
+    <ClInclude Include="boost\range\algorithm\max_element.hpp" />
+    <ClInclude Include="boost\range\algorithm\merge.hpp" />
+    <ClInclude Include="boost\range\algorithm\min_element.hpp" />
+    <ClInclude Include="boost\range\algorithm\mismatch.hpp" />
+    <ClInclude Include="boost\range\algorithm\nth_element.hpp" />
+    <ClInclude Include="boost\range\algorithm\partial_sort.hpp" />
+    <ClInclude Include="boost\range\algorithm\partial_sort_copy.hpp" />
+    <ClInclude Include="boost\range\algorithm\partition.hpp" />
+    <ClInclude Include="boost\range\algorithm\permutation.hpp" />
+    <ClInclude Include="boost\range\algorithm\random_shuffle.hpp" />
+    <ClInclude Include="boost\range\algorithm\remove.hpp" />
+    <ClInclude Include="boost\range\algorithm\remove_copy.hpp" />
+    <ClInclude Include="boost\range\algorithm\remove_copy_if.hpp" />
+    <ClInclude Include="boost\range\algorithm\remove_if.hpp" />
+    <ClInclude Include="boost\range\algorithm\replace.hpp" />
+    <ClInclude Include="boost\range\algorithm\replace_copy.hpp" />
+    <ClInclude Include="boost\range\algorithm\replace_copy_if.hpp" />
+    <ClInclude Include="boost\range\algorithm\replace_if.hpp" />
+    <ClInclude Include="boost\range\algorithm\reverse.hpp" />
+    <ClInclude Include="boost\range\algorithm\reverse_copy.hpp" />
+    <ClInclude Include="boost\range\algorithm\rotate.hpp" />
+    <ClInclude Include="boost\range\algorithm\rotate_copy.hpp" />
+    <ClInclude Include="boost\range\algorithm\search.hpp" />
+    <ClInclude Include="boost\range\algorithm\search_n.hpp" />
+    <ClInclude Include="boost\range\algorithm\set_algorithm.hpp" />
+    <ClInclude Include="boost\range\algorithm\sort.hpp" />
+    <ClInclude Include="boost\range\algorithm\stable_partition.hpp" />
+    <ClInclude Include="boost\range\algorithm\stable_sort.hpp" />
+    <ClInclude Include="boost\range\algorithm\swap_ranges.hpp" />
+    <ClInclude Include="boost\range\algorithm\transform.hpp" />
+    <ClInclude Include="boost\range\algorithm\unique.hpp" />
+    <ClInclude Include="boost\range\algorithm\unique_copy.hpp" />
+    <ClInclude Include="boost\range\algorithm\upper_bound.hpp" />
+    <ClInclude Include="boost\range\algorithm_ext.hpp" />
+    <ClInclude Include="boost\range\algorithm_ext\copy_n.hpp" />
+    <ClInclude Include="boost\range\algorithm_ext\erase.hpp" />
+    <ClInclude Include="boost\range\algorithm_ext\for_each.hpp" />
+    <ClInclude Include="boost\range\algorithm_ext\insert.hpp" />
+    <ClInclude Include="boost\range\algorithm_ext\iota.hpp" />
+    <ClInclude Include="boost\range\algorithm_ext\is_sorted.hpp" />
+    <ClInclude Include="boost\range\algorithm_ext\overwrite.hpp" />
+    <ClInclude Include="boost\range\algorithm_ext\push_back.hpp" />
+    <ClInclude Include="boost\range\algorithm_ext\push_front.hpp" />
+    <ClInclude Include="boost\range\any_range.hpp" />
+    <ClInclude Include="boost\range\as_array.hpp" />
+    <ClInclude Include="boost\range\as_literal.hpp" />
+    <ClInclude Include="boost\range\atl.hpp" />
+    <ClInclude Include="boost\range\begin.hpp" />
+    <ClInclude Include="boost\range\category.hpp" />
+    <ClInclude Include="boost\range\combine.hpp" />
+    <ClInclude Include="boost\range\concepts.hpp" />
+    <ClInclude Include="boost\range\config.hpp" />
+    <ClInclude Include="boost\range\const_iterator.hpp" />
+    <ClInclude Include="boost\range\const_reverse_iterator.hpp" />
+    <ClInclude Include="boost\range\counting_range.hpp" />
+    <ClInclude Include="boost\range\detail\any_iterator.hpp" />
+    <ClInclude Include="boost\range\detail\any_iterator_buffer.hpp" />
+    <ClInclude Include="boost\range\detail\any_iterator_interface.hpp" />
+    <ClInclude Include="boost\range\detail\any_iterator_wrapper.hpp" />
+    <ClInclude Include="boost\range\detail\as_literal.hpp" />
+    <ClInclude Include="boost\range\detail\begin.hpp" />
+    <ClInclude Include="boost\range\detail\collection_traits.hpp" />
+    <ClInclude Include="boost\range\detail\collection_traits_detail.hpp" />
+    <ClInclude Include="boost\range\detail\combine_cxx03.hpp" />
+    <ClInclude Include="boost\range\detail\combine_cxx11.hpp" />
+    <ClInclude Include="boost\range\detail\combine_no_rvalue.hpp" />
+    <ClInclude Include="boost\range\detail\combine_rvalue.hpp" />
+    <ClInclude Include="boost\range\detail\common.hpp" />
+    <ClInclude Include="boost\range\detail\default_constructible_unary_fn.hpp" />
+    <ClInclude Include="boost\range\detail\demote_iterator_traversal_tag.hpp" />
+    <ClInclude Include="boost\range\detail\detail_str.hpp" />
+    <ClInclude Include="boost\range\detail\difference_type.hpp" />
+    <ClInclude Include="boost\range\detail\empty.hpp" />
+    <ClInclude Include="boost\range\detail\end.hpp" />
+    <ClInclude Include="boost\range\detail\extract_optional_type.hpp" />
+    <ClInclude Include="boost\range\detail\has_member_size.hpp" />
+    <ClInclude Include="boost\range\detail\implementation_help.hpp" />
+    <ClInclude Include="boost\range\detail\join_iterator.hpp" />
+    <ClInclude Include="boost\range\detail\microsoft.hpp" />
+    <ClInclude Include="boost\range\detail\misc_concept.hpp" />
+    <ClInclude Include="boost\range\detail\msvc_has_iterator_workaround.hpp" />
+    <ClInclude Include="boost\range\detail\range_return.hpp" />
+    <ClInclude Include="boost\range\detail\remove_extent.hpp" />
+    <ClInclude Include="boost\range\detail\safe_bool.hpp" />
+    <ClInclude Include="boost\range\detail\sfinae.hpp" />
+    <ClInclude Include="boost\range\detail\sizer.hpp" />
+    <ClInclude Include="boost\range\detail\size_type.hpp" />
+    <ClInclude Include="boost\range\detail\str_types.hpp" />
+    <ClInclude Include="boost\range\detail\value_type.hpp" />
+    <ClInclude Include="boost\range\difference_type.hpp" />
+    <ClInclude Include="boost\range\distance.hpp" />
+    <ClInclude Include="boost\range\empty.hpp" />
+    <ClInclude Include="boost\range\end.hpp" />
+    <ClInclude Include="boost\range\functions.hpp" />
+    <ClInclude Include="boost\range\has_range_iterator.hpp" />
+    <ClInclude Include="boost\range\irange.hpp" />
+    <ClInclude Include="boost\range\istream_range.hpp" />
+    <ClInclude Include="boost\range\iterator.hpp" />
+    <ClInclude Include="boost\range\iterator_range.hpp" />
+    <ClInclude Include="boost\range\iterator_range_core.hpp" />
+    <ClInclude Include="boost\range\iterator_range_hash.hpp" />
+    <ClInclude Include="boost\range\iterator_range_io.hpp" />
+    <ClInclude Include="boost\range\join.hpp" />
+    <ClInclude Include="boost\range\metafunctions.hpp" />
+    <ClInclude Include="boost\range\mfc.hpp" />
+    <ClInclude Include="boost\range\mfc_map.hpp" />
+    <ClInclude Include="boost\range\mutable_iterator.hpp" />
+    <ClInclude Include="boost\range\numeric.hpp" />
+    <ClInclude Include="boost\range\pointer.hpp" />
+    <ClInclude Include="boost\range\range_fwd.hpp" />
+    <ClInclude Include="boost\range\rbegin.hpp" />
+    <ClInclude Include="boost\range\reference.hpp" />
+    <ClInclude Include="boost\range\rend.hpp" />
+    <ClInclude Include="boost\range\result_iterator.hpp" />
+    <ClInclude Include="boost\range\reverse_iterator.hpp" />
+    <ClInclude Include="boost\range\reverse_result_iterator.hpp" />
+    <ClInclude Include="boost\range\size.hpp" />
+    <ClInclude Include="boost\range\size_type.hpp" />
+    <ClInclude Include="boost\range\sub_range.hpp" />
+    <ClInclude Include="boost\range\traversal.hpp" />
+    <ClInclude Include="boost\range\value_type.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{EFAA7E72-BEF2-4AA0-8C24-A0C6866DAE45}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BoostRange</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;BOOSTRANGE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;BOOSTRANGE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;BOOSTRANGE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;BOOSTRANGE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

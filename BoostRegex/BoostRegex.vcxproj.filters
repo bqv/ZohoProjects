@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="c_regex_traits.cpp" />
+    <ClCompile Include="cpp_regex_traits.cpp" />
+    <ClCompile Include="cregex.cpp" />
+    <ClCompile Include="fileiter.cpp" />
+    <ClCompile Include="icu.cpp" />
+    <ClCompile Include="instances.cpp" />
+    <ClCompile Include="posix_api.cpp" />
+    <ClCompile Include="regex.cpp" />
+    <ClCompile Include="regex_debug.cpp" />
+    <ClCompile Include="regex_raw_buffer.cpp" />
+    <ClCompile Include="regex_traits_defaults.cpp" />
+    <ClCompile Include="static_mutex.cpp" />
+    <ClCompile Include="usinstances.cpp" />
+    <ClCompile Include="w32_regex_traits.cpp" />
+    <ClCompile Include="wc_regex_traits.cpp" />
+    <ClCompile Include="wide_posix_api.cpp" />
+    <ClCompile Include="winstances.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="internals.hpp" />
+    <ClInclude Include="boost\cregex.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex.h">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex_fwd.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\concepts.hpp">
+      <Filter>boost\regex</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\config.hpp">
+      <Filter>boost\regex</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\icu.hpp">
+      <Filter>boost\regex</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\mfc.hpp">
+      <Filter>boost\regex</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\pattern_except.hpp">
+      <Filter>boost\regex</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\regex_traits.hpp">
+      <Filter>boost\regex</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\user.hpp">
+      <Filter>boost\regex</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\config\borland.hpp">
+      <Filter>boost\regex\config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\config\cwchar.hpp">
+      <Filter>boost\regex\config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\char_regex_traits.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\cpp_regex_traits.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\cregex.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\error_type.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\fileiter.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\instances.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\iterator_category.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\iterator_traits.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\match_flags.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\match_results.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\mem_block_cache.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\perl_matcher.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\perl_matcher_common.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\perl_matcher_non_recursive.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\perl_matcher_recursive.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\primary_transform.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\protected_call.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\regbase.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\regex.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\regex_format.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\regex_fwd.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\regex_grep.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\regex_iterator.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\regex_match.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\regex_merge.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\regex_raw_buffer.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\regex_replace.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\regex_search.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\regex_split.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\regex_token_iterator.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\regex_traits.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\regex_traits_defaults.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\regex_workaround.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\states.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\sub_match.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\syntax_type.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\u32regex_iterator.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\u32regex_token_iterator.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\w32_regex_traits.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\basic_regex.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\basic_regex_creator.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\basic_regex_parser.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\v4\c_regex_traits.hpp">
+      <Filter>boost\regex\v4</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\pending\object_cache.hpp">
+      <Filter>boost\regex\pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\pending\static_mutex.hpp">
+      <Filter>boost\regex\pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex\pending\unicode_iterator.hpp">
+      <Filter>boost\regex\pending</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{166ec054-5ef6-4ccb-ae70-0ae6f2d2e6a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\regex">
+      <UniqueIdentifier>{8e1ce8f3-6121-49a5-8639-3b5583d3953b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\regex\config">
+      <UniqueIdentifier>{018c464d-c640-402a-8135-f98e41bb0a26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\regex\v4">
+      <UniqueIdentifier>{140c0ab3-371b-4b94-adbf-014ce4da4a1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\regex\pending">
+      <UniqueIdentifier>{83b6dfb1-0196-4bf7-b9c6-f12ac17ba5dc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

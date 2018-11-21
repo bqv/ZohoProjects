@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{7ea5f37c-7cf8-4a3a-8d1a-3f9f765a8bed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\detail">
+      <UniqueIdentifier>{40690166-1be3-4479-9b5a-96d250d23037}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\winapi">
+      <UniqueIdentifier>{1964a5c4-bd74-4b39-83f5-5f9fd665842b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\winapi\detail">
+      <UniqueIdentifier>{9199c153-12b2-4cad-90bf-a7bdc1682048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\detail\winapi">
+      <UniqueIdentifier>{44cf66df-ea7d-4577-8a0b-11dbd57d64c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\detail\winapi\detail">
+      <UniqueIdentifier>{2ee69631-3136-4ed4-8451-7524f9c15289}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\winapi\access_rights.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\apc.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\basic_types.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\bcrypt.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\character_code_conversion.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\condition_variable.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\config.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\critical_section.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\crypt.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\dbghelp.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\debugapi.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\directory_management.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\dll.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\environment.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\error_codes.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\error_handling.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\event.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\file_management.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\file_mapping.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\get_current_process.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\get_current_process_id.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\get_current_thread.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\get_current_thread_id.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\get_last_error.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\get_process_times.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\get_system_directory.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\get_thread_times.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\handle_info.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\handles.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\heap_memory.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\init_once.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\jobs.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\limits.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\local_memory.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\memory.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\mutex.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\overlapped.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\page_protection_flags.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\pipes.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\priority_class.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\process.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\security.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\semaphore.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\shell.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\show_window.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\srw_lock.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\stack_backtrace.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\synchronization.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\system.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\thread.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\thread_pool.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\time.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\timers.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\tls.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\wait.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\waitable_timer.hpp">
+      <Filter>boost\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\winapi\detail\cast_ptr.hpp">
+      <Filter>boost\winapi\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\interlocked.hpp">
+      <Filter>boost\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\access_rights.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\apc.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\basic_types.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\bcrypt.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\character_code_conversion.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\condition_variable.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\config.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\critical_section.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\crypt.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\dbghelp.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\debugapi.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\directory_management.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\dll.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\environment.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\error_codes.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\error_handling.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\event.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\file_management.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\file_mapping.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\get_current_process.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\get_current_process_id.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\get_current_thread.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\get_current_thread_id.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\get_last_error.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\get_process_times.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\get_system_directory.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\get_thread_times.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\handle_info.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\handles.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\heap_memory.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\init_once.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\jobs.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\limits.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\local_memory.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\memory.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\mutex.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\overlapped.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\page_protection_flags.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\pipes.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\priority_class.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\process.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\security.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\semaphore.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\shell.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\show_window.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\srw_lock.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\stack_backtrace.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\synchronization.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\system.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\thread.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\thread_pool.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\time.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\timers.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\tls.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\wait.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\waitable_timer.hpp">
+      <Filter>boost\detail\winapi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\winapi\detail\deprecated_namespace.hpp">
+      <Filter>boost\detail\winapi\detail</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

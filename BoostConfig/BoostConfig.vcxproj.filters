@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{d3f505b0-146f-490c-bb92-c954e1c22da9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\config">
+      <UniqueIdentifier>{ef4c6317-9663-48cf-828d-db9bb157b3d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\detail">
+      <UniqueIdentifier>{695eeda8-6182-4e35-a385-b7b0c32e9e36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\config\abi">
+      <UniqueIdentifier>{a3ae44a9-5047-456d-8bbf-9c1fb9659070}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\config\compiler">
+      <UniqueIdentifier>{2a40efd0-8392-44ef-a230-3db7194de804}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\config\detail">
+      <UniqueIdentifier>{5e288b7d-864d-4f3e-86e1-f4409fcce456}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\config\platform">
+      <UniqueIdentifier>{4090d240-8936-4e6e-90d4-d5764e7c373a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\config\stdlib">
+      <UniqueIdentifier>{8aaa5133-67e4-4cee-be6a-f364828fbf59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\config\no_tr1">
+      <UniqueIdentifier>{fb81ac0c-5347-4ceb-9268-a8386a569e13}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\config.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\cstdint.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\cxx11_char_types.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\limits.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\version.hpp">
+      <Filter>boost</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\workaround.hpp">
+      <Filter>boost\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\abi_prefix.hpp">
+      <Filter>boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\abi_suffix.hpp">
+      <Filter>boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\auto_link.hpp">
+      <Filter>boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\header_deprecated.hpp">
+      <Filter>boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\helper_macros.hpp">
+      <Filter>boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\pragma_message.hpp">
+      <Filter>boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\requires_threads.hpp">
+      <Filter>boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\user.hpp">
+      <Filter>boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\warning_disable.hpp">
+      <Filter>boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\workaround.hpp">
+      <Filter>boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\abi\borland_prefix.hpp">
+      <Filter>boost\config\abi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\abi\borland_suffix.hpp">
+      <Filter>boost\config\abi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\abi\msvc_prefix.hpp">
+      <Filter>boost\config\abi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\abi\msvc_suffix.hpp">
+      <Filter>boost\config\abi</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\cray.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\diab.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\digitalmars.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\gcc.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\gcc_xml.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\greenhills.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\hp_acc.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\intel.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\kai.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\metrowerks.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\mpw.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\nvcc.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\pathscale.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\pgi.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\sgi_mipspro.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\sunpro_cc.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\vacpp.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\visualc.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\xlcpp.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\xlcpp_zos.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\borland.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\clang.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\codegear.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\comeau.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\common_edg.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\compaq_cxx.hpp">
+      <Filter>boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\detail\posix_features.hpp">
+      <Filter>boost\config\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\detail\select_compiler_config.hpp">
+      <Filter>boost\config\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\detail\select_platform_config.hpp">
+      <Filter>boost\config\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\detail\select_stdlib_config.hpp">
+      <Filter>boost\config\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\detail\suffix.hpp">
+      <Filter>boost\config\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\no_tr1\cmath.hpp">
+      <Filter>boost\config\no_tr1</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\no_tr1\complex.hpp">
+      <Filter>boost\config\no_tr1</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\no_tr1\functional.hpp">
+      <Filter>boost\config\no_tr1</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\no_tr1\memory.hpp">
+      <Filter>boost\config\no_tr1</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\no_tr1\utility.hpp">
+      <Filter>boost\config\no_tr1</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\aix.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\amigaos.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\beos.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\bsd.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\cloudabi.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\cray.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\cygwin.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\haiku.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\hpux.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\irix.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\linux.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\macos.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\qnxnto.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\solaris.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\symbian.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\vms.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\vxworks.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\win32.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\zos.hpp">
+      <Filter>boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\dinkumware.hpp">
+      <Filter>boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\libcomo.hpp">
+      <Filter>boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\libcpp.hpp">
+      <Filter>boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\libstdcpp3.hpp">
+      <Filter>boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\modena.hpp">
+      <Filter>boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\msl.hpp">
+      <Filter>boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\roguewave.hpp">
+      <Filter>boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\sgi.hpp">
+      <Filter>boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\stlport.hpp">
+      <Filter>boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\vacpp.hpp">
+      <Filter>boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\xlcpp_zos.hpp">
+      <Filter>boost\config\stdlib</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

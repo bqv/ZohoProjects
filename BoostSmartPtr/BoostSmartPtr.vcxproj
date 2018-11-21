@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\detail\atomic_count.hpp" />
+    <ClInclude Include="boost\detail\lightweight_mutex.hpp" />
+    <ClInclude Include="boost\detail\lightweight_thread.hpp" />
+    <ClInclude Include="boost\detail\quick_allocator.hpp" />
+    <ClInclude Include="boost\enable_shared_from_this.hpp" />
+    <ClInclude Include="boost\intrusive_ptr.hpp" />
+    <ClInclude Include="boost\make_shared.hpp" />
+    <ClInclude Include="boost\make_unique.hpp" />
+    <ClInclude Include="boost\pointer_cast.hpp" />
+    <ClInclude Include="boost\pointer_to_other.hpp" />
+    <ClInclude Include="boost\scoped_array.hpp" />
+    <ClInclude Include="boost\scoped_ptr.hpp" />
+    <ClInclude Include="boost\shared_array.hpp" />
+    <ClInclude Include="boost\shared_ptr.hpp" />
+    <ClInclude Include="boost\smart_ptr.hpp" />
+    <ClInclude Include="boost\smart_ptr\allocate_local_shared_array.hpp" />
+    <ClInclude Include="boost\smart_ptr\allocate_shared_array.hpp" />
+    <ClInclude Include="boost\smart_ptr\atomic_shared_ptr.hpp" />
+    <ClInclude Include="boost\smart_ptr\bad_weak_ptr.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count_gcc.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count_gcc_x86.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count_nt.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count_pt.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count_solaris.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count_spin.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count_std_atomic.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count_sync.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\atomic_count_win32.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\lightweight_mutex.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\local_counted_base.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\local_sp_deleter.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\lwm_nop.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\lwm_pthreads.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\lwm_win32_cs.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\operator_bool.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\quick_allocator.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\shared_count.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\spinlock.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\spinlock_gcc_arm.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\spinlock_nt.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\spinlock_pool.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\spinlock_pt.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\spinlock_std_atomic.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\spinlock_sync.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\spinlock_w32.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_convertible.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_acc_ia64.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_aix.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_clang.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_cw_ppc.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_cw_x86.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_gcc_ia64.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_gcc_mips.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_gcc_ppc.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_gcc_sparc.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_gcc_x86.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_nt.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_pt.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_snc_ps3.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_solaris.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_spin.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_std_atomic.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_sync.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_vacpp_ppc.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_base_w32.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_counted_impl.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_disable_deprecated.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_forward.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_has_sync.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_interlocked.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_noexcept.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\sp_nullptr_t.hpp" />
+    <ClInclude Include="boost\smart_ptr\detail\yield_k.hpp" />
+    <ClInclude Include="boost\smart_ptr\enable_shared_from_raw.hpp" />
+    <ClInclude Include="boost\smart_ptr\enable_shared_from_this.hpp" />
+    <ClInclude Include="boost\smart_ptr\intrusive_ptr.hpp" />
+    <ClInclude Include="boost\smart_ptr\intrusive_ref_counter.hpp" />
+    <ClInclude Include="boost\smart_ptr\local_shared_ptr.hpp" />
+    <ClInclude Include="boost\smart_ptr\make_local_shared.hpp" />
+    <ClInclude Include="boost\smart_ptr\make_local_shared_array.hpp" />
+    <ClInclude Include="boost\smart_ptr\make_local_shared_object.hpp" />
+    <ClInclude Include="boost\smart_ptr\make_shared.hpp" />
+    <ClInclude Include="boost\smart_ptr\make_shared_array.hpp" />
+    <ClInclude Include="boost\smart_ptr\make_shared_object.hpp" />
+    <ClInclude Include="boost\smart_ptr\make_unique.hpp" />
+    <ClInclude Include="boost\smart_ptr\owner_less.hpp" />
+    <ClInclude Include="boost\smart_ptr\scoped_array.hpp" />
+    <ClInclude Include="boost\smart_ptr\scoped_ptr.hpp" />
+    <ClInclude Include="boost\smart_ptr\shared_array.hpp" />
+    <ClInclude Include="boost\smart_ptr\shared_ptr.hpp" />
+    <ClInclude Include="boost\smart_ptr\weak_ptr.hpp" />
+    <ClInclude Include="boost\weak_ptr.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{5A07BAE5-AAEF-4F20-BF56-585DDB3D0997}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BoostSmartPtr</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;BOOSTSMARTPTR_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;BOOSTSMARTPTR_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;BOOSTSMARTPTR_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;BOOSTSMARTPTR_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

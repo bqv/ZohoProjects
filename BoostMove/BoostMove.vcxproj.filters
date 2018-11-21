@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{73f6ca62-d413-44a0-b9eb-26d98232cf8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\move">
+      <UniqueIdentifier>{036f8cb5-ec29-467d-bef0-1d8312bd584a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\move\algo">
+      <UniqueIdentifier>{0dd06664-43a0-4c9e-93a9-65eed98804b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\move\algo\detail">
+      <UniqueIdentifier>{99d20da3-28bc-4efd-bda2-6294efef1ffe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\move\detail">
+      <UniqueIdentifier>{6d7e9f6a-3439-46ed-8d14-ef8a0c9d827f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\move\adl_move_swap.hpp">
+      <Filter>boost\move</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\algorithm.hpp">
+      <Filter>boost\move</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\core.hpp">
+      <Filter>boost\move</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\default_delete.hpp">
+      <Filter>boost\move</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\iterator.hpp">
+      <Filter>boost\move</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\make_unique.hpp">
+      <Filter>boost\move</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\move.hpp">
+      <Filter>boost\move</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\traits.hpp">
+      <Filter>boost\move</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\unique_ptr.hpp">
+      <Filter>boost\move</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\utility.hpp">
+      <Filter>boost\move</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\utility_core.hpp">
+      <Filter>boost\move</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\algo\adaptive_merge.hpp">
+      <Filter>boost\move\algo</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\algo\adaptive_sort.hpp">
+      <Filter>boost\move\algo</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\algo\move.hpp">
+      <Filter>boost\move\algo</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\algo\predicate.hpp">
+      <Filter>boost\move\algo</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\algo\unique.hpp">
+      <Filter>boost\move\algo</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\algo\detail\adaptive_sort_merge.hpp">
+      <Filter>boost\move\algo\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\algo\detail\basic_op.hpp">
+      <Filter>boost\move\algo\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\algo\detail\heap_sort.hpp">
+      <Filter>boost\move\algo\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\algo\detail\insertion_sort.hpp">
+      <Filter>boost\move\algo\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\algo\detail\is_sorted.hpp">
+      <Filter>boost\move\algo\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\algo\detail\merge.hpp">
+      <Filter>boost\move\algo\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\algo\detail\merge_sort.hpp">
+      <Filter>boost\move\algo\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\algo\detail\pdqsort.hpp">
+      <Filter>boost\move\algo\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\algo\detail\set_difference.hpp">
+      <Filter>boost\move\algo\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\detail\config_begin.hpp">
+      <Filter>boost\move\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\detail\config_end.hpp">
+      <Filter>boost\move\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\detail\destruct_n.hpp">
+      <Filter>boost\move\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\detail\fwd_macros.hpp">
+      <Filter>boost\move\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\detail\iterator_to_raw_pointer.hpp">
+      <Filter>boost\move\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\detail\iterator_traits.hpp">
+      <Filter>boost\move\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\detail\meta_utils.hpp">
+      <Filter>boost\move\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\detail\meta_utils_core.hpp">
+      <Filter>boost\move\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\detail\move_helpers.hpp">
+      <Filter>boost\move\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\detail\placement_new.hpp">
+      <Filter>boost\move\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\detail\pointer_element.hpp">
+      <Filter>boost\move\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\detail\reverse_iterator.hpp">
+      <Filter>boost\move\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\detail\std_ns_begin.hpp">
+      <Filter>boost\move\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\detail\std_ns_end.hpp">
+      <Filter>boost\move\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\detail\to_raw_pointer.hpp">
+      <Filter>boost\move\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\detail\type_traits.hpp">
+      <Filter>boost\move\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\detail\unique_ptr_meta_utils.hpp">
+      <Filter>boost\move\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\move\detail\workaround.hpp">
+      <Filter>boost\move\detail</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

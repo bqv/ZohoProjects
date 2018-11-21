@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\config.hpp" />
+    <ClInclude Include="boost\config\abi\borland_prefix.hpp" />
+    <ClInclude Include="boost\config\abi\borland_suffix.hpp" />
+    <ClInclude Include="boost\config\abi\msvc_prefix.hpp" />
+    <ClInclude Include="boost\config\abi\msvc_suffix.hpp" />
+    <ClInclude Include="boost\config\abi_prefix.hpp" />
+    <ClInclude Include="boost\config\abi_suffix.hpp" />
+    <ClInclude Include="boost\config\auto_link.hpp" />
+    <ClInclude Include="boost\config\compiler\borland.hpp" />
+    <ClInclude Include="boost\config\compiler\clang.hpp" />
+    <ClInclude Include="boost\config\compiler\codegear.hpp" />
+    <ClInclude Include="boost\config\compiler\comeau.hpp" />
+    <ClInclude Include="boost\config\compiler\common_edg.hpp" />
+    <ClInclude Include="boost\config\compiler\compaq_cxx.hpp" />
+    <ClInclude Include="boost\config\compiler\cray.hpp" />
+    <ClInclude Include="boost\config\compiler\diab.hpp" />
+    <ClInclude Include="boost\config\compiler\digitalmars.hpp" />
+    <ClInclude Include="boost\config\compiler\gcc.hpp" />
+    <ClInclude Include="boost\config\compiler\gcc_xml.hpp" />
+    <ClInclude Include="boost\config\compiler\greenhills.hpp" />
+    <ClInclude Include="boost\config\compiler\hp_acc.hpp" />
+    <ClInclude Include="boost\config\compiler\intel.hpp" />
+    <ClInclude Include="boost\config\compiler\kai.hpp" />
+    <ClInclude Include="boost\config\compiler\metrowerks.hpp" />
+    <ClInclude Include="boost\config\compiler\mpw.hpp" />
+    <ClInclude Include="boost\config\compiler\nvcc.hpp" />
+    <ClInclude Include="boost\config\compiler\pathscale.hpp" />
+    <ClInclude Include="boost\config\compiler\pgi.hpp" />
+    <ClInclude Include="boost\config\compiler\sgi_mipspro.hpp" />
+    <ClInclude Include="boost\config\compiler\sunpro_cc.hpp" />
+    <ClInclude Include="boost\config\compiler\vacpp.hpp" />
+    <ClInclude Include="boost\config\compiler\visualc.hpp" />
+    <ClInclude Include="boost\config\compiler\xlcpp.hpp" />
+    <ClInclude Include="boost\config\compiler\xlcpp_zos.hpp" />
+    <ClInclude Include="boost\config\detail\posix_features.hpp" />
+    <ClInclude Include="boost\config\detail\select_compiler_config.hpp" />
+    <ClInclude Include="boost\config\detail\select_platform_config.hpp" />
+    <ClInclude Include="boost\config\detail\select_stdlib_config.hpp" />
+    <ClInclude Include="boost\config\detail\suffix.hpp" />
+    <ClInclude Include="boost\config\header_deprecated.hpp" />
+    <ClInclude Include="boost\config\helper_macros.hpp" />
+    <ClInclude Include="boost\config\no_tr1\cmath.hpp" />
+    <ClInclude Include="boost\config\no_tr1\complex.hpp" />
+    <ClInclude Include="boost\config\no_tr1\functional.hpp" />
+    <ClInclude Include="boost\config\no_tr1\memory.hpp" />
+    <ClInclude Include="boost\config\no_tr1\utility.hpp" />
+    <ClInclude Include="boost\config\platform\aix.hpp" />
+    <ClInclude Include="boost\config\platform\amigaos.hpp" />
+    <ClInclude Include="boost\config\platform\beos.hpp" />
+    <ClInclude Include="boost\config\platform\bsd.hpp" />
+    <ClInclude Include="boost\config\platform\cloudabi.hpp" />
+    <ClInclude Include="boost\config\platform\cray.hpp" />
+    <ClInclude Include="boost\config\platform\cygwin.hpp" />
+    <ClInclude Include="boost\config\platform\haiku.hpp" />
+    <ClInclude Include="boost\config\platform\hpux.hpp" />
+    <ClInclude Include="boost\config\platform\irix.hpp" />
+    <ClInclude Include="boost\config\platform\linux.hpp" />
+    <ClInclude Include="boost\config\platform\macos.hpp" />
+    <ClInclude Include="boost\config\platform\qnxnto.hpp" />
+    <ClInclude Include="boost\config\platform\solaris.hpp" />
+    <ClInclude Include="boost\config\platform\symbian.hpp" />
+    <ClInclude Include="boost\config\platform\vms.hpp" />
+    <ClInclude Include="boost\config\platform\vxworks.hpp" />
+    <ClInclude Include="boost\config\platform\win32.hpp" />
+    <ClInclude Include="boost\config\platform\zos.hpp" />
+    <ClInclude Include="boost\config\pragma_message.hpp" />
+    <ClInclude Include="boost\config\requires_threads.hpp" />
+    <ClInclude Include="boost\config\stdlib\dinkumware.hpp" />
+    <ClInclude Include="boost\config\stdlib\libcomo.hpp" />
+    <ClInclude Include="boost\config\stdlib\libcpp.hpp" />
+    <ClInclude Include="boost\config\stdlib\libstdcpp3.hpp" />
+    <ClInclude Include="boost\config\stdlib\modena.hpp" />
+    <ClInclude Include="boost\config\stdlib\msl.hpp" />
+    <ClInclude Include="boost\config\stdlib\roguewave.hpp" />
+    <ClInclude Include="boost\config\stdlib\sgi.hpp" />
+    <ClInclude Include="boost\config\stdlib\stlport.hpp" />
+    <ClInclude Include="boost\config\stdlib\vacpp.hpp" />
+    <ClInclude Include="boost\config\stdlib\xlcpp_zos.hpp" />
+    <ClInclude Include="boost\config\user.hpp" />
+    <ClInclude Include="boost\config\warning_disable.hpp" />
+    <ClInclude Include="boost\config\workaround.hpp" />
+    <ClInclude Include="boost\cstdint.hpp" />
+    <ClInclude Include="boost\cxx11_char_types.hpp" />
+    <ClInclude Include="boost\detail\workaround.hpp" />
+    <ClInclude Include="boost\limits.hpp" />
+    <ClInclude Include="boost\version.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{FAFAE6CE-7EA4-4C3E-A79C-4525422DD062}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BoostConfig</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;BOOSTCONFIG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;BOOSTCONFIG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;BOOSTCONFIG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;BOOSTCONFIG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="alloc_lib.c" />
+    <ClCompile Include="dlmalloc.cpp" />
+    <ClCompile Include="dlmalloc_2_8_6.c" />
+    <ClCompile Include="dlmalloc_ext_2_8_6.c" />
+    <ClCompile Include="global_resource.cpp" />
+    <ClCompile Include="monotonic_buffer_resource.cpp" />
+    <ClCompile Include="pool_resource.cpp" />
+    <ClCompile Include="synchronized_pool_resource.cpp" />
+    <ClCompile Include="unsynchronized_pool_resource.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{440a97f1-8ae6-47bd-8119-263ea7f31f95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\container">
+      <UniqueIdentifier>{e990e08f-544d-483e-b06f-5d3fd817d9ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\container\detail">
+      <UniqueIdentifier>{7f263b51-6453-4886-9e01-1588a2b06f8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost\container\pmr">
+      <UniqueIdentifier>{4eb7e0c6-d436-4e0c-a2bd-4096102b0a82}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\container\adaptive_pool.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\allocator.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\allocator_traits.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\container_fwd.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\deque.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\flat_map.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\flat_set.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\list.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\map.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\new_allocator.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\node_allocator.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\node_handle.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\options.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\scoped_allocator.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\scoped_allocator_fwd.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\set.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\slist.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\small_vector.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\stable_vector.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\static_vector.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\string.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\throw_exception.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\uses_allocator.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\uses_allocator_fwd.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\vector.hpp">
+      <Filter>boost\container</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\adaptive_node_pool.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\adaptive_node_pool_impl.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\addressof.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\advanced_insert_int.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\algorithm.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\alloc_helpers.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\alloc_lib.h">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\allocation_type.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\allocator_version_traits.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\auto_link.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\block_list.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\block_slist.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\compare_functors.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\config_begin.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\config_end.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\construct_in_place.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\container_or_allocator_rebind.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\container_rebind.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\copy_move_algo.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\destroyers.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\dispatch_uses_allocator.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\dlmalloc.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\flat_tree.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\function_detector.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\is_container.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\is_contiguous_container.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\is_sorted.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\iterator.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\iterator_to_raw_pointer.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\iterators.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\math_functions.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\min_max.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\minimal_char_traits_header.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\mpl.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\multiallocation_chain.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\mutex.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\next_capacity.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\node_alloc_holder.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\node_pool.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\node_pool_impl.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\pair.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\pair_key_mapped_of_value.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\placement_new.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\pool_common.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\pool_common_alloc.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\pool_resource.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\singleton.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\std_fwd.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\thread_mutex.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\transform_iterator.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\tree.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\type_traits.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\value_functors.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\value_init.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\variadic_templates_tools.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\version_type.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\detail\workaround.hpp">
+      <Filter>boost\container\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\deque.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\flat_map.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\flat_set.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\global_resource.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\list.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\map.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\memory_resource.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\monotonic_buffer_resource.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\polymorphic_allocator.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\pool_options.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\resource_adaptor.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\set.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\slist.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\small_vector.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\stable_vector.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\string.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\synchronized_pool_resource.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\unsynchronized_pool_resource.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\container\pmr\vector.hpp">
+      <Filter>boost\container\pmr</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

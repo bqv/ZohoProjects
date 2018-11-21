@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\detail\interlocked.hpp" />
+    <ClInclude Include="boost\detail\winapi\access_rights.hpp" />
+    <ClInclude Include="boost\detail\winapi\apc.hpp" />
+    <ClInclude Include="boost\detail\winapi\basic_types.hpp" />
+    <ClInclude Include="boost\detail\winapi\bcrypt.hpp" />
+    <ClInclude Include="boost\detail\winapi\character_code_conversion.hpp" />
+    <ClInclude Include="boost\detail\winapi\condition_variable.hpp" />
+    <ClInclude Include="boost\detail\winapi\config.hpp" />
+    <ClInclude Include="boost\detail\winapi\critical_section.hpp" />
+    <ClInclude Include="boost\detail\winapi\crypt.hpp" />
+    <ClInclude Include="boost\detail\winapi\dbghelp.hpp" />
+    <ClInclude Include="boost\detail\winapi\debugapi.hpp" />
+    <ClInclude Include="boost\detail\winapi\detail\deprecated_namespace.hpp" />
+    <ClInclude Include="boost\detail\winapi\directory_management.hpp" />
+    <ClInclude Include="boost\detail\winapi\dll.hpp" />
+    <ClInclude Include="boost\detail\winapi\environment.hpp" />
+    <ClInclude Include="boost\detail\winapi\error_codes.hpp" />
+    <ClInclude Include="boost\detail\winapi\error_handling.hpp" />
+    <ClInclude Include="boost\detail\winapi\event.hpp" />
+    <ClInclude Include="boost\detail\winapi\file_management.hpp" />
+    <ClInclude Include="boost\detail\winapi\file_mapping.hpp" />
+    <ClInclude Include="boost\detail\winapi\get_current_process.hpp" />
+    <ClInclude Include="boost\detail\winapi\get_current_process_id.hpp" />
+    <ClInclude Include="boost\detail\winapi\get_current_thread.hpp" />
+    <ClInclude Include="boost\detail\winapi\get_current_thread_id.hpp" />
+    <ClInclude Include="boost\detail\winapi\get_last_error.hpp" />
+    <ClInclude Include="boost\detail\winapi\get_process_times.hpp" />
+    <ClInclude Include="boost\detail\winapi\get_system_directory.hpp" />
+    <ClInclude Include="boost\detail\winapi\get_thread_times.hpp" />
+    <ClInclude Include="boost\detail\winapi\handles.hpp" />
+    <ClInclude Include="boost\detail\winapi\handle_info.hpp" />
+    <ClInclude Include="boost\detail\winapi\heap_memory.hpp" />
+    <ClInclude Include="boost\detail\winapi\init_once.hpp" />
+    <ClInclude Include="boost\detail\winapi\jobs.hpp" />
+    <ClInclude Include="boost\detail\winapi\limits.hpp" />
+    <ClInclude Include="boost\detail\winapi\local_memory.hpp" />
+    <ClInclude Include="boost\detail\winapi\memory.hpp" />
+    <ClInclude Include="boost\detail\winapi\mutex.hpp" />
+    <ClInclude Include="boost\detail\winapi\overlapped.hpp" />
+    <ClInclude Include="boost\detail\winapi\page_protection_flags.hpp" />
+    <ClInclude Include="boost\detail\winapi\pipes.hpp" />
+    <ClInclude Include="boost\detail\winapi\priority_class.hpp" />
+    <ClInclude Include="boost\detail\winapi\process.hpp" />
+    <ClInclude Include="boost\detail\winapi\security.hpp" />
+    <ClInclude Include="boost\detail\winapi\semaphore.hpp" />
+    <ClInclude Include="boost\detail\winapi\shell.hpp" />
+    <ClInclude Include="boost\detail\winapi\show_window.hpp" />
+    <ClInclude Include="boost\detail\winapi\srw_lock.hpp" />
+    <ClInclude Include="boost\detail\winapi\stack_backtrace.hpp" />
+    <ClInclude Include="boost\detail\winapi\synchronization.hpp" />
+    <ClInclude Include="boost\detail\winapi\system.hpp" />
+    <ClInclude Include="boost\detail\winapi\thread.hpp" />
+    <ClInclude Include="boost\detail\winapi\thread_pool.hpp" />
+    <ClInclude Include="boost\detail\winapi\time.hpp" />
+    <ClInclude Include="boost\detail\winapi\timers.hpp" />
+    <ClInclude Include="boost\detail\winapi\tls.hpp" />
+    <ClInclude Include="boost\detail\winapi\wait.hpp" />
+    <ClInclude Include="boost\detail\winapi\waitable_timer.hpp" />
+    <ClInclude Include="boost\winapi\access_rights.hpp" />
+    <ClInclude Include="boost\winapi\apc.hpp" />
+    <ClInclude Include="boost\winapi\basic_types.hpp" />
+    <ClInclude Include="boost\winapi\bcrypt.hpp" />
+    <ClInclude Include="boost\winapi\character_code_conversion.hpp" />
+    <ClInclude Include="boost\winapi\condition_variable.hpp" />
+    <ClInclude Include="boost\winapi\config.hpp" />
+    <ClInclude Include="boost\winapi\critical_section.hpp" />
+    <ClInclude Include="boost\winapi\crypt.hpp" />
+    <ClInclude Include="boost\winapi\dbghelp.hpp" />
+    <ClInclude Include="boost\winapi\debugapi.hpp" />
+    <ClInclude Include="boost\winapi\detail\cast_ptr.hpp" />
+    <ClInclude Include="boost\winapi\directory_management.hpp" />
+    <ClInclude Include="boost\winapi\dll.hpp" />
+    <ClInclude Include="boost\winapi\environment.hpp" />
+    <ClInclude Include="boost\winapi\error_codes.hpp" />
+    <ClInclude Include="boost\winapi\error_handling.hpp" />
+    <ClInclude Include="boost\winapi\event.hpp" />
+    <ClInclude Include="boost\winapi\file_management.hpp" />
+    <ClInclude Include="boost\winapi\file_mapping.hpp" />
+    <ClInclude Include="boost\winapi\get_current_process.hpp" />
+    <ClInclude Include="boost\winapi\get_current_process_id.hpp" />
+    <ClInclude Include="boost\winapi\get_current_thread.hpp" />
+    <ClInclude Include="boost\winapi\get_current_thread_id.hpp" />
+    <ClInclude Include="boost\winapi\get_last_error.hpp" />
+    <ClInclude Include="boost\winapi\get_process_times.hpp" />
+    <ClInclude Include="boost\winapi\get_system_directory.hpp" />
+    <ClInclude Include="boost\winapi\get_thread_times.hpp" />
+    <ClInclude Include="boost\winapi\handles.hpp" />
+    <ClInclude Include="boost\winapi\handle_info.hpp" />
+    <ClInclude Include="boost\winapi\heap_memory.hpp" />
+    <ClInclude Include="boost\winapi\init_once.hpp" />
+    <ClInclude Include="boost\winapi\jobs.hpp" />
+    <ClInclude Include="boost\winapi\limits.hpp" />
+    <ClInclude Include="boost\winapi\local_memory.hpp" />
+    <ClInclude Include="boost\winapi\memory.hpp" />
+    <ClInclude Include="boost\winapi\mutex.hpp" />
+    <ClInclude Include="boost\winapi\overlapped.hpp" />
+    <ClInclude Include="boost\winapi\page_protection_flags.hpp" />
+    <ClInclude Include="boost\winapi\pipes.hpp" />
+    <ClInclude Include="boost\winapi\priority_class.hpp" />
+    <ClInclude Include="boost\winapi\process.hpp" />
+    <ClInclude Include="boost\winapi\security.hpp" />
+    <ClInclude Include="boost\winapi\semaphore.hpp" />
+    <ClInclude Include="boost\winapi\shell.hpp" />
+    <ClInclude Include="boost\winapi\show_window.hpp" />
+    <ClInclude Include="boost\winapi\srw_lock.hpp" />
+    <ClInclude Include="boost\winapi\stack_backtrace.hpp" />
+    <ClInclude Include="boost\winapi\synchronization.hpp" />
+    <ClInclude Include="boost\winapi\system.hpp" />
+    <ClInclude Include="boost\winapi\thread.hpp" />
+    <ClInclude Include="boost\winapi\thread_pool.hpp" />
+    <ClInclude Include="boost\winapi\time.hpp" />
+    <ClInclude Include="boost\winapi\timers.hpp" />
+    <ClInclude Include="boost\winapi\tls.hpp" />
+    <ClInclude Include="boost\winapi\wait.hpp" />
+    <ClInclude Include="boost\winapi\waitable_timer.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{BA20B68F-2AB6-4D73-888C-F17CC6388902}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BoostWinapi</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;BOOSTWINAPI_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;BOOSTWINAPI_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;BOOSTWINAPI_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;BOOSTWINAPI_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

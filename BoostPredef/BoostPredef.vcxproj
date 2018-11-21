@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\detail\endian.hpp" />
+    <ClInclude Include="boost\predef.h" />
+    <ClInclude Include="boost\predef\architecture.h" />
+    <ClInclude Include="boost\predef\architecture\alpha.h" />
+    <ClInclude Include="boost\predef\architecture\arm.h" />
+    <ClInclude Include="boost\predef\architecture\blackfin.h" />
+    <ClInclude Include="boost\predef\architecture\convex.h" />
+    <ClInclude Include="boost\predef\architecture\ia64.h" />
+    <ClInclude Include="boost\predef\architecture\m68k.h" />
+    <ClInclude Include="boost\predef\architecture\mips.h" />
+    <ClInclude Include="boost\predef\architecture\parisc.h" />
+    <ClInclude Include="boost\predef\architecture\ppc.h" />
+    <ClInclude Include="boost\predef\architecture\ptx.h" />
+    <ClInclude Include="boost\predef\architecture\pyramid.h" />
+    <ClInclude Include="boost\predef\architecture\rs6k.h" />
+    <ClInclude Include="boost\predef\architecture\sparc.h" />
+    <ClInclude Include="boost\predef\architecture\superh.h" />
+    <ClInclude Include="boost\predef\architecture\sys370.h" />
+    <ClInclude Include="boost\predef\architecture\sys390.h" />
+    <ClInclude Include="boost\predef\architecture\x86.h" />
+    <ClInclude Include="boost\predef\architecture\x86\32.h" />
+    <ClInclude Include="boost\predef\architecture\x86\64.h" />
+    <ClInclude Include="boost\predef\architecture\z.h" />
+    <ClInclude Include="boost\predef\compiler.h" />
+    <ClInclude Include="boost\predef\compiler\borland.h" />
+    <ClInclude Include="boost\predef\compiler\clang.h" />
+    <ClInclude Include="boost\predef\compiler\comeau.h" />
+    <ClInclude Include="boost\predef\compiler\compaq.h" />
+    <ClInclude Include="boost\predef\compiler\diab.h" />
+    <ClInclude Include="boost\predef\compiler\digitalmars.h" />
+    <ClInclude Include="boost\predef\compiler\dignus.h" />
+    <ClInclude Include="boost\predef\compiler\edg.h" />
+    <ClInclude Include="boost\predef\compiler\ekopath.h" />
+    <ClInclude Include="boost\predef\compiler\gcc.h" />
+    <ClInclude Include="boost\predef\compiler\gcc_xml.h" />
+    <ClInclude Include="boost\predef\compiler\greenhills.h" />
+    <ClInclude Include="boost\predef\compiler\hp_acc.h" />
+    <ClInclude Include="boost\predef\compiler\iar.h" />
+    <ClInclude Include="boost\predef\compiler\ibm.h" />
+    <ClInclude Include="boost\predef\compiler\intel.h" />
+    <ClInclude Include="boost\predef\compiler\kai.h" />
+    <ClInclude Include="boost\predef\compiler\llvm.h" />
+    <ClInclude Include="boost\predef\compiler\metaware.h" />
+    <ClInclude Include="boost\predef\compiler\metrowerks.h" />
+    <ClInclude Include="boost\predef\compiler\microtec.h" />
+    <ClInclude Include="boost\predef\compiler\mpw.h" />
+    <ClInclude Include="boost\predef\compiler\nvcc.h" />
+    <ClInclude Include="boost\predef\compiler\palm.h" />
+    <ClInclude Include="boost\predef\compiler\pgi.h" />
+    <ClInclude Include="boost\predef\compiler\sgi_mipspro.h" />
+    <ClInclude Include="boost\predef\compiler\sunpro.h" />
+    <ClInclude Include="boost\predef\compiler\tendra.h" />
+    <ClInclude Include="boost\predef\compiler\visualc.h" />
+    <ClInclude Include="boost\predef\compiler\watcom.h" />
+    <ClInclude Include="boost\predef\detail\comp_detected.h" />
+    <ClInclude Include="boost\predef\detail\endian_compat.h" />
+    <ClInclude Include="boost\predef\detail\os_detected.h" />
+    <ClInclude Include="boost\predef\detail\platform_detected.h" />
+    <ClInclude Include="boost\predef\detail\test.h" />
+    <ClInclude Include="boost\predef\detail\test_def.h" />
+    <ClInclude Include="boost\predef\detail\_cassert.h" />
+    <ClInclude Include="boost\predef\detail\_exception.h" />
+    <ClInclude Include="boost\predef\hardware.h" />
+    <ClInclude Include="boost\predef\hardware\simd.h" />
+    <ClInclude Include="boost\predef\hardware\simd\arm.h" />
+    <ClInclude Include="boost\predef\hardware\simd\arm\versions.h" />
+    <ClInclude Include="boost\predef\hardware\simd\ppc.h" />
+    <ClInclude Include="boost\predef\hardware\simd\ppc\versions.h" />
+    <ClInclude Include="boost\predef\hardware\simd\x86.h" />
+    <ClInclude Include="boost\predef\hardware\simd\x86\versions.h" />
+    <ClInclude Include="boost\predef\hardware\simd\x86_amd.h" />
+    <ClInclude Include="boost\predef\hardware\simd\x86_amd\versions.h" />
+    <ClInclude Include="boost\predef\language.h" />
+    <ClInclude Include="boost\predef\language\cuda.h" />
+    <ClInclude Include="boost\predef\language\objc.h" />
+    <ClInclude Include="boost\predef\language\stdc.h" />
+    <ClInclude Include="boost\predef\language\stdcpp.h" />
+    <ClInclude Include="boost\predef\library.h" />
+    <ClInclude Include="boost\predef\library\c.h" />
+    <ClInclude Include="boost\predef\library\c\cloudabi.h" />
+    <ClInclude Include="boost\predef\library\c\gnu.h" />
+    <ClInclude Include="boost\predef\library\c\uc.h" />
+    <ClInclude Include="boost\predef\library\c\vms.h" />
+    <ClInclude Include="boost\predef\library\c\zos.h" />
+    <ClInclude Include="boost\predef\library\c\_prefix.h" />
+    <ClInclude Include="boost\predef\library\std.h" />
+    <ClInclude Include="boost\predef\library\std\cxx.h" />
+    <ClInclude Include="boost\predef\library\std\dinkumware.h" />
+    <ClInclude Include="boost\predef\library\std\libcomo.h" />
+    <ClInclude Include="boost\predef\library\std\modena.h" />
+    <ClInclude Include="boost\predef\library\std\msl.h" />
+    <ClInclude Include="boost\predef\library\std\roguewave.h" />
+    <ClInclude Include="boost\predef\library\std\sgi.h" />
+    <ClInclude Include="boost\predef\library\std\stdcpp3.h" />
+    <ClInclude Include="boost\predef\library\std\stlport.h" />
+    <ClInclude Include="boost\predef\library\std\vacpp.h" />
+    <ClInclude Include="boost\predef\library\std\_prefix.h" />
+    <ClInclude Include="boost\predef\make.h" />
+    <ClInclude Include="boost\predef\os.h" />
+    <ClInclude Include="boost\predef\os\aix.h" />
+    <ClInclude Include="boost\predef\os\amigaos.h" />
+    <ClInclude Include="boost\predef\os\android.h" />
+    <ClInclude Include="boost\predef\os\beos.h" />
+    <ClInclude Include="boost\predef\os\bsd.h" />
+    <ClInclude Include="boost\predef\os\bsd\bsdi.h" />
+    <ClInclude Include="boost\predef\os\bsd\dragonfly.h" />
+    <ClInclude Include="boost\predef\os\bsd\free.h" />
+    <ClInclude Include="boost\predef\os\bsd\net.h" />
+    <ClInclude Include="boost\predef\os\bsd\open.h" />
+    <ClInclude Include="boost\predef\os\cygwin.h" />
+    <ClInclude Include="boost\predef\os\haiku.h" />
+    <ClInclude Include="boost\predef\os\hpux.h" />
+    <ClInclude Include="boost\predef\os\ios.h" />
+    <ClInclude Include="boost\predef\os\irix.h" />
+    <ClInclude Include="boost\predef\os\linux.h" />
+    <ClInclude Include="boost\predef\os\macos.h" />
+    <ClInclude Include="boost\predef\os\os400.h" />
+    <ClInclude Include="boost\predef\os\qnxnto.h" />
+    <ClInclude Include="boost\predef\os\solaris.h" />
+    <ClInclude Include="boost\predef\os\unix.h" />
+    <ClInclude Include="boost\predef\os\vms.h" />
+    <ClInclude Include="boost\predef\os\windows.h" />
+    <ClInclude Include="boost\predef\other.h" />
+    <ClInclude Include="boost\predef\other\endian.h" />
+    <ClInclude Include="boost\predef\other\workaround.h" />
+    <ClInclude Include="boost\predef\platform.h" />
+    <ClInclude Include="boost\predef\platform\cloudabi.h" />
+    <ClInclude Include="boost\predef\platform\ios.h" />
+    <ClInclude Include="boost\predef\platform\mingw.h" />
+    <ClInclude Include="boost\predef\platform\mingw32.h" />
+    <ClInclude Include="boost\predef\platform\mingw64.h" />
+    <ClInclude Include="boost\predef\platform\windows_desktop.h" />
+    <ClInclude Include="boost\predef\platform\windows_phone.h" />
+    <ClInclude Include="boost\predef\platform\windows_runtime.h" />
+    <ClInclude Include="boost\predef\platform\windows_server.h" />
+    <ClInclude Include="boost\predef\platform\windows_store.h" />
+    <ClInclude Include="boost\predef\platform\windows_system.h" />
+    <ClInclude Include="boost\predef\platform\windows_uwp.h" />
+    <ClInclude Include="boost\predef\version.h" />
+    <ClInclude Include="boost\predef\version_number.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{92772044-3B27-428D-899D-2B107981AA5D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BoostPredef</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;BOOSTPREDEF_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;BOOSTPREDEF_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;BOOSTPREDEF_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;BOOSTPREDEF_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
