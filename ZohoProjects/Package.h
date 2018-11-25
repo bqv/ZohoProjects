@@ -79,7 +79,8 @@ public:
 VSL_BEGIN_COMMAND_MAP()
     VSL_COMMAND_MAP_ENTRY(CLSID_ZohoProjectsCmdSet, zohoCreateTask, NULL, CommandHandler::ExecHandler(&OnMyCommand))
     VSL_COMMAND_MAP_ENTRY(CLSID_ZohoProjectsCmdSet, zohoProjectExplorer, NULL, CommandHandler::ExecHandler(&OnProjectExplorer))
-    VSL_COMMAND_MAP_ENTRY(CLSID_ZohoProjectExplorerCmdSet, zohoProjectExplorerToolbar, NULL, CommandHandler::ExecHandler(&OnProjectExplorerToolbar))
+    VSL_COMMAND_MAP_ENTRY(CLSID_ZohoProjectExplorerCmdSet, zohoProjectExplorerConnect, NULL, CommandHandler::ExecHandler(&OnProjectExplorerConnect))
+    VSL_COMMAND_MAP_ENTRY(CLSID_ZohoProjectExplorerCmdSet, zohoProjectExplorerDisconnect, NULL, CommandHandler::ExecHandler(&OnProjectExplorerDisconnect))
 VSL_END_VSCOMMAND_MAP()
 
 
@@ -89,15 +90,22 @@ VSL_BEGIN_TOOL_MAP()
     VSL_TOOL_ENTRY(CLSID_guidPersistanceSlot, m_ProjectExplorer.CreateAndShow())
 VSL_END_TOOL_MAP()
 
+	void OnProjectExplorerConnect(CommandHandler* /*pSender*/, DWORD /*flags*/, VARIANT* /*pIn*/, VARIANT* /*pOut*/)
+	{
+		m_client.Connect();
+		m_ProjectExplorer.Reload();
+	}
+
+	void OnProjectExplorerDisconnect(CommandHandler* /*pSender*/, DWORD /*flags*/, VARIANT* /*pIn*/, VARIANT* /*pOut*/)
+	{
+		m_client.Disconnect();
+		m_ProjectExplorer.Reload();
+	}
+
 	// Command handler called when the user selects the command to show the toolwindow.
 	void OnProjectExplorer(CommandHandler* /*pSender*/, DWORD /*flags*/, VARIANT* /*pIn*/, VARIANT* /*pOut*/)
 	{
 		m_ProjectExplorer.CreateAndShow();
-	}
-
-	void OnProjectExplorerToolbar(CommandHandler* /*pSender*/, DWORD /*flags*/, VARIANT* /*pIn*/, VARIANT* /*pOut*/)
-	{
-		OnMyCommand(NULL, NULL, NULL, NULL);
 	}
 
 	// Command handler called when the user selects the "My Command" command.

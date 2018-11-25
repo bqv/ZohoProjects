@@ -39,5 +39,11 @@
     <Image Include="Package.ico">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="ConnectWeb_16x.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Disconnect_16x.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

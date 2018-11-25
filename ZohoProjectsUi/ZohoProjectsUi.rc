@@ -124,6 +124,7 @@ BEGIN
     IDS_E_CANTCREATETOOL    "Unable to create the tool"
     IDS_E_GETVIEWOBJECT_CALLED_AGAIN 
                             "GetViewObject was unexpectedly called more then once."
+    IDS_E_NOTCONNECTED      "Not currently connected to Zoho."
 END
 
 #endif    // English (United States) resources

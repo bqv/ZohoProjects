@@ -122,6 +122,8 @@
     </VSCTCompile>
   </ItemGroup>
   <ItemGroup>
+    <Image Include="ConnectWeb_16x.png" />
+    <Image Include="Disconnect_16x.png" />
     <Image Include="Images.png" />
     <Image Include="Package.ico" />
   </ItemGroup>

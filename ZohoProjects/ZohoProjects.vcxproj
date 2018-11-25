@@ -203,6 +203,7 @@
     <ClInclude Include="CommonIncludes.h" />
     <ClInclude Include="Credentials.h" />
     <ClInclude Include="Guids.h" />
+    <ClInclude Include="Messages.h" />
     <ClInclude Include="Serializer.h" />
     <ClInclude Include="ProjectExplorer.h" />
     <ClInclude Include="Package.h" />

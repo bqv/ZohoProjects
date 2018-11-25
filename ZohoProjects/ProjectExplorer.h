@@ -19,10 +19,13 @@
 #include <atlctrlw.h>
 #include <atlctrlx.h>
 
+#include <cmath>
+
 #include <Client.h>
 
 #include "..\ZohoProjectsUI\Resource.h"
 
+#include "Messages.h"
 #include "Package.h"
 
 class ProjectExplorerHierarchy :
@@ -46,6 +49,13 @@ public:
 DEFINE_GUID(EnvironmentColorsCategory, 
 0x624ed9c3, 0xbdfd, 0x41fa, 0x96, 0xc3, 0x7c, 0x82, 0x4e, 0xa3, 0x2e, 0x3d);
 
+// {92ecf08e-8b13-4cf4-99e9-ae2692382185}
+DEFINE_GUID(TreeViewColorsCatetory,
+0x92ecf08e, 0x8b13, 0x4cf4, 0x99, 0xe9, 0xae, 0x26, 0x92, 0x38, 0x21, 0x85);
+
+// GUID_HeaderColorsCatetory: {4997f547-1379-456e-b985-2f413cdfa536}
+// GUID_SearchControlColorsCatetory: {f1095fad-881f-45f1-8580-589e10325eb8}
+
 #define VS_RGBA_TO_COLORREF(rgba) (rgba & 0x00FFFFFF)
 
 class ProjectExplorerPane :
@@ -58,7 +68,8 @@ class ProjectExplorerPane :
 	InterfaceSupportsErrorInfoList<IVsWindowFrameNotify3> > > >,
 	public IVsBroadcastMessageEvents,
 	public IVsToolWindowToolbar,
-	public IVsWindowSearch
+	public IVsWindowSearch,
+	public CDialogResize<ProjectExplorerPane>
 {
 	VSL_DECLARE_NOT_COPYABLE(ProjectExplorerPane)
 
@@ -66,15 +77,16 @@ protected:
 	enum map
 	{
 		Nil,
+		Resize,
 		TreeView,
-		Button,
+		PlaceholderLabel,
 	};
 
 	// Protected constructor called by CComObject<ProjectExplorerPane>::CreateInstance.
 	ProjectExplorerPane() :
 		VsWindowPaneFromResource(),
 		m_TreeView(WC_TREEVIEW, this, map::TreeView),
-		m_Button(WC_BUTTON, this, map::Button),
+		m_PlaceholderLabel(WC_STATIC, this, map::PlaceholderLabel),
 		m_hBackground(nullptr),
 		m_BroadcastCookie(VSCOOKIE_NIL)
 	{
@@ -97,9 +109,17 @@ END_COM_MAP()
 BEGIN_MSG_MAP(ProjectExplorerPane)
 	MESSAGE_HANDLER(WM_INITDIALOG, OnInitDialog)
 	MESSAGE_HANDLER(WM_CTLCOLORDLG, OnCtlColorDlg)
+	MESSAGE_HANDLER(WM_CTLCOLORSTATIC, OnCtlColorStatic)
+	MESSAGE_HANDLER(WM_ZOHO_RELOAD, OnZohoReload)
+	CHAIN_MSG_MAP(CDialogResize<ProjectExplorerPane>)
 ALT_MSG_MAP(map::TreeView)
-ALT_MSG_MAP(map::Button)
+ALT_MSG_MAP(map::PlaceholderLabel)
 END_MSG_MAP()
+
+BEGIN_DLGRESIZE_MAP(ProjectExplorerPane)
+	DLGRESIZE_CONTROL(IDC_TREEVIEW, DLSZ_SIZE_X | DLSZ_SIZE_Y)
+	DLGRESIZE_CONTROL(IDC_PLACEHOLDERLABEL, DLSZ_SIZE_Y)
+END_DLGRESIZE_MAP()
 
 	// Function called by VsWindowPaneFromResource at the end of SetSite; at this point the
 	// window pane is constructed and sited and can be used, so this is where we can initialize
@@ -133,6 +153,21 @@ END_MSG_MAP()
 	// Callback function called by ToolWindowBase when the size of the window changes.
 	void OnFrameSize(int x, int y, int w, int h)
 	{
+		BOOL handled = false;
+		OnSize(NULL, NULL, NULL, handled);
+	}
+
+	LRESULT OnSize(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+	{
+		RECT rc;
+		GetClientRect(&rc);
+		lParam = MAKELPARAM(
+			rc.right - rc.left - (m_ClientArea.right - m_ClientArea.left), 
+			rc.bottom - rc.top - (m_ClientArea.bottom - m_ClientArea.top)
+		);
+		CDialogResize<ProjectExplorerPane>::OnSize(uMsg, wParam, lParam, bHandled);
+		bHandled = TRUE;
+		return FALSE;
 	}
 
 	// Handled to set the color that should be used to draw the background of the Window Pane.
@@ -150,24 +185,87 @@ END_MSG_MAP()
 		return (LRESULT)m_hBackground;
 	}
 
+	// Handled to set the color that should be used to draw the background of the Window Pane.
+	LRESULT OnCtlColorStatic(UINT /*uMsg*/, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+	{
+        HDC hdcStatic = (HDC) wParam;
+		HWND hWnd = (HWND)lParam;
+
+		if (nullptr != m_hBackground && ::GetDlgCtrlID(hWnd) == IDC_PLACEHOLDERLABEL)
+		{
+			SetBkMode(hdcStatic, TRANSPARENT);
+			SetTextColor(hdcStatic, VS_RGBA_TO_COLORREF(m_TextColor));
+			bHandled = TRUE;
+		}
+		else
+		{
+			bHandled = FALSE;
+		}
+
+		return (LRESULT)m_hBackground;
+	}
+
 	LRESULT OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& bHandled)
 	{
-		RECT rc;
-		GetClientRect(&rc);
-		rc.right -= rc.left;
-		rc.bottom -= rc.top;
-		rc.top = rc.left = 0;
+		CComPtr<IUIHostLocale> spUIHostLocale;
+		HRESULT hr = GetVsSiteCache().QueryCachedService<IUIHostLocale, SID_SUIHostLocale>(&spUIHostLocale);
+		VSL_CHECKHRESULT(hr);
+		CLogFont dialogFont;
+		spUIHostLocale->GetDialogFont(&dialogFont);
 
+		SetWindowFont(GetHWND(), dialogFont.CreateFontIndirect(), TRUE);
+
+		RECT fullWindow;
+		GetClientRect(&fullWindow);
+		fullWindow.right -= fullWindow.left;
+		fullWindow.bottom -= fullWindow.top;
+		fullWindow.top = fullWindow.left = 0;
+
+		m_TreeView.Create(GetHWND(), fullWindow, U("Tree View"),
+			WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN |
+			TVS_HASLINES | TVS_LINESATROOT | TVS_HASBUTTONS | TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS,
+			0, IDC_TREEVIEW, 0);
+		VSL_CHECKBOOLEAN(m_TreeView.m_hWnd != NULL, E_UNEXPECTED);
+
+		LONG padding = static_cast<LONG>(std::fmin(
+			fullWindow.right * 0.20,
+			fullWindow.bottom * 0.20));
+		CComBSTR placeholderText;
+		VSL_CHECKBOOLEAN_GLE(placeholderText.LoadString(_AtlBaseModule.GetResourceInstance(),
+			IDS_E_NOTCONNECTED));
+
+		RECT padded20;
+		padded20.right = fullWindow.right - padding;
+		padded20.bottom = fullWindow.bottom - padding;
+		padded20.top = padded20.left = padding;
+
+		m_PlaceholderLabel.Create(GetHWND(), padded20, placeholderText,
+			WS_CHILD | WS_VISIBLE | SS_CENTER,
+			0, IDC_PLACEHOLDERLABEL, 0);
+		VSL_CHECKBOOLEAN(m_PlaceholderLabel.m_hWnd != NULL, E_UNEXPECTED);
+
+		m_PlaceholderLabel.SetFont(dialogFont.CreateFontIndirect());
+
+		DlgResize_Init(false, true);
+
+		BOOL bReloaded;
+		OnZohoReload(WM_ZOHO_RELOAD, NULL, NULL, bReloaded);
+
+		return FALSE;
+	}
+
+	LRESULT OnZohoReload(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& bHandled)
+	{
 		ZohoClient* zoho = GetZohoClient();
 		if (zoho->IsConnected())
 		{
-			m_TreeView.Create(GetHWND(), rc, U("Tree View"),
-				WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | TVS_HASLINES | TVS_LINESATROOT | TVS_HASBUTTONS | TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS);
-			VSL_CHECKBOOLEAN(m_TreeView.m_hWnd != NULL, E_UNEXPECTED);
-
-			m_Button.Create(GetHWND(), RECT({ 20,20,50,50 }), U("Button"),
-				0);
-			VSL_CHECKBOOLEAN(m_Button.m_hWnd != NULL, E_UNEXPECTED);
+			m_TreeView.ShowWindow(SW_SHOW);
+			m_PlaceholderLabel.ShowWindow(SW_HIDE);
+		}
+		else
+		{
+			m_TreeView.ShowWindow(SW_HIDE);
+			m_PlaceholderLabel.ShowWindow(SW_SHOW);
 		}
 
 		return FALSE;
@@ -183,6 +281,7 @@ END_MSG_MAP()
 
 	STDMETHOD(SetBorderSpace)(LPCBORDERWIDTHS pbw) override
 	{
+		m_ClientArea = *pbw;
 		return S_OK;
 	}
 #pragma endregion IVsToolwindowToolbar
@@ -267,9 +366,9 @@ private:
 	// Initialize colors that are used to render the Window Pane.
 	void InitVSColors()
 	{
-		// Obtain IVsUIShell5 from IVsUIShell
-		CComQIPtr<IVsUIShell5> spIVsUIShell5(GetVsSiteCache().GetCachedService<IVsUIShell, SID_SVsUIShell>());
-		VS_RGBA vsColor;
+		// Obtain IVsUIShell2 from IVsUIShell
+		CComQIPtr<IVsUIShell2> spIVsUIShell2(GetVsSiteCache().GetCachedService<IVsUIShell, SID_SVsUIShell>());
+		VS_RGBA vs_color;
 
 		if (nullptr != m_hBackground)
 		{
@@ -277,22 +376,29 @@ private:
 			m_hBackground = nullptr;
 		}
 
-		if (nullptr != spIVsUIShell5 && SUCCEEDED(spIVsUIShell5->GetThemedColor(EnvironmentColorsCategory, L"Window", TCT_Background, &vsColor)))
+		if (nullptr != spIVsUIShell2)
 		{
-			COLORREF crBackground = VS_RGBA_TO_COLORREF(vsColor);
-			m_hBackground = ::CreateSolidBrush(crBackground);
+			if (SUCCEEDED(spIVsUIShell2->GetVSSysColorEx(VSCOLOR_WINDOW, &vs_color)))
+			{
+				COLORREF crBackground = VS_RGBA_TO_COLORREF(vs_color);
+				m_hBackground = ::CreateSolidBrush(crBackground);
+			}
+
+			spIVsUIShell2->GetVSSysColorEx(VSCOLOR_TOOLWINDOW_TEXT, &m_TextColor);
 		}
 		
 		if (::IsWindow(this->m_hWnd))
 		{
-			::InvalidateRect(this->m_hWnd, nullptr /* lpRect */ , TRUE /* bErase */);
+			::InvalidateRect(this->m_hWnd, nullptr /* lpRect */, TRUE /* bErase */);
 		}
 	}
 
+	RECT m_ClientArea;
+	VS_RGBA m_TextColor;
 	HBRUSH m_hBackground;
 	VSCOOKIE m_BroadcastCookie;
 	CContainedWindowT<CTreeViewCtrl> m_TreeView;
-	CContainedWindowT<CButton> m_Button;
+	CContainedWindowT<CStatic> m_PlaceholderLabel;
 };
 
 class ProjectExplorer :
@@ -382,6 +488,14 @@ public:
 		VSL_CHECKHRESULT(spUIShell->SetupToolbar(pane->GetHWND(), (IVsToolWindowToolbar*)pane, &m_ToolbarHost));
 		VSL_CHECKBOOLEAN(m_ToolbarHost != nullptr, E_UNEXPECTED);
 		VSL_CHECKHRESULT(m_ToolbarHost->AddToolbar(VSTWT_TOP, &CLSID_ZohoProjectExplorerCmdSet, zohoProjectExplorerToolbar));
+	}
+
+	void Reload()
+	{
+		auto pane = static_cast<ProjectExplorerPane*>(
+						static_cast<IVsWindowPane*>(
+							&*m_spView));
+		pane->SendMessage(WM_ZOHO_RELOAD, NULL, NULL);
 	}
 
 private:

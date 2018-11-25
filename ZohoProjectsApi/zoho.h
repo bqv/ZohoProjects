@@ -36,6 +36,8 @@ namespace zoho
 
 		web::http::client::http_client client(std::string);
 		void set(const web::http::oauth2::experimental::oauth2_token&);
+		void reset();
+
 		explicit operator bool() const;
 	};
 

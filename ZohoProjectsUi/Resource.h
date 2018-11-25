@@ -10,10 +10,13 @@
 #define IDS_E_CANTCREATETOOL            121
 #define IDS_E_GETVIEWOBJECT_CALLED_AGAIN 122
 #define IDS_BUTTONCLICK_MESSAGE         123
+#define IDS_E_NOTCONNECTED              123
 #define IDB_IMAGES                      300
 #define IDI_PACKAGE_ICON                400
 #define IDB_BITMAP1                     404
 #define IDD_ZohoProjects_ProjectExplorer 800
+#define IDC_TREEVIEW                    1001
+#define IDC_PLACEHOLDERLABEL            1002
 
 // Next default values for new objects
 // 
@@ -21,7 +24,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        405
 #define _APS_NEXT_COMMAND_VALUE         40002
-#define _APS_NEXT_CONTROL_VALUE         1001
+#define _APS_NEXT_CONTROL_VALUE         1003
 #define _APS_NEXT_SYMED_VALUE           402
 #endif
 #endif

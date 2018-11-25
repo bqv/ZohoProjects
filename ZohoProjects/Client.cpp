@@ -59,9 +59,16 @@ BOOL ZohoClient::IsConnected() const
 	return static_cast<bool>(*this);
 }
 
+HRESULT ZohoClient::Connect()
+{
+	zoho::api::portals::all_portals(*this);
+
+	return S_OK;
+}
+
 HRESULT ZohoClient::Disconnect()
 {
-	zoho::session::expire();
+	zoho::session::reset();
 
 	HRESULT hr;
 	hr = m_credential.Delete();

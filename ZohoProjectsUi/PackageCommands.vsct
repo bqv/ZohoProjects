@@ -48,8 +48,8 @@
       <Menu guid="guidZohoProjectExplorerCmdSet" id="zohoProjectExplorerToolbar" type="ToolWindowToolbar">
         <CommandFlag>DefaultDocked</CommandFlag>
         <Strings>
-          <ButtonText>Test Toolbar</ButtonText>
-          <CommandName>Test Toolbar</CommandName>
+          <ButtonText>Zoho Project Explorer Toolbar</ButtonText>
+          <CommandName>Zoho Project Explorer Toolbar</CommandName>
         </Strings>
       </Menu>
     </Menus>
@@ -95,11 +95,19 @@
         </Strings>
       </Button>
 
-      <Button guid="guidZohoProjectExplorerCmdSet" id="zohoProjectExplorerCommand" priority="0x0100" type="Button">
+      <Button guid="guidZohoProjectExplorerCmdSet" id="zohoProjectExplorerConnect" priority="0x0100" type="Button">
         <Parent guid="guidZohoProjectExplorerCmdSet" id="zohoProjectExplorerToolbarGroup"/>
-        <Icon guid="guidImages" id="bmpPic1" />
+        <Icon guid="guidImageConnect" id="bmpPicConnect" />
         <Strings>
-          <ButtonText>Invoke Test Command</ButtonText>
+          <ButtonText>Connect</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidZohoProjectExplorerCmdSet" id="zohoProjectExplorerDisconnect" priority="0x0100" type="Button">
+        <Parent guid="guidZohoProjectExplorerCmdSet" id="zohoProjectExplorerToolbarGroup"/>
+        <Icon guid="guidImageDisconnect" id="bmpPicDisconnect" />
+        <Strings>
+          <ButtonText>Disconnect</ButtonText>
         </Strings>
       </Button>
 
@@ -114,6 +122,8 @@
             must be the actual index (1-based) of the bitmap inside the bitmap strip. -->
       
       <Bitmap guid="guidImages" href="Images.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows"/>
+      <Bitmap guid="guidImageConnect" href="ConnectWeb_16x.png" usedList="bmpPicConnect"/>
+      <Bitmap guid="guidImageDisconnect" href="Disconnect_16x.png" usedList="bmpPicDisconnect"/>
     </Bitmaps>
  
   </Commands>

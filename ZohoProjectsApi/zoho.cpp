@@ -41,6 +41,11 @@ namespace zoho
 		m_http_config.set_oauth2(m_oauth_config);
 	}
 
+	void session::reset()
+	{
+		set(web::http::oauth2::experimental::oauth2_token());
+	}
+
 	session::operator bool() const
 	{
 		const web::http::oauth2::experimental::oauth2_token& token = m_oauth_config.token();

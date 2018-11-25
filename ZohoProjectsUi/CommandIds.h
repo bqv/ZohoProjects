@@ -22,7 +22,8 @@
 
 #define zohoCreateTask 0x100
 #define zohoProjectExplorer 0x101
-#define zohoProjectExplorerCommand 0x102
+#define zohoProjectExplorerConnect 0x102
+#define zohoProjectExplorerDisconnect 0x103
 
 ///////////////////////////////////////////////////////////////////////////////
 // Bitmap IDs
@@ -32,5 +33,8 @@
 #define bmpPicX 4
 #define bmpPicArrows 5
 #define bmpPicStrikethrough 6
+
+#define bmpPicConnect 1
+#define bmpPicDisconnect 1
 
 #endif // __COMMANDIDS_H_

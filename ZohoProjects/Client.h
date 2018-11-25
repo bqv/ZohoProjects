@@ -5,8 +5,7 @@
 
 #include "Credentials.h"
 
-class ZohoClient :
-	private zoho::session
+class ZohoClient : private zoho::session
 {
 private:
 	const Credential m_credential;
@@ -19,5 +18,6 @@ public:
 	ZohoClient();
 
 	BOOL IsConnected() const;
+	HRESULT Connect();
 	HRESULT Disconnect();
 };
