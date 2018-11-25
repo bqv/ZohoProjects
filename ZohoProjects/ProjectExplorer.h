@@ -68,8 +68,7 @@ class ProjectExplorerPane :
 	InterfaceSupportsErrorInfoList<IVsWindowFrameNotify3> > > >,
 	public IVsBroadcastMessageEvents,
 	public IVsToolWindowToolbar,
-	public IVsWindowSearch,
-	public CDialogResize<ProjectExplorerPane>
+	public IVsWindowSearch
 {
 	VSL_DECLARE_NOT_COPYABLE(ProjectExplorerPane)
 
@@ -111,15 +110,9 @@ BEGIN_MSG_MAP(ProjectExplorerPane)
 	MESSAGE_HANDLER(WM_CTLCOLORDLG, OnCtlColorDlg)
 	MESSAGE_HANDLER(WM_CTLCOLORSTATIC, OnCtlColorStatic)
 	MESSAGE_HANDLER(WM_ZOHO_RELOAD, OnZohoReload)
-	CHAIN_MSG_MAP(CDialogResize<ProjectExplorerPane>)
 ALT_MSG_MAP(map::TreeView)
 ALT_MSG_MAP(map::PlaceholderLabel)
 END_MSG_MAP()
-
-BEGIN_DLGRESIZE_MAP(ProjectExplorerPane)
-	DLGRESIZE_CONTROL(IDC_TREEVIEW, DLSZ_SIZE_X | DLSZ_SIZE_Y)
-	DLGRESIZE_CONTROL(IDC_PLACEHOLDERLABEL, DLSZ_SIZE_Y)
-END_DLGRESIZE_MAP()
 
 	// Function called by VsWindowPaneFromResource at the end of SetSite; at this point the
 	// window pane is constructed and sited and can be used, so this is where we can initialize
@@ -153,26 +146,35 @@ END_DLGRESIZE_MAP()
 	// Callback function called by ToolWindowBase when the size of the window changes.
 	void OnFrameSize(int x, int y, int w, int h)
 	{
-		BOOL handled = false;
-		OnSize(NULL, NULL, NULL, handled);
-	}
-
-	LRESULT OnSize(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
-	{
 		RECT rc;
-		GetClientRect(&rc);
-		lParam = MAKELPARAM(
-			rc.right - rc.left - (m_ClientArea.right - m_ClientArea.left), 
-			rc.bottom - rc.top - (m_ClientArea.bottom - m_ClientArea.top)
-		);
-		CDialogResize<ProjectExplorerPane>::OnSize(uMsg, wParam, lParam, bHandled);
-		bHandled = TRUE;
-		return FALSE;
+		{
+			rc.top = m_ClientBorder.top;
+			rc.left = m_ClientBorder.left;
+			rc.bottom = h - m_ClientBorder.bottom;
+			rc.right = w - m_ClientBorder.right;
+		}
+
+		m_TreeView.SetWindowPos(NULL, rc.left, rc.top, rc.right - rc.left, rc.bottom - rc.top, 0);
+
+		LONG padding = static_cast<LONG>(std::fmin(
+			(rc.right - rc.left) * 0.20,
+			(rc.bottom - rc.top) * 0.20
+		));
+
+		RECT p20;
+		p20.right = rc.right - padding;
+		p20.bottom = rc.bottom - padding;
+		p20.top = p20.left = padding;
+
+		m_PlaceholderLabel.SetWindowPos(NULL, p20.left, p20.top, p20.right - p20.left, p20.bottom - p20.top, 0);
 	}
 
 	// Handled to set the color that should be used to draw the background of the Window Pane.
 	LRESULT OnCtlColorDlg(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& bHandled)
 	{
+		m_TreeView.SetBkColor(VS_RGBA_TO_COLORREF(m_BkColor));
+		m_TreeView.SetTextColor(VS_RGBA_TO_COLORREF(m_TextColor));
+
 		if (nullptr != m_hBackground)
 		{
 			bHandled = TRUE;
@@ -185,7 +187,6 @@ END_DLGRESIZE_MAP()
 		return (LRESULT)m_hBackground;
 	}
 
-	// Handled to set the color that should be used to draw the background of the Window Pane.
 	LRESULT OnCtlColorStatic(UINT /*uMsg*/, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 	{
         HDC hdcStatic = (HDC) wParam;
@@ -215,38 +216,24 @@ END_DLGRESIZE_MAP()
 
 		SetWindowFont(GetHWND(), dialogFont.CreateFontIndirect(), TRUE);
 
-		RECT fullWindow;
-		GetClientRect(&fullWindow);
-		fullWindow.right -= fullWindow.left;
-		fullWindow.bottom -= fullWindow.top;
-		fullWindow.top = fullWindow.left = 0;
+		RECT emptyRect = { 0,0,0,0 };
 
-		m_TreeView.Create(GetHWND(), fullWindow, U("Tree View"),
+		m_TreeView.Create(GetHWND(), emptyRect, U("Tree View"),
 			WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN |
 			TVS_HASLINES | TVS_LINESATROOT | TVS_HASBUTTONS | TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS,
 			0, IDC_TREEVIEW, 0);
 		VSL_CHECKBOOLEAN(m_TreeView.m_hWnd != NULL, E_UNEXPECTED);
 
-		LONG padding = static_cast<LONG>(std::fmin(
-			fullWindow.right * 0.20,
-			fullWindow.bottom * 0.20));
 		CComBSTR placeholderText;
 		VSL_CHECKBOOLEAN_GLE(placeholderText.LoadString(_AtlBaseModule.GetResourceInstance(),
 			IDS_E_NOTCONNECTED));
 
-		RECT padded20;
-		padded20.right = fullWindow.right - padding;
-		padded20.bottom = fullWindow.bottom - padding;
-		padded20.top = padded20.left = padding;
-
-		m_PlaceholderLabel.Create(GetHWND(), padded20, placeholderText,
+		m_PlaceholderLabel.Create(GetHWND(), emptyRect, placeholderText,
 			WS_CHILD | WS_VISIBLE | SS_CENTER,
 			0, IDC_PLACEHOLDERLABEL, 0);
 		VSL_CHECKBOOLEAN(m_PlaceholderLabel.m_hWnd != NULL, E_UNEXPECTED);
 
 		m_PlaceholderLabel.SetFont(dialogFont.CreateFontIndirect());
-
-		DlgResize_Init(false, true);
 
 		BOOL bReloaded;
 		OnZohoReload(WM_ZOHO_RELOAD, NULL, NULL, bReloaded);
@@ -281,7 +268,7 @@ END_DLGRESIZE_MAP()
 
 	STDMETHOD(SetBorderSpace)(LPCBORDERWIDTHS pbw) override
 	{
-		m_ClientArea = *pbw;
+		m_ClientBorder = *pbw;
 		return S_OK;
 	}
 #pragma endregion IVsToolwindowToolbar
@@ -368,7 +355,6 @@ private:
 	{
 		// Obtain IVsUIShell2 from IVsUIShell
 		CComQIPtr<IVsUIShell2> spIVsUIShell2(GetVsSiteCache().GetCachedService<IVsUIShell, SID_SVsUIShell>());
-		VS_RGBA vs_color;
 
 		if (nullptr != m_hBackground)
 		{
@@ -378,9 +364,9 @@ private:
 
 		if (nullptr != spIVsUIShell2)
 		{
-			if (SUCCEEDED(spIVsUIShell2->GetVSSysColorEx(VSCOLOR_WINDOW, &vs_color)))
+			if (SUCCEEDED(spIVsUIShell2->GetVSSysColorEx(VSCOLOR_WINDOW, &m_BkColor)))
 			{
-				COLORREF crBackground = VS_RGBA_TO_COLORREF(vs_color);
+				COLORREF crBackground = VS_RGBA_TO_COLORREF(m_BkColor);
 				m_hBackground = ::CreateSolidBrush(crBackground);
 			}
 
@@ -393,8 +379,8 @@ private:
 		}
 	}
 
-	RECT m_ClientArea;
-	VS_RGBA m_TextColor;
+	RECT m_ClientBorder;
+	VS_RGBA m_BkColor, m_TextColor;
 	HBRUSH m_hBackground;
 	VSCOOKIE m_BroadcastCookie;
 	CContainedWindowT<CTreeViewCtrl> m_TreeView;
