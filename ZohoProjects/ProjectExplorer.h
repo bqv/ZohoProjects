@@ -248,6 +248,44 @@ END_MSG_MAP()
 		{
 			m_TreeView.ShowWindow(SW_SHOW);
 			m_PlaceholderLabel.ShowWindow(SW_HIDE);
+
+			CTreeItem root = m_TreeView.GetRootItem();
+			if (root.IsNull())
+			{
+				root = zoho->TreeHierarchy().Insert(m_TreeView);
+			}
+
+			CAtlList<CTreeItem> hierarchyQueue;
+			hierarchyQueue.AddHead(root);
+			while (!hierarchyQueue.IsEmpty())
+			{
+				CTreeItem ti = hierarchyQueue.RemoveHead();
+				ZohoTreeItem& item = *(ZohoTreeItem*)ti.GetData();
+				if (!item.Valid())
+				{
+					delete &item;
+					m_TreeView.DeleteItem(ti);
+					continue;
+				}
+				else
+				{
+					CAutoPtr<CAtlList<ZohoTreeItem*>> children = item.Enumerate();
+					for (CTreeItem child = ti.GetChild(); !child.IsNull();
+						child = child.GetNextSibling())
+					{
+						hierarchyQueue.AddTail(child);
+						POSITION pos = children->Find((ZohoTreeItem*)child.GetData());
+						children->RemoveAt(pos);
+					}
+					while (!children->IsEmpty())
+					{
+						ZohoTreeItem& newChild = *children->RemoveHead();
+						CTreeItem child = newChild.Insert(m_TreeView);
+						hierarchyQueue.AddTail(child);
+					}
+					ti.SortChildren();
+				}
+			}
 		}
 		else
 		{
@@ -383,7 +421,7 @@ private:
 	VS_RGBA m_BkColor, m_TextColor;
 	HBRUSH m_hBackground;
 	VSCOOKIE m_BroadcastCookie;
-	CContainedWindowT<CTreeViewCtrl> m_TreeView;
+	CContainedWindowT<CTreeViewCtrlEx> m_TreeView;
 	CContainedWindowT<CStatic> m_PlaceholderLabel;
 };
 

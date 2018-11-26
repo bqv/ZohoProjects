@@ -109,6 +109,13 @@ namespace zoho
 			{
 				web::http::http_response response = client.request(web::http::methods::GET).get();
 				web::json::value json = response.extract_json().get();
+				if (!codes::is_success(response.status_code()))
+				{
+					p_sess.expire();
+					web::http::client::http_client client = p_sess.client(portals_endpoint());
+					response = client.request(web::http::methods::GET).get();
+					json = response.extract_json().get();
+				}
 				OutputDebugString(json.serialize().c_str());
 				if (codes::is_success(response.status_code()))
 				{
@@ -156,6 +163,13 @@ namespace zoho
 				if (!p_json_string.is_null()) query.append_query(U("json_string"), p_json_string.serialize());
 				web::http::http_response response = client.request(web::http::methods::GET, query.to_string()).get();
 				web::json::value json = response.extract_json().get();
+				if(!codes::is_success(response.status_code()))
+				{
+					p_sess.expire();
+					web::http::client::http_client client = p_sess.client(projects_endpoint(p_portal));
+					response = client.request(web::http::methods::GET, query.to_string()).get();
+					json = response.extract_json().get();
+				}
 				OutputDebugString(json.serialize().c_str());
 				if (codes::is_success(response.status_code()))
 				{
@@ -189,6 +203,13 @@ namespace zoho
 			{
 				web::http::http_response response = client.request(web::http::methods::GET).get();
 				web::json::value json = response.extract_json().get();
+				if (!codes::is_success(response.status_code()))
+				{
+					p_sess.expire();
+					web::http::client::http_client client = p_sess.client(project_endpoint(p_portal, p_project));
+					response = client.request(web::http::methods::GET).get();
+					json = response.extract_json().get();
+				}
 				OutputDebugString(json.serialize().c_str());
 				if (codes::is_success(response.status_code()))
 				{
@@ -219,6 +240,13 @@ namespace zoho
 			{
 				web::http::http_response response = client.request(web::http::methods::GET).get();
 				web::json::value json = response.extract_json().get();
+				if (!codes::is_success(response.status_code()))
+				{
+					p_sess.expire();
+					web::http::client::http_client client = p_sess.client(customfields_endpoint(p_portal));
+					response = client.request(web::http::methods::GET).get();
+					json = response.extract_json().get();
+				}
 				OutputDebugString(json.serialize().c_str());
 				if (codes::is_success(response.status_code()))
 				{
@@ -253,6 +281,13 @@ namespace zoho
 			{
 				web::http::http_response response = client.request(web::http::methods::GET).get();
 				web::json::value json = response.extract_json().get();
+				if (!codes::is_success(response.status_code()))
+				{
+					p_sess.expire();
+					web::http::client::http_client client = p_sess.client(groups_endpoint(p_portal));
+					response = client.request(web::http::methods::GET).get();
+					json = response.extract_json().get();
+				}
 				OutputDebugString(json.serialize().c_str());
 				if (codes::is_success(response.status_code()))
 				{
@@ -314,6 +349,13 @@ namespace zoho
 				for (auto cf : p_custom_fields) params[util::string(cf.first)] = web::json::value::string(util::string(cf.second));
 				web::http::http_response response = client.request(web::http::methods::POST, U("/"), params).get();
 				web::json::value json = response.extract_json().get();
+				if (!codes::is_success(response.status_code()))
+				{
+					p_sess.expire();
+					web::http::client::http_client client = p_sess.client(customfields_endpoint(p_portal));
+					response = client.request(web::http::methods::POST, U("/"), params).get();
+					json = response.extract_json().get();
+				}
 				OutputDebugString(json.serialize().c_str());
 				if (codes::is_success(response.status_code()))
 				{
@@ -371,6 +413,13 @@ namespace zoho
 				for (auto cf : p_custom_fields) params[util::string(cf.first)] = web::json::value::string(util::string(cf.second));
 				web::http::http_response response = client.request(web::http::methods::POST, U("/"), params).get();
 				web::json::value json = response.extract_json().get();
+				if (!codes::is_success(response.status_code()))
+				{
+					p_sess.expire();
+					web::http::client::http_client client = p_sess.client(projects_endpoint(p_portal));
+					response = client.request(web::http::methods::POST, U("/"), params).get();
+					json = response.extract_json().get();
+				}
 				OutputDebugString(json.serialize().c_str());
 				if (codes::is_success(response.status_code()))
 				{
@@ -395,6 +444,13 @@ namespace zoho
 			{
 				web::http::http_response response = client.request(web::http::methods::DEL).get();
 				web::json::value json = response.extract_json().get();
+				if (!codes::is_success(response.status_code()))
+				{
+					p_sess.expire();
+					web::http::client::http_client client = p_sess.client(project_endpoint(p_portal, p_project));
+					response = client.request(web::http::methods::DEL).get();
+					json = response.extract_json().get();
+				}
 				OutputDebugString(json.serialize().c_str());
 				if (codes::is_success(response.status_code()))
 				{
@@ -429,6 +485,13 @@ namespace zoho
 				if (p_range != 0) query.append_query(U("range"), util::string(std::to_string(p_range)));
 				web::http::http_response response = client.request(web::http::methods::GET).get();
 				web::json::value json = response.extract_json().get();
+				if (!codes::is_success(response.status_code()))
+				{
+					p_sess.expire();
+					web::http::client::http_client client = p_sess.client(activities_endpoint(p_portal, p_project));
+					response = client.request(web::http::methods::GET).get();
+					json = response.extract_json().get();
+				}
 				OutputDebugString(json.serialize().c_str());
 				if (codes::is_success(response.status_code()))
 				{
@@ -468,6 +531,13 @@ namespace zoho
 				if (p_range != 0) query.append_query(U("range"), util::string(std::to_string(p_range)));
 				web::http::http_response response = client.request(web::http::methods::GET).get();
 				web::json::value json = response.extract_json().get();
+				if (!codes::is_success(response.status_code()))
+				{
+					p_sess.expire();
+					web::http::client::http_client client = p_sess.client(statuses_endpoint(p_portal, p_project));
+					response = client.request(web::http::methods::GET).get();
+					json = response.extract_json().get();
+				}
 				OutputDebugString(json.serialize().c_str());
 				if (codes::is_success(response.status_code()))
 				{
@@ -499,6 +569,13 @@ namespace zoho
 				params[U("content")] = web::json::value::string(util::string(p_content));
 				web::http::http_response response = client.request(web::http::methods::POST, U("/"), params).get();
 				web::json::value json = response.extract_json().get();
+				if (!codes::is_success(response.status_code()))
+				{
+					p_sess.expire();
+					web::http::client::http_client client = p_sess.client(statuses_endpoint(p_portal, p_project));
+					response = client.request(web::http::methods::POST, U("/"), params).get();
+					json = response.extract_json().get();
+				}
 				OutputDebugString(json.serialize().c_str());
 				if (codes::is_success(response.status_code()))
 				{

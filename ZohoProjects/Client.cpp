@@ -74,3 +74,8 @@ HRESULT ZohoClient::Disconnect()
 	hr = m_credential.Delete();
 	return SUCCEEDED(hr) ? S_OK : HRESULT_FROM_WIN32(::GetLastError());
 }
+
+ZohoTreeItem& ZohoClient::TreeHierarchy()
+{
+	return *new ZohoRootItem(const_cast<ZohoClient&>(*this));
+}

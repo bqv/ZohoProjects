@@ -23,7 +23,7 @@ namespace zoho
 		friend class session;
 	};
 
-	class DLLEXPORT session : protected oauth2::session
+	class DLLEXPORT session : public oauth2::session
 	{
 	private:
 		void callback(const web::http::oauth2::experimental::oauth2_token&) final;

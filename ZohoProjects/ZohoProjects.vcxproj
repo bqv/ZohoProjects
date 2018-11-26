@@ -195,6 +195,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Client.cpp" />
+    <ClCompile Include="ZohoTree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ZohoProjects.def" />
@@ -210,6 +211,7 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="StdAfx.h" />
     <ClInclude Include="Client.h" />
+    <ClInclude Include="ZohoTree.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ZohoProjects.rc" />
